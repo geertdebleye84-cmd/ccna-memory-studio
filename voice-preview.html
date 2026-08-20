@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCNA Voice Preview</title>
+  <style>
+    :root { font-family: Inter, system-ui, sans-serif; color: #161616; background: #f7f7f5; }
+    body { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+    h1 { letter-spacing: -.04em; } label { display:block; margin: 18px 0 7px; font-weight: 650; }
+    textarea, select, input { width:100%; box-sizing:border-box; padding:10px; border:1px solid #ccc; border-radius:7px; background:white; font:inherit; }
+    textarea { min-height:140px; } button { margin:16px 8px 0 0; padding:10px 15px; border:1px solid #111; border-radius:7px; background:#111; color:white; font:inherit; cursor:pointer; }
+    button.alt { background:white; color:#111; } .row { display:grid; grid-template-columns:1fr 160px; gap:15px; } p { color:#666; line-height:1.5; }
+  </style>
+</head>
+<body>
+  <h1>English browser voice preview</h1>
+  <p>This is a standalone browser page. Chrome can expose installed Google/Windows voices here, even where Electron does not.</p>
+  <label for="voice">Available English voice</label><select id="voice"></select>
+  <div class="row"><div><label for="rate">Rate</label><input id="rate" type="range" min="0.65" max="1.2" value="0.92" step="0.05" /></div><div><label for="rate-value">Rate value</label><input id="rate-value" value="0.92" readonly /></div></div>
+  <label for="text">Text</label><textarea id="text">A user cannot reach a remote subnet. The router forwards packets between source and destination hosts. Which IP-connectivity concept should guide the next troubleshooting step?</textarea>
+  <button id="speak">Speak</button><button id="stop" class="alt">Stop</button>
+  <script>
+    const voice = document.querySelector('#voice'), rate = document.querySelector('#rate'), value = document.querySelector('#rate-value');
+    function loadVoices() { const voices = speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().startsWith('en')); voice.replaceChildren(...voices.map(v => { const o=document.createElement('option'); o.value=v.name; o.textContent=`${v.name} (${v.lang})`; return o; })); }
+    speechSynthesis.onvoiceschanged = loadVoices; loadVoices();
+    rate.addEventListener('input', () => value.value = rate.value);
+    document.querySelector('#speak').onclick = () => { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(document.querySelector('#text').value); u.rate=Number(rate.value); u.voice=speechSynthesis.getVoices().find(v => v.name===voice.value) || null; speechSynthesis.speak(u); };
+    document.querySelector('#stop').onclick = () => speechSynthesis.cancel();
+  </script>
+</body>
+</html>

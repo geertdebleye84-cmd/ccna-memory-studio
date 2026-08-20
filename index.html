@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCNA Memory Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout" data-layout="split">
+    <aside class="setup-panel panel-rail">
+      <div class="brand"><span class="brand-mark">CM</span><div><strong>CCNA<br />MEMORY STUDIO</strong><small>STUDY WORKBENCH / V3</small></div></div>
+      <nav class="rail-navigation" aria-label="Study mode and workspace arrangement">
+        <div class="rail-nav-label">MODE</div>
+        <div class="mode-switcher"><button class="mode active" data-mode="learn"><span>01</span>STUDY</button><button class="mode" data-mode="test"><span>02</span>TEST</button></div>
+        <div class="rail-nav-label">LAYOUT</div>
+        <div class="layout-switcher"><button class="layout-choice" data-layout="focus">FOCUS</button><button class="layout-choice active" data-layout="split">SPLIT</button><button class="layout-choice" data-layout="studio">VIDEO</button></div>
+        <p class="header-status" id="header-status">LOCAL PROGRESS</p>
+      </nav>
+
+      <div class="rail-label">STUDY SET</div>
+      <details class="selection-section" open>
+        <summary>Build your set</summary>
+        <div class="details-content">
+          <p class="rail-intro">Choose a topic bundle, then make the study queue your own.</p>
+          <label class="field">Bundle<select id="bundle"><option value="all">All concepts</option><option value="important">Important / difficult</option><option value="review">Due for review</option><option value="wrong">Incorrect test answers</option><option value="known">Known cards</option></select></label>
+          <details class="chapter-section" open><summary><span>Chapters</span><button id="toggle-chapters" class="link-button" type="button">ALL / NONE</button></summary><div class="details-content"><div id="chapter-list" class="chapter-list"></div></div></details>
+          <button id="apply-selection" class="wide primary">START THIS SET <span>&rarr;</span></button><p id="selection-summary" class="quiet"></p>
+          <button id="open-palace" class="wide quiet-button">OPEN MEMORY PALACE</button>
+        </div>
+      </details>
+      <details class="selection-section">
+        <summary>Session file</summary>
+        <div class="details-content"><button id="export-session" class="wide">SAVE SESSION&hellip;</button><button id="import-session" class="wide">LOAD SESSION&hellip;</button><p id="file-status" class="quiet">Progress is saved locally.</p></div>
+      </details>
+
+      <details id="voice-panel" class="settings-section floatable-panel">
+        <summary><span>Voice playback</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content"><label class="field field-stack">Voice<select id="voice-engine"><option value="piper-en">Piper neural - English AI</option><option value="piper-nl">Piper neural - Dutch AI</option><option value="system">Browser system voice (fallback)</option></select></label><p id="tts-status" class="quiet">Checking local neural voice&hellip;</p><div class="button-row"><button id="voice-test">TEST VOICE</button><button id="voice-stop">STOP</button></div><hr /><label class="inline"><input id="continuous" type="checkbox" /> Continue through this set until paused</label><label class="field">Speed<input id="speed" type="range" min="0.8" max="1.6" value="1.15" step="0.05" /></label><label class="field">Question &rarr; answer<span><input id="qa-pause" type="number" min="0" max="30" value="2" step="0.5" /> sec</span></label><label class="field">Card &rarr; card<span><input id="card-pause" type="number" min="0" max="60" value="4" step="0.5" /> sec</span></label><div class="button-row"><button id="reading-start" class="primary">START</button><button id="reading-pause">PAUSE</button><button id="reading-stop">STOP</button></div></div>
+      </details>
+
+      <details id="appearance-panel" class="settings-section floatable-panel">
+        <summary><span>Appearance &amp; behaviour</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content"><div class="size-control"><span>Question size</span><div><button id="question-smaller" class="mini-button" title="Smaller question text">-</button><output id="question-size-value">42</output><button id="question-larger" class="mini-button" title="Larger question text">+</button></div></div><div class="size-control"><span>Answer size</span><div><button id="answer-smaller" class="mini-button" title="Smaller answer text">-</button><output id="answer-size-value">30</output><button id="answer-larger" class="mini-button" title="Larger answer text">+</button></div></div><label class="field field-stack">Answer layout<select id="answer-flow"><option value="flip">Flip: question, then answer</option><option value="reveal">Reveal under question</option></select></label><div class="colour-grid"><label class="field">Text<input id="text-colour" type="color" value="#f4f1ea" /></label><label class="field">Background<input id="background-colour" type="color" value="#0a0a0a" /></label><label class="field">Card<input id="card-colour" type="color" value="#121212" /></label></div><button id="reset-theme" class="wide">RESET APPEARANCE</button></div>
+      </details>
+      <details id="recovery-panel" class="settings-section floatable-panel">
+        <summary><span>Recovery</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content"><button id="undo-one" class="wide">UNDO LAST RESULT</button><button id="undo-session" class="wide">UNDO THIS SESSION</button></div>
+      </details>
+    </aside>
+
+    <section class="workspace">
+      <div class="workspace-meta"><span id="workspace-mode">STUDY WORKSPACE</span><span id="library-status">LOADING STUDY LIBRARY&hellip;</span></div>
+      <div class="resource-strip" aria-label="Loaded study resources">
+        <button id="resource-cards" class="resource-card active"><b id="resource-card-count">509</b><span>STUDY CARDS</span></button>
+        <button id="resource-book" class="resource-card"><b>VOL. 1</b><span id="resource-book-label">BOOK LOADED</span></button>
+        <button id="resource-video" class="resource-card"><b>65</b><span>VIDEO LESSONS</span></button>
+      </div>
+      <div id="content" class="content"></div>
+      <div id="fixed-controls" class="fixed-controls">
+        <button id="fixed-ok" class="fixed-ok" title="Known: schedule less often">OK</button>
+        <button id="global-next" class="global-next" title="Keyboard shortcut: N">NEXT <span>&rarr;</span></button>
+        <button id="fixed-play" class="icon-control" title="Read visible content">&#9654;</button>
+        <button id="fixed-stop" class="icon-control" title="Stop speech">&#9632;</button>
+        <button id="fixed-attention" class="fixed-attention" title="Needs attention: schedule more often">ATTENTION</button>
+      </div>
+    </section>
+
+    <aside class="tools-panel panel-rail">
+      <div class="rail-label">WORKBENCH PANELS</div>
+      <details id="video-panel" class="settings-section media-section floatable-panel" open>
+        <summary><span>Jeremy's IT Lab</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content">
+          <div class="video-shell"><iframe id="jeremy-player" title="Jeremy's IT Lab lesson" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <p id="jeremy-match" class="video-match">Loading lesson catalogue&hellip;</p>
+          <label class="field field-stack">Lesson<select id="jeremy-topic" aria-label="Jeremy's IT Lab lesson"></select></label>
+          <div class="button-row"><button id="study-topic">MATCH THIS CARD</button><button id="open-youtube">OPEN YOUTUBE &nearr;</button></div>
+          <label class="inline"><input id="captions" type="checkbox" checked /> Request English captions when available</label>
+        </div>
+      </details>
+
+      <details id="reference-panel" class="settings-section reference-section floatable-panel">
+        <summary><span>Book reference</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content">
+          <p class="quiet">Volume 1 chapters are mapped to physical PDF pages. Your book stays local; the card catalogue is not overwritten.</p>
+          <label class="field field-stack">Matched Volume 1 chapter<select id="book-chapter" aria-label="Volume 1 chapter"></select></label>
+          <div class="button-row"><button id="use-provided-volume" class="primary">USE SUPPLIED VOL. 1</button><button id="open-reference">OPEN CHAPTER</button></div>
+          <button id="choose-reference" class="wide">CHOOSE ANOTHER PDF&hellip;</button>
+          <p id="reference-status" class="quiet">No reference PDF selected.</p>
+          <div id="reference-viewer-wrap" class="reference-viewer-wrap" hidden><iframe id="reference-viewer" title="Local study reference"></iframe></div>
+        </div>
+      </details>
+
+      <details id="note-panel" class="settings-section floatable-panel" open>
+        <summary><span>Card note</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content"><div id="note" class="rich-note" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Mnemonic, lab command, explanation, or paste a useful image&hellip;"></div><div class="button-row"><button id="save-note" class="primary">SAVE NOTE</button><button id="clear-note">CLEAR</button></div><p id="note-status" class="quiet">Local to this card.</p></div>
+      </details>
+    </aside>
+  </main>
+
+  <template id="learn-template"><article class="learn-card"><div class="card-top"><span class="chapter"></span><span class="counter"></span></div><p class="label">LEARN / CONCEPT CHECKPOINT</p><h2 class="statement"></h2><div class="answer hidden"><p class="label">ANSWER / TOPIC</p><h3 class="topic"></h3></div><p class="card-status"></p><div class="card-actions"><button class="read-question">READ VISIBLE</button><button class="study-topic">OPEN RELATED LESSON</button><button class="open-reference">OPEN BOOK REFERENCE</button><button class="previous">&larr; PREVIOUS</button></div><div class="decision-bar"><button class="know">OK<br /><small>known</small></button><button class="override primary">SHOW ANSWER</button><button class="practice">ATTENTION<br /><small>repeat more</small></button></div></article></template>
+  <template id="test-template"><article class="learn-card"><div class="card-top"><span class="chapter"></span><span class="counter"></span></div><p class="label">PRACTICE TEST</p><h2 class="statement"></h2><div class="answers"></div><div class="answer hidden"><p class="label">CORRECT TOPIC</p><h3 class="topic"></h3></div><p class="card-status"></p><div class="card-actions"><button class="read-question">READ QUESTION</button><button class="study-topic">OPEN RELATED LESSON</button><button class="open-reference">OPEN BOOK REFERENCE</button></div></article></template>
+  <script src="renderer.js"></script>
+</body>
+</html>
