@@ -6,7 +6,8 @@
   "repository": {
     "branch": "main",
     "baseline_commit": "0bd96ff",
-    "baseline_tag": "checkpoint/pre-lurnai-ai-bridge-20260820"
+    "baseline_tag": "checkpoint/pre-lurnai-ai-bridge-20260820",
+    "verified_implementation_commit": "0c2f10f"
   },
   "continuity": {
     "index": "docs/continuity/INDEX.md",

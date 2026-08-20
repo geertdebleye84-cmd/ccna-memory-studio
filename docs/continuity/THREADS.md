@@ -4,6 +4,6 @@
 
 - Scope: study/test app, course references, speech, UI, and LurnAI bridge
 - Branch: `main`
-- Outcome: active
+- Outcome: LurnAI AI bridge restored and integrated
 - Latest handoff: `HANDOFF.md`
-- Status: AI bridge reconstruction in progress
+- Status: complete; Course Import Wizard remains separate roadmap work

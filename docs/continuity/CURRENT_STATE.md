@@ -5,6 +5,7 @@ Last verified: 2026-08-20 Europe/Brussels
 - Canonical project root is on `M:`.
 - Baseline commit: `0bd96ff` on branch `main`.
 - Baseline tag: `checkpoint/pre-lurnai-ai-bridge-20260820`.
+- Verified bridge implementation commit: `0c2f10f`.
 - Catalog contains 505 JSONL records.
 - Electron source, CCNA PDF, progress data, Piper engine, and English/Dutch
   models were restored from a read-only C recovery copy.

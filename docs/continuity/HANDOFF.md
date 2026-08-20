@@ -5,7 +5,8 @@ Timestamp: 2026-08-20 Europe/Brussels
 - Canonical root: `M:\CCNA Memory Studio\CCNA-Memory-Studio-v3-Focused`
 - Branch: `main`
 - Baseline commit: `0bd96ff`
-- Dirty state: bridge implementation prepared for verified commit
+- Verified implementation commit: `0c2f10f`
+- Dirty state: clean after the continuity commit that records this handoff
 - Completed: restored and verified project; identified LurnAI bridge contract;
   created Git baseline and checkpoint tag; reconstructed the bridge; wired
   Electron IPC and the collapsible/floatable UI; added tests and documentation.
