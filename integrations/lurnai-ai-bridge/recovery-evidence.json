@@ -1,0 +1,21 @@
+{
+  "inspected_application": "C:\\Users\\User\\AppData\\Local\\Programs\\SiriusBitz\\SiriusBitz LurnAI",
+  "archive": "resources/app.asar",
+  "archive_sha256": "124EE18F2C1334A6CB305F2617C544A0067370387CD77F9EF4520EED089611BA",
+  "observed_version": "1.0.2",
+  "observed_contract": [
+    "Chat Web Provider Bridge",
+    "visible persistent login browser",
+    "master prompt plus source text transfer",
+    "manual fallback",
+    "response JSON extraction",
+    "Ollama localhost proxy"
+  ],
+  "excluded": [
+    "activation and licensing",
+    "anti-tamper runtime",
+    "embedded secrets",
+    "native security backend"
+  ],
+  "reconstructed_on": "2026-08-20"
+}

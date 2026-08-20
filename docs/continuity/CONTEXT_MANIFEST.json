@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "project": "CCNA Memory Studio v3 Focused",
+  "bundle": "CCNA Memory Studio",
+  "canonical_root": "M:\\CCNA Memory Studio\\CCNA-Memory-Studio-v3-Focused",
+  "repository": {
+    "branch": "main",
+    "baseline_commit": "0bd96ff",
+    "baseline_tag": "checkpoint/pre-lurnai-ai-bridge-20260820"
+  },
+  "continuity": {
+    "index": "docs/continuity/INDEX.md",
+    "state": "docs/continuity/CURRENT_STATE.md",
+    "handoff": "docs/continuity/HANDOFF.md",
+    "requirements": "docs/continuity/REQUIREMENTS.md",
+    "roadmap": "docs/continuity/ROADMAP.md",
+    "blocks": "docs/architecture/BLOCKS.md"
+  },
+  "entry_points": ["main.js", "preload.js", "renderer.js", "index.html"],
+  "catalog": "data/concept-checkpoints-v2.jsonl",
+  "last_verified": "2026-08-20T09:45:00+02:00",
+  "last_backup_reference": "C recovery copy verified 2026-08-20; no external full backup registered"
+}

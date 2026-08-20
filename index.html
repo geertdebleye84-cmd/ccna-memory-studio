@@ -91,6 +91,20 @@
         </div>
       </details>
 
+      <details id="ai-panel" class="settings-section floatable-panel">
+        <summary><span>AI communication bridge</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
+        <div class="details-content">
+          <p class="quiet">Optional local Ollama or a visible, user-controlled webchat session. The study app works without either.</p>
+          <label class="field field-stack">Web provider<select id="ai-web-provider"><option value="chatgpt">ChatGPT</option><option value="claude">Claude</option><option value="custom">Custom HTTPS chat</option></select></label>
+          <label class="field field-stack">Custom URL<input id="ai-custom-url" type="url" placeholder="https://example.com/chat" /></label>
+          <div class="button-row"><button id="ai-open-web" class="primary">OPEN WEB AI</button><button id="ai-close-web">CLOSE</button></div>
+          <label class="field field-stack">Local Ollama model<select id="ai-ollama-model"><option value="">No model detected</option></select></label>
+          <div class="button-row"><button id="ai-check">CHECK BRIDGE</button><button id="ai-explain-card">EXPLAIN THIS CARD</button></div>
+          <div class="button-row"><button id="ai-send-card">SEND CARD TO WEB AI</button><button id="ai-capture-note">CAPTURE ANSWER TO NOTE</button></div>
+          <p id="ai-status" class="quiet ai-status">Bridge not checked yet.</p>
+        </div>
+      </details>
+
       <details id="note-panel" class="settings-section floatable-panel" open>
         <summary><span>Card note</span><span class="summary-tools"><button type="button" data-panel-action="float" title="Float this panel">FLOAT</button><button type="button" data-panel-action="dock" title="Dock this panel" hidden>DOCK</button></span></summary>
         <div class="details-content"><div id="note" class="rich-note" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Mnemonic, lab command, explanation, or paste a useful image&hellip;"></div><div class="button-row"><button id="save-note" class="primary">SAVE NOTE</button><button id="clear-note">CLEAR</button></div><p id="note-status" class="quiet">Local to this card.</p></div>

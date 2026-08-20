@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "check": "node --check main.js && node --check preload.js && node --check renderer.js"
+    "check": "node --check main.js && node --check preload.js && node --check renderer.js && node --check integrations/lurnai-ai-bridge/index.js && node --check integrations/lurnai-ai-bridge/ollama-client.js && node --check integrations/lurnai-ai-bridge/web-provider.js",
+    "test": "node --test integrations/lurnai-ai-bridge/test/bridge.test.js"
   },
   "devDependencies": {
     "electron": "^43.1.1"

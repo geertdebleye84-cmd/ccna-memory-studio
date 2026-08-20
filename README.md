@@ -13,6 +13,17 @@ The voice control is explicit: Start, Pause/Resume and Stop. Continuous playback
 
 The app can use a locally installed Piper neural voice. The v3 setup installs the free Dutch Belgian `nl_BE-nathalie-medium` model (MIT) and retains system TTS as a fallback if that model or engine is unavailable. Model files are local under `runtime/piper`.
 
+## Optional AI bridge
+
+The collapsible **AI communication bridge** panel supports a local Ollama
+installation or a visible ChatGPT, Claude, or custom HTTPS browser session.
+Ollama explanations and captured web answers can be added to the current card's
+local note. The main study and test workflows do not require AI.
+
+The clean bridge implementation lives in `integrations/lurnai-ai-bridge`. It
+does not contain LurnAI activation, licensing, anti-tamper, secrets, or native
+security code.
+
 ## Source boundary
 
 The local catalogue contains concept statements and topic labels. This app does not include reproduced or copied Pearson/Cisco exam-question wording and is not an official practice exam.

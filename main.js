@@ -1,9 +1,10 @@
-const { app, BrowserWindow, ipcMain, dialog, shell } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, shell, clipboard } = require('electron');
 const fs = require('fs');
 const path = require('path');
 const { pathToFileURL } = require('url');
 const { spawn } = require('child_process');
 const http = require('http');
+const { registerAiBridgeIpc } = require('./integrations/lurnai-ai-bridge');
 
 const root = __dirname;
 const legacyUserData = path.join(app.getPath('appData'), 'CCNA Memory Studio Focused v3');
@@ -13,7 +14,7 @@ app.setPath('userData', path.join(root, 'user-data'));
 app.setPath('temp', path.join(root, 'user-data', 'temp'));
 const singleInstance = app.requestSingleInstanceLock();
 if (!singleInstance) app.exit(0);
-let windowRef;
+let windowRef, aiBridge;
 const dataFile = () => path.join(app.getPath('userData'), 'progress.json');
 const legacyDataFile = path.join(legacyUserData, 'progress.json');
 const outputDir = path.join(root, 'runtime', 'tts-output');
@@ -75,6 +76,7 @@ app.whenReady().then(() => {
     // the first Play click responsive without using any remote voice service.
     getPiperServer('en-US').catch(() => {});
   });
+  aiBridge = registerAiBridgeIpc({ ipcMain, BrowserWindow, clipboard, shell, getParentWindow: () => windowRef });
   ipcMain.handle('catalog:load', () => fs.readFileSync(path.join(root, 'data', 'concept-checkpoints-v2.jsonl'), 'utf8').trim().split(/\r?\n/).map(JSON.parse));
   ipcMain.handle('jeremy:load', () => JSON.parse(fs.readFileSync(path.join(root, 'data', 'jeremy-videos.json'), 'utf8')));
   ipcMain.handle('reference:chapters', () => JSON.parse(fs.readFileSync(path.join(root, 'data', 'ocg-volume1-chapters.json'), 'utf8')));
@@ -110,4 +112,4 @@ app.on('second-instance', () => {
   windowRef.show(); windowRef.focus();
 });
 app.on('window-all-closed', () => { if (process.platform !== 'darwin') app.quit(); });
-app.on('before-quit', () => { for (const { child } of piperServers.values()) child.kill(); });
+app.on('before-quit', () => { aiBridge?.dispose(); for (const { child } of piperServers.values()) child.kill(); });

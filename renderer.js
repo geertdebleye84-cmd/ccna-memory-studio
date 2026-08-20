@@ -480,6 +480,35 @@ async function runContinuous() {
 function pauseReading() { if (!reading.active) return; reading.paused = !reading.paused; if ($('#voice-engine').value === 'system') reading.paused ? speechSynthesis.pause() : speechSynthesis.resume(); else if (reading.paused) audio.pause(); else audio.play().catch(() => {}); $('#reading-pause').textContent = reading.paused ? 'Resume' : 'Pause'; }
 function stopReading() { reading.active = false; reading.paused = false; reading.token += 1; reading.waitCancel?.(); reading.waitCancel = null; speechToken += 1; speechSynthesis.cancel(); audio.pause(); audio.currentTime = 0; $('#reading-pause').textContent = 'Pause'; }
 
+function displayedCard() { return mode === 'learn' ? currentCard() : test?.cards?.[test.index] || null; }
+function cardAiPrompt(card) {
+  if (!card) throw new Error('Choose a study card first.');
+  return [
+    'Act as a precise CCNA tutor.',
+    `Question: ${card.prompt}`,
+    `Expected topic: ${card.title}`,
+    `Study clue: ${card.statement}`,
+    'Explain the reasoning in clear English, add one practical example, and identify one common misconception. Do not rewrite this as an exam dump.'
+  ].join('\n\n');
+}
+function setAiStatus(message, state = '') { const element = $('#ai-status'); element.textContent = message; element.dataset.state = state; }
+function appendAiNote(text, source) {
+  const card = displayedCard(); if (!card) throw new Error('Choose a study card first.');
+  const heading = document.createElement('p'); heading.innerHTML = `<strong>${escapeHtml(source)}</strong>`;
+  const body = document.createElement('p'); body.textContent = String(text || '').trim();
+  $('#note').append(heading, body); saveCurrentNote();
+}
+async function refreshAiStatus() {
+  setAiStatus('Checking AI bridge…');
+  const result = await window.studio.ai.status();
+  const select = $('#ai-ollama-model');
+  select.innerHTML = result.ollama.models.length
+    ? result.ollama.models.map((model) => `<option value="${escapeHtml(model)}">${escapeHtml(model)}</option>`).join('')
+    : '<option value="">No local model detected</option>';
+  setAiStatus(result.ollama.available ? `Bridge ready · Ollama online · ${result.ollama.models.length} model(s)` : 'Bridge ready · Ollama offline · web providers available', result.ollama.available ? 'ready' : 'manual');
+  return result;
+}
+
 function undoOne() { const event = store.history.pop(); if (!event) return; store.progress[event.cardId] = event.before; save(); status('Last result undone.'); render(); }
 function undoSession() { const events = store.history.filter((event) => event.sessionId === session.id); if (!events.length) return; events.sort((a, b) => b.at - a.at).forEach((event) => { store.progress[event.cardId] = event.before; }); store.history = store.history.filter((event) => event.sessionId !== session.id); save(); session = makeSession(); test = null; status('Current session undone.'); render(); }
 function updateGlobalNext() {
@@ -516,6 +545,7 @@ async function init() {
   if (store.settings.referenceBook) $('#reference-status').textContent = `Local reference selected: ${store.settings.referenceBook.split(/[/\\]/).pop()}`;
   else installReference(await window.studio.useProvidedVolumeOne(), { open: false });
   const tts = await window.studio.ttsStatus(); $('#tts-status').textContent = tts.piper && tts.english && tts.dutch ? 'Local English and Dutch neural voices are installed.' : 'A local neural voice is unavailable; the browser voice remains available.';
+  refreshAiStatus().catch((error) => setAiStatus(`Bridge check failed: ${error.message}`, 'error'));
   document.querySelectorAll('.mode').forEach((button) => button.addEventListener('click', () => { stopReading(); mode = button.dataset.mode; document.querySelectorAll('.mode').forEach((item) => item.classList.toggle('active', item === button)); render(); }));
   $('#resource-cards').addEventListener('click', () => document.querySelector('[data-mode="learn"]').click());
   $('#resource-book').addEventListener('click', () => { setWorkbenchLayout('split'); $('#reference-panel').open = true; showReference(); });
@@ -563,6 +593,12 @@ async function init() {
   ['text-colour', 'background-colour', 'card-colour'].forEach((id) => $('#'+id).addEventListener('input', () => { store.settings.theme = { text: $('#text-colour').value, background: $('#background-colour').value, card: $('#card-colour').value }; applyTheme(); save(); }));
   $('#reset-theme').addEventListener('click', () => { store.settings.theme = { text: '#f4f1ea', background: '#0a0a0a', card: '#121212' }; $('#text-colour').value = '#f4f1ea'; $('#background-colour').value = '#0a0a0a'; $('#card-colour').value = '#121212'; applyTheme(); save(); });
   $('#undo-one').addEventListener('click', undoOne); $('#undo-session').addEventListener('click', undoSession);
+  $('#ai-check').addEventListener('click', () => refreshAiStatus().catch((error) => setAiStatus(error.message, 'error')));
+  $('#ai-open-web').addEventListener('click', async () => { try { const provider = $('#ai-web-provider').value; await window.studio.ai.openWebProvider({ provider, customUrl: $('#ai-custom-url').value }); setAiStatus(`${provider} opened in a persistent visible session.`, 'ready'); } catch (error) { setAiStatus(error.message, 'error'); } });
+  $('#ai-close-web').addEventListener('click', async () => { await window.studio.ai.closeWebProvider(); setAiStatus('Web AI window closed.', 'manual'); });
+  $('#ai-send-card').addEventListener('click', async () => { try { const result = await window.studio.ai.sendWebPrompt({ prompt: cardAiPrompt(displayedCard()) }); setAiStatus(result.submitted ? 'Prompt inserted and submitted.' : result.clipboardFallback ? 'Prompt copied to the clipboard; paste it into the visible AI window.' : result.reason, result.submitted ? 'ready' : 'manual'); } catch (error) { setAiStatus(error.message, 'error'); } });
+  $('#ai-capture-note').addEventListener('click', async () => { try { const result = await window.studio.ai.captureWebResponse(); if (!result.captured) throw new Error('No visible AI answer could be captured yet.'); appendAiNote(result.text, 'AI web explanation'); setAiStatus('Latest visible AI answer added to this card note.', 'ready'); } catch (error) { setAiStatus(error.message, 'error'); } });
+  $('#ai-explain-card').addEventListener('click', async () => { try { const model = $('#ai-ollama-model').value; if (!model) throw new Error('No local Ollama model is selected.'); setAiStatus(`Generating locally with ${model}…`); const result = await window.studio.ai.generateWithOllama({ model, prompt: cardAiPrompt(displayedCard()) }); appendAiNote(result.text, `Ollama · ${model}`); setAiStatus('Local explanation added to this card note.', 'ready'); } catch (error) { setAiStatus(error.message, 'error'); } });
   $('#export-session').addEventListener('click', async () => { const result = await window.studio.exportSession(store); $('#file-status').textContent = result.canceled ? 'Save cancelled.' : `Saved: ${result.filePath}`; });
   $('#import-session').addEventListener('click', async () => { try { const result = await window.studio.importSession(); if (result.canceled) return; store = { ...store, ...result.store }; store.notes ||= {}; store.progress ||= {}; store.history ||= []; await save(); $('#file-status').textContent = `Loaded: ${result.filePath}`; render(); } catch { $('#file-status').textContent = 'Invalid session file.'; } });
   render();
@@ -573,7 +609,7 @@ function showStartupError(error) {
     ? 'This HTML page is only a preview. Open CCNA Memory Studio as the Electron program to load cards, PDF, progress, sessions and AI speech.'
     : `The study library could not start: ${error?.message || error}`;
   const content = $('#content');
-  if (content) content.innerHTML = `<article class="learn-card startup-error"><p class="label">PROGRAM NOT CONNECTED</p><h2 class="statement">${escapeHtml(message)}</h2><p class="quiet">Electron project: M:\\CCNA-Memory-Studio-v3-Focused</p></article>`;
+  if (content) content.innerHTML = `<article class="learn-card startup-error"><p class="label">PROGRAM NOT CONNECTED</p><h2 class="statement">${escapeHtml(message)}</h2><p class="quiet">Electron project: M:\\CCNA Memory Studio\\CCNA-Memory-Studio-v3-Focused</p></article>`;
   const controls = $('#fixed-controls'); if (controls) controls.hidden = true;
   console.error(error);
 }
