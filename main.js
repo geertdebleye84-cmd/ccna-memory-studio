@@ -10,14 +10,16 @@ const root = __dirname;
 const legacyUserData = path.join(app.getPath('appData'), 'CCNA Memory Studio Focused v3');
 // Keep the study application's caches and progress off C:. The workspace lives
 // on M:, while older progress remains readable as a one-way fallback.
-app.setPath('userData', path.join(root, 'user-data'));
-app.setPath('temp', path.join(root, 'user-data', 'temp'));
-const singleInstance = app.requestSingleInstanceLock();
-if (!singleInstance) app.exit(0);
+const writableDataRoot = app.isPackaged
+  ? path.join(app.getPath('appData'), 'SiriusBitz', 'CCNA Memory Studio')
+  : path.join(root, 'user-data');
+fs.mkdirSync(writableDataRoot, { recursive: true });
+app.setPath('userData', writableDataRoot);
+app.setPath('temp', path.join(writableDataRoot, 'temp'));
 let windowRef, aiBridge;
 const dataFile = () => path.join(app.getPath('userData'), 'progress.json');
 const legacyDataFile = path.join(legacyUserData, 'progress.json');
-const outputDir = path.join(root, 'runtime', 'tts-output');
+const outputDir = path.join(writableDataRoot, 'runtime', 'tts-output');
 const piperExe = path.join(root, 'runtime', 'piper', 'Scripts', 'piper.exe');
 const nlModel = path.join(root, 'runtime', 'piper', 'voices', 'nl_BE-nathalie-medium.onnx');
 const enModel = path.join(root, 'runtime', 'piper', 'voices-en', 'en_US-lessac-medium.onnx');
@@ -80,7 +82,6 @@ async function synthesize({ text, language, speed }) {
   fs.writeFileSync(output, audio); return pathToFileURL(output).toString();
 }
 app.whenReady().then(() => {
-  if (!singleInstance) return;
   windowRef = new BrowserWindow({ width: 1540, height: 980, minWidth: 1180, minHeight: 720, backgroundColor: '#0a0a0a', title: 'CCNA Memory Studio — Focused', webPreferences: { preload: path.join(root, 'preload.js'), contextIsolation: true, sandbox: false } });
   windowRef.on('page-title-updated', (event) => { event.preventDefault(); windowRef.setTitle('CCNA Memory Studio — Electron'); });
   windowRef.loadFile('index.html');
