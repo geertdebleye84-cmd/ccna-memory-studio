@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*.*.*'
+      - 'rebuild-*'
   workflow_dispatch:
     inputs:
       release_tag:
@@ -41,7 +42,7 @@ jobs:
       - name: Publish installer to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ inputs.release_tag || github.ref_name }}
+          tag_name: ${{ inputs.release_tag || (startsWith(github.ref_name, 'rebuild-') && 'v3.0.3') || github.ref_name }}
           generate_release_notes: true
           overwrite_files: true
           files: dist-installer/SiriusBitz-CCNA-Memory-Studio-*-Setup.exe
