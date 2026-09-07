@@ -17,6 +17,8 @@
 - Added `LICENSE`, `CONTRIBUTING.md` and `CHANGELOG.md`.
 - Extended the README with setup and packaging instructions.
 - Added `dist/` to `.gitignore`; installers belong in GitHub Releases.
+- The Windows installer is intentionally unsigned; no code-signing certificate
+  is available for this open source release.
 
 ## Required verification
 

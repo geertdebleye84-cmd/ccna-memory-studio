@@ -26,6 +26,7 @@ files:
   - '!tmp/**/*'
 win:
   target: nsis
+  signAndEditExecutable: false
   artifactName: SiriusBitz-CCNA-Memory-Studio-${version}-Setup.${ext}
 nsis:
   oneClick: false
