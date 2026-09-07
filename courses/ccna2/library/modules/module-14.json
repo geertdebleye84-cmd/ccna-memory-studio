@@ -1,0 +1,326 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 14,
+    "title": "Routing Concepts",
+    "summary": "Volg de forwardingbeslissing van host tot router, lees IPv4/IPv6-routetabellen en vergelijk statische en dynamische routebronnen."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 11
+  },
+  "cards": [
+    {
+      "id": "ccna2-m14-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.1",
+      "sectionTitle": "Path Determination",
+      "type": "knowledge",
+      "prompt": "Welke route wint voor 192.0.2.130 als /0, /24 en /25 beschikbaar zijn en alle matchen?",
+      "choices": [
+        "De /25",
+        "De route met laagste AD ongeacht prefix",
+        "De /0",
+        "De oudste route"
+      ],
+      "correctIndex": 0,
+      "answer": "De /25",
+      "explanation": "De meest specifieke, langste prefix wint.",
+      "tags": [
+        "routing",
+        "concepts",
+        "path",
+        "determination",
+        "route",
+        "wint",
+        "192.0.2.130",
+        "beschikbaar",
+        "alle",
+        "matchen"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m14-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.2",
+      "sectionTitle": "Packet Forwarding",
+      "type": "knowledge",
+      "prompt": "Wat verandert normaal op elke routerhop?",
+      "choices": [
+        "De Layer-2 bron- en bestemmingsadressen",
+        "De IP-bron en IP-bestemming",
+        "Het TCP-poortnummer",
+        "De applicatiedata"
+      ],
+      "correctIndex": 0,
+      "answer": "De Layer-2 bron- en bestemmingsadressen",
+      "explanation": "De router bouwt voor elke uitgaande link een nieuw frame.",
+      "tags": [
+        "routing",
+        "concepts",
+        "packet",
+        "forwarding",
+        "verandert",
+        "normaal",
+        "elke",
+        "routerhop"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m14-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.1",
+      "sectionTitle": "Path Determination",
+      "type": "knowledge",
+      "prompt": "Wanneer vergelijkt een router administrative distance?",
+      "choices": [
+        "Bij routes naar exact dezelfde prefix uit verschillende bronnen",
+        "Tussen elke /24 en /25",
+        "Bij ARP-resolutie",
+        "Bij keuze van switchpoort"
+      ],
+      "correctIndex": 0,
+      "answer": "Bij routes naar exact dezelfde prefix uit verschillende bronnen",
+      "explanation": "AD bepaalt welke routebron voor eenzelfde bestemming/prefix wordt vertrouwd.",
+      "tags": [
+        "routing",
+        "concepts",
+        "path",
+        "determination",
+        "wanneer",
+        "vergelijkt",
+        "router",
+        "administrative",
+        "distance"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m14-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.4",
+      "sectionTitle": "IP Routing Table",
+      "type": "knowledge",
+      "prompt": "Wat gebeurt zonder passende route of default route?",
+      "choices": [
+        "De router dropt het pakket.",
+        "De router floodt het pakket.",
+        "De switch leert de bestemming.",
+        "DHCP maakt een route."
+      ],
+      "correctIndex": 0,
+      "answer": "De router dropt het pakket.",
+      "explanation": "Routers flooden onbekende IP-bestemmingen niet.",
+      "tags": [
+        "routing",
+        "concepts",
+        "table",
+        "gebeurt",
+        "zonder",
+        "passende",
+        "route",
+        "default"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m14-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.1",
+      "sectionTitle": "Path Determination",
+      "type": "diagnosis",
+      "prompt": "Voor 10.1.2.130 bestaan routes /0, 10.0.0.0/8 en 10.1.2.128/25. De /8 heeft lagere AD. Welke route gebruikt de router?",
+      "choices": [
+        "De /25 door longest prefix match.",
+        "De /8 door de lagere AD.",
+        "De /0 als gateway of last resort.",
+        "Alle drie willekeurig."
+      ],
+      "correctIndex": 0,
+      "answer": "De /25 door longest prefix match.",
+      "explanation": "Prefixspecificiteit wordt vóór AD tussen verschillende prefixlengtes toegepast.",
+      "tags": [
+        "routing",
+        "concepts",
+        "path",
+        "determination",
+        "10.1.2.130",
+        "bestaan",
+        "routes",
+        "10.0.0.0/8",
+        "10.1.2.128/25.",
+        "heeft"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m14-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.2",
+      "sectionTitle": "Packet Forwarding",
+      "type": "diagnosis",
+      "prompt": "Een capture toont per routerhop andere Ethernetadressen maar dezelfde IP-bron en -bestemming. Waarom?",
+      "choices": [
+        "Elke router bouwt een nieuw Layer-2-frame.",
+        "Elke router voert DHCP uit.",
+        "STP herschrijft IP-adressen.",
+        "DNS bewaart de MAC-adressen."
+      ],
+      "correctIndex": 0,
+      "answer": "Elke router bouwt een nieuw Layer-2-frame.",
+      "explanation": "De Layer-3-payload blijft end-to-end terwijl de linkencapsulatie per hop verandert.",
+      "tags": [
+        "routing",
+        "concepts",
+        "packet",
+        "forwarding",
+        "capture",
+        "toont",
+        "per",
+        "routerhop",
+        "andere",
+        "ethernetadressen"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m14-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.1",
+      "sectionTitle": "Path Determination",
+      "type": "flashcard",
+      "front": "14.1 · Path Determination",
+      "back": "Een host bepaalt met eigen adres en masker/prefix of de bestemming lokaal is. Lokaal: resolveer doel-MAC. Remote: stuur het frame naar de MAC van de default gateway terwijl het IP-bestemmingsadres eind-tot-eind gelijk blijft. Elke router zoekt de meest specifieke overeenkomst: longest prefix match. /28 wint dus van /24 en van /0, ongeacht dat de default route ook overeenkomt. Wanneer meerdere routebronnen exact dezelfde prefix leveren, kiest de router eerst de laagste administrative distance; binnen hetzelfde protocol beslist de metric.",
+      "commands": "show ip route 198.51.100.25\nshow ipv6 route 2001:db8:20::25",
+      "verify": [
+        "Langste prefix geïdentificeerd",
+        "Routebron/AD/metric gelezen",
+        "Next hop of exitinterface bereikbaar"
+      ],
+      "tags": [
+        "routing",
+        "concepts",
+        "path",
+        "determination"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m14-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.2",
+      "sectionTitle": "Packet Forwarding",
+      "type": "flashcard",
+      "front": "14.2 · Packet Forwarding",
+      "back": "Een router verwijdert het ontvangen Layer-2-frame, valideert/verwerkt het IP-pakket, verlaagt IPv4 TTL of IPv6 Hop Limit, kiest een route en encapsuleert opnieuw voor de volgende link. De Layer-2-bron- en bestemmingsadressen veranderen per hop. De Layer-3-adressen blijven normaal gelijk zonder NAT. ARP bedient IPv4-next-hops; NDP bedient IPv6-neighbors. Cisco Express Forwarding gebruikt een Forwarding Information Base (FIB) en adjacency table om forwarding snel en schaalbaar uit te voeren.",
+      "commands": "show ip cef\nshow adjacency\nshow arp\nshow ipv6 neighbors",
+      "verify": [
+        "Next-hop adjacency resolved",
+        "TTL/Hop Limit daalt per router",
+        "Retourpad bestaat"
+      ],
+      "tags": [
+        "routing",
+        "concepts",
+        "packet",
+        "forwarding"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m14-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.3",
+      "sectionTitle": "Basic Router Configuration Review",
+      "type": "flashcard",
+      "front": "14.3 · Basic Router Configuration Review",
+      "back": "Een betrouwbare baseline bevat hostname, veilige toegang, interfacebeschrijvingen, correcte dual-stack adressen, no shutdown, opgeslagen configuratie en eventueel logging/NTP. show ip interface brief toont niet het masker; gebruik show running-config interface of show interfaces voor detail. up/down wijst vaak op Layer-2-line-protocolproblemen; down/down eerder fysiek.",
+      "commands": "show running-config\nshow interfaces description\nshow ip interface brief\nshow ipv6 interface brief",
+      "verify": [
+        "Alle gebruikte interfaces up/up",
+        "Adresschema zonder overlap",
+        "Configuratie opgeslagen"
+      ],
+      "tags": [
+        "routing",
+        "concepts",
+        "basic",
+        "router",
+        "configuration",
+        "review"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m14-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.4",
+      "sectionTitle": "IP Routing Table",
+      "type": "flashcard",
+      "front": "14.4 · IP Routing Table",
+      "back": "Routecodes tonen bron, bijvoorbeeld C connected, L local, S static en protocolcodes. Een parent/child-weergave kan subnetten groeperen; let steeds op de concrete prefix. Een route-entry vermeldt prefix, routebron/AD, metric, next hop, ouderdom en/of exitinterface. Direct connected routes hebben geen remote next hop. Een gateway of last resort is de kandidaat-default route. Ontbreekt een match én default route, dan dropt de router het pakket en kan ICMP unreachable terugkeren.",
+      "commands": "show ip route\nshow ip route connected\nshow ipv6 route\nshow ip protocols",
+      "verify": [
+        "Default route herkenbaar als /0",
+        "Local /32 of /128 onderscheiden van connected subnet",
+        "Route naar elk labnetwerk aanwezig"
+      ],
+      "tags": [
+        "routing",
+        "concepts",
+        "table"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m14-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 14,
+      "moduleTitle": "Routing Concepts",
+      "sectionId": "14.5",
+      "sectionTitle": "Static and Dynamic Routing",
+      "type": "flashcard",
+      "front": "14.5 · Static and Dynamic Routing",
+      "back": "Statische routes zijn voorspelbaar en protocolarm maar vereisen handmatig onderhoud. Dynamische protocollen ontdekken/topologie-updaten routes en schalen beter, met extra control traffic en ontwerpcomplexiteit. Administrative distance vergelijkt verschillende bronnen voor dezelfde prefix; lagere is geloofwaardiger. Connected is 0, static standaard 1; protocolwaarden verschillen. Equal-cost routes kunnen load sharing leveren. Een floating static route krijgt bewust een hogere AD en verschijnt pas wanneer de betere route verdwijnt.",
+      "commands": "show ip route static\nshow ip protocols\nshow running-config | include ^ip route",
+      "verify": [
+        "Primaire en backuproute onderscheiden",
+        "AD niet verward met metric",
+        "Route verdwijnt wanneer recursive next hop onbereikbaar wordt"
+      ],
+      "tags": [
+        "routing",
+        "concepts",
+        "static",
+        "and",
+        "dynamic"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

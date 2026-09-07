@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 14,
+    "title": "Network Automation",
+    "summary": "Gebruik gestructureerde data, APIs, REST, configuratiebeheer en intent-based networking om herhaalbare en controleerbare netwerkveranderingen te bouwen."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 5
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m14-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "14.1",
+      "sectionTitle": "Automation Overview",
+      "prompt": "Welke HTTP-methode leest normaal een resource?",
+      "choices": [
+        "GET",
+        "DELETE",
+        "PATCH",
+        "CONNECT als configuratiemethode"
+      ],
+      "correctIndex": 0,
+      "answer": "GET",
+      "explanation": "GET is bedoeld voor retrieval.",
+      "tags": [
+        "network",
+        "automation",
+        "overview",
+        "http-methode",
+        "leest",
+        "normaal",
+        "resource"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m14-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "14.2",
+      "sectionTitle": "Data Formats",
+      "prompt": "Wat betekent idempotent configuratiebeheer?",
+      "choices": [
+        "Herhaalde uitvoering convergeert naar dezelfde gewenste eindstate.",
+        "Elke run maakt een nieuwe interface.",
+        "Alle fouten worden genegeerd.",
+        "De API gebruikt geen TLS."
+      ],
+      "correctIndex": 0,
+      "answer": "Herhaalde uitvoering convergeert naar dezelfde gewenste eindstate.",
+      "explanation": "Een tweede run hoeft geen extra wijziging te maken.",
+      "tags": [
+        "network",
+        "automation",
+        "data",
+        "formats",
+        "betekent",
+        "idempotent",
+        "configuratiebeheer"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m14-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "14.3",
+      "sectionTitle": "APIs and REST",
+      "prompt": "Wat sluit de IBN-feedbacklus?",
+      "choices": [
+        "Assurance en telemetry vergelijken actuele state met intent.",
+        "Een statische banner",
+        "Alleen een VLAN-naam",
+        "Een handmatige ping zonder doelwaarde"
+      ],
+      "correctIndex": 0,
+      "answer": "Assurance en telemetry vergelijken actuele state met intent.",
+      "explanation": "Closed-loop assurance detecteert afwijking en voedt bijsturing.",
+      "tags": [
+        "network",
+        "automation",
+        "apis",
+        "and",
+        "rest",
+        "sluit",
+        "ibn-feedbacklus"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m14-diag-01",
+      "type": "diagnostic",
+      "sectionId": "14.3",
+      "sectionTitle": "APIs and REST",
+      "prompt": "Een automatiseringsjob herhaalt na een timeout een POST en maakt twee objecten. Welk ontwerpdetail ontbrak?",
+      "choices": [
+        "Veilige idempotentie of een idempotency key",
+        "Een hogere OSPF-priority",
+        "Een LLDP-neighbor",
+        "Een groter PoE-budget"
+      ],
+      "correctIndex": 0,
+      "answer": "Veilige idempotentie of een idempotency key",
+      "explanation": "Niet-idempotente retries kunnen zonder deduplicatie dubbele side effects veroorzaken.",
+      "tags": [
+        "network",
+        "automation",
+        "apis",
+        "and",
+        "rest",
+        "automatiseringsjob",
+        "herhaalt",
+        "timeout",
+        "post",
+        "maakt"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m14-diag-02",
+      "type": "diagnostic",
+      "sectionId": "14.4",
+      "sectionTitle": "Configuration Management",
+      "prompt": "Een tweede configuratierun toont opnieuw dezelfde wijzigingen terwijl het apparaat al correct staat. Welke eigenschap ontbreekt?",
+      "choices": [
+        "Idempotentie",
+        "Encryptie van syslog",
+        "PAT",
+        "DR-preemption"
+      ],
+      "correctIndex": 0,
+      "answer": "Idempotentie",
+      "explanation": "Een idempotente run convergeert en rapporteert daarna geen onnodige wijziging.",
+      "tags": [
+        "network",
+        "automation",
+        "configuration",
+        "management",
+        "tweede",
+        "configuratierun",
+        "toont",
+        "opnieuw",
+        "dezelfde",
+        "wijzigingen"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m14-flash-01",
+      "type": "flashcard",
+      "sectionId": "14.1",
+      "sectionTitle": "Automation Overview",
+      "front": "Wat moet je kunnen uitleggen over Automation Overview?",
+      "back": "Automatisering verlaagt variatie en versnelt herhaalbare taken, maar vermenigvuldigt ook fouten. Begin met een bron van waarheid, kleine scope, idempotentie, dry run, review en rollback. Orchestration coördineert meerdere systemen en stappen. Een script is pas operationeel betrouwbaar met inputvalidatie, logging, foutafhandeling, secretsbeheer en tests.",
+      "tags": [
+        "network",
+        "automation",
+        "overview",
+        "automatisering",
+        "verlaagt",
+        "variatie",
+        "versnelt",
+        "herhaalbare",
+        "taken",
+        "maar"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m14-flash-02",
+      "type": "flashcard",
+      "sectionId": "14.2",
+      "sectionTitle": "Data Formats",
+      "front": "Wat moet je kunnen uitleggen over Data Formats?",
+      "back": "JSON gebruikt objecten, arrays, strings, numbers, booleans en null. YAML is mensvriendelijk maar inspringing en impliciete types vragen aandacht. XML gebruikt geneste tags en attributen. Een schema en versiecontract voorkomen dat syntactisch geldige maar semantisch verkeerde data wordt toegepast. Normaliseer adressen, interfaces en units vóór vergelijking.",
+      "tags": [
+        "network",
+        "automation",
+        "data",
+        "formats",
+        "json",
+        "gebruikt",
+        "objecten",
+        "arrays",
+        "strings",
+        "numbers"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m14-flash-03",
+      "type": "flashcard",
+      "sectionId": "14.3",
+      "sectionTitle": "APIs and REST",
+      "front": "Wat moet je kunnen uitleggen over APIs and REST?",
+      "back": "Een API definieert een contract. REST werkt met resources en HTTP-methoden: GET leest, POST maakt of start, PUT vervangt, PATCH wijzigt gedeeltelijk en DELETE verwijdert. Statuscodes, headers, authenticatie, pagination en rate limits horen bij het contract. GET hoort safe te zijn; idempotentie betekent dat herhaling hetzelfde eindresultaat geeft, niet dat elk antwoord identiek is.",
+      "tags": [
+        "network",
+        "automation",
+        "apis",
+        "and",
+        "rest",
+        "api",
+        "definieert",
+        "contract.",
+        "werkt",
+        "resources"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m14-flash-04",
+      "type": "flashcard",
+      "sectionId": "14.4",
+      "sectionTitle": "Configuration Management",
+      "front": "Wat moet je kunnen uitleggen over Configuration Management?",
+      "back": "Agentless tools verbinden vanaf een controller; agent-based systemen draaien een component op nodes. Declaratieve modellen beschrijven gewenste state, imperatieve scripts de exacte stappen. Templates scheiden variabele data van configuratielogica. Idempotente runs veranderen niets wanneer state al klopt; drift detection vergelijkt actuele state met source of truth.",
+      "tags": [
+        "network",
+        "automation",
+        "configuration",
+        "management",
+        "agentless",
+        "tools",
+        "verbinden",
+        "vanaf",
+        "controller",
+        "agent-based"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m14-flash-05",
+      "type": "flashcard",
+      "sectionId": "14.5",
+      "sectionTitle": "Intent-Based Networking and Controllers",
+      "front": "Wat moet je kunnen uitleggen over Intent-Based Networking and Controllers?",
+      "back": "IBN vertaalt zakelijke intent naar beleid, implementeert dit via een controller en gebruikt assurance om resultaat continu te vergelijken met bedoeling. Dit is een closed-loopproces. Controllerplatforms zoals Cisco Catalyst Center combineren inventory, design, policy, provisioning en assurance. Menselijke goedkeuring blijft passend voor brede of risicovolle wijzigingen.",
+      "tags": [
+        "network",
+        "automation",
+        "intent-based",
+        "networking",
+        "and",
+        "controllers",
+        "ibn",
+        "vertaalt",
+        "zakelijke",
+        "intent"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

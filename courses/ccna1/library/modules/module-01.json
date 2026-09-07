@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 1,
+    "title": "Networking Today",
+    "summary": "Plaats hosts, tussenliggende apparaten, media, topologieën en internetdiensten in één betrouwbaar en veilig netwerkmodel."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 9,
+    "total": 14
+  },
+  "cards": [
+    {
+      "id": "ccna1-m01-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.4",
+      "sectionTitle": "Common Types of Networks",
+      "type": "knowledge",
+      "prompt": "Welk apparaat verbindt normaal verschillende IP-netwerken?",
+      "choices": [
+        "Router",
+        "Layer-2-hub",
+        "Patchpaneel",
+        "NIC"
+      ],
+      "correctIndex": 0,
+      "answer": "Router",
+      "explanation": "Een router kiest een Layer-3-pad tussen netwerken.",
+      "tags": [
+        "networking",
+        "today",
+        "common",
+        "types",
+        "networks",
+        "welk",
+        "apparaat",
+        "verbindt",
+        "normaal",
+        "verschillende"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m01-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.6",
+      "sectionTitle": "Reliable Networks",
+      "type": "knowledge",
+      "prompt": "Welke vier eigenschappen horen bij een betrouwbaar netwerk?",
+      "choices": [
+        "Fault tolerance, schaalbaarheid, QoS en beveiliging",
+        "DNS, DHCP, FTP en HTTP",
+        "Koper, glas, radio en coax",
+        "CLI, GUI, API en console"
+      ],
+      "correctIndex": 0,
+      "answer": "Fault tolerance, schaalbaarheid, QoS en beveiliging",
+      "explanation": "Dit zijn de vier ontwerpvereisten uit de module.",
+      "tags": [
+        "networking",
+        "today",
+        "reliable",
+        "networks",
+        "vier",
+        "eigenschappen",
+        "horen",
+        "betrouwbaar",
+        "netwerk"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m01-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.3",
+      "sectionTitle": "Network Representations and Topologies",
+      "type": "knowledge",
+      "prompt": "Wat toont een logisch diagram vooral?",
+      "choices": [
+        "Adressen, subnetten en verkeersrelaties",
+        "De exacte kabellengtes in een rack",
+        "Alleen gebouwafmetingen",
+        "De aankoopprijs van apparaten"
+      ],
+      "correctIndex": 0,
+      "answer": "Adressen, subnetten en verkeersrelaties",
+      "explanation": "Logische topologie beschrijft communicatie en adressering.",
+      "tags": [
+        "networking",
+        "today",
+        "network",
+        "representations",
+        "and",
+        "topologies",
+        "toont",
+        "logisch",
+        "diagram",
+        "vooral"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m01-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.3",
+      "sectionTitle": "Network Representations and Topologies",
+      "type": "diagnosis",
+      "prompt": "Een nieuw netwerkdiagram toont wel apparaten en kabels, maar geen IP-subnetten, gateways of VLANs. Waarom is het ongeschikt voor routingdiagnose?",
+      "choices": [
+        "Het is alleen een fysiek diagram; de logische adresrelaties ontbreken.",
+        "Het gebruikt te veel Layer-3-informatie.",
+        "Elke kabel moet een DNS-naam hebben.",
+        "Een diagram mag nooit beide topologieën tonen."
+      ],
+      "correctIndex": 0,
+      "answer": "Het is alleen een fysiek diagram; de logische adresrelaties ontbreken.",
+      "explanation": "Routingdiagnose vraagt een logisch overzicht van adressen, subnetten en verkeersrelaties.",
+      "tags": [
+        "networking",
+        "today",
+        "network",
+        "representations",
+        "and",
+        "topologies",
+        "nieuw",
+        "netwerkdiagram",
+        "toont",
+        "wel"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m01-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.6",
+      "sectionTitle": "Reliable Networks",
+      "type": "diagnosis",
+      "prompt": "Een kantoor heeft één router, één ISP-link en geen reservepad. Na één kabelbreuk is alles offline. Welke betrouwbaarheidseis ontbreekt?",
+      "choices": [
+        "Fault tolerance door redundantie.",
+        "Meer DNS-records.",
+        "Een groter broadcastdomein.",
+        "Een lagere Ethernet-FCS."
+      ],
+      "correctIndex": 0,
+      "answer": "Fault tolerance door redundantie.",
+      "explanation": "Zonder redundant pad blijft de verbinding een single point of failure.",
+      "tags": [
+        "networking",
+        "today",
+        "reliable",
+        "networks",
+        "kantoor",
+        "heeft",
+        "router",
+        "isp-link",
+        "geen",
+        "reservepad."
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m01-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.1",
+      "sectionTitle": "Networks Affect our Lives",
+      "type": "flashcard",
+      "front": "1.1 · Networks Affect our Lives",
+      "back": "Netwerken verbinden mensen, processen, gegevens en apparaten. Ze maken communicatie, samenwerking, leren, werken, automatisering en dienstverlening onafhankelijker van plaats en tijd. Converged networks dragen data, spraak en video over één beheerde infrastructuur; beschikbaarheid en beveiliging worden daardoor bedrijfskritisch.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "networks",
+        "affect",
+        "our",
+        "lives"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.2",
+      "sectionTitle": "Network Components",
+      "type": "flashcard",
+      "front": "1.2 · Network Components",
+      "back": "Hosts of end devices zijn bron of bestemming van berichten. Servers leveren diensten; clients vragen ze aan; een apparaat kan in peer-to-peercontext beide rollen hebben. Switches, routers, access points en firewalls sturen verkeer tussen hosts en netwerken. NIC, poort en interface koppelen een apparaat aan koper, glasvezel of radio.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "network",
+        "components"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.3",
+      "sectionTitle": "Network Representations and Topologies",
+      "type": "flashcard",
+      "front": "1.3 · Network Representations and Topologies",
+      "back": "Een logisch diagram toont adressen, subnetten, VLANs en verkeerspaden; een fysiek diagram toont locaties, bekabeling, racks en poorten. Belangrijke symbolen en termen zijn NIC, fysieke poort, interface, LAN, WAN en cloud. Documenteer beide topologieën om configuratie en storingen te begrijpen.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "network",
+        "representations",
+        "and",
+        "topologies"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.4",
+      "sectionTitle": "Common Types of Networks",
+      "type": "flashcard",
+      "front": "1.4 · Common Types of Networks",
+      "back": "Een SOHO/LAN bedient een beperkte locatie; een WAN verbindt geografisch gescheiden LANs. Internet is een wereldwijde internetwork van autonome netwerken. Een intranet is intern voor een organisatie; een extranet geeft gecontroleerde toegang aan externe partners. Eigendom, schaal, beheer en technologie onderscheiden netwerken.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "common",
+        "types",
+        "networks"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.5",
+      "sectionTitle": "Internet Connections",
+      "type": "flashcard",
+      "front": "1.5 · Internet Connections",
+      "back": "Consumenten gebruiken onder meer kabel, DSL, glasvezel, mobiel en satelliet. Organisaties gebruiken daarnaast dedicated Ethernet, leased lines, MPLS of zakelijke breedband. Keuzecriteria zijn bandbreedte, latency, symmetrie, beschikbaarheid, dekking, SLA, kosten en redundantie; internettoegang loopt via een ISP.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "internet",
+        "connections"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.6",
+      "sectionTitle": "Reliable Networks",
+      "type": "flashcard",
+      "front": "1.6 · Reliable Networks",
+      "back": "Een betrouwbaar netwerk levert fault tolerance, schaalbaarheid, QoS en beveiliging. Redundante paden verminderen single points of failure. Packet-switched verkeer deelt verbindingen efficiënt. QoS prioriteert tijdgevoelige stromen; beveiliging beschermt infrastructuur en gegevens.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "reliable",
+        "networks"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.7",
+      "sectionTitle": "Network Trends",
+      "type": "flashcard",
+      "front": "1.7 · Network Trends",
+      "back": "BYOD, collaboration, video, cloud, smart home en IoT verhogen mobiliteit en het aantal verbonden endpoints. Public, private, hybrid en community cloud verschillen in eigendom en afscherming. Powerline en wireless broadband vullen traditionele toegang aan.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "network",
+        "trends"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f08",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.8",
+      "sectionTitle": "Network Security",
+      "type": "flashcard",
+      "front": "1.8 · Network Security",
+      "back": "Externe en interne dreigingen omvatten malware, phishing, kwetsbaarheden, gestolen accounts, denial-of-service en misbruik door bevoegde gebruikers. Verdedig in lagen met updates, sterke authenticatie, firewalls, endpointbescherming, segmentatie, encryptie, back-ups, logging en opleiding.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "network",
+        "security"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m01-f09",
+      "courseId": "ccna1-itn",
+      "moduleId": 1,
+      "moduleTitle": "Networking Today",
+      "sectionId": "1.9",
+      "sectionTitle": "The IT Professional",
+      "type": "flashcard",
+      "front": "1.9 · The IT Professional",
+      "back": "Netwerkrollen lopen van support en technicus tot beheerder, engineer, architect, security- of automatiseringsspecialist. Vaardigheden worden aangetoond met labs, portfolio, documentatie en certificering; Cisco DevNet koppelt netwerkkennis aan software en API’s.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "networking",
+        "today",
+        "the",
+        "professional"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

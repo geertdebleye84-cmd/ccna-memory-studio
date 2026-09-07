@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 8,
+    "title": "VPN and IPsec Concepts",
+    "summary": "Begrijp VPN-modellen en hoe IPsec met IKE, security associations, ESP en cryptografische algoritmen een beveiligde tunnel vormt."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 3
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m08-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "8.1",
+      "sectionTitle": "VPN Technology and Types",
+      "prompt": "Welk IPsec-protocol biedt doorgaans encryptie?",
+      "choices": [
+        "ESP",
+        "AH",
+        "ARP",
+        "LLDP"
+      ],
+      "correctIndex": 0,
+      "answer": "ESP",
+      "explanation": "ESP kan confidentiality en integriteit leveren.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "technology",
+        "types",
+        "welk",
+        "ipsec-protocol",
+        "biedt",
+        "doorgaans"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m08-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "8.2",
+      "sectionTitle": "IPsec Services and Protocols",
+      "prompt": "Welke taak voert IKE uit vóór IPsec-dataverkeer?",
+      "choices": [
+        "Peers authenticeren en SAs/sleutels onderhandelen",
+        "Ethernetframes schakelen",
+        "DHCP-leases uitdelen",
+        "QoS-queues legen"
+      ],
+      "correctIndex": 0,
+      "answer": "Peers authenticeren en SAs/sleutels onderhandelen",
+      "explanation": "IKE bouwt het control-planevertrouwen voor IPsec.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "services",
+        "protocols",
+        "taak",
+        "voert",
+        "ike",
+        "ipsec-dataverkeer"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m08-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "8.3",
+      "sectionTitle": "IKE and Cryptographic Choices",
+      "prompt": "Wat beschermt tunnel mode?",
+      "choices": [
+        "Het volledige oorspronkelijke IP-pakket in een nieuw pakket",
+        "Alleen de TCP-poort",
+        "Alleen de Ethernet-FCS",
+        "Uitsluitend DNS"
+      ],
+      "correctIndex": 0,
+      "answer": "Het volledige oorspronkelijke IP-pakket in een nieuw pakket",
+      "explanation": "Tunnel mode kapselt het originele pakket in.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "ike",
+        "cryptographic",
+        "choices",
+        "beschermt",
+        "tunnel",
+        "mode"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m08-diag-01",
+      "type": "diagnostic",
+      "sectionId": "8.3",
+      "sectionTitle": "IKE and Cryptographic Choices",
+      "prompt": "IKEv2 staat READY, maar IPsec encap/decap blijft nul tijdens verkeer. Wat is de waarschijnlijkste volgende controle?",
+      "choices": [
+        "Traffic selectors en routes",
+        "CDP op de accesspoort",
+        "NTP-stratum",
+        "STP root priority"
+      ],
+      "correctIndex": 0,
+      "answer": "Traffic selectors en routes",
+      "explanation": "Een gezonde IKE SA bewijst niet dat interessant verkeer de IPsec selectors matcht.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "ike",
+        "cryptographic",
+        "choices",
+        "ikev2",
+        "staat",
+        "ready"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m08-diag-02",
+      "type": "diagnostic",
+      "sectionId": "8.2",
+      "sectionTitle": "IPsec Services and Protocols",
+      "prompt": "Een site-to-site VPN moet het volledige oorspronkelijke IP-pakket tussen gateways beschermen. Welke mode past?",
+      "choices": [
+        "Tunnel mode",
+        "Transport mode",
+        "Access mode",
+        "Passive mode"
+      ],
+      "correctIndex": 0,
+      "answer": "Tunnel mode",
+      "explanation": "Tunnel mode kapselt het volledige oorspronkelijke pakket in een nieuw IP-pakket.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "services",
+        "protocols",
+        "site-to-site",
+        "moet",
+        "volledige",
+        "oorspronkelijke"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m08-flash-01",
+      "type": "flashcard",
+      "sectionId": "8.1",
+      "sectionTitle": "VPN Technology and Types",
+      "front": "Wat moet je kunnen uitleggen over VPN Technology and Types?",
+      "back": "Een VPN creëert een logische private verbinding over een gedeeld netwerk. Site-to-site koppelt gateways en netwerken; remote access koppelt een endpoint aan een organisatie. Client-based VPN gebruikt software; clientless toegang beperkt zich vaak tot webapplicaties. Full tunnel stuurt al het verkeer via de organisatie, split tunnel alleen geselecteerde prefixes.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "technology",
+        "types",
+        "cre",
+        "ert",
+        "logische",
+        "private"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m08-flash-02",
+      "type": "flashcard",
+      "sectionId": "8.2",
+      "sectionTitle": "IPsec Services and Protocols",
+      "front": "Wat moet je kunnen uitleggen over IPsec Services and Protocols?",
+      "back": "IPsec kan data-origin authentication, integriteit, anti-replay en vertrouwelijkheid leveren. AH authenticeert maar versleutelt niet; ESP is gebruikelijk en kan encryptie plus authenticatie bieden. Transport mode beschermt de payload van het oorspronkelijke IP-pakket; tunnel mode kapselt het volledige oorspronkelijke pakket in en past bij gateway-naar-gateway VPNs.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "services",
+        "protocols",
+        "data-origin",
+        "authentication",
+        "integriteit",
+        "anti-replay"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m08-flash-03",
+      "type": "flashcard",
+      "sectionId": "8.3",
+      "sectionTitle": "IKE and Cryptographic Choices",
+      "front": "Wat moet je kunnen uitleggen over IKE and Cryptographic Choices?",
+      "back": "IKE authenticeert peers, onderhandelt algoritmen en maakt SAs en sleutelmateriaal. De peers moeten proposals, identiteit, authenticatie en traffic selectors compatibel configureren. Gebruik actuele combinaties zoals AES, SHA-2 en sterke Diffie-Hellmangroepen volgens organisatiebeleid. PFS zorgt dat nieuwe IPsec-sleutels niet uitsluitend van eerder sleutelmateriaal afhangen.",
+      "tags": [
+        "vpn",
+        "and",
+        "ipsec",
+        "concepts",
+        "ike",
+        "cryptographic",
+        "choices",
+        "authenticeert",
+        "peers",
+        "onderhandelt"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

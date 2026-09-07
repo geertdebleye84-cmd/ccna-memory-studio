@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 5,
+    "title": "STP Concepts",
+    "summary": "Voorkom Layer-2-lussen met STP/RSTP, voorspel root- en poortselectie en stuur het spanning-tree-pad bewust."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 3,
+    "total": 9
+  },
+  "cards": [
+    {
+      "id": "ccna2-m05-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.2",
+      "sectionTitle": "STP Operations",
+      "type": "knowledge",
+      "prompt": "Welke switch wordt STP-root?",
+      "choices": [
+        "De switch met de laagste Bridge ID",
+        "De switch met de meeste poorten",
+        "De switch met de hoogste MAC",
+        "De default gateway"
+      ],
+      "correctIndex": 0,
+      "answer": "De switch met de laagste Bridge ID",
+      "explanation": "Priority en daarna MAC vormen de verkiezingsbasis.",
+      "tags": [
+        "stp",
+        "concepts",
+        "operations",
+        "switch",
+        "stp-root"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m05-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.2",
+      "sectionTitle": "STP Operations",
+      "type": "knowledge",
+      "prompt": "Welke poort kiest een niet-root switch als root port?",
+      "choices": [
+        "Het pad met de laagste totale root path cost",
+        "De poort met hoogste poortnummer",
+        "Elke trunkpoort",
+        "De poort met de meeste VLANs"
+      ],
+      "correctIndex": 0,
+      "answer": "Het pad met de laagste totale root path cost",
+      "explanation": "STP vergelijkt eerst de gecumuleerde kosten naar de root.",
+      "tags": [
+        "stp",
+        "concepts",
+        "operations",
+        "poort",
+        "kiest",
+        "niet-root",
+        "switch",
+        "root",
+        "port"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m05-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.3",
+      "sectionTitle": "Evolution of STP",
+      "type": "knowledge",
+      "prompt": "Wat doet BPDU Guard bij een BPDU op een beschermde edgepoort?",
+      "choices": [
+        "De poort err-disable zetten",
+        "De switch root maken",
+        "De VLAN verwijderen",
+        "De BPDU flooden naar hosts"
+      ],
+      "correctIndex": 0,
+      "answer": "De poort err-disable zetten",
+      "explanation": "Dit voorkomt dat een onverwachte bridge via een edgepoort de topologie beïnvloedt.",
+      "tags": [
+        "stp",
+        "concepts",
+        "evolution",
+        "doet",
+        "bpdu",
+        "guard",
+        "beschermde",
+        "edgepoort"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m05-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.2",
+      "sectionTitle": "STP Operations",
+      "type": "knowledge",
+      "prompt": "Welke RSTP-status stuurt gebruikersframes door?",
+      "choices": [
+        "Forwarding",
+        "Discarding",
+        "Learning",
+        "Listening"
+      ],
+      "correctIndex": 0,
+      "answer": "Forwarding",
+      "explanation": "Alleen forwarding leert én stuurt normale frames door; learning stuurt ze nog niet door.",
+      "tags": [
+        "stp",
+        "concepts",
+        "operations",
+        "rstp-status",
+        "stuurt",
+        "gebruikersframes"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m05-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.2",
+      "sectionTitle": "STP Operations",
+      "type": "diagnosis",
+      "prompt": "In een switchdriehoek stuurt één redundante link geen gebruikersframes maar ontvangt wel BPDUs. Welke STP-rol verklaart dit?",
+      "choices": [
+        "Alternate/discarding.",
+        "Root/forwarding op de root bridge.",
+        "PortFast edge forwarding.",
+        "Disabled door shutdown."
+      ],
+      "correctIndex": 0,
+      "answer": "Alternate/discarding.",
+      "explanation": "Een alternate poort bewaart een reservepad en verwerkt BPDUs zonder normale data te forwarden.",
+      "tags": [
+        "stp",
+        "concepts",
+        "operations",
+        "switchdriehoek",
+        "stuurt",
+        "redundante",
+        "link",
+        "geen",
+        "gebruikersframes",
+        "maar"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m05-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.3",
+      "sectionTitle": "Evolution of STP",
+      "type": "diagnosis",
+      "prompt": "Een gebruiker sluit een kleine switch aan op een PortFast-poort en die poort gaat direct err-disabled. Welke beveiliging reageerde?",
+      "choices": [
+        "BPDU Guard.",
+        "DHCP relay.",
+        "HSRP tracking.",
+        "DAI trust."
+      ],
+      "correctIndex": 0,
+      "answer": "BPDU Guard.",
+      "explanation": "BPDU Guard blokkeert een edgepoort wanneer daar onverwacht een BPDU verschijnt.",
+      "tags": [
+        "stp",
+        "concepts",
+        "evolution",
+        "gebruiker",
+        "sluit",
+        "kleine",
+        "switch",
+        "portfast-poort",
+        "die",
+        "poort"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m05-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.1",
+      "sectionTitle": "Purpose of STP",
+      "type": "flashcard",
+      "front": "5.1 · Purpose of STP",
+      "back": "Redundante Layer-2-links verbeteren beschikbaarheid maar veroorzaken zonder luspreventie broadcast storms, MAC-table instability en meerdere kopieën van hetzelfde frame. Ethernet heeft geen TTL die een lus vanzelf stopt. STP bouwt een logisch lusvrije boom door overtollige paden te blokkeren en kan een geblokkeerd pad activeren wanneer het actieve pad faalt. BPDUs dragen bridge- en padinformatie. Switches blijven BPDUs verwerken op geblokkeerde/alternate poorten; blokkeren betekent geen normale dataforwarding, niet dat de poort fysiek uit staat.",
+      "commands": "show spanning-tree\nshow spanning-tree vlan 10",
+      "verify": [
+        "Eén root bridge per VLAN/instance",
+        "Redundante topologie heeft een alternate/blocking pad",
+        "Geen onverwachte topology changes"
+      ],
+      "tags": [
+        "stp",
+        "concepts",
+        "purpose"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m05-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.2",
+      "sectionTitle": "STP Operations",
+      "type": "flashcard",
+      "front": "5.2 · STP Operations",
+      "back": "De laagste Bridge ID wint root: eerst priority (met extended system ID/VLAN), daarna MAC-adres. Alle poorten op de root bridge zijn designated en forwarding. Elke niet-root switch kiest één root port met het laagste totale root path cost. Op elk segment wint één designated port; overige redundante poorten worden non-designated of alternate. Bij gelijke kosten beslissen achtereenvolgens lagere upstream bridge ID, lagere upstream port priority en lager port ID. Kosten zijn gebaseerd op linkbandbreedte. Klassiek 802.1D gebruikt blocking, listening, learning en forwarding; RSTP vereenvoudigt tot discarding, learning en forwarding en convergeert sneller met proposal/agreement.",
+      "commands": "show spanning-tree vlan 10 detail\nshow spanning-tree interface g0/1 detail",
+      "verify": [
+        "Root ID en local Bridge ID correct gelezen",
+        "Root port wijst naar laagste-cost pad",
+        "Port roles passen bij het diagram"
+      ],
+      "tags": [
+        "stp",
+        "concepts",
+        "operations"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m05-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 5,
+      "moduleTitle": "STP Concepts",
+      "sectionId": "5.3",
+      "sectionTitle": "Evolution of STP",
+      "type": "flashcard",
+      "front": "5.3 · Evolution of STP",
+      "back": "PVST+ draait een 802.1D-instance per VLAN; Rapid PVST+ gebruikt 802.1w-gedrag per VLAN. MST bundelt meerdere VLANs in een kleiner aantal instances. PortFast laat een edge/accesspoort direct forwarding worden, maar schakelt STP niet uit. Gebruik het alleen richting eindapparaten. BPDU Guard zet een PortFast-poort err-disabled zodra een BPDU binnenkomt en beschermt tegen een ongewenste switch. Root Guard en Loop Guard beschermen andere specifieke invarianten.",
+      "commands": "spanning-tree mode rapid-pvst\nspanning-tree vlan 10 root primary\ninterface range f0/1-20\n spanning-tree portfast\n spanning-tree bpduguard enable",
+      "verify": [
+        "show spanning-tree summary",
+        "show spanning-tree inconsistentports",
+        "show errdisable recovery"
+      ],
+      "tags": [
+        "stp",
+        "concepts",
+        "evolution"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

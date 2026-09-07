@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 10,
+    "title": "Basic Router Configuration",
+    "summary": "Configureer veilige routerbasis, dual-stack interfaces en correcte default gateways en verifieer de connected routes."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 3,
+    "total": 8
+  },
+  "cards": [
+    {
+      "id": "ccna1-m10-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.2",
+      "sectionTitle": "Configure Interfaces",
+      "type": "knowledge",
+      "prompt": "Welk commando activeert een routerinterface?",
+      "choices": [
+        "no shutdown",
+        "enable routing port",
+        "ip default-gateway",
+        "service routing"
+      ],
+      "correctIndex": 0,
+      "answer": "no shutdown",
+      "explanation": "No shutdown verwijdert de administratieve blokkering.",
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "interfaces",
+        "welk",
+        "commando",
+        "activeert",
+        "routerinterface"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m10-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.2",
+      "sectionTitle": "Configure Interfaces",
+      "type": "knowledge",
+      "prompt": "Welke route ontstaat door een up/up interface met IP?",
+      "choices": [
+        "Connected route",
+        "OSPF external route",
+        "Default route",
+        "BGP route"
+      ],
+      "correctIndex": 0,
+      "answer": "Connected route",
+      "explanation": "Direct aangesloten prefix wordt C.",
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "interfaces",
+        "route",
+        "ontstaat",
+        "up/up",
+        "interface"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m10-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.2",
+      "sectionTitle": "Configure Interfaces",
+      "type": "knowledge",
+      "prompt": "Wat betekent administratively down?",
+      "choices": [
+        "De interface staat shutdown",
+        "ARP ontbreekt",
+        "Het masker is /32",
+        "DNS faalt"
+      ],
+      "correctIndex": 0,
+      "answer": "De interface staat shutdown",
+      "explanation": "De beheerstatus is uitgezet.",
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "interfaces",
+        "betekent",
+        "administratively",
+        "down"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m10-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.2",
+      "sectionTitle": "Configure Interfaces",
+      "type": "diagnosis",
+      "prompt": "G0/0/0 toont administratively down/down en heeft een correct IP-adres. Welke configuratie veroorzaakt dit?",
+      "choices": [
+        "Het interfacecommando shutdown is actief.",
+        "De ARP-cache is leeg.",
+        "De route heeft een hoge metric.",
+        "De host gebruikt SLAAC."
+      ],
+      "correctIndex": 0,
+      "answer": "Het interfacecommando shutdown is actief.",
+      "explanation": "Administratively down wijst rechtstreeks op de softwarematige shutdownstatus.",
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "interfaces",
+        "g0/0/0",
+        "toont",
+        "administratively",
+        "down/down",
+        "heeft"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m10-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.3",
+      "sectionTitle": "Configure the Default Gateway",
+      "type": "diagnosis",
+      "prompt": "Hosts in LAN A bereiken elkaar, maar niet LAN B. Hun default gateway staat op een adres buiten hun eigen subnet. Wat is de oorzaak?",
+      "choices": [
+        "De gateway is niet rechtstreeks lokaal bereikbaar.",
+        "De switch gebruikt store-and-forward.",
+        "De DNS-server mist een AAAA-record.",
+        "De routerinterface heeft een description."
+      ],
+      "correctIndex": 0,
+      "answer": "De gateway is niet rechtstreeks lokaal bereikbaar.",
+      "explanation": "Een host moet zijn default gateway via de lokale link kunnen resolven en bereiken.",
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "the",
+        "default",
+        "gateway",
+        "hosts",
+        "lan",
+        "bereiken"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m10-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.1",
+      "sectionTitle": "Configure Initial Router Settings",
+      "type": "flashcard",
+      "front": "10.1 · Configure Initial Router Settings",
+      "back": "Een router gebruikt dezelfde IOS-modi en beveiligingsbasis als een switch: hostname, enable secret, console/VTY, banner, password policy en opgeslagen config. SSH vereist hostname, domein, RSA-sleutel, lokale gebruiker en `transport input ssh`. Schakel ongebruikte services uit en documenteer interfaces.",
+      "commands": "hostname R1\nenable secret <GEHEIM>\nip domain-name lab.example\nusername admin secret <GEHEIM>\ncrypto key generate rsa modulus 2048\nip ssh version 2\nline vty 0 4\n login local\n transport input ssh",
+      "verify": [],
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "initial",
+        "settings"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m10-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.2",
+      "sectionTitle": "Configure Interfaces",
+      "type": "flashcard",
+      "front": "10.2 · Configure Interfaces",
+      "back": "Elke routed interface krijgt een uniek subnetadres, description en `no shutdown`. Up/up vereist administratief actief én een werkende datalink. Met `ipv6 unicast-routing` routeert IOS IPv6. Een interface kan een GUA en LLA hebben; connected en local routes verschijnen automatisch.",
+      "commands": "ipv6 unicast-routing\ninterface g0/0/0\n description LAN_A\n ip address 192.0.2.1 255.255.255.0\n ipv6 address 2001:db8:1::1/64\n no shutdown",
+      "verify": [
+        "show ip interface brief",
+        "show ipv6 interface brief",
+        "show ip route connected"
+      ],
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "interfaces"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m10-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 10,
+      "moduleTitle": "Basic Router Configuration",
+      "sectionId": "10.3",
+      "sectionTitle": "Configure the Default Gateway",
+      "type": "flashcard",
+      "front": "10.3 · Configure the Default Gateway",
+      "back": "Een hostgateway is het routerinterfaceadres in hetzelfde subnet. Zonder of met een foute gateway blijven lokale hosts bereikbaar maar remote netwerken niet. Een Layer-2-switch gebruikt `ip default-gateway`; een router of multilayer switch met routing gebruikt een default route.",
+      "commands": "ip default-gateway 192.0.2.1\nshow ip route",
+      "verify": [
+        "Host en gateway zelfde prefix",
+        "Remote ping in beide richtingen"
+      ],
+      "tags": [
+        "basic",
+        "router",
+        "configuration",
+        "configure",
+        "the",
+        "default",
+        "gateway"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

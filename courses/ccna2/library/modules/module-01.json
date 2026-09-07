@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 1,
+    "title": "Basic Device Configuration",
+    "summary": "Configureer en controleer een switch of router veilig vanaf de eerste boot: beheeradres, poorten, SSH en rechtstreeks verbonden netwerken."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 11
+  },
+  "cards": [
+    {
+      "id": "ccna2-m01-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.1",
+      "sectionTitle": "Configure a Switch with Initial Settings",
+      "type": "knowledge",
+      "prompt": "Waarom kan een switch frames blijven doorsturen zonder beheer-IP?",
+      "choices": [
+        "Switching gebruikt de MAC-adrestabel op Layer 2.",
+        "ARP levert altijd een automatisch beheer-IP.",
+        "Elke switchpoort krijgt een routingtabel.",
+        "STP deelt een IP-adres uit."
+      ],
+      "correctIndex": 0,
+      "answer": "Switching gebruikt de MAC-adrestabel op Layer 2.",
+      "explanation": "Het beheer-IP is voor IP-beheer; Ethernet-switching zelf is Layer 2.",
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "configure",
+        "switch",
+        "with",
+        "initial",
+        "settings",
+        "frames",
+        "blijven"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m01-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.3",
+      "sectionTitle": "Secure Remote Access",
+      "type": "knowledge",
+      "prompt": "Welke combinatie maakt versleutelde VTY-aanmelding met een lokale gebruiker mogelijk?",
+      "choices": [
+        "login local en transport input ssh",
+        "password cisco en transport output telnet",
+        "enable password en login",
+        "service password-encryption en no login"
+      ],
+      "correctIndex": 0,
+      "answer": "login local en transport input ssh",
+      "explanation": "login local raadpleegt de lokale gebruikersdatabase; transport input ssh blokkeert Telnet.",
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "secure",
+        "remote",
+        "access",
+        "combinatie",
+        "maakt",
+        "versleutelde",
+        "vty-aanmelding"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m01-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.2",
+      "sectionTitle": "Configure Switch Ports",
+      "type": "knowledge",
+      "prompt": "Een switchpoort toont veel late collisions. Wat is de meest waarschijnlijke oorzaak?",
+      "choices": [
+        "Duplex-mismatch",
+        "Onjuist default gateway",
+        "Ontbrekende RSA-sleutel",
+        "Verkeerde VLAN-naam"
+      ],
+      "correctIndex": 0,
+      "answer": "Duplex-mismatch",
+      "explanation": "Late collisions passen bij een half/full-duplexconflict of fysiek gedeeld medium.",
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "configure",
+        "switch",
+        "ports",
+        "switchpoort",
+        "toont",
+        "veel",
+        "late"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m01-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.4",
+      "sectionTitle": "Basic Router Configuration",
+      "type": "knowledge",
+      "prompt": "Wat betekent administratively down?",
+      "choices": [
+        "De interface is met shutdown uitgezet.",
+        "Er bestaat geen ARP-entry.",
+        "De lijn heeft een native-VLAN mismatch.",
+        "De interface heeft geen DNS-server."
+      ],
+      "correctIndex": 0,
+      "answer": "De interface is met shutdown uitgezet.",
+      "explanation": "De administratieve status komt rechtstreeks van shutdown/no shutdown.",
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "router",
+        "betekent",
+        "administratively",
+        "down"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m01-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.1",
+      "sectionTitle": "Configure a Switch with Initial Settings",
+      "type": "diagnosis",
+      "prompt": "S1 heeft een correct management-IP, maar interface VLAN 99 blijft down/down. VLAN 99 bestaat en alle poorten in die VLAN zijn uitgeschakeld. Wat is de oorzaak?",
+      "choices": [
+        "Er is geen actieve Layer-2-poort in VLAN 99.",
+        "De RSA-sleutel is te lang.",
+        "De switch mist ip routing.",
+        "De consolelijn heeft geen wachtwoord."
+      ],
+      "correctIndex": 0,
+      "answer": "Er is geen actieve Layer-2-poort in VLAN 99.",
+      "explanation": "Een SVI wordt pas operationeel wanneer de VLAN actief is via minstens één up/forwarding poort.",
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "configure",
+        "switch",
+        "with",
+        "initial",
+        "settings",
+        "heeft",
+        "correct"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m01-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.2",
+      "sectionTitle": "Configure Switch Ports",
+      "type": "diagnosis",
+      "prompt": "Een Ethernetlink is up, maar toont veel late collisions en zeer lage throughput. Eén zijde staat full duplex en de andere half duplex. Wat veroorzaakt het probleem?",
+      "choices": [
+        "Een duplex-mismatch.",
+        "Een ontbrekende default route.",
+        "Een native-VLAN mismatch.",
+        "Een verlopen DHCP-lease."
+      ],
+      "correctIndex": 0,
+      "answer": "Een duplex-mismatch.",
+      "explanation": "Late collisions en slechte prestaties zijn klassieke signalen van een duplexconflict.",
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "configure",
+        "switch",
+        "ports",
+        "ethernetlink",
+        "maar",
+        "toont",
+        "veel"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m01-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.1",
+      "sectionTitle": "Configure a Switch with Initial Settings",
+      "type": "flashcard",
+      "front": "1.1 · Configure a Switch with Initial Settings",
+      "back": "Een Layer-2-switch heeft geen IP-adres nodig om frames te schakelen. Voor beheer op afstand krijgt een SVI (interface vlan) wel een adres; de SVI wordt pas line protocol up wanneer de VLAN bestaat en minstens één poort in die VLAN actief is. Beveilig privileged EXEC met enable secret, versleutel leesbare wachtwoorden met service password-encryption, stel een banner in en sla de actieve configuratie op in startup-config. Voor beheer buiten het lokale subnet gebruikt een Layer-2-switch ip default-gateway. Een multilayer switch met ip routing gebruikt routes en geen ip default-gateway.",
+      "commands": "hostname S1\nno ip domain-lookup\nenable secret <STERK_GEHEIM>\nservice password-encryption\nbanner motd # Alleen bevoegde toegang #\ninterface vlan 99\n ip address 192.0.2.2 255.255.255.0\n no shutdown\nexit\nip default-gateway 192.0.2.1\ncopy running-config startup-config",
+      "verify": [
+        "show running-config",
+        "show startup-config",
+        "show ip interface brief",
+        "show interfaces vlan 99"
+      ],
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "configure",
+        "switch",
+        "with",
+        "initial",
+        "settings"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m01-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.2",
+      "sectionTitle": "Configure Switch Ports",
+      "type": "flashcard",
+      "front": "1.2 · Configure Switch Ports",
+      "back": "Configureer een eindapparaatpoort expliciet als accesspoort. Beschrijvingen, snelheid en duplex moeten aan beide uiteinden overeenkomen; autonegotiation is normaal de veiligste keuze tenzij het ontwerp vaste waarden vereist. Auto-MDIX herkent rechte en crossover-kabels wanneer de interface dit ondersteunt. Duplex-mismatch veroorzaakt late collisions, FCS-fouten en zeer slechte prestaties, ook als de link up blijft. De interfacecounters zijn diagnostisch bewijs: kijk naar input errors, CRC/FCS, collisions, late collisions en drops en vergelijk beide uiteinden.",
+      "commands": "interface range gigabitEthernet 0/1-4\n description USER_PORTS\n switchport mode access\n spanning-tree portfast\n no shutdown",
+      "verify": [
+        "show interfaces status",
+        "show interfaces counters errors",
+        "show interfaces gigabitEthernet 0/1",
+        "show controllers ethernet-controller"
+      ],
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "configure",
+        "switch",
+        "ports"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m01-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.3",
+      "sectionTitle": "Secure Remote Access",
+      "type": "flashcard",
+      "front": "1.3 · Secure Remote Access",
+      "back": "SSH versleutelt beheer; Telnet niet. IOS heeft een hostname, domeinnaam, RSA-sleutelpaar, lokale gebruiker en VTY-login via de lokale database nodig. Beperk de VTY-lijnen tot SSH. RSA 2048 bit is een bruikbare labkeuze; productiebeleid kan langere sleutels, AAA en management-ACL’s eisen. De SSH-client moet het beheer-IP kunnen bereiken en de juiste gebruikersnaam gebruiken. Een falende sessie kan netwerk-, sleutel-, VTY- of authenticatieproblemen hebben.",
+      "commands": "ip domain-name lab.example\nusername admin privilege 15 secret <STERK_GEHEIM>\ncrypto key generate rsa modulus 2048\nip ssh version 2\nline vty 0 15\n login local\n transport input ssh\n exec-timeout 10 0",
+      "verify": [
+        "show ip ssh",
+        "show ssh",
+        "show users",
+        "ssh -l admin 192.0.2.2"
+      ],
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "secure",
+        "remote",
+        "access"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m01-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.4",
+      "sectionTitle": "Basic Router Configuration",
+      "type": "flashcard",
+      "front": "1.4 · Basic Router Configuration",
+      "back": "Een routerinterface vormt een Layer-3-grens en heeft meestal een uniek subnetadres. no shutdown is vereist; administratively down betekent dat de interface softwarematig is uitgezet. IPv6-routing wordt globaal ingeschakeld met ipv6 unicast-routing. Een interface kan tegelijk een IPv4-adres, IPv6-GUA en automatisch gevormd link-local adres hebben. Een beschrijving legt het doel en de buur vast en versnelt storingsanalyse.",
+      "commands": "hostname R1\nipv6 unicast-routing\ninterface gigabitEthernet 0/0/0\n description LAN_A\n ip address 192.0.2.1 255.255.255.0\n ipv6 address 2001:db8:1::1/64\n no shutdown",
+      "verify": [
+        "show ip interface brief",
+        "show ipv6 interface brief",
+        "show interfaces description",
+        "show running-config interface g0/0/0"
+      ],
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "router"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m01-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 1,
+      "moduleTitle": "Basic Device Configuration",
+      "sectionId": "1.5",
+      "sectionTitle": "Verify Directly Connected Networks",
+      "type": "flashcard",
+      "front": "1.5 · Verify Directly Connected Networks",
+      "back": "Een actieve interface plaatst een connected route (C) voor het subnet en een local host route (L /32 of /128) voor het eigen adres in de routingtabel. Gebruik eerst show ip interface brief voor status, daarna show route voor Layer 3 en pas dan ping/traceroute. Test oplopend: loopback, eigen interface, lokale buur, remote doel. IPv6-neighbors verschijnen in show ipv6 neighbors; dit is het NDP-equivalent van de IPv4 ARP-cache.",
+      "commands": "show ip route connected\nshow ipv6 route connected\nshow arp\nshow ipv6 neighbors\nping 192.0.2.10\ntraceroute 198.51.100.10",
+      "verify": [
+        "Interface is up/up",
+        "Connected en local routes aanwezig",
+        "Buuradres resolveert naar een MAC-adres",
+        "End-to-end ping slaagt"
+      ],
+      "tags": [
+        "basic",
+        "device",
+        "configuration",
+        "verify",
+        "directly",
+        "connected",
+        "networks"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

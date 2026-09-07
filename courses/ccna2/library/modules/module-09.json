@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 9,
+    "title": "FHRP Concepts",
+    "summary": "Maak de default gateway hoog beschikbaar met een virtueel IP/MAC en begrijp HSRP-verkiezing, preemption en tracking."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 2,
+    "total": 8
+  },
+  "cards": [
+    {
+      "id": "ccna2-m09-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.2",
+      "sectionTitle": "HSRP",
+      "type": "knowledge",
+      "prompt": "Welke HSRP-router wordt normaal active?",
+      "choices": [
+        "De hoogste priority, daarna hoogste IP als tiebreaker",
+        "De laagste MAC",
+        "De laagste priority",
+        "De router met meeste routes ongeacht priority"
+      ],
+      "correctIndex": 0,
+      "answer": "De hoogste priority, daarna hoogste IP als tiebreaker",
+      "explanation": "Priority is de primaire verkiezingswaarde.",
+      "tags": [
+        "fhrp",
+        "concepts",
+        "hsrp",
+        "hsrp-router",
+        "normaal",
+        "active"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m09-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.2",
+      "sectionTitle": "HSRP",
+      "type": "knowledge",
+      "prompt": "Waarom is standby preempt nodig?",
+      "choices": [
+        "Om een terugkerende router met hogere priority de active-rol te laten hernemen",
+        "Om DHCP te relayen",
+        "Om STP te versnellen",
+        "Om het virtuele IP te versleutelen"
+      ],
+      "correctIndex": 0,
+      "answer": "Om een terugkerende router met hogere priority de active-rol te laten hernemen",
+      "explanation": "Zonder preemption blijft de huidige active doorgaans actief zolang hij gezond is.",
+      "tags": [
+        "fhrp",
+        "concepts",
+        "hsrp",
+        "standby",
+        "preempt",
+        "nodig"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m09-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.1",
+      "sectionTitle": "First Hop Redundancy Protocols",
+      "type": "knowledge",
+      "prompt": "Welk adres configureert een host als gateway in HSRP?",
+      "choices": [
+        "Het virtuele IP",
+        "Het fysieke R1-adres",
+        "Het broadcastadres",
+        "Het HSRP-multicastadres"
+      ],
+      "correctIndex": 0,
+      "answer": "Het virtuele IP",
+      "explanation": "Het virtuele adres blijft stabiel over een failover.",
+      "tags": [
+        "fhrp",
+        "concepts",
+        "first",
+        "hop",
+        "redundancy",
+        "protocols",
+        "welk",
+        "adres",
+        "configureert",
+        "host"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m09-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.2",
+      "sectionTitle": "HSRP",
+      "type": "knowledge",
+      "prompt": "Wat lost HSRP niet op?",
+      "choices": [
+        "Een ontbrekende route na de actieve gateway",
+        "Uitval van één gatewayrouter",
+        "Wijziging van het virtuele MAC bij failover",
+        "First-hop beschikbaarheid"
+      ],
+      "correctIndex": 0,
+      "answer": "Een ontbrekende route na de actieve gateway",
+      "explanation": "FHRP levert een redundante first hop, maar geen volledige routingoplossing.",
+      "tags": [
+        "fhrp",
+        "concepts",
+        "hsrp",
+        "lost",
+        "niet"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m09-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.2",
+      "sectionTitle": "HSRP",
+      "type": "diagnosis",
+      "prompt": "R1 met priority 110 herstart. R2 blijft active nadat R1 terug is, hoewel R1 de hogere priority heeft. Wat ontbreekt op R1?",
+      "choices": [
+        "standby preempt",
+        "ip helper-address",
+        "spanning-tree portfast",
+        "switchport nonegotiate"
+      ],
+      "correctIndex": 0,
+      "answer": "standby preempt",
+      "explanation": "Preempt laat de preferred router de active-rol terugnemen.",
+      "tags": [
+        "fhrp",
+        "concepts",
+        "hsrp",
+        "priority",
+        "110",
+        "herstart.",
+        "blijft",
+        "active",
+        "nadat",
+        "terug"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m09-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.2",
+      "sectionTitle": "HSRP",
+      "type": "diagnosis",
+      "prompt": "R1 blijft HSRP-active terwijl zijn WAN-uplink defect is; de LAN-interface is nog up. Welke verbetering ontbreekt?",
+      "choices": [
+        "Object tracking met priority decrement.",
+        "Een langere DHCP-lease.",
+        "DTP desirable.",
+        "Een static MAC-entry."
+      ],
+      "correctIndex": 0,
+      "answer": "Object tracking met priority decrement.",
+      "explanation": "Tracking koppelt de gatewayrol aan de gezondheid van het relevante upstream pad.",
+      "tags": [
+        "fhrp",
+        "concepts",
+        "hsrp",
+        "blijft",
+        "hsrp-active",
+        "terwijl",
+        "wan-uplink",
+        "defect",
+        "lan-interface",
+        "nog"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m09-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.1",
+      "sectionTitle": "First Hop Redundancy Protocols",
+      "type": "flashcard",
+      "front": "9.1 · First Hop Redundancy Protocols",
+      "back": "Hosts hebben meestal één default gateway. Zonder FHRP blijft die configuratie naar een defecte router wijzen. Een FHRP laat meerdere routers één virtueel gateway-IP en -MAC presenteren. HSRP is Cisco-georiënteerd, VRRP is een open standaard en GLBP kan naast redundantie ook gateway-loadsharing leveren. Het cursuslab focust op HSRP. FHRP vervangt geen routingprotocol: de actieve gateway moet nog steeds routes naar externe netwerken hebben.",
+      "commands": "show standby brief\nshow standby",
+      "verify": [
+        "Virtueel IP ligt in clientsubnet",
+        "Eén active en één standby",
+        "Clients gebruiken VIP, niet fysiek routeradres"
+      ],
+      "tags": [
+        "fhrp",
+        "concepts",
+        "first",
+        "hop",
+        "redundancy",
+        "protocols"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m09-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 9,
+      "moduleTitle": "FHRP Concepts",
+      "sectionId": "9.2",
+      "sectionTitle": "HSRP",
+      "type": "flashcard",
+      "front": "9.2 · HSRP",
+      "back": "De router met de hoogste HSRP-priority wordt active; standaard is 100. Bij gelijke priority beslist het hoogste interface-IP. preempt laat een later terugkerende router met hogere priority de active-rol hernemen. HSRPv1 gebruikt voor IPv4 een virtueel MAC-patroon 0000.0c07.acXX; HSRPv2 ondersteunt meer groepen en gebruikt een ander patroon. Groep, versie, VIP en authenticatie moeten overeenkomen. Standaard hello/hold zijn typisch 3/10 seconden. Object tracking kan de priority verlagen wanneer bijvoorbeeld de WAN-uplink faalt, zodat een nog levende maar geïsoleerde router niet active blijft.",
+      "commands": "interface g0/0\n standby version 2\n standby 10 ip 192.0.2.1\n standby 10 priority 110\n standby 10 preempt\n standby 10 track g0/1 20",
+      "verify": [
+        "show standby brief",
+        "show standby g0/0",
+        "Failover na shutdown uplink",
+        "ARP voor VIP wijst naar virtual MAC"
+      ],
+      "tags": [
+        "fhrp",
+        "concepts",
+        "hsrp"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

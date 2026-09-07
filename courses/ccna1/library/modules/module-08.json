@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 8,
+    "title": "Network Layer",
+    "summary": "Verklaar IPv4/IPv6 packetvelden, host- en routerbeslissingen, longest-prefix-match en routingtabelcodes."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 10
+  },
+  "cards": [
+    {
+      "id": "ccna1-m08-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.5",
+      "sectionTitle": "Router Routing Tables",
+      "type": "knowledge",
+      "prompt": "Welke route wint als /0, /24 en /28 alle matchen?",
+      "choices": [
+        "/28",
+        "Laagste AD ongeacht prefix",
+        "/0",
+        "Oudste route"
+      ],
+      "correctIndex": 0,
+      "answer": "/28",
+      "explanation": "Longest prefix match komt eerst.",
+      "tags": [
+        "network",
+        "layer",
+        "router",
+        "routing",
+        "tables",
+        "route",
+        "wint",
+        "alle",
+        "matchen"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m08-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.2",
+      "sectionTitle": "IPv4 Packet",
+      "type": "knowledge",
+      "prompt": "Welk IPv4-veld voorkomt eindeloze loops?",
+      "choices": [
+        "TTL",
+        "IHL",
+        "FCS",
+        "Source port"
+      ],
+      "correctIndex": 0,
+      "answer": "TTL",
+      "explanation": "TTL daalt bij elke router.",
+      "tags": [
+        "network",
+        "layer",
+        "ipv4",
+        "packet",
+        "welk",
+        "ipv4-veld",
+        "voorkomt",
+        "eindeloze",
+        "loops"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m08-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.3",
+      "sectionTitle": "IPv6 Packet",
+      "type": "knowledge",
+      "prompt": "Wat gebruikt IPv6 in plaats van TTL?",
+      "choices": [
+        "Hop Limit",
+        "Flow Label",
+        "Next Header",
+        "Payload Length"
+      ],
+      "correctIndex": 0,
+      "answer": "Hop Limit",
+      "explanation": "Hop Limit heeft dezelfde loopbegrenzende functie.",
+      "tags": [
+        "network",
+        "layer",
+        "ipv6",
+        "packet",
+        "gebruikt",
+        "plaats",
+        "ttl"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m08-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.5",
+      "sectionTitle": "Router Routing Tables",
+      "type": "diagnosis",
+      "prompt": "Voor 10.1.2.130 bestaan routes /0, 10.0.0.0/8 en 10.1.2.128/25. De /8 heeft een lagere AD. Welke route wint?",
+      "choices": [
+        "De /25 door longest prefix match.",
+        "De /8 door de lagere AD.",
+        "De /0 als gateway of last resort.",
+        "Alle routes willekeurig."
+      ],
+      "correctIndex": 0,
+      "answer": "De /25 door longest prefix match.",
+      "explanation": "Prefixspecificiteit wordt vóór administrative distance tussen verschillende prefixlengtes toegepast.",
+      "tags": [
+        "network",
+        "layer",
+        "router",
+        "routing",
+        "tables",
+        "10.1.2.130",
+        "bestaan",
+        "routes",
+        "10.0.0.0/8",
+        "10.1.2.128/25."
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m08-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.4",
+      "sectionTitle": "How a Host Routes",
+      "type": "diagnosis",
+      "prompt": "Een host bereikt lokale peers maar geen enkel remote netwerk. Het eigen adres en masker zijn correct. Welke instelling controleer je eerst?",
+      "choices": [
+        "De default gateway.",
+        "De Ethernet-preamble.",
+        "De DNS TTL voor lokale peers.",
+        "De switch-FCS."
+      ],
+      "correctIndex": 0,
+      "answer": "De default gateway.",
+      "explanation": "Lokale communicatie heeft geen gateway nodig; remote aflevering wel.",
+      "tags": [
+        "network",
+        "layer",
+        "how",
+        "host",
+        "routes",
+        "bereikt",
+        "lokale",
+        "peers",
+        "maar",
+        "geen"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m08-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.1",
+      "sectionTitle": "Network Layer Characteristics",
+      "type": "flashcard",
+      "front": "8.1 · Network Layer Characteristics",
+      "back": "IP levert connectionless, best-effort en media-independent bezorging. Betrouwbaarheid en volgorde zijn functies van hogere lagen wanneer vereist. MTU bepaalt maximale Layer-3-packetgrootte op een link. IPv4-routers kunnen fragmenteren; bij IPv6 fragmenteert alleen de bron na Path MTU Discovery.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "network",
+        "layer",
+        "characteristics"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m08-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.2",
+      "sectionTitle": "IPv4 Packet",
+      "type": "flashcard",
+      "front": "8.2 · IPv4 Packet",
+      "back": "Belangrijke velden zijn Version, IHL, DSCP/ECN, Total Length, Identification/Flags/Fragment Offset, TTL, Protocol, Header Checksum en bron/doeladres. TTL daalt per router; bij nul volgt drop en meestal ICMP Time Exceeded. Protocol identificeert TCP(6), UDP(17), ICMP(1) of een andere payload.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "network",
+        "layer",
+        "ipv4",
+        "packet"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m08-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.3",
+      "sectionTitle": "IPv6 Packet",
+      "type": "flashcard",
+      "front": "8.3 · IPv6 Packet",
+      "back": "De vaste IPv6-header is 40 bytes: Version, Traffic Class, Flow Label, Payload Length, Next Header, Hop Limit en 128-bit bron/doel. Extension headers dragen optionele functies. Geen headerchecksum en eenvoudiger basisheader verminderen routerwerk; broadcast bestaat niet in IPv6.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "network",
+        "layer",
+        "ipv6",
+        "packet"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m08-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.4",
+      "sectionTitle": "How a Host Routes",
+      "type": "flashcard",
+      "front": "8.4 · How a Host Routes",
+      "back": "Een host vergelijkt doel met eigen prefix. Lokaal: resolveer doel-MAC; remote: resolveer MAC van de default gateway en behoud remote doel-IP. De hosttabel bevat connected/local routes, statische routes en default. Een foute gateway schaadt remote maar niet lokale communicatie.",
+      "commands": "route print\nip route\nnetstat -r",
+      "verify": [],
+      "tags": [
+        "network",
+        "layer",
+        "how",
+        "host",
+        "routes"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m08-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 8,
+      "moduleTitle": "Network Layer",
+      "sectionId": "8.5",
+      "sectionTitle": "Router Routing Tables",
+      "type": "flashcard",
+      "front": "8.5 · Router Routing Tables",
+      "back": "Een router kiest de langste match. Routebronnen zijn onder meer connected (C), local (L), static (S) en dynamische protocollen; bij dezelfde prefix vergelijkt hij administrative distance en metric. Een route bevat prefix, bron, AD/metric, next hop, leeftijd en exitinterface. Zonder match/default dropt de router het packet.",
+      "commands": "show ip route\nshow ipv6 route\nshow ip route 198.51.100.25",
+      "verify": [
+        "Winnende prefix is meest specifiek",
+        "Next hop resolveerbaar"
+      ],
+      "tags": [
+        "network",
+        "layer",
+        "router",
+        "routing",
+        "tables"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

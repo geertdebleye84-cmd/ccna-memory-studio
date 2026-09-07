@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 2,
+    "title": "Basic Switch and End Device Configuration",
+    "summary": "Bedien Cisco IOS veilig, configureer een switch en hosts, bewaar de configuratie en bewijs lokale connectiviteit."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 8,
+    "total": 13
+  },
+  "cards": [
+    {
+      "id": "ccna1-m02-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.1",
+      "sectionTitle": "Cisco IOS Access",
+      "type": "knowledge",
+      "prompt": "Welke toegang is versleuteld?",
+      "choices": [
+        "SSH",
+        "Telnet",
+        "Consolekabel als IP-protocol",
+        "HTTP"
+      ],
+      "correctIndex": 0,
+      "answer": "SSH",
+      "explanation": "SSH beschermt de beheersessie over het netwerk.",
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "cisco",
+        "ios",
+        "access",
+        "toegang"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m02-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.5",
+      "sectionTitle": "Save Configurations",
+      "type": "knowledge",
+      "prompt": "Waar staat de actieve configuratie?",
+      "choices": [
+        "RAM",
+        "NVRAM",
+        "Flash uitsluitend",
+        "ROM"
+      ],
+      "correctIndex": 0,
+      "answer": "RAM",
+      "explanation": "Running-config bevindt zich in RAM.",
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "save",
+        "configurations",
+        "waar",
+        "staat"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m02-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.7",
+      "sectionTitle": "Configure IP Addressing",
+      "type": "knowledge",
+      "prompt": "Waarom krijgt een Layer-2-switch een IP-adres?",
+      "choices": [
+        "Voor beheer",
+        "Om elk frame te routeren",
+        "Om MAC-adressen te maken",
+        "Om kabels te detecteren"
+      ],
+      "correctIndex": 0,
+      "answer": "Voor beheer",
+      "explanation": "Switching werkt op Layer 2; het adres dient beheer.",
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "configure",
+        "addressing",
+        "krijgt",
+        "layer-2-switch"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m02-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.7",
+      "sectionTitle": "Configure IP Addressing",
+      "type": "diagnosis",
+      "prompt": "S1 heeft een correct management-IP, maar het SVI blijft down/down. De VLAN bestaat, maar geen enkele poort in die VLAN is actief. Wat is de oorzaak?",
+      "choices": [
+        "Een SVI heeft minstens één actieve Layer-2-poort in de VLAN nodig.",
+        "De switch mist ip routing.",
+        "Het enable secret is te lang.",
+        "De host gebruikt DNS."
+      ],
+      "correctIndex": 0,
+      "answer": "Een SVI heeft minstens één actieve Layer-2-poort in de VLAN nodig.",
+      "explanation": "Een management-SVI wordt pas operationeel wanneer de bijbehorende VLAN actief is.",
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "configure",
+        "addressing",
+        "heeft",
+        "correct"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m02-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.5",
+      "sectionTitle": "Save Configurations",
+      "type": "diagnosis",
+      "prompt": "Na een stroomonderbreking zijn alle nieuwe instellingen verdwenen. Voor de storing werkte alles. Wat is waarschijnlijk vergeten?",
+      "choices": [
+        "Running-config naar startup-config kopiëren.",
+        "De MAC-tabel statisch maken.",
+        "De consolekabel verwijderen.",
+        "De hostnaam via DHCP uitdelen."
+      ],
+      "correctIndex": 0,
+      "answer": "Running-config naar startup-config kopiëren.",
+      "explanation": "Niet-opgeslagen running-config in RAM verdwijnt bij reload of stroomverlies.",
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "save",
+        "configurations",
+        "stroomonderbreking",
+        "alle"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m02-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.1",
+      "sectionTitle": "Cisco IOS Access",
+      "type": "flashcard",
+      "front": "2.1 · Cisco IOS Access",
+      "back": "Console geeft out-of-band toegang; SSH is versleutelde in-band toegang; Telnet verzendt beheerinformatie leesbaar en moet worden vermeden. Terminalemulatie gebruikt passende console-instellingen. Remote beheer vereist eerst IP-connectiviteit en beveiligde VTY-configuratie.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "cisco",
+        "ios",
+        "access"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.2",
+      "sectionTitle": "IOS Navigation",
+      "type": "flashcard",
+      "front": "2.2 · IOS Navigation",
+      "back": "User EXEC (`>`), privileged EXEC (`#`), global configuration en subconfiguratiemodi hebben verschillende rechten. `enable`, `configure terminal`, `exit`, `end` en Ctrl-Z navigeren. De prompt toont modus en apparaatnaam. `disable` keert terug; context-sensitive help voorkomt gokwerk.",
+      "commands": "enable\nconfigure terminal\ninterface vlan 1\nexit\nend",
+      "verify": [],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "ios",
+        "navigation"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.3",
+      "sectionTitle": "The Command Structure",
+      "type": "flashcard",
+      "front": "2.3 · The Command Structure",
+      "back": "IOS-commando’s bestaan uit keyword(s), argumenten en parameters. `?`, verkorte unieke commando’s, Tab, pijl-omhoog en opdrachtgeschiedenis versnellen correct werk. Foutmeldingen onderscheiden ambiguous, incomplete en invalid input. Controleer het caret-teken en de actieve modus.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "the",
+        "command",
+        "structure"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.4",
+      "sectionTitle": "Basic Device Configuration",
+      "type": "flashcard",
+      "front": "2.4 · Basic Device Configuration",
+      "back": "Stel hostname, enable secret, console- en VTY-beveiliging, banner en versleuteling van leesbare wachtwoorden in. Een secret gebruikt een hash en verdient voorkeur boven password. Gebruik unieke sterke wachtwoorden; een banner is juridisch/operationeel, geen toegangscontrole.",
+      "commands": "hostname S1\nno ip domain-lookup\nenable secret <GEHEIM>\nservice password-encryption\nbanner motd # Alleen bevoegde toegang #\nline console 0\n password <GEHEIM>\n login",
+      "verify": [],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.5",
+      "sectionTitle": "Save Configurations",
+      "type": "flashcard",
+      "front": "2.5 · Save Configurations",
+      "back": "Running-config staat in RAM en verandert direct; startup-config staat in NVRAM en wordt bij boot geladen. `copy running-config startup-config` bewaart wijzigingen. `reload` zonder opslaan verliest actieve wijzigingen. Wis alleen bewust; controleer voor en na met show-commando’s.",
+      "commands": "show running-config\nshow startup-config\ncopy running-config startup-config",
+      "verify": [
+        "Configuratie blijft na reload beschikbaar"
+      ],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "save",
+        "configurations"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.6",
+      "sectionTitle": "Ports and Addresses",
+      "type": "flashcard",
+      "front": "2.6 · Ports and Addresses",
+      "back": "Een fysieke poort draagt signalen; een IOS-interface is het configureerbare aansluitpunt. IPv4/IPv6-adres en masker/prefix identificeren host en netwerk. Een switch management-SVI geeft de switch IP-beheer, maar is niet nodig voor Layer-2 frameforwarding.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "ports",
+        "addresses"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.7",
+      "sectionTitle": "Configure IP Addressing",
+      "type": "flashcard",
+      "front": "2.7 · Configure IP Addressing",
+      "back": "Configureer hostadres, subnetmasker/prefix, default gateway en eventueel DNS. Alle lokale hosts moeten unieke adressen uit hetzelfde subnet hebben. Een Layer-2-switch krijgt een managementadres op een SVI plus `ip default-gateway` voor beheer buiten het lokale subnet.",
+      "commands": "interface vlan 1\n ip address 192.0.2.2 255.255.255.0\n no shutdown\nexit\nip default-gateway 192.0.2.1",
+      "verify": [],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "configure",
+        "addressing"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m02-f08",
+      "courseId": "ccna1-itn",
+      "moduleId": 2,
+      "moduleTitle": "Basic Switch and End Device Configuration",
+      "sectionId": "2.8",
+      "sectionTitle": "Verify Connectivity",
+      "type": "flashcard",
+      "front": "2.8 · Verify Connectivity",
+      "back": "`ipconfig`/`ip addr`, `show ip interface brief` en `ping` bewijzen respectievelijk hostconfiguratie, interfacestatus en bereikbaarheid. Test oplopend: lokale stack, eigen adres, lokale buur, gateway en pas daarna remote doel.",
+      "commands": "show ip interface brief\nping 192.0.2.10",
+      "verify": [
+        "Interfaces up/up",
+        "Unieke adressen",
+        "Pings in beide richtingen"
+      ],
+      "tags": [
+        "basic",
+        "switch",
+        "and",
+        "end",
+        "device",
+        "configuration",
+        "verify",
+        "connectivity"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 16,
+    "title": "Network Security Fundamentals",
+    "summary": "Herken dreigingen en kwetsbaarheden, koppel aanvallen aan mitigatie en harden IOS-apparaten."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 4,
+    "total": 9
+  },
+  "cards": [
+    {
+      "id": "ccna1-m16-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.1",
+      "sectionTitle": "Security Threats and Vulnerabilities",
+      "type": "knowledge",
+      "prompt": "Welke CIA-eigenschap beschermt tegen ongeoorloofde wijziging?",
+      "choices": [
+        "Integrity",
+        "Availability",
+        "Confidentiality",
+        "Latency"
+      ],
+      "correctIndex": 0,
+      "answer": "Integrity",
+      "explanation": "Integrity bewaakt juistheid en onveranderdheid.",
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "threats",
+        "and",
+        "vulnerabilities",
+        "cia-eigenschap",
+        "beschermt",
+        "tegen",
+        "ongeoorloofde"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m16-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.4",
+      "sectionTitle": "Device Security",
+      "type": "knowledge",
+      "prompt": "Welke beheeroptie vermijdt leesbare credentials onderweg?",
+      "choices": [
+        "SSHv2",
+        "Telnet",
+        "HTTP",
+        "Een banner"
+      ],
+      "correctIndex": 0,
+      "answer": "SSHv2",
+      "explanation": "SSH versleutelt de sessie.",
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "device",
+        "beheeroptie",
+        "vermijdt",
+        "leesbare",
+        "credentials",
+        "onderweg"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m16-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.3",
+      "sectionTitle": "Network Attack Mitigation",
+      "type": "knowledge",
+      "prompt": "Wat is least privilege?",
+      "choices": [
+        "Alleen minimaal noodzakelijke rechten geven",
+        "Iedereen privilege 15 geven",
+        "Alle logs wissen",
+        "Alle poorten trusted maken"
+      ],
+      "correctIndex": 0,
+      "answer": "Alleen minimaal noodzakelijke rechten geven",
+      "explanation": "Beperk rechten tot taakbehoefte.",
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "attack",
+        "mitigation",
+        "least",
+        "privilege"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m16-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.4",
+      "sectionTitle": "Device Security",
+      "type": "diagnosis",
+      "prompt": "VTY staat op `transport input telnet ssh` en gebruikers melden dat credentials zichtbaar zijn in een capture. Welke hardening ontbreekt?",
+      "choices": [
+        "Alleen SSH toestaan en Telnet blokkeren.",
+        "Service password-encryption uitschakelen.",
+        "Een groter broadcastdomein maken.",
+        "ICMP volledig blokkeren."
+      ],
+      "correctIndex": 0,
+      "answer": "Alleen SSH toestaan en Telnet blokkeren.",
+      "explanation": "Telnet versleutelt de beheersessie niet; VTY hoort alleen SSH toe te laten.",
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "device",
+        "vty",
+        "staat",
+        "transport",
+        "input",
+        "telnet",
+        "ssh"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m16-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.2",
+      "sectionTitle": "Network Attacks",
+      "type": "diagnosis",
+      "prompt": "Een medewerker voert na een phishingmail een onbekende bijlage uit en bestanden worden versleuteld. Welke combinatie beschrijft het incident?",
+      "choices": [
+        "Social engineering gevolgd door ransomware.",
+        "ARP gevolgd door SLAAC.",
+        "STP gevolgd door DHCP.",
+        "NTP gevolgd door DNSSEC."
+      ],
+      "correctIndex": 0,
+      "answer": "Social engineering gevolgd door ransomware.",
+      "explanation": "Phishing misleidt de gebruiker; ransomware versleutelt gegevens voor afpersing.",
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "attacks",
+        "medewerker",
+        "voert",
+        "phishingmail",
+        "onbekende",
+        "bijlage",
+        "bestanden"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m16-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.1",
+      "sectionTitle": "Security Threats and Vulnerabilities",
+      "type": "flashcard",
+      "front": "16.1 · Security Threats and Vulnerabilities",
+      "back": "CIA staat voor confidentiality, integrity en availability. Een threat kan een vulnerability misbruiken; risk combineert waarschijnlijkheid en impact. Dreigingen zijn extern of intern, opzettelijk of accidenteel. Kwetsbaarheden ontstaan in technologie, configuratie, beleid en menselijk gedrag.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "threats",
+        "and",
+        "vulnerabilities"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m16-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.2",
+      "sectionTitle": "Network Attacks",
+      "type": "flashcard",
+      "front": "16.2 · Network Attacks",
+      "back": "Malware omvat virus, worm, trojan, ransomware en spyware. Reconnaissance verzamelt informatie; access attacks misbruiken credentials/kwetsbaarheden; DoS tast beschikbaarheid aan. Social engineering zoals phishing en pretexting richt zich op mensen. Spoofing, MITM, password attacks en data exfiltration vragen verschillende detectie en mitigatie.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "attacks"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m16-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.3",
+      "sectionTitle": "Network Attack Mitigation",
+      "type": "flashcard",
+      "front": "16.3 · Network Attack Mitigation",
+      "back": "Defense in depth combineert patches, least privilege, MFA, firewalls/ACLs, IDS/IPS, endpoint security, segmentatie, encryptie, back-ups en monitoring. Beveilig management met SSH, AAA en afgescheiden toegang. Baselines, logs, NTP en incidentprocedures maken afwijkingen aantoonbaar.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "attack",
+        "mitigation"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m16-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 16,
+      "moduleTitle": "Network Security Fundamentals",
+      "sectionId": "16.4",
+      "sectionTitle": "Device Security",
+      "type": "flashcard",
+      "front": "16.4 · Device Security",
+      "back": "Gebruik sterke secrets, lokale fallbackaccounts, SSHv2, VTY-beperking, timeouts, banners en versleutelde beheerprotocollen. Schakel ongebruikte poorten/services uit. Login block-for en logging beperken/registreren brute force. Bewaar config veilig, test herstel en geef gebruikers minimale privilege.",
+      "commands": "enable secret <GEHEIM>\nsecurity passwords min-length 10\nlogin block-for 120 attempts 3 within 60\nip ssh version 2\nline vty 0 4\n login local\n transport input ssh\n exec-timeout 5 0",
+      "verify": [
+        "show login",
+        "show ip ssh",
+        "show users",
+        "Logs met correcte tijd"
+      ],
+      "tags": [
+        "network",
+        "security",
+        "fundamentals",
+        "device"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

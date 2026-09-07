@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 7,
+    "title": "WAN Concepts",
+    "summary": "Vergelijk WAN-topologieën en transportopties op bereik, beheer, SLA, kosten, beveiliging en redundantie."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 3
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m07-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "7.1",
+      "sectionTitle": "Purpose and Operations of WANs",
+      "prompt": "Wat markeert de demarc?",
+      "choices": [
+        "De grens tussen klant- en providerverantwoordelijkheid",
+        "Het begin van elke VLAN",
+        "De OSPF DR",
+        "De DHCP-lease"
+      ],
+      "correctIndex": 0,
+      "answer": "De grens tussen klant- en providerverantwoordelijkheid",
+      "explanation": "De demarc maakt beheer- en storingsverantwoordelijkheid duidelijk.",
+      "tags": [
+        "wan",
+        "concepts",
+        "purpose",
+        "and",
+        "operations",
+        "wans",
+        "markeert",
+        "demarc"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m07-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "7.2",
+      "sectionTitle": "Traditional and Modern WAN Connectivity",
+      "prompt": "Welke metric raakt real-time spraak sterk?",
+      "choices": [
+        "Jitter",
+        "Hostnaam",
+        "VLAN-naam",
+        "Flashgeheugen"
+      ],
+      "correctIndex": 0,
+      "answer": "Jitter",
+      "explanation": "Variatie in pakketvertraging verstoort playout.",
+      "tags": [
+        "wan",
+        "concepts",
+        "traditional",
+        "and",
+        "modern",
+        "connectivity",
+        "metric",
+        "raakt",
+        "real-time",
+        "spraak"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m07-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "7.3",
+      "sectionTitle": "Internet-Based Connectivity",
+      "prompt": "Waarom is internettransport vaak met VPN gecombineerd?",
+      "choices": [
+        "Voor authenticatie en vertrouwelijkheid over een onbetrouwbaar netwerk",
+        "Om NAT altijd te verwijderen",
+        "Om latency nul te maken",
+        "Om een publieke SLA te garanderen"
+      ],
+      "correctIndex": 0,
+      "answer": "Voor authenticatie en vertrouwelijkheid over een onbetrouwbaar netwerk",
+      "explanation": "Een VPN beschermt de overlay, niet de fysieke performance.",
+      "tags": [
+        "wan",
+        "concepts",
+        "internet-based",
+        "connectivity",
+        "internettransport",
+        "vaak",
+        "vpn",
+        "gecombineerd"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m07-diag-01",
+      "type": "diagnostic",
+      "sectionId": "7.1",
+      "sectionTitle": "Purpose and Operations of WANs",
+      "prompt": "Twee WAN-verbindingen vallen tegelijk uit bij één kabelbreuk buiten het gebouw. Welke ontwerpfout blijkt?",
+      "choices": [
+        "Beide logische paden delen dezelfde fysieke last mile",
+        "De SLA bevat te veel metrics",
+        "De CE gebruikt een hostname",
+        "De provider gebruikt Ethernet"
+      ],
+      "correctIndex": 0,
+      "answer": "Beide logische paden delen dezelfde fysieke last mile",
+      "explanation": "Logische redundantie helpt niet wanneer beide paden één fysieke failure domain delen.",
+      "tags": [
+        "wan",
+        "concepts",
+        "purpose",
+        "and",
+        "operations",
+        "wans",
+        "twee",
+        "wan-verbindingen",
+        "vallen",
+        "tegelijk"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m07-diag-02",
+      "type": "diagnostic",
+      "sectionId": "7.3",
+      "sectionTitle": "Internet-Based Connectivity",
+      "prompt": "Een thuiswerker bereikt internet, maar bedrijfsverkeer over de remote-access VPN heeft zeer hoge jitter. Welke eigenschap onderzoek je eerst?",
+      "choices": [
+        "Kwaliteit en congestie van de internet-underlay",
+        "De OSPF DR in het datacenter",
+        "De flashhash van de router",
+        "De LLDP-neighbornaam"
+      ],
+      "correctIndex": 0,
+      "answer": "Kwaliteit en congestie van de internet-underlay",
+      "explanation": "De VPN-overlay blijft afhankelijk van latency, verlies en jitter in de underlay.",
+      "tags": [
+        "wan",
+        "concepts",
+        "internet-based",
+        "connectivity",
+        "thuiswerker",
+        "bereikt",
+        "internet",
+        "maar",
+        "bedrijfsverkeer",
+        "remote-access"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m07-flash-01",
+      "type": "flashcard",
+      "sectionId": "7.1",
+      "sectionTitle": "Purpose and Operations of WANs",
+      "front": "Wat moet je kunnen uitleggen over Purpose and Operations of WANs?",
+      "back": "Een WAN verbindt geografisch gescheiden LANs. De klant beheert CPE/CE; de provider beheert zijn PE- en kerninfrastructuur. Een demarcation point scheidt verantwoordelijkheden. Bandbreedte, latency, jitter, verlies, beschikbaarheid en SLA bepalen of een verbinding een toepassing ondersteunt. Redundantie moet fysieke en providerafhankelijkheden meenemen.",
+      "tags": [
+        "wan",
+        "concepts",
+        "purpose",
+        "and",
+        "operations",
+        "wans",
+        "verbindt",
+        "geografisch",
+        "gescheiden",
+        "lans."
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m07-flash-02",
+      "type": "flashcard",
+      "sectionId": "7.2",
+      "sectionTitle": "Traditional and Modern WAN Connectivity",
+      "front": "Wat moet je kunnen uitleggen over Traditional and Modern WAN Connectivity?",
+      "back": "Leased lines leveren voorspelbaar point-to-pointtransport maar kunnen duur zijn. Provider Ethernet en MPLS bieden beheerde schaal; oudere circuit- of celltechnieken zijn grotendeels legacy. SD-WAN gebruikt policies en meerdere underlays om verkeer centraal te sturen. De overlay neemt niet weg dat iedere underlay nog bereik, capaciteit en beveiliging nodig heeft.",
+      "tags": [
+        "wan",
+        "concepts",
+        "traditional",
+        "and",
+        "modern",
+        "connectivity",
+        "leased",
+        "lines",
+        "leveren",
+        "voorspelbaar"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m07-flash-03",
+      "type": "flashcard",
+      "sectionId": "7.3",
+      "sectionTitle": "Internet-Based Connectivity",
+      "front": "Wat moet je kunnen uitleggen over Internet-Based Connectivity?",
+      "back": "Broadband, fiber, cable, DSL, cellular en satelliet verschillen in asymmetrie, latency, datalimiet en beschikbaarheid. Internettransport vraagt doorgaans een VPN voor vertrouwelijkheid en authenticatie. Remote-access VPN bedient individuele gebruikers; site-to-site VPN verbindt netwerken. Een tweede internetprovider helpt alleen als stroom, last mile en edgeapparatuur ook voldoende redundant zijn.",
+      "tags": [
+        "wan",
+        "concepts",
+        "internet-based",
+        "connectivity",
+        "broadband",
+        "fiber",
+        "cable",
+        "dsl",
+        "cellular",
+        "satelliet"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

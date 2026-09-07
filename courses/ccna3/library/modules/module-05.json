@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 5,
+    "title": "ACLs for IPv4 Configuration",
+    "summary": "Configureer, wijzig en verifieer standaard- en extended IPv4-ACLs zonder legitiem beheer- of retourverkeer te blokkeren."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 4
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m05-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "5.1",
+      "sectionTitle": "Configure Standard IPv4 ACLs",
+      "prompt": "Welk commando past een ACL op VTY-lijnen toe?",
+      "choices": [
+        "access-class",
+        "ip access-group",
+        "service-policy",
+        "ip nat inside"
+      ],
+      "correctIndex": 0,
+      "answer": "access-class",
+      "explanation": "VTY gebruikt access-class.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "configure",
+        "standard",
+        "welk",
+        "commando",
+        "past",
+        "acl"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m05-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "5.2",
+      "sectionTitle": "Modify IPv4 ACLs",
+      "prompt": "Waarom zijn sequence numbers nuttig?",
+      "choices": [
+        "Je kunt gericht regels invoegen of verwijderen.",
+        "Ze versleutelen de ACL.",
+        "Ze kiezen de routingmetric.",
+        "Ze activeren stateful inspectie."
+      ],
+      "correctIndex": 0,
+      "answer": "Je kunt gericht regels invoegen of verwijderen.",
+      "explanation": "Sequence numbers maken gecontroleerd onderhoud mogelijk.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "modify",
+        "sequence",
+        "numbers",
+        "nuttig"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m05-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "5.3",
+      "sectionTitle": "Secure VTY Access with an ACL",
+      "prompt": "Wat matcht tcp established?",
+      "choices": [
+        "TCP-pakketten met ACK of RST gezet",
+        "Elke nieuwe TCP-SYN",
+        "Alle UDP-antwoorden",
+        "Alleen HTTPS"
+      ],
+      "correctIndex": 0,
+      "answer": "TCP-pakketten met ACK of RST gezet",
+      "explanation": "Het is een eenvoudige vlagcontrole, geen sessietabel.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "secure",
+        "vty",
+        "access",
+        "with",
+        "acl",
+        "matcht"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m05-diag-01",
+      "type": "diagnostic",
+      "sectionId": "5.3",
+      "sectionTitle": "Secure VTY Access with an ACL",
+      "prompt": "SSH werkt vanaf iedere host terwijl alleen 192.0.2.50 beheer mag uitvoeren. Welke ontbrekende maatregel is het waarschijnlijkst?",
+      "choices": [
+        "Een inbound access-class op de VTY-lijnen",
+        "Een outbound NAT-regel",
+        "Een hogere OSPF-cost",
+        "Een LLDP-filter"
+      ],
+      "correctIndex": 0,
+      "answer": "Een inbound access-class op de VTY-lijnen",
+      "explanation": "VTY-bronnen worden met access-class beperkt.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "secure",
+        "vty",
+        "access",
+        "with",
+        "acl",
+        "ssh"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m05-diag-02",
+      "type": "diagnostic",
+      "sectionId": "5.4",
+      "sectionTitle": "Configure Extended IPv4 ACLs",
+      "prompt": "DNS via UDP werkt, maar grote DNS-antwoorden via TCP falen. Welke ACL-omissie past het best?",
+      "choices": [
+        "TCP poort 53 is niet toegestaan",
+        "ICMP echo is niet toegestaan",
+        "SSH ontbreekt",
+        "De wildcard is host 0.0.0.0"
+      ],
+      "correctIndex": 0,
+      "answer": "TCP poort 53 is niet toegestaan",
+      "explanation": "DNS gebruikt vooral UDP, maar kan voor grote antwoorden of zoneoverdracht TCP 53 gebruiken.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "configure",
+        "extended",
+        "dns",
+        "via",
+        "udp",
+        "werkt"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m05-flash-01",
+      "type": "flashcard",
+      "sectionId": "5.1",
+      "sectionTitle": "Configure Standard IPv4 ACLs",
+      "front": "Wat moet je kunnen uitleggen over Configure Standard IPv4 ACLs?",
+      "back": "Genummerde standaard ACLs gebruiken 1–99 of 1300–1999; named ACLs zijn leesbaarder en ondersteunen sequencebeheer. Ze matchen alleen het bronadres. Pas toe met ip access-group naam in|out. Controleer dat verkeer de gekozen interface werkelijk in die richting passeert.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "configure",
+        "standard",
+        "genummerde",
+        "standaard",
+        "gebruiken",
+        "1300"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m05-flash-02",
+      "type": "flashcard",
+      "sectionId": "5.2",
+      "sectionTitle": "Modify IPv4 ACLs",
+      "front": "Wat moet je kunnen uitleggen over Modify IPv4 ACLs?",
+      "back": "In named ACL-configuratiemodus kun je een ACE via sequence number verwijderen en op een nieuw nummer invoegen. Resequence maakt ruimte zonder de logica te veranderen. Wijzig live filters gecontroleerd: leg baseline vast, behoud een out-of-band pad en controleer hit counters na elke stap.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "modify",
+        "named",
+        "acl-configuratiemodus",
+        "kun",
+        "ace",
+        "via"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m05-flash-03",
+      "type": "flashcard",
+      "sectionId": "5.3",
+      "sectionTitle": "Secure VTY Access with an ACL",
+      "front": "Wat moet je kunnen uitleggen over Secure VTY Access with an ACL?",
+      "back": "access-class filtert inkomende VTY-sessies op bronadres; dit is anders dan ip access-group op een dataplane-interface. Combineer met SSH en login local of AAA. Een management-ACL is geen vervanging voor sterke authenticatie. Test vanaf een toegestane én geweigerde bron.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "secure",
+        "vty",
+        "access",
+        "with",
+        "acl",
+        "access-class"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m05-flash-04",
+      "type": "flashcard",
+      "sectionId": "5.4",
+      "sectionTitle": "Configure Extended IPv4 ACLs",
+      "front": "Wat moet je kunnen uitleggen over Configure Extended IPv4 ACLs?",
+      "back": "Extended ACEs noemen protocol, bron, bestemming en optioneel bron- of bestemmingspoort. established matcht alleen TCP met ACK of RST en is geen volledige stateful firewall. Gebruik eq voor één service, range voor poortbereik en icmp-types wanneer alleen specifieke controlemeldingen zijn toegestaan.",
+      "tags": [
+        "acls",
+        "for",
+        "ipv4",
+        "configuration",
+        "configure",
+        "extended",
+        "aces",
+        "noemen",
+        "protocol",
+        "bron"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

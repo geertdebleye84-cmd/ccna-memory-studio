@@ -26,10 +26,25 @@ const piperService = path.join(root, 'runtime', 'piper_service.py');
 const piperServers = new Map();
 const providedVolumeOneFilename = '1. CCNA 200-301 Official Cert Guide, Volume 1 .pdf';
 const bundledVolumeOne = path.join(root, 'references', 'CCNA-200-301-Official-Cert-Guide-Volume-1.pdf');
+const diagramLibraryDir = path.join(app.getPath('userData'), 'diagram-library');
 const defaultStore = () => ({ notes: {}, progress: {}, history: [], settings: {}, translations: {} });
 function readStore(file) { try { return { ...defaultStore(), ...JSON.parse(fs.readFileSync(file, 'utf8')) }; } catch { return null; } }
 function loadStore() { return readStore(dataFile()) || readStore(legacyDataFile) || defaultStore(); }
 function saveStore(store) { fs.mkdirSync(path.dirname(dataFile()), { recursive: true }); fs.writeFileSync(dataFile(), JSON.stringify(store, null, 2), 'utf8'); }
+function diagramPdfList() {
+  if (!fs.existsSync(diagramLibraryDir)) return [];
+  return fs.readdirSync(diagramLibraryDir, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.pdf'))
+    .map((entry) => {
+      const filePath = path.join(diagramLibraryDir, entry.name);
+      const previewDir = path.join(diagramLibraryDir, 'previews'), base = path.parse(entry.name).name;
+      const pageUrls = fs.existsSync(previewDir) ? fs.readdirSync(previewDir)
+        .filter((name) => name.startsWith(`${base}-`) && name.toLowerCase().endsWith('.png'))
+        .sort((a, b) => Number(a.match(/-(\d+)\.png$/i)?.[1] || 0) - Number(b.match(/-(\d+)\.png$/i)?.[1] || 0))
+        .map((name) => pathToFileURL(path.join(previewDir, name)).toString()) : [];
+      return { name: entry.name, filePath, url: pathToFileURL(filePath).toString(), pageUrls, bytes: fs.statSync(filePath).size };
+    });
+}
 function ttsStatus() {
   return { piper: fs.existsSync(piperExe), dutch: fs.existsSync(nlModel), english: fs.existsSync(enModel) };
 }
@@ -95,6 +110,21 @@ app.whenReady().then(() => {
     const filePath = fs.existsSync(bundledVolumeOne) ? bundledVolumeOne : downloadCopy;
     if (!fs.existsSync(filePath)) return { canceled: true, reason: 'The supplied Volume 1 PDF was not found in this project or Downloads.' };
     return { canceled: false, filePath, url: pathToFileURL(filePath).toString() };
+  });
+  ipcMain.handle('diagrams:load', () => diagramPdfList());
+  ipcMain.handle('diagrams:import', async () => {
+    const result = await dialog.showOpenDialog(windowRef, { properties: ['openFile', 'multiSelections'], filters: [{ name: 'Diagram PDFs', extensions: ['pdf'] }] });
+    if (result.canceled || !result.filePaths.length) return { canceled: true, imported: [], skipped: [] };
+    fs.mkdirSync(diagramLibraryDir, { recursive: true });
+    const imported = [], skipped = [];
+    for (const source of result.filePaths) {
+      const safeName = path.basename(source).replace(/[⁄/\\]/g, '-');
+      const destination = path.join(diagramLibraryDir, safeName);
+      if (fs.existsSync(destination)) { skipped.push(safeName); continue; }
+      fs.copyFileSync(source, destination, fs.constants.COPYFILE_EXCL);
+      imported.push(safeName);
+    }
+    return { canceled: false, imported, skipped, diagrams: diagramPdfList() };
   });
   ipcMain.handle('link:open', async (_, rawUrl) => {
     try {

@@ -1,14 +1,53 @@
 {
   "name": "ccna-memory-studio-focused",
   "version": "3.0.0",
-  "private": true,
+  "description": "SiriusBitz offline-first CCNA learning studio with Learn, Test, CLI Lab and Diagram Trainer modes",
+  "author": "SiriusBitz (Geert Marie-Rose De Bleye)",
+  "organization": "SiriusBitz",
+  "license": "GPL-3.0-only",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "check": "node --check main.js && node --check preload.js && node --check renderer.js && node --check integrations/lurnai-ai-bridge/index.js && node --check integrations/lurnai-ai-bridge/ollama-client.js && node --check integrations/lurnai-ai-bridge/web-provider.js",
-    "test": "node --test integrations/lurnai-ai-bridge/test/bridge.test.js"
+    "dist": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "dist:installer": "electron-builder --config electron-builder-installer.yml --win --publish never",
+    "build:ccna1-library": "node courses/ccna1/scripts/build-library.js",
+    "build:ccna2-library": "node courses/ccna2/scripts/build-library.js",
+    "build:ccna3-library": "node courses/ccna3/scripts/build-library.js",
+    "check": "node --check main.js && node --check preload.js && node --check renderer.js && node --check data/diagram-trainer.js && node --check integrations/lurnai-ai-bridge/index.js && node --check integrations/lurnai-ai-bridge/ollama-client.js && node --check integrations/lurnai-ai-bridge/web-provider.js",
+    "test": "node --test integrations/lurnai-ai-bridge/test/bridge.test.js courses/ccna1/test/library.test.js courses/ccna2/test/course-content.test.js courses/ccna2/test/library.test.js courses/ccna3/test/library.test.js test/ccna1-course-content.test.js test/ccna3-course-content.test.js test/cli-trainer.test.js test/diagram-trainer.test.js"
   },
   "devDependencies": {
-    "electron": "^43.1.1"
+    "electron": "^43.1.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "be.geertmarierosedebleye.ccnamemorystudio",
+    "productName": "SiriusBitz — CCNA Memory Studio",
+    "asar": true,
+    "files": [
+      "AGENTS.md", "index.html", "main.js", "preload.js", "renderer.js", "styles.css",
+      "data/**/*", "courses/**/*", "integrations/**/*", "docs/**/*", "README.md",
+      "LICENSE", "CHANGELOG.md", "CONTRIBUTING.md",
+      "!test/**/*", "!references/**/*", "!runtime/piper/**/*", "!runtime/tts-output/**/*",
+      "!user-data/**/*", "!tmp/**/*"
+    ],
+    "directories": { "output": "dist" },
+    "win": {
+      "target": ["nsis", "portable"],
+      "artifactName": "CCNA-Memory-Studio-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "CCNA Memory Studio",
+      "uninstallDisplayName": "CCNA Memory Studio",
+      "license": "LICENSE"
+    },
+    "portable": {
+      "artifactName": "CCNA-Memory-Studio-${version}-portable.${ext}"
+    }
   }
 }

@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 6,
+    "title": "EtherChannel",
+    "summary": "Bundel compatibele fysieke links tot één logische Port-Channel met LACP, PAgP of statische mode en diagnoseer bundelproblemen."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 3,
+    "total": 9
+  },
+  "cards": [
+    {
+      "id": "ccna2-m06-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.2",
+      "sectionTitle": "Configure EtherChannel",
+      "type": "knowledge",
+      "prompt": "Welke LACP-combinatie vormt geen kanaal?",
+      "choices": [
+        "passive–passive",
+        "active–passive",
+        "active–active",
+        "active met een correct LACP-peer"
+      ],
+      "correctIndex": 0,
+      "answer": "passive–passive",
+      "explanation": "Ten minste één zijde moet actief LACP-berichten initiëren.",
+      "tags": [
+        "etherchannel",
+        "configure",
+        "lacp-combinatie",
+        "vormt",
+        "geen",
+        "kanaal"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m06-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.1",
+      "sectionTitle": "EtherChannel Operation",
+      "type": "knowledge",
+      "prompt": "Hoe ziet STP een Layer-2 EtherChannel?",
+      "choices": [
+        "Als één logische poort",
+        "Als afzonderlijke onafhankelijke lussen",
+        "Als een routerinterface",
+        "Als één VLAN"
+      ],
+      "correctIndex": 0,
+      "answer": "Als één logische poort",
+      "explanation": "De Port-Channel is de STP-interface.",
+      "tags": [
+        "etherchannel",
+        "operation",
+        "ziet",
+        "stp",
+        "layer-2"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m06-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.2",
+      "sectionTitle": "Configure EtherChannel",
+      "type": "knowledge",
+      "prompt": "Welke eigenschap moet tussen members overeenkomen?",
+      "choices": [
+        "Trunk/access-parameters",
+        "Lokale channel-group-ID op beide switches",
+        "Interfacebeschrijving",
+        "MAC-adres"
+      ],
+      "correctIndex": 0,
+      "answer": "Trunk/access-parameters",
+      "explanation": "Incompatibele Layer-2-parameters verhinderen bundeling; lokale groepsnummers mogen verschillen.",
+      "tags": [
+        "etherchannel",
+        "configure",
+        "eigenschap",
+        "moet",
+        "members",
+        "overeenkomen"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m06-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.3",
+      "sectionTitle": "Verify and Troubleshoot EtherChannel",
+      "type": "knowledge",
+      "prompt": "Wat betekent membervlag P gewoonlijk in show etherchannel summary?",
+      "choices": [
+        "De poort is in de bundle",
+        "De poort is passive",
+        "De poort is geparkeerd",
+        "PAgP is verplicht"
+      ],
+      "correctIndex": 0,
+      "answer": "De poort is in de bundle",
+      "explanation": "P staat voor bundled in port-channel.",
+      "tags": [
+        "etherchannel",
+        "verify",
+        "and",
+        "troubleshoot",
+        "betekent",
+        "membervlag",
+        "gewoonlijk",
+        "show",
+        "summary"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m06-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.2",
+      "sectionTitle": "Configure EtherChannel",
+      "type": "diagnosis",
+      "prompt": "Twee links staan aan beide zijden in LACP passive. De Port-Channel komt niet up. Waarom?",
+      "choices": [
+        "Geen zijde initieert LACP.",
+        "De channel-groupnummers verschillen lokaal.",
+        "STP ziet één logische poort.",
+        "Beide links zijn full duplex."
+      ],
+      "correctIndex": 0,
+      "answer": "Geen zijde initieert LACP.",
+      "explanation": "Minstens één zijde moet LACP active gebruiken.",
+      "tags": [
+        "etherchannel",
+        "configure",
+        "twee",
+        "links",
+        "staan",
+        "beide",
+        "zijden",
+        "lacp",
+        "passive.",
+        "port-channel"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m06-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.3",
+      "sectionTitle": "Verify and Troubleshoot EtherChannel",
+      "type": "diagnosis",
+      "prompt": "Eén EtherChannel-member staat suspended. De allowed-VLAN lijst verschilt van de andere member. Wat is de oorzaak?",
+      "choices": [
+        "Incompatibele Layer-2-parameters.",
+        "Een te hoge HSRP-priority.",
+        "Een ontbrekende DHCP-pool.",
+        "Een DNS-timeout."
+      ],
+      "correctIndex": 0,
+      "answer": "Incompatibele Layer-2-parameters.",
+      "explanation": "Members moeten dezelfde trunk/access-eigenschappen hebben.",
+      "tags": [
+        "etherchannel",
+        "verify",
+        "and",
+        "troubleshoot",
+        "etherchannel-member",
+        "staat",
+        "suspended.",
+        "allowed-vlan",
+        "lijst",
+        "verschilt"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m06-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.1",
+      "sectionTitle": "EtherChannel Operation",
+      "type": "flashcard",
+      "front": "6.1 · EtherChannel Operation",
+      "back": "EtherChannel combineert meerdere gelijksoortige links in één logische interface. STP ziet de Port-Channel als één link, waardoor alle gebundelde capaciteit bruikbaar kan zijn zonder parallelle STP-blokkering. Load balancing kiest per flow een member op basis van een hash, bijvoorbeeld bron-/bestemmings-MAC of IP. Eén flow wordt normaal niet over alle links gespreid; de totale bundel profiteert van meerdere flows. LACP is IEEE 802.1AX/802.3ad-gebaseerd met active/passive. PAgP is Cisco-eigen met desirable/auto. Statische on-mode onderhandelt niet en vereist een foutloze configuratie aan beide zijden.",
+      "commands": "show etherchannel summary\nshow etherchannel load-balance",
+      "verify": [
+        "Protocol LACP/PAgP zoals ontworpen",
+        "Port-Channel is up",
+        "Members tonen gebundelde status P"
+      ],
+      "tags": [
+        "etherchannel",
+        "operation"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m06-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.2",
+      "sectionTitle": "Configure EtherChannel",
+      "type": "flashcard",
+      "front": "6.2 · Configure EtherChannel",
+      "back": "Memberpoorten moeten compatibel zijn: snelheid, duplex, switchportmode, access-VLAN of trunk-native/allowed VLANs. Configureer consistente kenmerken bij voorkeur op interface range vóór channel-group. LACP active initieert; passive reageert. Active–active en active–passive werken, passive–passive niet. PAgP desirable–auto of desirable–desirable werkt; auto–auto niet. Configureer gemeenschappelijke Layer-2-eigenschappen ook op interface port-channel zodat de logische interface de bedoeling vastlegt.",
+      "commands": "interface range g0/1-2\n switchport mode trunk\n switchport trunk allowed vlan 10,20,99\n channel-group 1 mode active\n no shutdown\ninterface port-channel 1\n switchport mode trunk\n switchport trunk allowed vlan 10,20,99",
+      "verify": [
+        "show interfaces port-channel 1",
+        "show interfaces trunk",
+        "show lacp neighbor"
+      ],
+      "tags": [
+        "etherchannel",
+        "configure"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m06-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 6,
+      "moduleTitle": "EtherChannel",
+      "sectionId": "6.3",
+      "sectionTitle": "Verify and Troubleshoot EtherChannel",
+      "type": "flashcard",
+      "front": "6.3 · Verify and Troubleshoot EtherChannel",
+      "back": "In show etherchannel summary betekent SU doorgaans Layer 2 en in use; membervlag P betekent bundled. Suspended of stand-alone wijst op protocol- of parameterconflict. Vergelijk beide uiteinden: channel-groupnummer hoeft lokaal niet gelijk te zijn, maar protocol/modes moeten compatibel zijn en alle poortkenmerken moeten overeenkomen. Pas structurele wijzigingen op de Port-Channel toe en verifieer daarna de members. Verwijder en herbouw alleen gecontroleerd wanneer configs inconsistent zijn.",
+      "commands": "show etherchannel summary\nshow etherchannel port-channel\nshow interfaces g0/1 etherchannel\nshow lacp neighbor\nshow running-config interface port-channel 1",
+      "verify": [
+        "Alle bedoelde members P",
+        "Geen suspended links",
+        "Trunkdetails aan beide kanten gelijk",
+        "STP toont Po1, niet elk member als apart pad"
+      ],
+      "tags": [
+        "etherchannel",
+        "verify",
+        "and",
+        "troubleshoot"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

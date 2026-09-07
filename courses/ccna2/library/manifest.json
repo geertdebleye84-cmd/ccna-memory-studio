@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "generatedAt": "2026-08-20T09:43:19.103Z",
+  "totals": {
+    "knowledge": 64,
+    "diagnosis": 32,
+    "flashcards": 66,
+    "total": 162
+  },
+  "files": [
+    {
+      "moduleId": 1,
+      "path": "modules/module-01.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 5,
+        "total": 11
+      },
+      "bytes": 13416,
+      "sha256": "cde58735d947294d405a39c5f2b5a5e92ef1348a09af262154bc37abf30619a6"
+    },
+    {
+      "moduleId": 2,
+      "path": "modules/module-02.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 2,
+        "total": 8
+      },
+      "bytes": 8782,
+      "sha256": "c0ce2f7114da6deda2d865ae0e4234cb1bb1f138e4bedba969b64b5340d12fb0"
+    },
+    {
+      "moduleId": 3,
+      "path": "modules/module-03.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 5,
+        "total": 11
+      },
+      "bytes": 11946,
+      "sha256": "875fc546f8a1f0b7271a8e98eb098f77c5ef5d7e8b00c298155a8002ae277c02"
+    },
+    {
+      "moduleId": 4,
+      "path": "modules/module-04.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 4,
+        "total": 10
+      },
+      "bytes": 11481,
+      "sha256": "f423001828556fcbeb1759fdf5c0b3ccc0971a91cd26cbb6db12b6d4679de2c5"
+    },
+    {
+      "moduleId": 5,
+      "path": "modules/module-05.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 3,
+        "total": 9
+      },
+      "bytes": 9399,
+      "sha256": "99b248a3747e37324c1e52f12cbf8254fa90980490f9026b24da8073250562a4"
+    },
+    {
+      "moduleId": 6,
+      "path": "modules/module-06.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 3,
+        "total": 9
+      },
+      "bytes": 9551,
+      "sha256": "e02e9a4f1b2624208892ecfe923b9e8ccf40d61558fafd3dcb244ffb2cbbbe7c"
+    },
+    {
+      "moduleId": 7,
+      "path": "modules/module-07.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 3,
+        "total": 9
+      },
+      "bytes": 9334,
+      "sha256": "583c55af86c8f5a1f50dcc0e7704d6f7148c4389d086b88ce9d786af78162440"
+    },
+    {
+      "moduleId": 8,
+      "path": "modules/module-08.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 6,
+        "total": 12
+      },
+      "bytes": 11952,
+      "sha256": "1efa447b7e7ba9057aefead4cc30709f22407f1fe7a2a3c890ba076c9956a6bb"
+    },
+    {
+      "moduleId": 9,
+      "path": "modules/module-09.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 2,
+        "total": 8
+      },
+      "bytes": 8156,
+      "sha256": "bc459153f0f1c31e44be4eebf0590322e95cceecd815bc2ab650826a48416918"
+    },
+    {
+      "moduleId": 10,
+      "path": "modules/module-10.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 5,
+        "total": 11
+      },
+      "bytes": 11953,
+      "sha256": "20e41bae6a4be09ff9e6ef9ff9ae4915dbabbb733966e22e9576bbb511b97d96"
+    },
+    {
+      "moduleId": 11,
+      "path": "modules/module-11.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 5,
+        "total": 11
+      },
+      "bytes": 12746,
+      "sha256": "1179483dcd9e74c56284f34a049b2cb11a71d3c3696413d58fbba5a5ed783406"
+    },
+    {
+      "moduleId": 12,
+      "path": "modules/module-12.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 7,
+        "total": 13
+      },
+      "bytes": 13871,
+      "sha256": "ea78fd497e97e1ea65bbb02052cdb32ce61fe17a852d8577d4f1c6a7523b1464"
+    },
+    {
+      "moduleId": 13,
+      "path": "modules/module-13.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 4,
+        "total": 10
+      },
+      "bytes": 11330,
+      "sha256": "9498a3b14b260dce0055c03c61ddc6dbd69d791a4d6fbb1fc78d6dd0d0c97236"
+    },
+    {
+      "moduleId": 14,
+      "path": "modules/module-14.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 5,
+        "total": 11
+      },
+      "bytes": 12018,
+      "sha256": "0ec6ee4da24c1dea84597a851e7b21905344d8d7e51676fe8fbdf8acab7c716e"
+    },
+    {
+      "moduleId": 15,
+      "path": "modules/module-15.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 5,
+        "total": 11
+      },
+      "bytes": 11781,
+      "sha256": "566ccc76631a7e3081e21e81a65c3d8350f3c96b943aa6177cbcf9818d067deb"
+    },
+    {
+      "moduleId": 16,
+      "path": "modules/module-16.json",
+      "counts": {
+        "knowledge": 4,
+        "diagnosis": 2,
+        "flashcards": 2,
+        "total": 8
+      },
+      "bytes": 9831,
+      "sha256": "66b210d47cb4aef0e360aa10ae8c4b0948f9b397909aeaaf1791c5d9f4b104c6"
+    }
+  ]
+}

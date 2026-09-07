@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 2,
+    "title": "Single-Area OSPFv2 Configuration",
+    "summary": "Configureer, optimaliseer en controleer OSPFv2 in één area, inclusief router-ID, DR/BDR en default-routepropagatie."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 4
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m02-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "2.1",
+      "sectionTitle": "OSPF Router ID",
+      "prompt": "Welke router wordt bij gelijke OSPF-priority DR?",
+      "choices": [
+        "De hoogste router-ID",
+        "De laagste cost",
+        "De laagste router-ID",
+        "De hoogste process-id"
+      ],
+      "correctIndex": 0,
+      "answer": "De hoogste router-ID",
+      "explanation": "Router-ID is de tiebreaker.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "ospf",
+        "router",
+        "gelijke",
+        "ospf-priority"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m02-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "2.2",
+      "sectionTitle": "Point-to-Point OSPF Networks",
+      "prompt": "Wat doet passive-interface?",
+      "choices": [
+        "Het netwerk blijft geadverteerd, maar er worden geen Hellos verstuurd.",
+        "Het verwijdert de connected route.",
+        "Het schakelt SPF uit.",
+        "Het maakt de interface DR."
+      ],
+      "correctIndex": 0,
+      "answer": "Het netwerk blijft geadverteerd, maar er worden geen Hellos verstuurd.",
+      "explanation": "Passief voorkomt buren op een interface zonder de prefix te verbergen.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "point-to-point",
+        "ospf",
+        "networks",
+        "doet",
+        "passive-interface"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m02-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "2.3",
+      "sectionTitle": "Multiaccess OSPF Networks",
+      "prompt": "Wat is nodig voor normale default-information originate?",
+      "choices": [
+        "Een default route in de lokale routingtabel",
+        "Een loopback met /32",
+        "Priority 0",
+        "Een DR op elke link"
+      ],
+      "correctIndex": 0,
+      "answer": "Een default route in de lokale routingtabel",
+      "explanation": "OSPF adverteert standaard alleen een bestaande default.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "multiaccess",
+        "ospf",
+        "networks",
+        "nodig",
+        "normale",
+        "default-information",
+        "originate"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m02-diag-01",
+      "type": "diagnostic",
+      "sectionId": "2.3",
+      "sectionTitle": "Multiaccess OSPF Networks",
+      "prompt": "Een router met hogere OSPF-priority komt later online, maar de bestaande DR blijft DR. Wat verklaart dit?",
+      "choices": [
+        "De DR-verkiezing is niet-preemptive",
+        "De hoogste priority wordt altijd DROTHER",
+        "Process-ID’s moeten gelijk zijn",
+        "De nieuwe router gebruikt area 1"
+      ],
+      "correctIndex": 0,
+      "answer": "De DR-verkiezing is niet-preemptive",
+      "explanation": "Een bestaande gezonde DR wordt niet automatisch verdrongen door een later betere kandidaat.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "multiaccess",
+        "ospf",
+        "networks",
+        "router",
+        "hogere",
+        "ospf-priority",
+        "komt"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m02-diag-02",
+      "type": "diagnostic",
+      "sectionId": "2.4",
+      "sectionTitle": "Modify and Verify Single-Area OSPFv2",
+      "prompt": "OSPF-buren zien alle interne prefixes, maar geen default route vanaf de edge. Wat controleer je eerst?",
+      "choices": [
+        "Of de edge zelf een default route heeft",
+        "Of alle routers priority 0 hebben",
+        "Of ARP is uitgeschakeld",
+        "Of de DR een loopback mist"
+      ],
+      "correctIndex": 0,
+      "answer": "Of de edge zelf een default route heeft",
+      "explanation": "Normale default-information originate adverteert alleen een bestaande lokale default route.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "modify",
+        "and",
+        "verify",
+        "ospf-buren",
+        "zien",
+        "alle",
+        "interne"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m02-flash-01",
+      "type": "flashcard",
+      "sectionId": "2.1",
+      "sectionTitle": "OSPF Router ID",
+      "front": "Wat moet je kunnen uitleggen over OSPF Router ID?",
+      "back": "De router-ID is een 32-bits identificator en hoeft geen bereikbaar IPv4-adres te zijn. IOS kiest expliciete router-id, anders hoogste loopbackadres, anders hoogste actieve interfaceadres. Wijziging van de router-ID vereist doorgaans herstart van het OSPF-proces of een reload; dubbele IDs voorkomen betrouwbare LSDB-synchronisatie.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "ospf",
+        "router",
+        "router-id",
+        "32-bits",
+        "identificator",
+        "hoeft",
+        "geen"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m02-flash-02",
+      "type": "flashcard",
+      "sectionId": "2.2",
+      "sectionTitle": "Point-to-Point OSPF Networks",
+      "front": "Wat moet je kunnen uitleggen over Point-to-Point OSPF Networks?",
+      "back": "Activeer OSPF met network plus wildcard en area, of direct op de interface met ip ospf process-id area area-id. Het process-id is lokaal en hoeft tussen buren niet gelijk te zijn. Op point-to-pointnetwerken is geen DR/BDR nodig. passive-interface voorkomt Hellos op gebruikers-LANs maar blijft het aangesloten netwerk adverteren.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "point-to-point",
+        "ospf",
+        "networks",
+        "activeer",
+        "network",
+        "plus",
+        "wildcard"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m02-flash-03",
+      "type": "flashcard",
+      "sectionId": "2.3",
+      "sectionTitle": "Multiaccess OSPF Networks",
+      "front": "Wat moet je kunnen uitleggen over Multiaccess OSPF Networks?",
+      "back": "Op Ethernet reduceert een DR/BDR het aantal volledige adjacencies. Hoogste interfacepriority wint; priority 0 sluit een router uit. Bij gelijke priority wint de hoogste router-ID. De verkiezing is niet-preemptive: een later gestarte betere kandidaat neemt de rol niet automatisch over. DROTHERs zijn onderling normaal 2-Way.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "multiaccess",
+        "ospf",
+        "networks",
+        "ethernet",
+        "reduceert",
+        "dr/bdr",
+        "aantal"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m02-flash-04",
+      "type": "flashcard",
+      "sectionId": "2.4",
+      "sectionTitle": "Modify and Verify Single-Area OSPFv2",
+      "front": "Wat moet je kunnen uitleggen over Modify and Verify Single-Area OSPFv2?",
+      "back": "Hello/dead timers, area, authenticatie, MTU en netwerktype moeten compatibel zijn. Cost kan direct worden gezet of uit interfacebandbreedte en reference bandwidth voortkomen. Advertiseer een aanwezige default route met default-information originate. Controleer eerst of de ASBR zelf 0.0.0.0/0 in zijn routingtabel heeft.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "configuration",
+        "modify",
+        "and",
+        "verify",
+        "hello/dead",
+        "timers",
+        "area",
+        "authenticatie"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

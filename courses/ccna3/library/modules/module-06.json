@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 6,
+    "title": "NAT for IPv4",
+    "summary": "Vertaal private en publieke IPv4-adressen met static NAT, dynamic NAT en PAT en diagnoseer vertalingen stap voor stap."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 5
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m06-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "6.1",
+      "sectionTitle": "NAT Characteristics and Terminology",
+      "prompt": "Welke NAT-vorm deelt één publiek adres via poorten?",
+      "choices": [
+        "PAT",
+        "Static NAT zonder overload",
+        "OSPF",
+        "GRE"
+      ],
+      "correctIndex": 0,
+      "answer": "PAT",
+      "explanation": "PAT gebruikt Layer-4-poorten om sessies te onderscheiden.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "characteristics",
+        "and",
+        "terminology",
+        "nat-vorm",
+        "deelt",
+        "publiek",
+        "adres"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m06-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "6.2",
+      "sectionTitle": "Static NAT",
+      "prompt": "Wat gebeurt bij een uitgeputte dynamic-NAT-pool?",
+      "choices": [
+        "Nieuwe vertalingen kunnen niet worden aangemaakt.",
+        "IOS schakelt automatisch over op IPv6.",
+        "Alle bestaande entries verdwijnen.",
+        "De ACL wordt een permit any."
+      ],
+      "correctIndex": 0,
+      "answer": "Nieuwe vertalingen kunnen niet worden aangemaakt.",
+      "explanation": "Zonder beschikbaar global adres kan geen nieuwe mapping ontstaan.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "static",
+        "gebeurt",
+        "uitgeputte",
+        "dynamic-nat-pool"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m06-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "6.3",
+      "sectionTitle": "Dynamic NAT",
+      "prompt": "Waar begin je bij ontbrekende NAT-vertalingen?",
+      "choices": [
+        "Controleer routing, interface-rollen en selectie-ACL.",
+        "Wis altijd eerst de configuratie.",
+        "Verander OSPF-area.",
+        "Schakel logging uit."
+      ],
+      "correctIndex": 0,
+      "answer": "Controleer routing, interface-rollen en selectie-ACL.",
+      "explanation": "Deze drie voorwaarden bepalen of verkeer de NAT-regel bereikt en matcht.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "dynamic",
+        "waar",
+        "begin",
+        "ontbrekende",
+        "nat-vertalingen"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m06-diag-01",
+      "type": "diagnostic",
+      "sectionId": "6.4",
+      "sectionTitle": "PAT",
+      "prompt": "Tientallen inside-hosts verschijnen met hetzelfde publieke adres maar verschillende bronpoorten. Welke functie zie je?",
+      "choices": [
+        "PAT/overload",
+        "Static NAT",
+        "NAT64 zonder poorten",
+        "OSPF ECMP"
+      ],
+      "correctIndex": 0,
+      "answer": "PAT/overload",
+      "explanation": "PAT onderscheidt gelijktijdige vertalingen met Layer-4-poorten.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "pat",
+        "tientallen",
+        "inside-hosts",
+        "verschijnen",
+        "hetzelfde",
+        "publieke",
+        "adres"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m06-diag-02",
+      "type": "diagnostic",
+      "sectionId": "6.3",
+      "sectionTitle": "Dynamic NAT",
+      "prompt": "De eerste vijf hosts krijgen een dynamic-NAT-vertaling; de zesde niet, hoewel routing en ACL kloppen. Wat is waarschijnlijk?",
+      "choices": [
+        "De publieke NAT-pool is uitgeput",
+        "De DR is gewijzigd",
+        "De switch heeft geen native VLAN",
+        "NTP is niet gesynchroniseerd"
+      ],
+      "correctIndex": 0,
+      "answer": "De publieke NAT-pool is uitgeput",
+      "explanation": "Dynamic NAT zonder overload heeft voor iedere gelijktijdige mapping een pooladres nodig.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "dynamic",
+        "eerste",
+        "vijf",
+        "hosts",
+        "krijgen",
+        "dynamic-nat-vertaling",
+        "zesde"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m06-flash-01",
+      "type": "flashcard",
+      "sectionId": "6.1",
+      "sectionTitle": "NAT Characteristics and Terminology",
+      "front": "Wat moet je kunnen uitleggen over NAT Characteristics and Terminology?",
+      "back": "Inside local is het bronadres zoals binnen gezien; inside global vertegenwoordigt die host buiten. Outside local/global beschrijven de externe host vanuit beide perspectieven. NAT spaart publieke IPv4-adressen en verbergt interne adressering, maar doorbreekt end-to-end-adressering en kan protocollen met ingebedde adressen bemoeilijken.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "characteristics",
+        "and",
+        "terminology",
+        "inside",
+        "local",
+        "bronadres",
+        "zoals"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m06-flash-02",
+      "type": "flashcard",
+      "sectionId": "6.2",
+      "sectionTitle": "Static NAT",
+      "front": "Wat moet je kunnen uitleggen over Static NAT?",
+      "back": "Static NAT levert een vaste één-op-één mapping en past bij een intern aangeboden dienst. De publieke mapping moet extern naar de NAT-router worden gerouteerd. Markeer interfaces met ip nat inside/outside; de mapping alleen bepaalt niet automatisch firewallbeleid.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "static",
+        "levert",
+        "vaste",
+        "n-op-",
+        "mapping",
+        "past",
+        "intern"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m06-flash-03",
+      "type": "flashcard",
+      "sectionId": "6.3",
+      "sectionTitle": "Dynamic NAT",
+      "front": "Wat moet je kunnen uitleggen over Dynamic NAT?",
+      "back": "Dynamic NAT koppelt toegestane inside-localadressen tijdelijk aan een pool van publieke adressen. Is de pool vol, dan wachten nieuwe hosts tot een vertaling verloopt. De ACL selecteert te vertalen bronnen en is hier geen directe permit/deny-filter op de interface.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "dynamic",
+        "koppelt",
+        "toegestane",
+        "inside-localadressen",
+        "tijdelijk",
+        "pool",
+        "publieke"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m06-flash-04",
+      "type": "flashcard",
+      "sectionId": "6.4",
+      "sectionTitle": "PAT",
+      "front": "Wat moet je kunnen uitleggen over PAT?",
+      "back": "PAT multiplexeert veel inside-localhosts op één of enkele publieke adressen met unieke Layer-4-poorten; overload activeert dit gedrag. Een interfaceadres kan als inside global dienen. Retourverkeer wordt aan de translation table gekoppeld; unsolicited inbound verkeer heeft geen bestaande entry.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "pat",
+        "multiplexeert",
+        "veel",
+        "inside-localhosts",
+        "enkele",
+        "publieke",
+        "adressen"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m06-flash-05",
+      "type": "flashcard",
+      "sectionId": "6.5",
+      "sectionTitle": "NAT Verification and NAT64",
+      "front": "Wat moet je kunnen uitleggen over NAT Verification and NAT64?",
+      "back": "Diagnoseer in volgorde: interfaceadres/routing, inside/outside-markering, ACL-match, translation en return route. clear ip nat translation verwijdert state en verstoort actieve sessies. NAT64 kan IPv6-clients met IPv4-diensten laten communiceren, maar is een migratiemechanisme; dual stack behoudt native bereikbaarheid waar mogelijk.",
+      "tags": [
+        "nat",
+        "for",
+        "ipv4",
+        "verification",
+        "and",
+        "nat64",
+        "diagnoseer",
+        "volgorde",
+        "interfaceadres/routing",
+        "inside/outside-markering"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

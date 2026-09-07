@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 11,
+    "title": "IPv4 Addressing",
+    "summary": "Ontleed IPv4-adressen en masks, bereken subnetten en VLSM en ontwerp een schaalbaar adresplan."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 9,
+    "total": 14
+  },
+  "cards": [
+    {
+      "id": "ccna1-m11-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.5",
+      "sectionTitle": "Subnet an IPv4 Network",
+      "type": "knowledge",
+      "prompt": "Hoeveel bruikbare hosts heeft een klassiek /26-LAN?",
+      "choices": [
+        "62",
+        "64",
+        "30",
+        "126"
+      ],
+      "correctIndex": 0,
+      "answer": "62",
+      "explanation": "Zes hostbits: 64 adressen minus netwerk en broadcast.",
+      "tags": [
+        "ipv4",
+        "addressing",
+        "subnet",
+        "network",
+        "hoeveel",
+        "bruikbare",
+        "hosts",
+        "heeft",
+        "klassiek",
+        "26-lan"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m11-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.8",
+      "sectionTitle": "Variable Length Subnet Masking",
+      "type": "knowledge",
+      "prompt": "Waarom VLSM?",
+      "choices": [
+        "Subnets passend bij verschillende hostbehoeften maken",
+        "MAC-adressen inkorten",
+        "DNS vervangen",
+        "Broadcasts over routers sturen"
+      ],
+      "correctIndex": 0,
+      "answer": "Subnets passend bij verschillende hostbehoeften maken",
+      "explanation": "VLSM vermindert verspilling.",
+      "tags": [
+        "ipv4",
+        "addressing",
+        "variable",
+        "length",
+        "subnet",
+        "masking",
+        "vlsm"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m11-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.5",
+      "sectionTitle": "Subnet an IPv4 Network",
+      "type": "knowledge",
+      "prompt": "Wat is de block size bij 255.255.255.224?",
+      "choices": [
+        "32",
+        "224",
+        "16",
+        "64"
+      ],
+      "correctIndex": 0,
+      "answer": "32",
+      "explanation": "De block size is 256 min 224 en bedraagt dus 32 adressen.",
+      "tags": [
+        "ipv4",
+        "addressing",
+        "subnet",
+        "network",
+        "block",
+        "size",
+        "255.255.255.224"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m11-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.5",
+      "sectionTitle": "Subnet an IPv4 Network",
+      "type": "diagnosis",
+      "prompt": "Een /26-subnet start op 192.0.2.64. Een beheerder gebruikt .127 als hostadres. Waarom werkt dit niet?",
+      "choices": [
+        ".127 is het broadcastadres van 192.0.2.64/26.",
+        "Een /26 heeft geen broadcast.",
+        ".127 is altijd loopback.",
+        "Het netwerk start op .128."
+      ],
+      "correctIndex": 0,
+      "answer": ".127 is het broadcastadres van 192.0.2.64/26.",
+      "explanation": "Het bereik is .64–.127; netwerk .64, hosts .65–.126 en broadcast .127.",
+      "tags": [
+        "ipv4",
+        "addressing",
+        "subnet",
+        "network",
+        "26-subnet",
+        "start",
+        "192.0.2.64.",
+        "beheerder",
+        "gebruikt",
+        "127"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m11-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.8",
+      "sectionTitle": "Variable Length Subnet Masking",
+      "type": "diagnosis",
+      "prompt": "Een VLSM-plan deelt eerst kleine subnetten uit en vindt daarna geen uitgelijnd blok voor 100 hosts. Wat was de ontwerpfout?",
+      "choices": [
+        "Niet van grootste naar kleinste behoefte verdelen.",
+        "Te veel DNS-records gebruiken.",
+        "De MAC-adressen niet sorteren.",
+        "Elke link een /64 geven."
+      ],
+      "correctIndex": 0,
+      "answer": "Niet van grootste naar kleinste behoefte verdelen.",
+      "explanation": "Grootste-eerst behoudt uitgelijnde grote blokken en voorkomt fragmentatie van adresruimte.",
+      "tags": [
+        "ipv4",
+        "addressing",
+        "variable",
+        "length",
+        "subnet",
+        "masking",
+        "vlsm-plan",
+        "deelt",
+        "eerst",
+        "kleine"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m11-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.1",
+      "sectionTitle": "IPv4 Address Structure",
+      "type": "flashcard",
+      "front": "11.1 · IPv4 Address Structure",
+      "back": "IPv4 heeft 32 bits. Prefix/masker scheidt netwerk- en hostdeel; AND tussen adres en masker levert netwerkadres. Prefixlengte telt 1-bits in het masker. Hostbits alle 0 is netwerk; alle 1 is directed broadcast; tussenwaarden zijn doorgaans hosts.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "address",
+        "structure"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.2",
+      "sectionTitle": "IPv4 Unicast, Broadcast, and Multicast",
+      "type": "flashcard",
+      "front": "11.2 · IPv4 Unicast, Broadcast, and Multicast",
+      "back": "Unicast richt zich op één interface; broadcast op alle hosts in een subnet; multicast op ingeschreven groepsleden. Limited broadcast is 255.255.255.255. Routers forwarden broadcasts standaard niet; multicast gebruikt 224.0.0.0/4.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "unicast",
+        "broadcast",
+        "and",
+        "multicast"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.3",
+      "sectionTitle": "Types of IPv4 Addresses",
+      "type": "flashcard",
+      "front": "11.3 · Types of IPv4 Addresses",
+      "back": "Private bereiken: 10/8, 172.16/12 en 192.168/16; ze zijn niet publiek routeerbaar en gebruiken vaak NAT. Public adressen zijn globaal uniek. Speciale bereiken omvatten loopback 127/8, link-local 169.254/16, documentation 192.0.2/24 e.a., multicast en limited broadcast.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "types",
+        "addresses"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.4",
+      "sectionTitle": "Network Segmentation",
+      "type": "flashcard",
+      "front": "11.4 · Network Segmentation",
+      "back": "Subnetting verkleint broadcastdomeinen, scheidt locaties/rollen/securityzones en gebruikt adressen doelmatiger. Routers/L3-switches verbinden subnetten. Leen hostbits als subnetbits. Aantal subnetten is 2^s; bruikbare hosts klassiek 2^h−2, met uitzonderingen /31 en /32.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "network",
+        "segmentation"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.5",
+      "sectionTitle": "Subnet an IPv4 Network",
+      "type": "flashcard",
+      "front": "11.5 · Subnet an IPv4 Network",
+      "back": "Voor vaste subnetgrootte bepaal hosts, kies h zodat 2^h−2 volstaat, prefix=32−h en block size=256−relevant maskeroctet. Netwerken stijgen met block size. Noteer netwerk, eerste host, laatste host en broadcast; subnetten overlappen nooit.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "subnet",
+        "network"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.6",
+      "sectionTitle": "Subnet a /16 and a /8 Prefix",
+      "type": "flashcard",
+      "front": "11.6 · Subnet a /16 and a /8 Prefix",
+      "back": "Dezelfde binaire methode geldt over octetgrenzen. Focus niet op oude classful grenzen; prefixlengte bepaalt de echte grens. Schrijf het volledige masker en identificeer het interesting octet om block sizes systematisch te berekenen.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "subnet",
+        "and",
+        "prefix"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.7",
+      "sectionTitle": "Subnet To Meet Requirements",
+      "type": "flashcard",
+      "front": "11.7 · Subnet To Meet Requirements",
+      "back": "Vertaal aantallen hosts, locaties, groei en point-to-pointlinks naar subnetbehoeften. Reserveer gateway en infrastructuuradressen consequent. Valideer elk subnet op capaciteit, overlap, aggregatiemogelijkheid en documenteer vrije ruimte.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "subnet",
+        "meet",
+        "requirements"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f08",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.8",
+      "sectionTitle": "Variable Length Subnet Masking",
+      "type": "flashcard",
+      "front": "11.8 · Variable Length Subnet Masking",
+      "back": "VLSM gebruikt verschillende prefixlengtes binnen één adresblok. Deel grootste subnet eerst uit, daarna aflopend, zodat uitlijning en vrije ruimte behouden blijven. Routes dragen prefixlengte; classless routing ondersteunt VLSM. Route summarization kan alleen op binaire grenzen.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "variable",
+        "length",
+        "subnet",
+        "masking"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m11-f09",
+      "courseId": "ccna1-itn",
+      "moduleId": 11,
+      "moduleTitle": "IPv4 Addressing",
+      "sectionId": "11.9",
+      "sectionTitle": "Structured Design",
+      "type": "flashcard",
+      "front": "11.9 · Structured Design",
+      "back": "Een plan koppelt subnet/VLAN, doel, prefix, gateway, hostrange, broadcast en reserveringen. Gebruik hiërarchie per locatie/functie. Controleer ontwerp voor configuratie; verifieer daarna met host- en routertabellen, pings en een bijgewerkt diagram.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv4",
+        "addressing",
+        "structured",
+        "design"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

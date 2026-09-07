@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 7,
+    "title": "DHCPv4",
+    "summary": "Automatiseer IPv4-configuratie met DORA, IOS DHCP-pools, relay agents en clientconfiguratie."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 3,
+    "total": 9
+  },
+  "cards": [
+    {
+      "id": "ccna2-m07-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.1",
+      "sectionTitle": "DHCPv4 Concepts",
+      "type": "knowledge",
+      "prompt": "Wat is de juiste DORA-volgorde?",
+      "choices": [
+        "Discover, Offer, Request, Acknowledge",
+        "Discover, Request, Offer, Acknowledge",
+        "Offer, Discover, Acknowledge, Request",
+        "Request, Offer, Discover, Acknowledge"
+      ],
+      "correctIndex": 0,
+      "answer": "Discover, Offer, Request, Acknowledge",
+      "explanation": "De client ontdekt, server biedt, client vraagt en server bevestigt.",
+      "tags": [
+        "dhcpv4",
+        "concepts",
+        "juiste",
+        "dora-volgorde"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m07-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.3",
+      "sectionTitle": "Configure a DHCPv4 Client",
+      "type": "knowledge",
+      "prompt": "Waar configureer je ip helper-address?",
+      "choices": [
+        "Op de routerinterface die clientbroadcasts ontvangt",
+        "Op elke client",
+        "Alleen op de DHCP-serverinterface",
+        "Op de switchconsole"
+      ],
+      "correctIndex": 0,
+      "answer": "Op de routerinterface die clientbroadcasts ontvangt",
+      "explanation": "De relay onderschept de broadcast op het clientsubnet.",
+      "tags": [
+        "dhcpv4",
+        "configure",
+        "client",
+        "waar",
+        "configureer",
+        "helper-address"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m07-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.1",
+      "sectionTitle": "DHCPv4 Concepts",
+      "type": "knowledge",
+      "prompt": "Welke DHCP-optie levert normaal de default gateway?",
+      "choices": [
+        "Option 3",
+        "Option 6",
+        "Option 53",
+        "Option 82"
+      ],
+      "correctIndex": 0,
+      "answer": "Option 3",
+      "explanation": "Option 3 is de routeroptie; option 6 is DNS.",
+      "tags": [
+        "dhcpv4",
+        "concepts",
+        "dhcp-optie",
+        "levert",
+        "normaal",
+        "default",
+        "gateway"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m07-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.2",
+      "sectionTitle": "Configure a Cisco IOS DHCPv4 Server",
+      "type": "knowledge",
+      "prompt": "Welke opdracht voorkomt dat een gatewayadres wordt uitgedeeld?",
+      "choices": [
+        "ip dhcp excluded-address",
+        "deny dhcp any",
+        "no service dhcp pool",
+        "ip helper-address"
+      ],
+      "correctIndex": 0,
+      "answer": "ip dhcp excluded-address",
+      "explanation": "Excluded ranges worden buiten de dynamische allocatie gehouden.",
+      "tags": [
+        "dhcpv4",
+        "configure",
+        "cisco",
+        "ios",
+        "server",
+        "opdracht",
+        "voorkomt",
+        "gatewayadres",
+        "uitgedeeld"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m07-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.1",
+      "sectionTitle": "DHCPv4 Concepts",
+      "type": "diagnosis",
+      "prompt": "Clients in een remote subnet sturen DHCPDISCOVER, maar de server in een ander subnet ziet niets. De router routeert gewone unicast wel. Wat ontbreekt?",
+      "choices": [
+        "ip helper-address op het client-facing interface.",
+        "Een static host route op de client.",
+        "BPDU Guard op de uplink.",
+        "Een native voice VLAN."
+      ],
+      "correctIndex": 0,
+      "answer": "ip helper-address op het client-facing interface.",
+      "explanation": "Routers forwarden de clientbroadcast niet zonder DHCP relay.",
+      "tags": [
+        "dhcpv4",
+        "concepts",
+        "clients",
+        "remote",
+        "subnet",
+        "sturen",
+        "dhcpdiscover",
+        "maar",
+        "server",
+        "ander"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m07-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.2",
+      "sectionTitle": "Configure a Cisco IOS DHCPv4 Server",
+      "type": "diagnosis",
+      "prompt": "Een client krijgt soms het IP-adres van de default gateway uit de IOS DHCP-pool. Wat is verkeerd geconfigureerd?",
+      "choices": [
+        "Het gatewayadres is niet uitgesloten.",
+        "De lease is te lang.",
+        "De switch gebruikt Rapid PVST+.",
+        "De router heeft SSHv2."
+      ],
+      "correctIndex": 0,
+      "answer": "Het gatewayadres is niet uitgesloten.",
+      "explanation": "Statische infrastructuuradressen horen in ip dhcp excluded-address.",
+      "tags": [
+        "dhcpv4",
+        "configure",
+        "cisco",
+        "ios",
+        "server",
+        "client",
+        "krijgt",
+        "soms",
+        "ip-adres",
+        "default"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m07-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.1",
+      "sectionTitle": "DHCPv4 Concepts",
+      "type": "flashcard",
+      "front": "7.1 · DHCPv4 Concepts",
+      "back": "Een nieuwe client gebruikt DORA: DHCPDISCOVER, DHCPOFFER, DHCPREQUEST en DHCPACK. Omdat de client aanvankelijk geen bruikbaar adres of serveradres kent, begint de uitwisseling met broadcasts. Een lease bevat minimaal adres en masker en vaak default gateway (option 3), DNS (option 6) en leasetijd. Een client probeert rond T1 de lease unicast te vernieuwen en later via rebinding breder te zoeken. Routers sturen broadcasts niet standaard door. ip helper-address op de client-LAN-interface zet relevante UDP-broadcasts om naar unicast richting een server in een ander subnet.",
+      "commands": "show ip dhcp binding\nshow ip dhcp pool\nshow ip dhcp server statistics",
+      "verify": [
+        "Lease komt uit het juiste subnet",
+        "Gateway en DNS kloppen",
+        "Geen overlap met statische adressen"
+      ],
+      "tags": [
+        "dhcpv4",
+        "concepts"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m07-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.2",
+      "sectionTitle": "Configure a Cisco IOS DHCPv4 Server",
+      "type": "flashcard",
+      "front": "7.2 · Configure a Cisco IOS DHCPv4 Server",
+      "back": "Sluit infrastructuuradressen uit vóór poolallocatie. De network-regel definieert het uitdeelnetwerk; default-router moet een bereikbaar adres in dat subnet zijn. IOS kiest de pool op basis van de ontvangende interface of het relay-informatieveld (giaddr). Eén router kan meerdere pools voor verschillende LANs hosten. Controleer bindings én poolgebruik. Een lege pool, verkeerde mask of ontbrekende route naar het clientnetwerk kan de uitgifte stoppen.",
+      "commands": "ip dhcp excluded-address 192.0.2.1 192.0.2.20\nip dhcp pool USERS\n network 192.0.2.0 255.255.255.0\n default-router 192.0.2.1\n dns-server 203.0.113.53\n domain-name lab.example\n lease 7",
+      "verify": [
+        "show ip dhcp pool",
+        "show ip dhcp binding",
+        "show running-config | section dhcp"
+      ],
+      "tags": [
+        "dhcpv4",
+        "configure",
+        "cisco",
+        "ios",
+        "server"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m07-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 7,
+      "moduleTitle": "DHCPv4",
+      "sectionId": "7.3",
+      "sectionTitle": "Configure a DHCPv4 Client",
+      "type": "flashcard",
+      "front": "7.3 · Configure a DHCPv4 Client",
+      "back": "Een IOS-interface kan zelf client zijn met ip address dhcp, bijvoorbeeld een kleine kantoorrouter aan een providerzijde. Een relay hoort op de interface die de clientbroadcast ontvangt, niet op de server-facing interface. Het helper-adres is het unicastadres van de DHCP-server. Bij troubleshooting volg je het proces: ziet de client link, verlaat DISCOVER de VLAN, ontvangt relay/server het verzoek, bestaat een passende pool en keert OFFER/ACK via het retourpad terug?",
+      "commands": "interface g0/0/0\n ip address dhcp\n no shutdown\n! Relay op client-LAN\ninterface g0/0/1\n ip helper-address 203.0.113.10",
+      "verify": [
+        "show ip interface brief",
+        "show dhcp lease",
+        "debug ip dhcp server events (alleen gecontroleerd in lab)"
+      ],
+      "tags": [
+        "dhcpv4",
+        "configure",
+        "client"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

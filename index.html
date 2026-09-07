@@ -12,7 +12,7 @@
       <div class="brand"><span class="brand-mark">CM</span><div><strong>CCNA<br />MEMORY STUDIO</strong><small>STUDY WORKBENCH / V3</small></div></div>
       <nav class="rail-navigation" aria-label="Study mode and workspace arrangement">
         <div class="rail-nav-label">MODE</div>
-        <div class="mode-switcher"><button class="mode active" data-mode="learn"><span>01</span>STUDY</button><button class="mode" data-mode="test"><span>02</span>TEST</button></div>
+        <div class="mode-switcher"><button class="mode active" data-mode="learn"><span>01</span>STUDY</button><button class="mode" data-mode="test"><span>02</span>TEST</button><button class="mode" data-mode="course"><span>03</span>COURSES</button><button class="mode" data-mode="cli"><span>04</span>CLI LAB</button><button class="mode" data-mode="diagram"><span>05</span>DIAGRAMS</button></div>
         <div class="rail-nav-label">LAYOUT</div>
         <div class="layout-switcher"><button class="layout-choice" data-layout="focus">FOCUS</button><button class="layout-choice active" data-layout="split">SPLIT</button><button class="layout-choice" data-layout="studio">VIDEO</button></div>
         <p class="header-status" id="header-status">LOCAL PROGRESS</p>
@@ -112,8 +112,16 @@
     </aside>
   </main>
 
-  <template id="learn-template"><article class="learn-card"><div class="card-top"><span class="chapter"></span><span class="counter"></span></div><p class="label">LEARN / CONCEPT CHECKPOINT</p><h2 class="statement"></h2><div class="answer hidden"><p class="label">ANSWER / TOPIC</p><h3 class="topic"></h3></div><p class="card-status"></p><div class="card-actions"><button class="read-question">READ VISIBLE</button><button class="study-topic">OPEN RELATED LESSON</button><button class="open-reference">OPEN BOOK REFERENCE</button><button class="previous">&larr; PREVIOUS</button></div><div class="decision-bar"><button class="know">OK<br /><small>known</small></button><button class="override primary">SHOW ANSWER</button><button class="practice">ATTENTION<br /><small>repeat more</small></button></div></article></template>
-  <template id="test-template"><article class="learn-card"><div class="card-top"><span class="chapter"></span><span class="counter"></span></div><p class="label">PRACTICE TEST</p><h2 class="statement"></h2><div class="answers"></div><div class="answer hidden"><p class="label">CORRECT TOPIC</p><h3 class="topic"></h3></div><p class="card-status"></p><div class="card-actions"><button class="read-question">READ QUESTION</button><button class="study-topic">OPEN RELATED LESSON</button><button class="open-reference">OPEN BOOK REFERENCE</button></div></article></template>
+  <template id="learn-template"><article class="learn-card"><div class="card-top"><span class="chapter"></span><span class="counter"></span></div><p class="label">LEARN / CONCEPT CHECKPOINT</p><h2 class="statement"></h2><div class="answer hidden"><p class="label">ANSWER</p><h3 class="topic"></h3><p class="answer-detail"></p></div><p class="card-status"></p><div class="card-actions"><button class="read-question">READ VISIBLE</button><button class="study-topic">OPEN RELATED LESSON</button><button class="open-reference">OPEN BOOK REFERENCE</button><button class="previous">&larr; PREVIOUS</button></div><div class="decision-bar"><button class="know">OK<br /><small>known</small></button><button class="override primary">SHOW ANSWER</button><button class="practice">ATTENTION<br /><small>repeat more</small></button></div></article></template>
+  <template id="test-template"><article class="learn-card"><div class="card-top"><span class="chapter"></span><span class="counter"></span></div><p class="label">PRACTICE TEST</p><h2 class="statement"></h2><div class="answers"></div><div class="answer hidden"><p class="label">CORRECT ANSWER</p><h3 class="topic"></h3><p class="answer-detail"></p></div><p class="card-status"></p><div class="card-actions"><button class="read-question">READ QUESTION</button><button class="study-topic">OPEN RELATED LESSON</button><button class="open-reference">OPEN BOOK REFERENCE</button></div></article></template>
+  <script src="data/ccna1-course.js"></script>
+  <script src="courses/ccna1/library/library-index.js"></script>
+  <script src="courses/ccna2/data/ccna2-course.js"></script>
+  <script src="courses/ccna2/library/library-index.js"></script>
+  <script src="data/ccna3-course.js"></script>
+  <script src="courses/ccna3/library/library-index.js"></script>
+  <script src="data/cli-trainer.js"></script>
+  <script src="data/diagram-trainer.js"></script>
   <script src="renderer.js"></script>
 </body>
 </html>

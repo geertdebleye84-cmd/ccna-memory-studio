@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 9,
+    "title": "QoS Concepts",
+    "summary": "Classificeer netwerkverkeer en beheer congestie met marking, queuing, shaping, policing en een passend QoS-model."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 3
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m09-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "9.1",
+      "sectionTitle": "Network Transmission Quality",
+      "prompt": "Welke QoS-tool buffert excess verkeer om de verzendsnelheid af te vlakken?",
+      "choices": [
+        "Shaping",
+        "Policing",
+        "NAT",
+        "OSPF"
+      ],
+      "correctIndex": 0,
+      "answer": "Shaping",
+      "explanation": "Shaping vertraagt pakketten via een wachtrij.",
+      "tags": [
+        "qos",
+        "concepts",
+        "network",
+        "transmission",
+        "quality",
+        "qos-tool",
+        "buffert",
+        "excess",
+        "verkeer",
+        "verzendsnelheid"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m09-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "9.2",
+      "sectionTitle": "Traffic Characteristics and Queuing",
+      "prompt": "Waarom begrens je een priority queue?",
+      "choices": [
+        "Om starvation van andere classes te voorkomen",
+        "Om DSCP te verwijderen",
+        "Om ARP te versnellen",
+        "Om routes samen te vatten"
+      ],
+      "correctIndex": 0,
+      "answer": "Om starvation van andere classes te voorkomen",
+      "explanation": "Onbegrensde prioriteit kan alle capaciteit opeisen.",
+      "tags": [
+        "qos",
+        "concepts",
+        "traffic",
+        "characteristics",
+        "and",
+        "queuing",
+        "begrens",
+        "priority",
+        "queue"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m09-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "9.3",
+      "sectionTitle": "QoS Models and Tools",
+      "prompt": "Welk model werkt met geaggregeerde serviceklassen?",
+      "choices": [
+        "DiffServ",
+        "Best effort zonder classes",
+        "ARP",
+        "STP"
+      ],
+      "correctIndex": 0,
+      "answer": "DiffServ",
+      "explanation": "DiffServ classificeert en markeert gedragaggregaten.",
+      "tags": [
+        "qos",
+        "concepts",
+        "models",
+        "and",
+        "tools",
+        "welk",
+        "model",
+        "werkt",
+        "geaggregeerde",
+        "serviceklassen"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m09-diag-01",
+      "type": "diagnostic",
+      "sectionId": "9.2",
+      "sectionTitle": "Traffic Characteristics and Queuing",
+      "prompt": "Tijdens congestie werkt spraak goed, maar alle businessdata valt bijna stil. Welke QoS-fout is waarschijnlijk?",
+      "choices": [
+        "Een onbegrensde priority queue veroorzaakt starvation",
+        "Shaping gebruikt een buffer",
+        "DSCP is zichtbaar",
+        "De WAN-link heeft een SLA"
+      ],
+      "correctIndex": 0,
+      "answer": "Een onbegrensde priority queue veroorzaakt starvation",
+      "explanation": "Strict priority moet begrensd worden zodat andere classes capaciteit houden.",
+      "tags": [
+        "qos",
+        "concepts",
+        "traffic",
+        "characteristics",
+        "and",
+        "queuing",
+        "tijdens",
+        "congestie",
+        "werkt",
+        "spraak"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m09-diag-02",
+      "type": "diagnostic",
+      "sectionId": "9.3",
+      "sectionTitle": "QoS Models and Tools",
+      "prompt": "Verkeer boven 20 Mbit/s wordt niet gedropt maar tijdelijk gebufferd en gelijkmatiger verzonden. Welke techniek is actief?",
+      "choices": [
+        "Shaping",
+        "Policing",
+        "NAT",
+        "ARP inspection"
+      ],
+      "correctIndex": 0,
+      "answer": "Shaping",
+      "explanation": "Shaping buffert excess verkeer om de gemiddelde rate af te vlakken.",
+      "tags": [
+        "qos",
+        "concepts",
+        "models",
+        "and",
+        "tools",
+        "verkeer",
+        "boven",
+        "mbit/s",
+        "niet",
+        "gedropt"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m09-flash-01",
+      "type": "flashcard",
+      "sectionId": "9.1",
+      "sectionTitle": "Network Transmission Quality",
+      "front": "Wat moet je kunnen uitleggen over Network Transmission Quality?",
+      "back": "Congestie veroorzaakt delay, jitter en packet loss. Serialization, propagation, processing en queuing dragen elk bij aan end-to-end latency. Real-timeverkeer verdraagt weinig delay en jitter; TCP-data kan verlies vaak herstellen maar throughput daalt. Een baseline moet per richting en tijdvenster worden gemeten.",
+      "tags": [
+        "qos",
+        "concepts",
+        "network",
+        "transmission",
+        "quality",
+        "congestie",
+        "veroorzaakt",
+        "delay",
+        "jitter",
+        "packet"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m09-flash-02",
+      "type": "flashcard",
+      "sectionId": "9.2",
+      "sectionTitle": "Traffic Characteristics and Queuing",
+      "front": "Wat moet je kunnen uitleggen over Traffic Characteristics and Queuing?",
+      "back": "Voice is klein, periodiek en gevoelig voor vertraging; video is bursty en bandbreedte-intensief; data varieert sterk. Classificatie gebruikt betrouwbare kenmerken en marking bewaart de klasse downstream. FIFO behandelt aankomstvolgorde; class-based queuing reserveert middelen; een strict priority queue helpt real-timeverkeer maar moet begrensd zijn om starvation te voorkomen.",
+      "tags": [
+        "qos",
+        "concepts",
+        "traffic",
+        "characteristics",
+        "and",
+        "queuing",
+        "voice",
+        "klein",
+        "periodiek",
+        "gevoelig"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m09-flash-03",
+      "type": "flashcard",
+      "sectionId": "9.3",
+      "sectionTitle": "QoS Models and Tools",
+      "front": "Wat moet je kunnen uitleggen over QoS Models and Tools?",
+      "back": "Best effort geeft geen differentiatie. IntServ reserveert per flow maar schaalt beperkt; DiffServ classificeert en markeert aggregaten en is gangbaar in ondernemingsnetwerken. Policing dropt of remarkt boven limiet; shaping buffert om een gemiddelde rate af te vlakken. Congestion avoidance zoals WRED kan vroeg selectief droppen.",
+      "tags": [
+        "qos",
+        "concepts",
+        "models",
+        "and",
+        "tools",
+        "best",
+        "effort",
+        "geeft",
+        "geen",
+        "differentiatie."
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

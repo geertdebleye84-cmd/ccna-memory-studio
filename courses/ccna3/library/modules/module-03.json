@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 3,
+    "title": "Network Security Concepts",
+    "summary": "Herken dreigingsactoren, aanvalsvormen en verdedigingslagen en verbind technische maatregelen met vertrouwelijkheid, integriteit en beschikbaarheid."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 4
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m03-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "3.1",
+      "sectionTitle": "Threat Landscape and Actors",
+      "prompt": "Welke maatregel beperkt laterale beweging na een endpointcompromis?",
+      "choices": [
+        "Segmentatie",
+        "Een langere banner",
+        "Een extra DNS-alias",
+        "Alleen NAT"
+      ],
+      "correctIndex": 0,
+      "answer": "Segmentatie",
+      "explanation": "Segmentatie verkleint bereikbare zones en afdwingpunten.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "threat",
+        "landscape",
+        "and",
+        "actors",
+        "maatregel",
+        "beperkt",
+        "laterale"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m03-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "3.2",
+      "sectionTitle": "Malware and Common Network Attacks",
+      "prompt": "Welke cryptografische functie levert vooral integriteitsbewijs?",
+      "choices": [
+        "Hashfunctie",
+        "NAT",
+        "DHCP",
+        "QoS"
+      ],
+      "correctIndex": 0,
+      "answer": "Hashfunctie",
+      "explanation": "Een gewijzigde invoer hoort een andere digest te produceren.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "malware",
+        "and",
+        "common",
+        "attacks",
+        "cryptografische",
+        "functie",
+        "levert"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m03-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "3.3",
+      "sectionTitle": "Protocol Vulnerabilities",
+      "prompt": "Waarom is defense in depth nuttig?",
+      "choices": [
+        "Een tweede laag kan een falende eerste laag opvangen.",
+        "Elke laag gebruikt hetzelfde wachtwoord.",
+        "Het verwijdert de noodzaak voor logging.",
+        "Het maakt patches overbodig."
+      ],
+      "correctIndex": 0,
+      "answer": "Een tweede laag kan een falende eerste laag opvangen.",
+      "explanation": "Onafhankelijke controles verkleinen single points of failure.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "protocol",
+        "vulnerabilities",
+        "defense",
+        "depth",
+        "nuttig"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m03-diag-01",
+      "type": "diagnostic",
+      "sectionId": "3.3",
+      "sectionTitle": "Protocol Vulnerabilities",
+      "prompt": "Een dienst ontvangt enorme UDP-antwoorden op verzoeken met een vervalst slachtofferadres. Welke aanval past het best?",
+      "choices": [
+        "Reflectie/amplificatie",
+        "VLAN pruning",
+        "OSPF summarization",
+        "Duplex mismatch"
+      ],
+      "correctIndex": 0,
+      "answer": "Reflectie/amplificatie",
+      "explanation": "UDP maakt bronspoofing en reflectie via veel grotere antwoorden mogelijk.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "protocol",
+        "vulnerabilities",
+        "dienst",
+        "ontvangt",
+        "enorme",
+        "udp-antwoorden",
+        "verzoeken"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m03-diag-02",
+      "type": "diagnostic",
+      "sectionId": "3.4",
+      "sectionTitle": "Security Best Practices and Cryptography",
+      "prompt": "Een bestand is niet geheim, maar iedere ongeautoriseerde wijziging moet aantoonbaar zijn. Welke techniek past primair?",
+      "choices": [
+        "Cryptografische hash",
+        "NAT overload",
+        "DHCP snooping",
+        "QoS shaping"
+      ],
+      "correctIndex": 0,
+      "answer": "Cryptografische hash",
+      "explanation": "Een hash levert een controleerbare digest voor integriteit.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "best",
+        "practices",
+        "and",
+        "cryptography",
+        "bestand",
+        "niet",
+        "geheim"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m03-flash-01",
+      "type": "flashcard",
+      "sectionId": "3.1",
+      "sectionTitle": "Threat Landscape and Actors",
+      "front": "Wat moet je kunnen uitleggen over Threat Landscape and Actors?",
+      "back": "Cyberrisico ontstaat door de combinatie van dreiging, kwetsbaarheid en impact. Interne fouten, georganiseerde criminaliteit, hacktivisten en statelijke actoren verschillen in middelen en motief. Indicatoren en threat intelligence helpen prioriteren, maar assetinventaris, patching en least privilege blijven de basis.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "threat",
+        "landscape",
+        "and",
+        "actors",
+        "cyberrisico",
+        "ontstaat",
+        "combinatie"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m03-flash-02",
+      "type": "flashcard",
+      "sectionId": "3.2",
+      "sectionTitle": "Malware and Common Network Attacks",
+      "front": "Wat moet je kunnen uitleggen over Malware and Common Network Attacks?",
+      "back": "Virussen hebben een hostbestand nodig; worms verspreiden zelfstandig; trojans misleiden de gebruiker; ransomware versleutelt of blokkeert data. Social engineering richt zich op menselijke beslissingen. Reconnaissance, access en denial-of-service kunnen elkaar opvolgen. Spoofing vervalst identiteit; man-in-the-middle onderschept of wijzigt verkeer.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "malware",
+        "and",
+        "common",
+        "attacks",
+        "virussen",
+        "hebben",
+        "hostbestand"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m03-flash-03",
+      "type": "flashcard",
+      "sectionId": "3.3",
+      "sectionTitle": "Protocol Vulnerabilities",
+      "front": "Wat moet je kunnen uitleggen over Protocol Vulnerabilities?",
+      "back": "IP biedt op zichzelf geen bronauthenticatie. Fragmentatie, spoofing en ICMP-misbruik vragen filtering en rate limits zonder legitieme foutmeldingen volledig te blokkeren. TCP is gevoelig voor SYN-flooding en sessiemisbruik; UDP heeft geen handshake en is bruikbaar voor reflectie/amplificatie. DNS, DHCP, HTTP en e-mail vragen elk eigen bescherming.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "protocol",
+        "vulnerabilities",
+        "biedt",
+        "zichzelf",
+        "geen",
+        "bronauthenticatie.",
+        "fragmentatie"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m03-flash-04",
+      "type": "flashcard",
+      "sectionId": "3.4",
+      "sectionTitle": "Security Best Practices and Cryptography",
+      "front": "Wat moet je kunnen uitleggen over Security Best Practices and Cryptography?",
+      "back": "Defense in depth combineert segmentatie, AAA, patches, back-ups, monitoring, fysieke beveiliging en een incidentplan. Geen enkele maatregel dekt alle aanvalspaden. Symmetrische encryptie is snel; asymmetrische cryptografie helpt bij sleuteluitwisseling en digitale handtekeningen. Hashes leveren integriteitsbewijs; certificaten binden een publieke sleutel aan een identiteit.",
+      "tags": [
+        "network",
+        "security",
+        "concepts",
+        "best",
+        "practices",
+        "and",
+        "cryptography",
+        "defense",
+        "depth",
+        "combineert"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

@@ -3,6 +3,8 @@ contextBridge.exposeInMainWorld('studio', {
   loadCatalog: () => ipcRenderer.invoke('catalog:load'),
   loadJeremyVideos: () => ipcRenderer.invoke('jeremy:load'),
   loadReferenceChapters: () => ipcRenderer.invoke('reference:chapters'),
+  loadDiagramPdfs: () => ipcRenderer.invoke('diagrams:load'),
+  importDiagramPdfs: () => ipcRenderer.invoke('diagrams:import'),
   load: () => ipcRenderer.invoke('store:load'), save: (store) => ipcRenderer.invoke('store:save', store),
   exportSession: (store) => ipcRenderer.invoke('session:export', store), importSession: () => ipcRenderer.invoke('session:import'),
   chooseReference: () => ipcRenderer.invoke('reference:choose'), useProvidedVolumeOne: () => ipcRenderer.invoke('reference:provided-volume-one'), openLink: (url) => ipcRenderer.invoke('link:open', url),

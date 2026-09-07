@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 15,
+    "title": "IP Static Routing",
+    "summary": "Configureer en verifieer IPv4/IPv6 network-, default-, floating- en hostroutes met juiste next-hopresolutie."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 11
+  },
+  "cards": [
+    {
+      "id": "ccna2-m15-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.5",
+      "sectionTitle": "Configure Static Host Routes",
+      "type": "knowledge",
+      "prompt": "Welke IPv4-prefix is een hostroute?",
+      "choices": [
+        "/32",
+        "/31",
+        "/24",
+        "/0"
+      ],
+      "correctIndex": 0,
+      "answer": "/32",
+      "explanation": "Een /32 matcht precies één IPv4-adres.",
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "host",
+        "routes",
+        "ipv4-prefix",
+        "hostroute"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m15-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.1",
+      "sectionTitle": "Static Routes",
+      "type": "knowledge",
+      "prompt": "Waarom vermeld je bij een IPv6 link-local next hop ook de exitinterface?",
+      "choices": [
+        "Link-local adressen zijn alleen per link uniek.",
+        "IPv6 gebruikt geen routing table.",
+        "De prefix moet altijd /64 zijn.",
+        "NDP werkt alleen met globale adressen."
+      ],
+      "correctIndex": 0,
+      "answer": "Link-local adressen zijn alleen per link uniek.",
+      "explanation": "De interface bepaalt op welke link fe80::… bedoeld is.",
+      "tags": [
+        "static",
+        "routing",
+        "routes",
+        "vermeld",
+        "ipv6",
+        "link-local",
+        "next",
+        "hop",
+        "ook",
+        "exitinterface"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m15-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.4",
+      "sectionTitle": "Configure Floating Static Routes",
+      "type": "knowledge",
+      "prompt": "Hoe maak je een floating static route?",
+      "choices": [
+        "Geef haar een hogere administrative distance dan de primaire route.",
+        "Gebruik een langere prefix dan elke primaire route.",
+        "Gebruik DTP passive.",
+        "Verlaag de metric van connected routes."
+      ],
+      "correctIndex": 0,
+      "answer": "Geef haar een hogere administrative distance dan de primaire route.",
+      "explanation": "De hogere AD laat de route verliezen tot de betere bron verdwijnt.",
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "floating",
+        "routes",
+        "maak",
+        "route"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m15-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.3",
+      "sectionTitle": "Configure IP Default Static Routes",
+      "type": "knowledge",
+      "prompt": "Welke route matcht alle IPv6-bestemmingen?",
+      "choices": [
+        "::/0",
+        "fe80::/10",
+        "ff00::/8",
+        "::1/128"
+      ],
+      "correctIndex": 0,
+      "answer": "::/0",
+      "explanation": "::/0 is de IPv6-default route.",
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "default",
+        "routes",
+        "route",
+        "matcht",
+        "alle",
+        "ipv6-bestemmingen"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m15-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.4",
+      "sectionTitle": "Configure Floating Static Routes",
+      "type": "diagnosis",
+      "prompt": "Een backuproute met AD 200 verschijnt pas nadat de dynamische primaire route verdwijnt. Welk type route is dit?",
+      "choices": [
+        "Een floating static route.",
+        "Een connected local route.",
+        "Een summary-only VLAN.",
+        "Een DHCP hostbinding."
+      ],
+      "correctIndex": 0,
+      "answer": "Een floating static route.",
+      "explanation": "Een bewust hogere AD laat de static route als backup functioneren.",
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "floating",
+        "routes",
+        "backuproute",
+        "200",
+        "verschijnt",
+        "pas",
+        "nadat"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m15-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.1",
+      "sectionTitle": "Static Routes",
+      "type": "diagnosis",
+      "prompt": "Een IPv6 static route gebruikt alleen next hop fe80::2 en IOS meldt dat de route ambigu is. Wat ontbreekt?",
+      "choices": [
+        "De exitinterface.",
+        "Een DNS-server.",
+        "De native VLAN.",
+        "Een HSRP group number."
+      ],
+      "correctIndex": 0,
+      "answer": "De exitinterface.",
+      "explanation": "Een link-local next hop is alleen per link uniek en vereist interfacecontext.",
+      "tags": [
+        "static",
+        "routing",
+        "routes",
+        "ipv6",
+        "route",
+        "gebruikt",
+        "alleen",
+        "next",
+        "hop",
+        "fe80"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m15-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.1",
+      "sectionTitle": "Static Routes",
+      "type": "flashcard",
+      "front": "15.1 · Static Routes",
+      "back": "Een static route bevat bestemmingsprefix plus next-hop, exitinterface of beide. Next-hop-only is recursively: IOS zoekt daarna hoe de next hop bereikbaar is. Fully specified geeft next hop én interface. Op point-to-point links kan een exitinterface-route duidelijk zijn. Op multiaccess Ethernet kan alleen een exitinterface onnodige ARP/NDP voor vele doelen veroorzaken; gebruik daar doorgaans next hop of fully specified. IPv6-static routes gebruiken prefix/length en een IPv6-next-hop. Bij alleen een link-local next hop moet de exitinterface worden vermeld omdat hetzelfde link-local adres op meerdere links kan bestaan.",
+      "commands": "ip route 198.51.100.0 255.255.255.0 192.0.2.2\nipv6 route 2001:db8:20::/64 2001:db8:12::2\nipv6 route 2001:db8:30::/64 g0/0 fe80::2",
+      "verify": [
+        "show ip route static",
+        "show ipv6 route static",
+        "Next hop resolved via connected route"
+      ],
+      "tags": [
+        "static",
+        "routing",
+        "routes"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m15-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.2",
+      "sectionTitle": "Configure IP Static Routes",
+      "type": "flashcard",
+      "front": "15.2 · Configure IP Static Routes",
+      "back": "Ontwerp beide richtingen. R1→LAN B zonder R2/R3→LAN A geeft een heenpad maar geen bruikbare sessie. Voeg alleen noodzakelijke, niet-overlappende routes toe. Verifieer eerst dat next hop rechtstreeks bereikbaar is, daarna dat route in RIB staat, vervolgens ping met relevante source en tenslotte traceroute/end-to-end. Een verkeerde mask/prefix is gevaarlijker dan een tikfout: hij kan een te brede route installeren en verkeer naar het verkeerde pad trekken.",
+      "commands": "ip route 10.20.0.0 255.255.0.0 192.0.2.2\nping 10.20.0.1 source 192.0.2.1\ntraceroute 10.20.0.10",
+      "verify": [
+        "Prefix exact",
+        "Next hop in rechtstreeks verbonden subnet",
+        "Retourroute aanwezig"
+      ],
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "routes"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m15-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.3",
+      "sectionTitle": "Configure IP Default Static Routes",
+      "type": "flashcard",
+      "front": "15.3 · Configure IP Default Static Routes",
+      "back": "Een IPv4-default route is 0.0.0.0/0; IPv6 gebruikt ::/0. Ze vangen alleen pakketten waarvoor geen specifiekere route bestaat. Een stubrouter wijst typisch default naar upstream. De upstreamrouter heeft nog routes naar de stub-LANs nodig; default routing is geen automatische routeadvertentie. Gateway of last resort verschijnt wanneer een bruikbare IPv4-default in de tabel staat.",
+      "commands": "ip route 0.0.0.0 0.0.0.0 203.0.113.1\nipv6 route ::/0 2001:db8:ff::1",
+      "verify": [
+        "show ip route | include Gateway|0.0.0.0",
+        "show ipv6 route ::/0",
+        "Specifieke route wint nog steeds van default"
+      ],
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "default",
+        "routes"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m15-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.4",
+      "sectionTitle": "Configure Floating Static Routes",
+      "type": "flashcard",
+      "front": "15.4 · Configure Floating Static Routes",
+      "back": "Geef de backupstatic een hogere AD dan de primaire routebron. Zolang de primaire route aanwezig is, blijft de floating route buiten de actieve routingtabel of als niet-winnende kandidaat. De backup werkt alleen als zijn next hop zelf bereikbaar blijft en het retourpad ook omschakelt. Test door de primaire link gecontroleerd te onderbreken. Een static route volgt standaard alleen next-hopreachability, niet altijd end-to-end dienstgezondheid; geavanceerde tracking/IP SLA kan nodig zijn buiten CCNA-basis.",
+      "commands": "ip route 198.51.100.0 255.255.255.0 192.0.2.2 200\nipv6 route 2001:db8:20::/64 2001:db8:13::3 200",
+      "verify": [
+        "Primaire route actief vóór storing",
+        "Floating route actief na storing",
+        "Convergentie en retourpad gemeten"
+      ],
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "floating",
+        "routes"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m15-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 15,
+      "moduleTitle": "IP Static Routing",
+      "sectionId": "15.5",
+      "sectionTitle": "Configure Static Host Routes",
+      "type": "flashcard",
+      "front": "15.5 · Configure Static Host Routes",
+      "back": "Een IPv4-hostroute gebruikt /32 en een IPv6-hostroute /128. Ze sturen slechts één exact adres en winnen door longest prefix van bredere routes. IOS maakt local /32-/128-routes voor eigen interfaceadressen; handmatige hostroutes dienen voor externe specifieke doelen, policy of uitzonderingen. Controleer dat een hostroute geen onbedoelde blackhole creëert wanneer het doel via een ander pad moet failoveren.",
+      "commands": "ip route 198.51.100.25 255.255.255.255 192.0.2.2\nipv6 route 2001:db8:20::25/128 2001:db8:12::2",
+      "verify": [
+        "show ip route 198.51.100.25",
+        "show ipv6 route 2001:db8:20::25",
+        "Bredere route blijft voor andere hosts"
+      ],
+      "tags": [
+        "static",
+        "routing",
+        "configure",
+        "host",
+        "routes"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+appId: be.geertmarierosedebleye.ccnamemorystudio
+productName: SiriusBitz - CCNA Memory Studio
+asar: true
+directories:
+  output: dist-installer
+files:
+  - AGENTS.md
+  - index.html
+  - main.js
+  - preload.js
+  - renderer.js
+  - styles.css
+  - data/**/*
+  - courses/**/*
+  - integrations/**/*
+  - docs/**/*
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - '!test/**/*'
+  - '!references/**/*'
+  - '!runtime/piper/**/*'
+  - '!runtime/tts-output/**/*'
+  - '!user-data/**/*'
+  - '!tmp/**/*'
+win:
+  target: nsis
+  artifactName: SiriusBitz-CCNA-Memory-Studio-${version}-Setup.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: SiriusBitz - CCNA Memory Studio
+  uninstallDisplayName: SiriusBitz - CCNA Memory Studio
+  license: LICENSE

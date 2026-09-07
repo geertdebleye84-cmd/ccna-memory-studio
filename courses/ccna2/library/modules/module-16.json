@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 16,
+    "title": "Troubleshoot Static and Default Routes",
+    "summary": "Volg pakketverwerking, isoleer fouten in static/default routes en herstel uitsluitend de bewezen oorzaak."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 2,
+    "total": 8
+  },
+  "cards": [
+    {
+      "id": "ccna2-m16-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.2",
+      "sectionTitle": "Troubleshoot IPv4 Static and Default Route Configuration",
+      "type": "knowledge",
+      "prompt": "Een static route staat in running-config maar niet in show ip route. Wat controleer je eerst?",
+      "choices": [
+        "Of de next hop/exitinterface resolveerbaar en up is",
+        "Of DNS werkt",
+        "Of de switch VTP server is",
+        "Of de host een browser heeft"
+      ],
+      "correctIndex": 0,
+      "answer": "Of de next hop/exitinterface resolveerbaar en up is",
+      "explanation": "Een onbruikbare next hop voorkomt installatie in de actieve RIB.",
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "ipv4",
+        "route",
+        "configuration",
+        "staat",
+        "running-config"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m16-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.2",
+      "sectionTitle": "Troubleshoot IPv4 Static and Default Route Configuration",
+      "type": "knowledge",
+      "prompt": "Waarom kan een router de bestemming pingen terwijl de LAN-host dat niet kan?",
+      "choices": [
+        "De routerping kan een andere bron en dus ander retourpad gebruiken.",
+        "Routers negeren routetabellen bij ping.",
+        "Hosts gebruiken geen default gateway.",
+        "ICMP werkt alleen lokaal."
+      ],
+      "correctIndex": 0,
+      "answer": "De routerping kan een andere bron en dus ander retourpad gebruiken.",
+      "explanation": "Test met dezelfde relevante broncontext als het probleemverkeer.",
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "ipv4",
+        "route",
+        "configuration",
+        "router",
+        "bestemming"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m16-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.1",
+      "sectionTitle": "Packet Processing with Static Routes",
+      "type": "knowledge",
+      "prompt": "Welke twee configuraties zijn nodig voor een geslaagde round trip?",
+      "choices": [
+        "Een heenroute en een retourroute",
+        "Twee default gateways op elke host",
+        "DTP en VTP",
+        "Twee DNS-records"
+      ],
+      "correctIndex": 0,
+      "answer": "Een heenroute en een retourroute",
+      "explanation": "Request en reply worden onafhankelijk gerouteerd.",
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "packet",
+        "processing",
+        "with",
+        "twee",
+        "configuraties"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m16-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.2",
+      "sectionTitle": "Troubleshoot IPv4 Static and Default Route Configuration",
+      "type": "knowledge",
+      "prompt": "Wat is de beste eerste troubleshootingactie?",
+      "choices": [
+        "Scope, verwacht pad en actuele status vastleggen",
+        "Alle routes verwijderen en opnieuw beginnen",
+        "De router herladen",
+        "Elke interface trusted maken"
+      ],
+      "correctIndex": 0,
+      "answer": "Scope, verwacht pad en actuele status vastleggen",
+      "explanation": "Een bewijsgerichte baseline voorkomt dat symptomen worden gemaskeerd.",
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "ipv4",
+        "route",
+        "configuration",
+        "beste",
+        "eerste"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m16-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.2",
+      "sectionTitle": "Troubleshoot IPv4 Static and Default Route Configuration",
+      "type": "diagnosis",
+      "prompt": "ip route staat in running-config, maar de route ontbreekt in show ip route. De next hop is niet bereikbaar. Wat verklaart dit?",
+      "choices": [
+        "De static route kan niet recursief worden opgelost.",
+        "De switch gebruikt cut-through.",
+        "De host heeft een correcte gateway.",
+        "De route heeft een /32 local entry."
+      ],
+      "correctIndex": 0,
+      "answer": "De static route kan niet recursief worden opgelost.",
+      "explanation": "Configuratie-intentie wordt pas geïnstalleerd wanneer next hop/exitpad bruikbaar is.",
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "ipv4",
+        "route",
+        "configuration",
+        "staat",
+        "running-config"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m16-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.2",
+      "sectionTitle": "Troubleshoot IPv4 Static and Default Route Configuration",
+      "type": "diagnosis",
+      "prompt": "Een router kan het doel pingen vanaf zijn WAN-interface, maar een LAN-host niet. Welke ontbrekende controle is het belangrijkst?",
+      "choices": [
+        "Test met de LAN-bron en controleer het retourpad.",
+        "Verwijder alle routes.",
+        "Maak elke poort trusted.",
+        "Schakel DTP in."
+      ],
+      "correctIndex": 0,
+      "answer": "Test met de LAN-bron en controleer het retourpad.",
+      "explanation": "Een routerping kan een ander bronadres en daardoor een ander retourpad gebruiken.",
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "ipv4",
+        "route",
+        "configuration",
+        "router",
+        "doel"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m16-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.1",
+      "sectionTitle": "Packet Processing with Static Routes",
+      "type": "flashcard",
+      "front": "16.1 · Packet Processing with Static Routes",
+      "back": "De bronhost beslist local of remote, resolveert doel of gateway met ARP/NDP en verzendt een frame. Elke router decapsuleert, longest-prefix-matcht, resolveert zijn next hop en encapsuleert opnieuw. Bij een recursive static route moet zowel de statische prefix als een route naar de next hop bestaan. Verdwijnt de resolutie, dan kan de static route uit de RIB verdwijnen. ICMP echo request en reply zijn onafhankelijke routed pakketten. Een succesvolle heenweg zonder terugroute geeft time-outs, geen halve ping.",
+      "commands": "show ip route <destination>\nshow ip route <next-hop>\nshow arp\ntraceroute <destination>",
+      "verify": [
+        "Elke hop heeft forward route",
+        "Elke next hop is L2-resolved",
+        "Retourroute vanaf bestemming aanwezig"
+      ],
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "packet",
+        "processing",
+        "with"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m16-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 16,
+      "moduleTitle": "Troubleshoot Static and Default Routes",
+      "sectionId": "16.2",
+      "sectionTitle": "Troubleshoot IPv4 Static and Default Route Configuration",
+      "type": "flashcard",
+      "front": "16.2 · Troubleshoot IPv4 Static and Default Route Configuration",
+      "back": "Begin met probleemscope en gewenste pad. Controleer interface up/up en adressen, connected routes, daarna de exacte bestemmingsprefix, mask, next hop/exitinterface en AD. Veel fouten: verkeerd netwerk/masker, next hop op verkeerd subnet, shutdown interface, ontbrekende retourroute, default naar verkeerde buur, te specifieke blackhole of floating AD lager dan bedoeld. Gebruik show running-config om intentie te zien en show ip route om geïnstalleerde werkelijkheid te zien. Een regel in running-config is niet noodzakelijk actief in de RIB. Gebruik ping met source om een specifieke routecontext te testen en traceroute om het laatste antwoordende hopgebied te vinden. Debug alleen beperkt in een lab; counters en tabellen zijn veiliger.",
+      "commands": "show ip interface brief\nshow ip route\nshow running-config | include ^ip route\nshow cdp neighbors detail\nping <doel> source <bron-interface>\ntraceroute <doel>",
+      "verify": [
+        "Fout bewezen vóór wijziging",
+        "Exacte route-entry na fix actief",
+        "End-to-end + return path getest",
+        "Configuratie opgeslagen"
+      ],
+      "tags": [
+        "troubleshoot",
+        "static",
+        "and",
+        "default",
+        "routes",
+        "ipv4",
+        "route",
+        "configuration"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

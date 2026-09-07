@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 12,
+    "title": "Network Troubleshooting",
+    "summary": "Werk systematisch van symptoom naar oorzaak met documentatie, baselines, laaggerichte tests en bewijs na herstel."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 4
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m12-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "12.1",
+      "sectionTitle": "Network Documentation and Baselines",
+      "prompt": "Wat doe je vóór een configuratiewijziging in een diagnose?",
+      "choices": [
+        "Een toetsbare hypothese en baseline vastleggen",
+        "Alle counters wissen zonder notitie",
+        "De router reloaden",
+        "Alle ACLs verwijderen"
+      ],
+      "correctIndex": 0,
+      "answer": "Een toetsbare hypothese en baseline vastleggen",
+      "explanation": "Zo weet je wat de test hoort te bewijzen.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "documentation",
+        "and",
+        "baselines",
+        "doe",
+        "configuratiewijziging",
+        "diagnose"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m12-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "12.2",
+      "sectionTitle": "Troubleshooting Process and Methods",
+      "prompt": "Welke fout past bij veel late collisions?",
+      "choices": [
+        "Duplex-mismatch",
+        "Verkeerde DNS-suffix",
+        "Ontbrekende NTP-peer",
+        "Te lage OSPF-priority"
+      ],
+      "correctIndex": 0,
+      "answer": "Duplex-mismatch",
+      "explanation": "Late collisions zijn een klassiek Ethernetduplexsignaal.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "process",
+        "and",
+        "methods",
+        "fout",
+        "past",
+        "veel",
+        "late",
+        "collisions"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m12-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "12.3",
+      "sectionTitle": "Troubleshooting Tools and Symptoms",
+      "prompt": "Waarom controleer je het returnpath?",
+      "choices": [
+        "Stateful filtering en NAT kunnen asymmetrische flows breken",
+        "Omdat switches altijd asymmetrisch routeren",
+        "Om VLANnamen te wijzigen",
+        "Om CDP te versleutelen"
+      ],
+      "correctIndex": 0,
+      "answer": "Stateful filtering en NAT kunnen asymmetrische flows breken",
+      "explanation": "Een sessie heeft werkend verkeer in beide richtingen nodig.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "tools",
+        "and",
+        "symptoms",
+        "controleer",
+        "returnpath"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m12-diag-01",
+      "type": "diagnostic",
+      "sectionId": "12.3",
+      "sectionTitle": "Troubleshooting Tools and Symptoms",
+      "prompt": "Een Ethernetlink blijft up, maar toont veel late collisions en zeer slechte throughput. Wat is de waarschijnlijkste oorzaak?",
+      "choices": [
+        "Duplex-mismatch",
+        "Verkeerde DNS-suffix",
+        "Ontbrekende default-information originate",
+        "Te veel NTP-peers"
+      ],
+      "correctIndex": 0,
+      "answer": "Duplex-mismatch",
+      "explanation": "Late collisions zijn een klassiek symptoom van een duplexconflict.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "tools",
+        "and",
+        "symptoms",
+        "ethernetlink",
+        "blijft",
+        "maar",
+        "toont",
+        "veel"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m12-diag-02",
+      "type": "diagnostic",
+      "sectionId": "12.4",
+      "sectionTitle": "Troubleshoot IP Connectivity",
+      "prompt": "Een ping naar het server-IP werkt, maar HTTPS niet. Welke conclusie is correct?",
+      "choices": [
+        "Layer-3-bereik is bewezen, de applicatiepoort nog niet",
+        "De volledige applicatie is gezond",
+        "DNS is zeker de oorzaak",
+        "De return route kan nooit het probleem zijn"
+      ],
+      "correctIndex": 0,
+      "answer": "Layer-3-bereik is bewezen, de applicatiepoort nog niet",
+      "explanation": "Ping bewijst niet dat TCP 443, TLS of de applicatie zelf werkt.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "troubleshoot",
+        "connectivity",
+        "ping",
+        "server-ip",
+        "werkt",
+        "maar",
+        "https",
+        "niet."
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m12-flash-01",
+      "type": "flashcard",
+      "sectionId": "12.1",
+      "sectionTitle": "Network Documentation and Baselines",
+      "front": "Wat moet je kunnen uitleggen over Network Documentation and Baselines?",
+      "back": "Actuele fysieke/logische diagrammen, adresplannen, VLANs, circuits, dependencies en configuratieversies versnellen diagnose. Zonder baseline is “traag” niet kwantificeerbaar. Leg normale latency, throughput, CPU, memory, interfaceerrors en route/neighborstates vast op representatieve tijden. Bescherm gevoelige configuratiegegevens.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "documentation",
+        "and",
+        "baselines",
+        "actuele",
+        "fysieke/logische",
+        "diagrammen",
+        "adresplannen",
+        "vlans"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m12-flash-02",
+      "type": "flashcard",
+      "sectionId": "12.2",
+      "sectionTitle": "Troubleshooting Process and Methods",
+      "front": "Wat moet je kunnen uitleggen over Troubleshooting Process and Methods?",
+      "back": "Definieer probleem, impact en wijzigingen; verzamel feiten; vorm een toetsbare hypothese; test de minst risicovolle stap; implementeer gecontroleerd; verifieer en documenteer. Bottom-up start fysiek, top-down bij applicatie, divide-and-conquer bij een logisch middenpunt. Follow-the-path volgt het echte datapad en is vaak effectiever dan willekeurige show-commando’s.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "process",
+        "and",
+        "methods",
+        "definieer",
+        "probleem",
+        "impact",
+        "wijzigingen",
+        "verzamel"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m12-flash-03",
+      "type": "flashcard",
+      "sectionId": "12.3",
+      "sectionTitle": "Troubleshooting Tools and Symptoms",
+      "front": "Wat moet je kunnen uitleggen over Troubleshooting Tools and Symptoms?",
+      "back": "LEDs, cable tester, TDR, protocol analyzer, SPAN, syslog, SNMP en flowdata zien verschillende lagen. Kies het minst ingrijpende instrument dat de hypothese kan falsificeren. Fysieke fouten tonen CRC, runts, giants of flaps; duplexproblemen geven late collisions en slechte throughput; congestie geeft output drops zonder noodzakelijk fysieke errors.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "tools",
+        "and",
+        "symptoms",
+        "leds",
+        "cable",
+        "tester",
+        "tdr",
+        "protocol"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m12-flash-04",
+      "type": "flashcard",
+      "sectionId": "12.4",
+      "sectionTitle": "Troubleshoot IP Connectivity",
+      "front": "Wat moet je kunnen uitleggen over Troubleshoot IP Connectivity?",
+      "back": "Test oplopend: lokale stack, eigen gateway, buurresolution, route, ACL/NAT, remote gateway, dienst. Een succesvolle ping bewijst niet dat DNS, TCP-poort of applicatie gezond is. Controleer bronadres en VRF/context. Asymmetrische routing kan stateful firewalls en NAT breken ondanks correcte forward route.",
+      "tags": [
+        "network",
+        "troubleshooting",
+        "troubleshoot",
+        "connectivity",
+        "test",
+        "oplopend",
+        "lokale",
+        "stack",
+        "eigen",
+        "gateway"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

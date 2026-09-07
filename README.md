@@ -1,4 +1,8 @@
-# CCNA Memory Studio — Focused v3
+# SiriusBitz — CCNA Memory Studio Focused v3
+
+Developed by **SiriusBitz**, with **Geert Marie-Rose De Bleye** as copyright
+holder, and released under the GNU General Public License v3.0. This is an
+independent learning tool for networking students, contributors and teachers.
 
 A reliable, offline-first Electron study workspace with two main modes only: **Learn** and **Test**.
 
@@ -27,3 +31,28 @@ security code.
 ## Source boundary
 
 The local catalogue contains concept statements and topic labels. This app does not include reproduced or copied Pearson/Cisco exam-question wording and is not an official practice exam.
+
+## Run from source
+
+Requires Node.js and npm on Windows.
+
+```powershell
+npm install
+npm run check
+npm test
+npm start
+```
+
+## Build Windows installers
+
+```powershell
+npm run dist
+```
+
+This creates an NSIS installer and a portable Windows executable under `dist/`.
+The binaries are published as GitHub Release assets rather than committed to
+the source tree.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md), and the
+[roadmap](docs/continuity/ROADMAP.md). The project is not affiliated with or
+endorsed by Cisco or NetAcad.

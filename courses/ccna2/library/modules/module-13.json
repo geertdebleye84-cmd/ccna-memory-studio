@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 13,
+    "title": "WLAN Configuration",
+    "summary": "Configureer een thuis/filiaal-WLAN en controllergebaseerde WPA2-Personal en WPA2-Enterprise WLANs en diagnoseer clientproblemen."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 4,
+    "total": 10
+  },
+  "cards": [
+    {
+      "id": "ccna2-m13-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.4",
+      "sectionTitle": "Troubleshoot WLAN Issues",
+      "type": "knowledge",
+      "prompt": "Een Wi-Fi-client associeert maar krijgt 169.254.x.x. Welke fase faalt waarschijnlijk?",
+      "choices": [
+        "DHCP/adrestoewijzing",
+        "RF-discovery",
+        "802.11-beaconing",
+        "SSID-advertentie"
+      ],
+      "correctIndex": 0,
+      "answer": "DHCP/adrestoewijzing",
+      "explanation": "Een link-local IPv4-adres verschijnt wanneer geen DHCP-lease verkregen wordt.",
+      "tags": [
+        "wlan",
+        "configuration",
+        "troubleshoot",
+        "issues",
+        "wi-fi-client",
+        "associeert",
+        "maar",
+        "krijgt",
+        "169.254.x.x.",
+        "fase"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m13-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.2",
+      "sectionTitle": "Configure a Basic WLAN on WLC",
+      "type": "knowledge",
+      "prompt": "Wat wordt bij een WLC aan een WLAN gekoppeld om clientverkeer in de juiste VLAN te plaatsen?",
+      "choices": [
+        "Een dynamic interface/VLAN of policy profile",
+        "De AP-consolekabel",
+        "Alleen het RADIUS shared secret",
+        "Het BSSID als subnetmasker"
+      ],
+      "correctIndex": 0,
+      "answer": "Een dynamic interface/VLAN of policy profile",
+      "explanation": "De WLAN-policy mapping bepaalt de wired VLAN/segmentcontext.",
+      "tags": [
+        "wlan",
+        "configuration",
+        "configure",
+        "basic",
+        "wlc",
+        "gekoppeld",
+        "clientverkeer",
+        "juiste",
+        "vlan",
+        "plaatsen"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m13-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.3",
+      "sectionTitle": "Configure WPA2 Enterprise WLAN on WLC",
+      "type": "knowledge",
+      "prompt": "Wat is het RADIUS shared secret?",
+      "choices": [
+        "Een geheim tussen authenticator/WLC en RADIUS-server",
+        "Het wachtwoord dat alle Wi-Fi-gebruikers delen",
+        "De WPA2-encryptiesleutel van elke sessie",
+        "Het AP-managementadres"
+      ],
+      "correctIndex": 0,
+      "answer": "Een geheim tussen authenticator/WLC en RADIUS-server",
+      "explanation": "Het beveiligt/verifieert de AAA-relatie, niet de individuele gebruikerslogin.",
+      "tags": [
+        "wlan",
+        "configuration",
+        "configure",
+        "wpa2",
+        "enterprise",
+        "wlc",
+        "radius",
+        "shared",
+        "secret"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m13-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.4",
+      "sectionTitle": "Troubleshoot WLAN Issues",
+      "type": "knowledge",
+      "prompt": "Welke troubleshootingvolgorde is het meest efficiënt?",
+      "choices": [
+        "RF/SSID → authenticatie → DHCP → gateway/DNS → applicatie",
+        "DNS → applicatie → antenne → VLAN",
+        "Factory reset → nieuw SSID → routing",
+        "Alleen signaalsterkte controleren"
+      ],
+      "correctIndex": 0,
+      "answer": "RF/SSID → authenticatie → DHCP → gateway/DNS → applicatie",
+      "explanation": "De fasen volgen de werkelijke opbouw van een clientsessie.",
+      "tags": [
+        "wlan",
+        "configuration",
+        "troubleshoot",
+        "issues",
+        "troubleshootingvolgorde",
+        "meest",
+        "effici"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m13-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.4",
+      "sectionTitle": "Troubleshoot WLAN Issues",
+      "type": "diagnosis",
+      "prompt": "Een client ziet het SSID en associeert, maar krijgt 169.254.20.8. Welke fase is waarschijnlijk defect?",
+      "choices": [
+        "DHCP of de WLAN-naar-VLAN-koppeling.",
+        "Beacon discovery.",
+        "De eerste 802.11 probe.",
+        "De weergave van het SSID."
+      ],
+      "correctIndex": 0,
+      "answer": "DHCP of de WLAN-naar-VLAN-koppeling.",
+      "explanation": "Een APIPA-adres wijst op een mislukte IPv4-lease na associatie.",
+      "tags": [
+        "wlan",
+        "configuration",
+        "troubleshoot",
+        "issues",
+        "client",
+        "ziet",
+        "ssid",
+        "associeert",
+        "maar",
+        "krijgt"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m13-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.3",
+      "sectionTitle": "Configure WPA2 Enterprise WLAN on WLC",
+      "type": "diagnosis",
+      "prompt": "Alle 802.1X-logins falen direct nadat het RADIUS shared secret op de server is gewijzigd. Wat is de oorzaak?",
+      "choices": [
+        "Het shared secret komt niet meer overeen met de WLC.",
+        "Het 2,4-GHz kanaal is te breed.",
+        "De client heeft een geldige DHCP-lease.",
+        "CAPWAP gebruikt IP."
+      ],
+      "correctIndex": 0,
+      "answer": "Het shared secret komt niet meer overeen met de WLC.",
+      "explanation": "WLC en RADIUS-server moeten hetzelfde AAA shared secret gebruiken.",
+      "tags": [
+        "wlan",
+        "configuration",
+        "configure",
+        "wpa2",
+        "enterprise",
+        "wlc",
+        "alle",
+        "802.1x-logins",
+        "falen",
+        "direct"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m13-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.1",
+      "sectionTitle": "Remote Site WLAN Configuration",
+      "type": "flashcard",
+      "front": "13.1 · Remote Site WLAN Configuration",
+      "back": "Een SOHO-router combineert vaak WAN-router, NAT, DHCP, switch en AP. Wijzig standaardbeheercredentials, beheeradres, SSID en beveiliging; schakel WPS en ongebruikte remote administration uit. Gebruik WPA2-AES of WPA3 wanneer alle clients dit ondersteunen, een lange unieke passphrase en een afzonderlijk gastnetwerk. Kies kanaal en breedte op basis van de RF-omgeving. Controleer de volledige keten: associatie, beveiligingshandshake, DHCP, default gateway, DNS en internetroute/NAT.",
+      "commands": "Client checks: SSID → security → IP lease → gateway ping → DNS lookup",
+      "verify": [
+        "Geen fabriekswachtwoord",
+        "WEP/TKIP/WPS uit",
+        "Gastnetwerk geïsoleerd",
+        "Beheer alleen vanaf vertrouwd LAN"
+      ],
+      "tags": [
+        "wlan",
+        "configuration",
+        "remote",
+        "site"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m13-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.2",
+      "sectionTitle": "Configure a Basic WLAN on WLC",
+      "type": "flashcard",
+      "front": "13.2 · Configure a Basic WLAN on WLC",
+      "back": "Maak of kies eerst de client-VLAN/dynamic interface, definieer daarna WLAN-ID, profielnaam en SSID, koppel het WLAN aan de juiste interface en activeer het pas na security/QoS-instellingen. Een WLAN kan zichtbaar bestaan maar disabled zijn. Controleer daarom zowel administratieve enable-state als AP-groep/policy-toewijzing. Voor WPA2-Personal selecteer AES/CCMP en PSK. Test met een echte client dat associatie én DHCP via de gekoppelde VLAN werken.",
+      "commands": "WLC GUI: WLANs → Create New → ID/Profile/SSID → Interface/VLAN → Security WPA2/AES → PSK → Enable",
+      "verify": [
+        "show wlan summary",
+        "Clientdetail toont juiste WLAN/VLAN",
+        "DHCP-adres uit juiste scope"
+      ],
+      "tags": [
+        "wlan",
+        "configuration",
+        "configure",
+        "basic",
+        "wlc"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m13-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.3",
+      "sectionTitle": "Configure WPA2 Enterprise WLAN on WLC",
+      "type": "flashcard",
+      "front": "13.3 · Configure WPA2 Enterprise WLAN on WLC",
+      "back": "Registreer de RADIUS-server met IP, gedeeld geheim en juiste poorten; configureer dezelfde client/NAS-informatie op RADIUS. Daarna koppel je WPA2/AES met 802.1X aan het WLAN. De supplicant kiest een EAP-methode en moet servercertificaten correct valideren. Foute tijd, CA-trust, identiteit of shared secret veroorzaakt authenticatiefalen. Gebruik accounting wanneer vereist en beperk fallback. Het RADIUS shared secret is tussen WLC en server, niet het gebruikerswachtwoord.",
+      "commands": "WLC GUI: Security → AAA → RADIUS Authentication → Add\nWLAN Security: WPA2/AES + 802.1X → select RADIUS server",
+      "verify": [
+        "RADIUS-server bereikbaar",
+        "AAA-log toont accept of concrete reject",
+        "Clientcertificaat/credentials geldig",
+        "Client krijgt daarna DHCP"
+      ],
+      "tags": [
+        "wlan",
+        "configuration",
+        "configure",
+        "wpa2",
+        "enterprise",
+        "wlc"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m13-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 13,
+      "moduleTitle": "WLAN Configuration",
+      "sectionId": "13.4",
+      "sectionTitle": "Troubleshoot WLAN Issues",
+      "type": "flashcard",
+      "front": "13.4 · Troubleshoot WLAN Issues",
+      "back": "Classificeer de fase: ziet de client SSID/beacon, kan hij authenticeren/associëren, krijgt hij DHCP, bereikt hij gateway/DNS en werkt de applicatie? Elke fase heeft andere bewijzen. Controleer RF (afstand, interferentie, kanaal, SNR), clientcompatibiliteit, security/EAP, WLC mapping/VLAN, wired trunk, DHCP en routing in die volgorde. Een client met 169.254/16 heeft vaak wel link maar geen IPv4-lease. Een herhaald credentialprompt wijst eerder op 802.1X/EAP dan op radio.",
+      "commands": "show wireless client summary\nshow client detail <MAC>\nshow ap summary\nshow wlan summary\nshow radius auth statistics",
+      "verify": [
+        "Probleemfase geïsoleerd",
+        "Wired en wireless VLAN-identiteit gelijk",
+        "Logs ondersteunen conclusie"
+      ],
+      "tags": [
+        "wlan",
+        "configuration",
+        "troubleshoot",
+        "issues"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

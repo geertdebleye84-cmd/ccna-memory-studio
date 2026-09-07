@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "sourceVersion": "2026-08-20",
+  "courseId": "ccna3-ensa",
+  "totals": {
+    "multipleChoice": 42,
+    "diagnostic": 28,
+    "flashcards": 53
+  },
+  "files": [
+    {
+      "moduleId": 1,
+      "path": "modules/module-01.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 3
+      },
+      "bytes": 7007,
+      "sha256": "e959d5f723881033b2bc0af1d6c4b2e028d9c57bc4615225aa7e1eb3899b67f3"
+    },
+    {
+      "moduleId": 2,
+      "path": "modules/module-02.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 4
+      },
+      "bytes": 8198,
+      "sha256": "0415bcdeefaee93eb41a4fcd991f197f9ba5881a706d9d3f2a1d270578ec1e48"
+    },
+    {
+      "moduleId": 3,
+      "path": "modules/module-03.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 4
+      },
+      "bytes": 8115,
+      "sha256": "2f514e92d27c3045323a38e6d4fc859c03ee55639e8bfd3cb01b3bc2155a0b25"
+    },
+    {
+      "moduleId": 4,
+      "path": "modules/module-04.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 3
+      },
+      "bytes": 6990,
+      "sha256": "e03cded5391ac228dbd5f3743f81e7653fccc6789b231695dac686587c6f9be4"
+    },
+    {
+      "moduleId": 5,
+      "path": "modules/module-05.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 4
+      },
+      "bytes": 7649,
+      "sha256": "42c521a0f5febcd7d00ddc48a054d7247ce66ecdb8735efb911885f9b890e35d"
+    },
+    {
+      "moduleId": 6,
+      "path": "modules/module-06.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 5
+      },
+      "bytes": 8516,
+      "sha256": "0c73ea5c9f26b868baae261bb340cd25d0139f01675627947508a8a179a64968"
+    },
+    {
+      "moduleId": 7,
+      "path": "modules/module-07.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 3
+      },
+      "bytes": 7502,
+      "sha256": "e89778ee4b18c100e46e3b26d484f8831ba0111770442029fa46febc659aa078"
+    },
+    {
+      "moduleId": 8,
+      "path": "modules/module-08.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 3
+      },
+      "bytes": 7165,
+      "sha256": "0229d8bb81666e0357e28e2a6b536eac768096e7f20287e85498f92bb4fba2ad"
+    },
+    {
+      "moduleId": 9,
+      "path": "modules/module-09.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 3
+      },
+      "bytes": 7019,
+      "sha256": "6adb978f06d443145c0d25f683692998e7216d62322ff5c52739385e6fef3b71"
+    },
+    {
+      "moduleId": 10,
+      "path": "modules/module-10.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 5
+      },
+      "bytes": 8353,
+      "sha256": "d5175ad1d00bce07f8bfb4effc7a6802f73a830d40a790509fe136549da3518f"
+    },
+    {
+      "moduleId": 11,
+      "path": "modules/module-11.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 3
+      },
+      "bytes": 7198,
+      "sha256": "354f551b8abc40ca49803a678b0575abd85371e3bfb9c7aecc921372bc158183"
+    },
+    {
+      "moduleId": 12,
+      "path": "modules/module-12.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 4
+      },
+      "bytes": 8262,
+      "sha256": "3308c234aa5792464c8b12090dfa2f19a526689bc862479a9e1c1c045720aafb"
+    },
+    {
+      "moduleId": 13,
+      "path": "modules/module-13.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 4
+      },
+      "bytes": 8082,
+      "sha256": "ea62ba3d6dbe486ccb86b0f62020361f3f90fae1b023d9468407af10e2d08dc8"
+    },
+    {
+      "moduleId": 14,
+      "path": "modules/module-14.json",
+      "counts": {
+        "multipleChoice": 3,
+        "diagnostic": 2,
+        "flashcards": 5
+      },
+      "bytes": 8959,
+      "sha256": "f840eda579bb1dce974a2645615b055e31c4b3f13fccef2c62dd2ac5798a4204"
+    }
+  ]
+}

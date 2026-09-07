@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 11,
+    "title": "Network Design",
+    "summary": "Ontwerp een schaalbaar, modulair en fouttolerant campusnetwerk en kies hardware en routing op basis van meetbare eisen."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 3
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m11-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "11.1",
+      "sectionTitle": "Hierarchical Network Design",
+      "prompt": "Welke laag aggregeert access en past vaak beleid toe?",
+      "choices": [
+        "Distribution",
+        "Endpoint",
+        "Internet",
+        "Physical media"
+      ],
+      "correctIndex": 0,
+      "answer": "Distribution",
+      "explanation": "Distribution vormt de beleids- en aggregatiegrens.",
+      "tags": [
+        "network",
+        "design",
+        "hierarchical",
+        "laag",
+        "aggregeert",
+        "access",
+        "past",
+        "vaak",
+        "beleid",
+        "toe"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m11-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "11.2",
+      "sectionTitle": "Scalable Network Characteristics",
+      "prompt": "Wat verkleint een modulair ontwerp?",
+      "choices": [
+        "De blast radius van storingen en wijzigingen",
+        "Het aantal IP-adressen tot nul",
+        "De noodzaak voor monitoring",
+        "Elke vorm van latency"
+      ],
+      "correctIndex": 0,
+      "answer": "De blast radius van storingen en wijzigingen",
+      "explanation": "Gestandaardiseerde blokken isoleren effecten.",
+      "tags": [
+        "network",
+        "design",
+        "scalable",
+        "characteristics",
+        "verkleint",
+        "modulair",
+        "ontwerp"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m11-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "11.3",
+      "sectionTitle": "Hardware and Routing Design",
+      "prompt": "Welke factor hoort bij PoE-switchselectie?",
+      "choices": [
+        "Totaal vermogensbudget met marge",
+        "Alleen hostnamen",
+        "OSPF router-ID",
+        "NAT poolnaam"
+      ],
+      "correctIndex": 0,
+      "answer": "Totaal vermogensbudget met marge",
+      "explanation": "Alle gevoede endpoints moeten binnen het budget passen.",
+      "tags": [
+        "network",
+        "design",
+        "hardware",
+        "and",
+        "routing",
+        "factor",
+        "hoort",
+        "poe-switchselectie"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m11-diag-01",
+      "type": "diagnostic",
+      "sectionId": "11.2",
+      "sectionTitle": "Scalable Network Characteristics",
+      "prompt": "Een ontwerp heeft dubbele uplinks, maar beide eindigen op dezelfde voeding en hetzelfde chassis. Welk risico blijft?",
+      "choices": [
+        "Een gedeeld single point of failure",
+        "Te veel route summarization",
+        "Een te lage DSCP-waarde",
+        "Een dubbele router-ID"
+      ],
+      "correctIndex": 0,
+      "answer": "Een gedeeld single point of failure",
+      "explanation": "Redundantie moet ook chassis, voeding en fysieke paden omvatten.",
+      "tags": [
+        "network",
+        "design",
+        "scalable",
+        "characteristics",
+        "ontwerp",
+        "heeft",
+        "dubbele",
+        "uplinks",
+        "maar",
+        "beide"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m11-diag-02",
+      "type": "diagnostic",
+      "sectionId": "11.3",
+      "sectionTitle": "Hardware and Routing Design",
+      "prompt": "Een access-switch heeft genoeg poorten maar valt uit zodra alle telefoons en APs vermogen vragen. Welke capaciteit is onderschat?",
+      "choices": [
+        "Het PoE-budget",
+        "De OSPF reference bandwidth",
+        "De NTP-stratumwaarde",
+        "De NAT-pool"
+      ],
+      "correctIndex": 0,
+      "answer": "Het PoE-budget",
+      "explanation": "Poortdichtheid garandeert niet dat het totale benodigde PoE-vermogen beschikbaar is.",
+      "tags": [
+        "network",
+        "design",
+        "hardware",
+        "and",
+        "routing",
+        "access-switch",
+        "heeft",
+        "genoeg",
+        "poorten",
+        "maar"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m11-flash-01",
+      "type": "flashcard",
+      "sectionId": "11.1",
+      "sectionTitle": "Hierarchical Network Design",
+      "front": "Wat moet je kunnen uitleggen over Hierarchical Network Design?",
+      "back": "Het accesslaagmodel verbindt endpoints, distribution aggregeert en past beleid toe, core transporteert snel en voorspelbaar. In kleinere locaties kan collapsed core distribution en core combineren. Modulariteit beperkt blast radius en maakt capaciteit, adressen en veranderingen herhaalbaar. Redundantie moet convergentie én failure domains bewust ontwerpen.",
+      "tags": [
+        "network",
+        "design",
+        "hierarchical",
+        "accesslaagmodel",
+        "verbindt",
+        "endpoints",
+        "distribution",
+        "aggregeert",
+        "past",
+        "beleid"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m11-flash-02",
+      "type": "flashcard",
+      "sectionId": "11.2",
+      "sectionTitle": "Scalable Network Characteristics",
+      "front": "Wat moet je kunnen uitleggen over Scalable Network Characteristics?",
+      "back": "Schaalbaarheid vraagt hiërarchie, samenvatting, gestandaardiseerde blokken, redundantie, EtherChannel en voorspelbare routing. Beschikbaarheid is een end-to-end eigenschap, niet alleen dubbele links. Meet utilization, error rates, flowverdeling en convergentietijd voordat je uitbreidt. Overprovisioning zonder baseline verplaatst soms alleen het knelpunt.",
+      "tags": [
+        "network",
+        "design",
+        "scalable",
+        "characteristics",
+        "schaalbaarheid",
+        "vraagt",
+        "rarchie",
+        "samenvatting",
+        "gestandaardiseerde",
+        "blokken"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m11-flash-03",
+      "type": "flashcard",
+      "sectionId": "11.3",
+      "sectionTitle": "Hardware and Routing Design",
+      "front": "Wat moet je kunnen uitleggen over Hardware and Routing Design?",
+      "back": "Kies switches op poortdichtheid, forwarding rate, buffers, uplinks, PoE-budget, redundante voedingen en feature/licentiebehoefte. Datasheets moeten bij worst-case profiel passen. Layer-3 naar access verkleint STP-domeinen; Layer-2 access kan operationeel eenvoudiger zijn. Kies IGP, summarization en default routes op topologie en beheerbaarheid, niet op gewoonte.",
+      "tags": [
+        "network",
+        "design",
+        "hardware",
+        "and",
+        "routing",
+        "kies",
+        "switches",
+        "poortdichtheid",
+        "forwarding",
+        "rate"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

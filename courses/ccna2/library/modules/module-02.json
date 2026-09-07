@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 2,
+    "title": "Switching Concepts",
+    "summary": "Begrijp hoe een switch MAC-adressen leert, frames doorstuurt en collision- en broadcastdomeinen begrenst."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 2,
+    "total": 8
+  },
+  "cards": [
+    {
+      "id": "ccna2-m02-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.1",
+      "sectionTitle": "Frame Forwarding",
+      "type": "knowledge",
+      "prompt": "Wat doet een switch met een frame waarvan het bestemmings-MAC onbekend is?",
+      "choices": [
+        "Flooden binnen dezelfde VLAN behalve de inkomende poort",
+        "Naar de default gateway sturen",
+        "Altijd droppen",
+        "Over alle VLANs flooden"
+      ],
+      "correctIndex": 0,
+      "answer": "Flooden binnen dezelfde VLAN behalve de inkomende poort",
+      "explanation": "Unknown unicast flooding blijft beperkt tot de betreffende VLAN.",
+      "tags": [
+        "switching",
+        "concepts",
+        "frame",
+        "forwarding",
+        "doet",
+        "switch",
+        "waarvan",
+        "bestemmings-mac",
+        "onbekend"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m02-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.1",
+      "sectionTitle": "Frame Forwarding",
+      "type": "knowledge",
+      "prompt": "Welke informatie gebruikt de switch om zijn MAC-tabel te leren?",
+      "choices": [
+        "Bron-MAC en inkomende poort",
+        "Bestemmings-IP en uitgaande poort",
+        "Bron-IP en ARP-timeout",
+        "Bestemmings-MAC en default gateway"
+      ],
+      "correctIndex": 0,
+      "answer": "Bron-MAC en inkomende poort",
+      "explanation": "Elke ontvangen framebron onthult waar dat MAC-adres bereikbaar is.",
+      "tags": [
+        "switching",
+        "concepts",
+        "frame",
+        "forwarding",
+        "informatie",
+        "gebruikt",
+        "switch",
+        "mac-tabel",
+        "leren"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m02-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.1",
+      "sectionTitle": "Frame Forwarding",
+      "type": "knowledge",
+      "prompt": "Wat is een belangrijk voordeel van store-and-forward?",
+      "choices": [
+        "FCS-controle vóór forwarding",
+        "Geen framebuffer nodig",
+        "Broadcasts worden gerouteerd",
+        "MAC-learning wordt uitgeschakeld"
+      ],
+      "correctIndex": 0,
+      "answer": "FCS-controle vóór forwarding",
+      "explanation": "Het volledige frame is beschikbaar voor lengte- en FCS-validatie.",
+      "tags": [
+        "switching",
+        "concepts",
+        "frame",
+        "forwarding",
+        "belangrijk",
+        "voordeel",
+        "store-and-forward"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m02-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.2",
+      "sectionTitle": "Collision and Broadcast Domains",
+      "type": "knowledge",
+      "prompt": "Hoeveel collision domains heeft een switch met acht actieve full-duplex accesspoorten?",
+      "choices": [
+        "Acht",
+        "Eén",
+        "Twee",
+        "Nul fysieke segmenten"
+      ],
+      "correctIndex": 0,
+      "answer": "Acht",
+      "explanation": "Elke switchpoort vormt zijn eigen segment, ook al ontstaan in full duplex feitelijk geen collisions.",
+      "tags": [
+        "switching",
+        "concepts",
+        "collision",
+        "and",
+        "broadcast",
+        "domains",
+        "hoeveel",
+        "heeft",
+        "switch",
+        "acht"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m02-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.1",
+      "sectionTitle": "Frame Forwarding",
+      "type": "diagnosis",
+      "prompt": "Na het leegmaken van de MAC-tabel wordt het eerste unicastframe naar meerdere poorten in dezelfde VLAN gestuurd. Waarom?",
+      "choices": [
+        "De bestemming is nog unknown unicast.",
+        "De switch routeert het frame.",
+        "STP heeft alle poorten root gemaakt.",
+        "De FCS is correct."
+      ],
+      "correctIndex": 0,
+      "answer": "De bestemming is nog unknown unicast.",
+      "explanation": "Zonder geleerde bestemmingsentry floodt de switch unknown unicast binnen de VLAN.",
+      "tags": [
+        "switching",
+        "concepts",
+        "frame",
+        "forwarding",
+        "leegmaken",
+        "mac-tabel",
+        "eerste",
+        "unicastframe",
+        "meerdere",
+        "poorten"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m02-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.2",
+      "sectionTitle": "Collision and Broadcast Domains",
+      "type": "diagnosis",
+      "prompt": "Broadcasts van VLAN 10 bereiken alle VLAN-10-poorten op twee switches, maar nooit VLAN 20. Welke netwerkgrens verklaart dit?",
+      "choices": [
+        "Elke VLAN is een apart broadcast domain.",
+        "Elke trunk is een router.",
+        "Elke switch heeft één collision domain.",
+        "Auto-MDIX filtert broadcasts."
+      ],
+      "correctIndex": 0,
+      "answer": "Elke VLAN is een apart broadcast domain.",
+      "explanation": "VLAN-segmentatie begrenst Layer-2-broadcasts.",
+      "tags": [
+        "switching",
+        "concepts",
+        "collision",
+        "and",
+        "broadcast",
+        "domains",
+        "broadcasts",
+        "vlan",
+        "bereiken",
+        "alle"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m02-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.1",
+      "sectionTitle": "Frame Forwarding",
+      "type": "flashcard",
+      "front": "2.1 · Frame Forwarding",
+      "back": "De switch leert het bron-MAC-adres van elk ontvangen frame en koppelt dit aan de inkomende poort en VLAN. Dynamische entries verouderen wanneer geen verkeer ze vernieuwt. Bij een bekende unicastbestemming stuurt de switch alleen via de gekoppelde poort. Unknown unicast, broadcast en relevante multicast worden binnen dezelfde VLAN via alle andere actieve poorten geflood. Store-and-forward ontvangt het hele frame en controleert FCS vóór forwarding; cut-through begint na het bestemmingsadres en verlaagt latency maar kan beschadigde frames doorgeven. Een switch gebruikt buffering per poort of uit gedeeld geheugen. Gedeeld geheugen helpt bij asymmetrische snelheden en tijdelijke bursts.",
+      "commands": "show mac address-table\nshow mac address-table dynamic\nclear mac address-table dynamic",
+      "verify": [
+        "Bron-MAC verschijnt op de inkomende poort",
+        "Bekende unicast wordt niet naar andere accesspoorten geflood",
+        "MAC-entry staat in de juiste VLAN"
+      ],
+      "tags": [
+        "switching",
+        "concepts",
+        "frame",
+        "forwarding"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m02-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 2,
+      "moduleTitle": "Switching Concepts",
+      "sectionId": "2.2",
+      "sectionTitle": "Collision and Broadcast Domains",
+      "type": "flashcard",
+      "front": "2.2 · Collision and Broadcast Domains",
+      "back": "Elke switchpoort is een afzonderlijk collision domain; full duplex schakelt botsingen uit. Een hub deelt één collision domain en werkt half duplex. Een VLAN vormt een broadcast domain. Routers en multilayer-switches begrenzen broadcasts; gewone Layer-2-switches verspreiden ze binnen de VLAN. Microsegmentation geeft elke endpoint een eigen switchpoort en dus eigen bandbreedte. Congestie kan nog steeds optreden bij oversubscribed uplinks.",
+      "commands": "show interfaces status\nshow interfaces switchport\nshow vlan brief",
+      "verify": [
+        "Elke accesspoort is aan precies één operationele access-VLAN gekoppeld",
+        "Uplinks hebben voldoende capaciteit",
+        "Full duplex aan beide uiteinden"
+      ],
+      "tags": [
+        "switching",
+        "concepts",
+        "collision",
+        "and",
+        "broadcast",
+        "domains"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 13,
+    "title": "Network Virtualization",
+    "summary": "Leg uit hoe cloud, hypervisors, virtual switching, overlays en SDN fysieke resources abstraheren en programmeerbaar maken."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 4
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m13-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "13.1",
+      "sectionTitle": "Cloud Computing",
+      "prompt": "Wat scheidt een VRF?",
+      "choices": [
+        "Routingtables",
+        "Elektrische voedingen",
+        "DNS-recordtypes",
+        "Syslogseverities"
+      ],
+      "correctIndex": 0,
+      "answer": "Routingtables",
+      "explanation": "VRFs bieden meerdere geïsoleerde routingcontexten.",
+      "tags": [
+        "network",
+        "virtualization",
+        "cloud",
+        "computing",
+        "scheidt",
+        "vrf"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m13-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "13.2",
+      "sectionTitle": "Virtualization Fundamentals",
+      "prompt": "Wat is een type-1 hypervisor?",
+      "choices": [
+        "Een hypervisor die direct op hardware draait",
+        "Een browserextensie",
+        "Een NAT-type",
+        "Een OSPF-pakket"
+      ],
+      "correctIndex": 0,
+      "answer": "Een hypervisor die direct op hardware draait",
+      "explanation": "Type 1 is bare metal.",
+      "tags": [
+        "network",
+        "virtualization",
+        "fundamentals",
+        "type-1",
+        "hypervisor"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m13-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "13.3",
+      "sectionTitle": "Network Infrastructure Virtualization",
+      "prompt": "Wat betekent southbound in SDN?",
+      "choices": [
+        "De interface van controller naar netwerkapparaten",
+        "De gebruikersportal naar applicaties",
+        "Een fysieke kabelrichting",
+        "Alleen internetverkeer"
+      ],
+      "correctIndex": 0,
+      "answer": "De interface van controller naar netwerkapparaten",
+      "explanation": "Southbound programmeert of bevraagt infrastructuur.",
+      "tags": [
+        "network",
+        "virtualization",
+        "infrastructure",
+        "betekent",
+        "southbound",
+        "sdn"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m13-diag-01",
+      "type": "diagnostic",
+      "sectionId": "13.3",
+      "sectionTitle": "Network Infrastructure Virtualization",
+      "prompt": "Twee tenants gebruiken overlappende IP-prefixes zonder elkaars routes te zien. Welke abstractie past het best?",
+      "choices": [
+        "Afzonderlijke VRFs",
+        "Eén gedeelde global routing table",
+        "Alleen een native VLAN",
+        "NTP authentication"
+      ],
+      "correctIndex": 0,
+      "answer": "Afzonderlijke VRFs",
+      "explanation": "VRFs bieden geïsoleerde routingtabellen en ondersteunen overlappende adressen.",
+      "tags": [
+        "network",
+        "virtualization",
+        "infrastructure",
+        "twee",
+        "tenants",
+        "gebruiken",
+        "overlappende",
+        "ip-prefixes",
+        "zonder",
+        "elkaars"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m13-diag-02",
+      "type": "diagnostic",
+      "sectionId": "13.4",
+      "sectionTitle": "Software-Defined Networking",
+      "prompt": "De controller is tijdelijk onbereikbaar, maar bestaande flows blijven volgens de laatste policy doorlopen. Welke scheiding zie je?",
+      "choices": [
+        "Control plane en data plane",
+        "Inside en outside NAT",
+        "Access en trunk",
+        "Voice en video queue"
+      ],
+      "correctIndex": 0,
+      "answer": "Control plane en data plane",
+      "explanation": "De dataplane kan bestaande forwardingstate behouden terwijl de controller niet beschikbaar is.",
+      "tags": [
+        "network",
+        "virtualization",
+        "software-defined",
+        "networking",
+        "controller",
+        "tijdelijk",
+        "onbereikbaar",
+        "maar",
+        "bestaande",
+        "flows"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m13-flash-01",
+      "type": "flashcard",
+      "sectionId": "13.1",
+      "sectionTitle": "Cloud Computing",
+      "front": "Wat moet je kunnen uitleggen over Cloud Computing?",
+      "back": "Cloud levert on-demand resources uit gedeelde pools met automatisering en meetbaar gebruik. IaaS, PaaS en SaaS verschuiven de beheergrens tussen klant en provider. Public, private, hybrid en community cloud beschrijven eigendom en plaatsing. Beschikbaarheid, dataresidentie, exitstrategie en shared responsibility blijven ontwerpvragen.",
+      "tags": [
+        "network",
+        "virtualization",
+        "cloud",
+        "computing",
+        "levert",
+        "on-demand",
+        "resources",
+        "gedeelde",
+        "pools",
+        "automatisering"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m13-flash-02",
+      "type": "flashcard",
+      "sectionId": "13.2",
+      "sectionTitle": "Virtualization Fundamentals",
+      "front": "Wat moet je kunnen uitleggen over Virtualization Fundamentals?",
+      "back": "Een type-1 hypervisor draait direct op hardware; type-2 op een host-OS. VMs bevatten een volledig guest-OS; containers delen doorgaans de hostkernel en zijn lichter maar hebben een andere isolatiegrens. vNICs koppelen workloads aan virtual switches. Resource overcommit kan efficiënt zijn maar veroorzaakt contention; monitor CPU ready, memory pressure, storage latency en netwerkqueues.",
+      "tags": [
+        "network",
+        "virtualization",
+        "fundamentals",
+        "type-1",
+        "hypervisor",
+        "draait",
+        "direct",
+        "hardware",
+        "type-2",
+        "host-os."
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m13-flash-03",
+      "type": "flashcard",
+      "sectionId": "13.3",
+      "sectionTitle": "Network Infrastructure Virtualization",
+      "front": "Wat moet je kunnen uitleggen over Network Infrastructure Virtualization?",
+      "back": "VRF virtualiseert routingtables; VLAN/EVPN/VXLAN segmenteren Layer 2 en overlays; tunnels scheiden logische topologie van de fysieke underlay. Elke abstractielaag vraagt eigen observability. NFV draait functies zoals firewall of router als software. Schaalbaarheid verbetert alleen wanneer dataplane-capaciteit, state, orchestration en failure handling goed zijn ontworpen.",
+      "tags": [
+        "network",
+        "virtualization",
+        "infrastructure",
+        "vrf",
+        "virtualiseert",
+        "routingtables",
+        "vlan/evpn/vxlan",
+        "segmenteren",
+        "layer",
+        "overlays"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m13-flash-04",
+      "type": "flashcard",
+      "sectionId": "13.4",
+      "sectionTitle": "Software-Defined Networking",
+      "front": "Wat moet je kunnen uitleggen over Software-Defined Networking?",
+      "back": "SDN scheidt beleidsbeslissingen logisch van forwarding en gebruikt een controller voor gecentraliseerde intent en automatisering. De control plane kan logisch centraal maar fysiek redundant zijn. Northbound APIs bedienen applicaties en intent; southbound protocollen/programmeerinterfaces sturen netwerkapparaten. Closed loop combineert telemetry, analyse en gecontroleerde wijziging.",
+      "tags": [
+        "network",
+        "virtualization",
+        "software-defined",
+        "networking",
+        "sdn",
+        "scheidt",
+        "beleidsbeslissingen",
+        "logisch",
+        "forwarding",
+        "gebruikt"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

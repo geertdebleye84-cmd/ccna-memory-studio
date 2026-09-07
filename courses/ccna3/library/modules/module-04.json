@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 4,
+    "title": "ACL Concepts",
+    "summary": "Ontwerp IPv4-ACLs met correcte volgorde, wildcardmaskers en plaatsing voordat je ze op interfaces toepast."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 3
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m04-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "4.1",
+      "sectionTitle": "Purpose and Operation of ACLs",
+      "prompt": "Wat gebeurt er bij de eerste passende ACE?",
+      "choices": [
+        "De bijbehorende actie wordt uitgevoerd en verdere ACEs worden niet bekeken.",
+        "Alle ACEs worden opgeteld.",
+        "Alleen de laatste ACE telt.",
+        "De route wordt altijd verwijderd."
+      ],
+      "correctIndex": 0,
+      "answer": "De bijbehorende actie wordt uitgevoerd en verdere ACEs worden niet bekeken.",
+      "explanation": "ACL-verwerking is first match.",
+      "tags": [
+        "acl",
+        "concepts",
+        "purpose",
+        "and",
+        "operation",
+        "acls",
+        "gebeurt",
+        "eerste",
+        "passende",
+        "ace"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m04-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "4.2",
+      "sectionTitle": "Wildcard Masks",
+      "prompt": "Welke wildcard hoort bij een /26-subnetmasker?",
+      "choices": [
+        "0.0.0.63",
+        "255.255.255.192",
+        "0.0.0.192",
+        "255.255.255.63"
+      ],
+      "correctIndex": 0,
+      "answer": "0.0.0.63",
+      "explanation": "255.255.255.192 omgekeerd is 0.0.0.63.",
+      "tags": [
+        "acl",
+        "concepts",
+        "wildcard",
+        "masks",
+        "hoort",
+        "26-subnetmasker"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m04-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "4.3",
+      "sectionTitle": "ACL Design Guidelines and Types",
+      "prompt": "Waar plaats je een extended ACL doorgaans?",
+      "choices": [
+        "Dicht bij de bron",
+        "Dicht bij de bestemming",
+        "Alleen op loopbacks",
+        "Uitsluitend outbound"
+      ],
+      "correctIndex": 0,
+      "answer": "Dicht bij de bron",
+      "explanation": "Zo wordt ongewenst verkeer vroeg gestopt.",
+      "tags": [
+        "acl",
+        "concepts",
+        "design",
+        "guidelines",
+        "and",
+        "types",
+        "waar",
+        "plaats",
+        "extended",
+        "doorgaans"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m04-diag-01",
+      "type": "diagnostic",
+      "sectionId": "4.1",
+      "sectionTitle": "Purpose and Operation of ACLs",
+      "prompt": "Een pakket matcht ACE 20. ACE 30 zou het verkeer toestaan, maar ACE 20 weigert het. Wat gebeurt er?",
+      "choices": [
+        "Het pakket wordt bij ACE 20 geweigerd",
+        "ACE 30 overschrijft ACE 20",
+        "De ACL telt beide acties op",
+        "De route kiest de ACE met laagste cost"
+      ],
+      "correctIndex": 0,
+      "answer": "Het pakket wordt bij ACE 20 geweigerd",
+      "explanation": "ACLs stoppen bij de eerste match.",
+      "tags": [
+        "acl",
+        "concepts",
+        "purpose",
+        "and",
+        "operation",
+        "acls",
+        "pakket",
+        "matcht",
+        "ace",
+        "20."
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m04-diag-02",
+      "type": "diagnostic",
+      "sectionId": "4.3",
+      "sectionTitle": "ACL Design Guidelines and Types",
+      "prompt": "Je wilt HTTPS van één gebruikers-LAN naar één server toestaan en al het overige vroeg blokkeren. Welk ACL-type en welke plaatsing passen?",
+      "choices": [
+        "Extended ACL dicht bij de bron",
+        "Standard ACL dicht bij de bron",
+        "Standard ACL dicht bij de bestemming zonder poort",
+        "Alleen een VTY access-class"
+      ],
+      "correctIndex": 0,
+      "answer": "Extended ACL dicht bij de bron",
+      "explanation": "Een extended ACL kan bron, bestemming, protocol en poort vroeg in het pad matchen.",
+      "tags": [
+        "acl",
+        "concepts",
+        "design",
+        "guidelines",
+        "and",
+        "types",
+        "wilt",
+        "https",
+        "gebruikers-lan",
+        "server"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m04-flash-01",
+      "type": "flashcard",
+      "sectionId": "4.1",
+      "sectionTitle": "Purpose and Operation of ACLs",
+      "front": "Wat moet je kunnen uitleggen over Purpose and Operation of ACLs?",
+      "back": "Een ACL bestaat uit geordende ACEs. IOS stopt bij de eerste match; zonder match geldt een impliciete deny any aan het einde. Inbound filtering gebeurt vóór de routebeslissing; outbound filtering erna. Eén IPv4-ACL per protocol, richting en interface kan actief zijn.",
+      "tags": [
+        "acl",
+        "concepts",
+        "purpose",
+        "and",
+        "operation",
+        "acls",
+        "bestaat",
+        "geordende",
+        "aces.",
+        "ios"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m04-flash-02",
+      "type": "flashcard",
+      "sectionId": "4.2",
+      "sectionTitle": "Wildcard Masks",
+      "front": "Wat moet je kunnen uitleggen over Wildcard Masks?",
+      "back": "Een wildcardbit 0 moet overeenkomen; bit 1 wordt genegeerd. Een subnetwildcard is meestal het omgekeerde masker, bijvoorbeeld /24 naar 0.0.0.255. host 192.0.2.10 is gelijk aan 192.0.2.10 0.0.0.0; any is gelijk aan 0.0.0.0 255.255.255.255. Niet-contigue wildcards zijn mogelijk maar lastiger te beoordelen.",
+      "tags": [
+        "acl",
+        "concepts",
+        "wildcard",
+        "masks",
+        "wildcardbit",
+        "moet",
+        "overeenkomen",
+        "bit",
+        "genegeerd.",
+        "subnetwildcard"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m04-flash-03",
+      "type": "flashcard",
+      "sectionId": "4.3",
+      "sectionTitle": "ACL Design Guidelines and Types",
+      "front": "Wat moet je kunnen uitleggen over ACL Design Guidelines and Types?",
+      "back": "Standaard-ACLs kijken alleen naar bron-IPv4 en staan doorgaans dicht bij de bestemming. Extended ACLs kijken ook naar protocol, bestemming en poorten en staan meestal dicht bij de bron. Specifieke regels horen vóór algemene regels. Gebruik remark, sequence numbers en een expliciet wijzigingsplan; test eerst zonder beheerconnectiviteit af te snijden.",
+      "tags": [
+        "acl",
+        "concepts",
+        "design",
+        "guidelines",
+        "and",
+        "types",
+        "standaard-acls",
+        "kijken",
+        "alleen",
+        "bron-ipv4"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

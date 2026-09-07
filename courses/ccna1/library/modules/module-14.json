@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 14,
+    "title": "Transport Layer",
+    "summary": "Vergelijk TCP en UDP, poorten en sockets en verklaar betrouwbaarheid, flow control, multiplexing en sessieopbouw."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 7,
+    "total": 12
+  },
+  "cards": [
+    {
+      "id": "ccna1-m14-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.5",
+      "sectionTitle": "TCP Communication Process",
+      "type": "knowledge",
+      "prompt": "Welke TCP-volgorde start een sessie?",
+      "choices": [
+        "SYN, SYN-ACK, ACK",
+        "ACK, FIN, RST",
+        "DISCOVER, OFFER, REQUEST",
+        "NS, NA, RA"
+      ],
+      "correctIndex": 0,
+      "answer": "SYN, SYN-ACK, ACK",
+      "explanation": "Dat is de three-way handshake.",
+      "tags": [
+        "transport",
+        "layer",
+        "tcp",
+        "communication",
+        "process",
+        "tcp-volgorde",
+        "start",
+        "sessie"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m14-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.3",
+      "sectionTitle": "UDP Overview",
+      "type": "knowledge",
+      "prompt": "Welke UDP-eigenschap is correct?",
+      "choices": [
+        "Geen ingebouwde ordering of retransmissie",
+        "Altijd trager dan TCP",
+        "Gebruikt geen poorten",
+        "Heeft een 40-byte header"
+      ],
+      "correctIndex": 0,
+      "answer": "Geen ingebouwde ordering of retransmissie",
+      "explanation": "UDP houdt het transport minimaal.",
+      "tags": [
+        "transport",
+        "layer",
+        "udp",
+        "overview",
+        "udp-eigenschap",
+        "correct"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m14-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.4",
+      "sectionTitle": "Port Numbers",
+      "type": "knowledge",
+      "prompt": "Welke poort is HTTPS standaard?",
+      "choices": [
+        "443/TCP",
+        "80/UDP",
+        "53/TCP uitsluitend",
+        "22/UDP"
+      ],
+      "correctIndex": 0,
+      "answer": "443/TCP",
+      "explanation": "HTTPS gebruikt normaal TCP 443 (naast moderne QUIC-varianten over UDP).",
+      "tags": [
+        "transport",
+        "layer",
+        "port",
+        "numbers",
+        "poort",
+        "https",
+        "standaard"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m14-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.5",
+      "sectionTitle": "TCP Communication Process",
+      "type": "diagnosis",
+      "prompt": "Een capture toont SYN, SYN-ACK en daarna geen ACK. De server luistert en stuurt correct terug. Waar ligt het probleem waarschijnlijk?",
+      "choices": [
+        "Het laatste client→serverpad of de client blokkeert het ACK.",
+        "UDP heeft geen checksum.",
+        "DNS gebruikt een MX-record.",
+        "Ethernet heeft geen FCS."
+      ],
+      "correctIndex": 0,
+      "answer": "Het laatste client→serverpad of de client blokkeert het ACK.",
+      "explanation": "Zonder de derde handshakeboodschap wordt de TCP-sessie niet volledig gevestigd.",
+      "tags": [
+        "transport",
+        "layer",
+        "tcp",
+        "communication",
+        "process",
+        "capture",
+        "toont",
+        "syn",
+        "syn-ack",
+        "daarna"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m14-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.6",
+      "sectionTitle": "Reliability and Flow Control",
+      "type": "diagnosis",
+      "prompt": "De ontvanger adverteert een steeds kleiner TCP-window en de zender vertraagt. Welk mechanisme zie je?",
+      "choices": [
+        "Flow control ter bescherming van de ontvanger.",
+        "ARP-spoofing.",
+        "Longest prefix match.",
+        "DHCP relay."
+      ],
+      "correctIndex": 0,
+      "answer": "Flow control ter bescherming van de ontvanger.",
+      "explanation": "Het advertised receive window begrenst hoeveel data zonder extra ACK mag worden verzonden.",
+      "tags": [
+        "transport",
+        "layer",
+        "reliability",
+        "and",
+        "flow",
+        "control",
+        "ontvanger",
+        "adverteert",
+        "steeds",
+        "kleiner"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m14-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.1",
+      "sectionTitle": "Transportation of Data",
+      "type": "flashcard",
+      "front": "14.1 · Transportation of Data",
+      "back": "De transportlaag segmenteert/reassembleert, multiplexeert applicaties met poorten en kan betrouwbaarheid, flow control en sessiebeheer leveren. Een socket is IP-adres plus poort; een flow wordt uniek door protocol en bron/doel-IP/poort. Clients gebruiken vaak dynamische source ports.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "transportation",
+        "data"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m14-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.2",
+      "sectionTitle": "TCP Overview",
+      "type": "flashcard",
+      "front": "14.2 · TCP Overview",
+      "back": "TCP is connection-oriented en levert geordende betrouwbare byte-streams met sequence/acknowledgment numbers, retransmissie, checksum en flow control. Overhead en wachttijd zijn hoger dan UDP. HTTP(S), SSH, e-mail en file transfer gebruiken vaak TCP wanneer volledigheid belangrijk is.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "tcp",
+        "overview"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m14-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.3",
+      "sectionTitle": "UDP Overview",
+      "type": "flashcard",
+      "front": "14.3 · UDP Overview",
+      "back": "UDP is connectionless met een header van 8 bytes: source port, destination port, length en checksum. Geen handshake, ordering of retransmissie door UDP zelf. DNS, DHCP, streaming, voice en gaming kiezen vaak UDP voor lage latency of eigen herstel; “onbetrouwbaar” betekent geen leveringsgarantie, niet waardeloos.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "udp",
+        "overview"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m14-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.4",
+      "sectionTitle": "Port Numbers",
+      "type": "flashcard",
+      "front": "14.4 · Port Numbers",
+      "back": "Well-known 0–1023, registered 1024–49151 en dynamic/private 49152–65535. Server luistert op bekende/registreerde poort; client kiest meestal ephemeral. Voorbeelden: 20/21 FTP, 22 SSH, 25 SMTP, 53 DNS, 67/68 DHCPv4, 80 HTTP, 110 POP3, 143 IMAP, 443 HTTPS. Controleer altijd TCP versus UDP.",
+      "commands": "netstat -ano\nss -tulpen",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "port",
+        "numbers"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m14-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.5",
+      "sectionTitle": "TCP Communication Process",
+      "type": "flashcard",
+      "front": "14.5 · TCP Communication Process",
+      "back": "Three-way handshake: SYN, SYN-ACK, ACK synchroniseert sequence numbers. Beëindiging gebruikt doorgaans FIN/ACK in beide richtingen; RST breekt abrupt af. Sequence numbers markeren bytes; ACK is het volgende verwachte nummer. Meerdere applicatiesessies blijven gescheiden door sockets.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "tcp",
+        "communication",
+        "process"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m14-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.6",
+      "sectionTitle": "Reliability and Flow Control",
+      "type": "flashcard",
+      "front": "14.6 · Reliability and Flow Control",
+      "back": "Ontbrekende bytes worden via acknowledgments/timers en retransmissie hersteld; ontvanger ordent out-of-order segmenten. SACK kan specifieke ontvangen blokken melden. Sliding window laat meerdere bytes in flight; advertised receive window beschermt de ontvanger. Congestion control beschermt het netwerk en is iets anders dan flow control.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "reliability",
+        "and",
+        "flow",
+        "control"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m14-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 14,
+      "moduleTitle": "Transport Layer",
+      "sectionId": "14.7",
+      "sectionTitle": "UDP Communication",
+      "type": "flashcard",
+      "front": "14.7 · UDP Communication",
+      "back": "UDP-datagrams zijn onafhankelijk; de applicatie bepaalt of verlies, duplicatie of volgorde wordt behandeld. Query/responseprotocollen kunnen eigen timeouts/retries gebruiken. Realtimeverkeer verkiest vaak een laat packet te missen boven wachten op retransmissie. QoS kan prioriteren maar creëert geen betrouwbaarheid.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "transport",
+        "layer",
+        "udp",
+        "communication"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

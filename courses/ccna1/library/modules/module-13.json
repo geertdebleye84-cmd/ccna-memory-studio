@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 13,
+    "title": "ICMP",
+    "summary": "Gebruik ICMPv4/ICMPv6, ping en traceroute om bereikbaarheid, pad en foutlocatie systematisch te onderzoeken."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 2,
+    "total": 7
+  },
+  "cards": [
+    {
+      "id": "ccna1-m13-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.1",
+      "sectionTitle": "ICMP Messages",
+      "type": "knowledge",
+      "prompt": "Welk bericht ontstaat wanneer TTL nul wordt?",
+      "choices": [
+        "ICMP Time Exceeded",
+        "ARP Reply",
+        "TCP SYN-ACK",
+        "DHCP Offer"
+      ],
+      "correctIndex": 0,
+      "answer": "ICMP Time Exceeded",
+      "explanation": "De router dropt en meldt Time Exceeded.",
+      "tags": [
+        "icmp",
+        "messages",
+        "welk",
+        "bericht",
+        "ontstaat",
+        "wanneer",
+        "ttl",
+        "nul"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m13-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.2",
+      "sectionTitle": "Ping and Traceroute Testing",
+      "type": "knowledge",
+      "prompt": "Wat test ping primair?",
+      "choices": [
+        "IP-bereikbaarheid en round trip",
+        "DNS alleen",
+        "De volledige applicatie",
+        "Kabelcategorie"
+      ],
+      "correctIndex": 0,
+      "answer": "IP-bereikbaarheid en round trip",
+      "explanation": "Echo test het IP-pad, niet elke applicatielaag.",
+      "tags": [
+        "icmp",
+        "ping",
+        "and",
+        "traceroute",
+        "testing",
+        "test",
+        "primair"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m13-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.2",
+      "sectionTitle": "Ping and Traceroute Testing",
+      "type": "knowledge",
+      "prompt": "Waarom kan een heenpad werken maar ping falen?",
+      "choices": [
+        "Het retourpad ontbreekt",
+        "Ethernet heeft geen MAC",
+        "De TTL stijgt",
+        "DNS verandert de FCS"
+      ],
+      "correctIndex": 0,
+      "answer": "Het retourpad ontbreekt",
+      "explanation": "Echo Reply moet onafhankelijk terug worden gerouteerd.",
+      "tags": [
+        "icmp",
+        "ping",
+        "and",
+        "traceroute",
+        "testing",
+        "heenpad",
+        "werken",
+        "maar",
+        "falen"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m13-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.2",
+      "sectionTitle": "Ping and Traceroute Testing",
+      "type": "diagnosis",
+      "prompt": "Een traceroute toont antwoorden tot R2 en daarna alleen sterretjes, terwijl het doel niet reageert. Wat kun je veilig concluderen?",
+      "choices": [
+        "Het probleem of filtering ligt na het laatst bewezen antwoordende punt; meer bewijs is nodig.",
+        "R2 is zeker defect.",
+        "DNS is zeker de oorzaak.",
+        "Het doel gebruikt altijd een verkeerd MAC-adres."
+      ],
+      "correctIndex": 0,
+      "answer": "Het probleem of filtering ligt na het laatst bewezen antwoordende punt; meer bewijs is nodig.",
+      "explanation": "Sterretjes kunnen een drop, filtering of rate limiting betekenen; ze bewijzen niet één specifieke oorzaak.",
+      "tags": [
+        "icmp",
+        "ping",
+        "and",
+        "traceroute",
+        "testing",
+        "toont",
+        "antwoorden",
+        "tot",
+        "daarna",
+        "alleen"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m13-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.1",
+      "sectionTitle": "ICMP Messages",
+      "type": "diagnosis",
+      "prompt": "Een ping naar IP faalt, maar de applicatie werkt via hetzelfde doel. Welke verklaring is mogelijk?",
+      "choices": [
+        "ICMP Echo wordt gefilterd terwijl het applicatieprotocol is toegestaan.",
+        "IP-connectiviteit bestaat niet.",
+        "De host heeft geen NIC.",
+        "De switch gebruikt geen MAC-tabel."
+      ],
+      "correctIndex": 0,
+      "answer": "ICMP Echo wordt gefilterd terwijl het applicatieprotocol is toegestaan.",
+      "explanation": "Een pingtimeout bewijst niet dat alle transport- of applicatieverkeer faalt.",
+      "tags": [
+        "icmp",
+        "messages",
+        "ping",
+        "faalt",
+        "maar",
+        "applicatie",
+        "werkt",
+        "via",
+        "hetzelfde",
+        "doel."
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m13-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.1",
+      "sectionTitle": "ICMP Messages",
+      "type": "flashcard",
+      "front": "13.1 · ICMP Messages",
+      "back": "ICMP rapporteert fouten en operationele informatie voor IP. Echo Request/Reply test bereikbaarheid; Destination Unreachable en Time Exceeded verklaren bepaalde drops. ICMPv6 is bovendien essentieel voor NDP en Path MTU Discovery. Een timeout bewijst niet automatisch dat het doel down is: filtering of een ontbrekend retourpad kan hetzelfde symptoom geven.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "icmp",
+        "messages"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m13-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 13,
+      "moduleTitle": "ICMP",
+      "sectionId": "13.2",
+      "sectionTitle": "Ping and Traceroute Testing",
+      "type": "flashcard",
+      "front": "13.2 · Ping and Traceroute Testing",
+      "back": "Ping meet round-trip en verlies met Echo. Test van dichtbij naar ver: loopback, eigen interface, lokale buur, gateway, remote hop, remote doel en naam. Traceroute verhoogt TTL/Hop Limit om tussenrouters Time Exceeded te laten antwoorden. Sterretjes kunnen filtering of rate limiting zijn; het laatste antwoordende hopgebied helpt scope bepalen.",
+      "commands": "ping 127.0.0.1\nping 192.0.2.1\ntracert 198.51.100.10\ntraceroute 2001:db8:2::10",
+      "verify": [
+        "Bronadres passend",
+        "Retourpad aanwezig",
+        "Naamresolutie apart getest"
+      ],
+      "tags": [
+        "icmp",
+        "ping",
+        "and",
+        "traceroute",
+        "testing"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 1,
+    "title": "Single-Area OSPFv2 Concepts",
+    "summary": "Begrijp waarom OSPF link-state-informatie uitwisselt, buren vormt en voor elk doel het kortste pad berekent."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 3
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m01-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "1.1",
+      "sectionTitle": "OSPF Features and Characteristics",
+      "prompt": "Welke OSPF-database hoort binnen één area inhoudelijk gelijk te zijn?",
+      "choices": [
+        "De link-state database",
+        "De ARP-cache",
+        "De running-config",
+        "De NAT-tabel"
+      ],
+      "correctIndex": 0,
+      "answer": "De link-state database",
+      "explanation": "LSA-flooding zorgt voor een gesynchroniseerde LSDB.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "features",
+        "and",
+        "characteristics",
+        "ospf-database",
+        "hoort",
+        "binnen"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m01-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "1.2",
+      "sectionTitle": "OSPF Packets",
+      "prompt": "Welk pakket vraagt specifieke ontbrekende LSDB-informatie?",
+      "choices": [
+        "LSR",
+        "Hello",
+        "LSAck",
+        "ARP"
+      ],
+      "correctIndex": 0,
+      "answer": "LSR",
+      "explanation": "Een Link-State Request vraagt de benodigde LSA’s op.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "packets",
+        "welk",
+        "pakket",
+        "vraagt",
+        "specifieke",
+        "ontbrekende"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m01-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "1.3",
+      "sectionTitle": "OSPF Operation",
+      "prompt": "Wat berekent het SPF-algoritme?",
+      "choices": [
+        "Een shortest-path tree vanuit de lokale router",
+        "Een MAC-adrestabel",
+        "Een DHCP-pool",
+        "Een encryptiesleutel"
+      ],
+      "correctIndex": 0,
+      "answer": "Een shortest-path tree vanuit de lokale router",
+      "explanation": "SPF gebruikt de LSDB om beste paden te bepalen.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "operation",
+        "berekent",
+        "spf-algoritme"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m01-diag-01",
+      "type": "diagnostic",
+      "sectionId": "1.2",
+      "sectionTitle": "OSPF Packets",
+      "prompt": "Een OSPF-router kent de samenvatting van een LSA, maar mist de volledige informatie in zijn LSDB. Welk pakket past bij de volgende stap?",
+      "choices": [
+        "LSR",
+        "Hello",
+        "ARP Request",
+        "DHCP Discover"
+      ],
+      "correctIndex": 0,
+      "answer": "LSR",
+      "explanation": "Een Link-State Request vraagt de ontbrekende LSA gericht op.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "packets",
+        "ospf-router",
+        "kent",
+        "samenvatting",
+        "lsa",
+        "maar"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m01-diag-02",
+      "type": "diagnostic",
+      "sectionId": "1.3",
+      "sectionTitle": "OSPF Operation",
+      "prompt": "Twee routers op hetzelfde broadcastsegment blijven onderling in 2-Way, terwijl beide met de DR Full zijn. Wat is de waarschijnlijkste verklaring?",
+      "choices": [
+        "Dit is normaal voor twee DROTHER-routers",
+        "De router-ID is dubbel",
+        "De dead timer is verlopen",
+        "IP-protocol 89 wordt geblokkeerd"
+      ],
+      "correctIndex": 0,
+      "answer": "Dit is normaal voor twee DROTHER-routers",
+      "explanation": "DROTHERs vormen onderling geen volledige adjacency en kunnen normaal 2-Way blijven.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "operation",
+        "twee",
+        "routers",
+        "hetzelfde",
+        "broadcastsegment",
+        "blijven"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m01-flash-01",
+      "type": "flashcard",
+      "sectionId": "1.1",
+      "sectionTitle": "OSPF Features and Characteristics",
+      "front": "Wat moet je kunnen uitleggen over OSPF Features and Characteristics?",
+      "back": "OSPF is een open link-state IGP. Routers bouwen binnen een area dezelfde link-state database (LSDB) en gebruiken SPF om routes te berekenen; dit verschilt van het periodiek doorgeven van een volledige routingtabel. De metric cost is gebaseerd op bandbreedte ten opzichte van een reference bandwidth. OSPF ondersteunt VLSM, CIDR, equal-cost load balancing, hiërarchische areas en snelle, getriggerde convergentie.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "features",
+        "and",
+        "characteristics",
+        "open",
+        "link-state",
+        "igp."
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m01-flash-02",
+      "type": "flashcard",
+      "sectionId": "1.2",
+      "sectionTitle": "OSPF Packets",
+      "front": "Wat moet je kunnen uitleggen over OSPF Packets?",
+      "back": "Hello-pakketten ontdekken en onderhouden buren. DBD vat de LSDB samen, LSR vraagt ontbrekende informatie, LSU vervoert LSA’s en LSAck bevestigt ontvangst. OSPF gebruikt IP-protocol 89. Multicast 224.0.0.5 bereikt alle OSPF-routers; 224.0.0.6 richt zich op DR en BDR op multiaccessnetwerken.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "packets",
+        "hello-pakketten",
+        "ontdekken",
+        "onderhouden",
+        "buren.",
+        "dbd"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m01-flash-03",
+      "type": "flashcard",
+      "sectionId": "1.3",
+      "sectionTitle": "OSPF Operation",
+      "front": "Wat moet je kunnen uitleggen over OSPF Operation?",
+      "back": "Buren doorlopen states van Down en Init naar 2-Way; alleen routers die een adjacency moeten vormen gaan verder via ExStart, Exchange en Loading naar Full. Na synchronisatie floodt OSPF wijzigingen betrouwbaar. SPF berekent een shortest-path tree met de lokale router als wortel en installeert de beste routes in de routingtabel.",
+      "tags": [
+        "single-area",
+        "ospfv2",
+        "concepts",
+        "ospf",
+        "operation",
+        "buren",
+        "doorlopen",
+        "states",
+        "down",
+        "init"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 15,
+    "title": "Application Layer",
+    "summary": "Leg uit hoe client/server en peer-to-peerapplicaties DNS, DHCP, web, e-mail en bestandsoverdracht gebruiken."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 10
+  },
+  "cards": [
+    {
+      "id": "ccna1-m15-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.4",
+      "sectionTitle": "IP Addressing Services",
+      "type": "knowledge",
+      "prompt": "Welke DHCPv4-volgorde is correct?",
+      "choices": [
+        "Discover, Offer, Request, Acknowledge",
+        "Request, Discover, Ack, Offer",
+        "SYN, SYN-ACK, ACK",
+        "Query, Reply, Update"
+      ],
+      "correctIndex": 0,
+      "answer": "Discover, Offer, Request, Acknowledge",
+      "explanation": "DORA beschrijft leaseverlening.",
+      "tags": [
+        "application",
+        "layer",
+        "addressing",
+        "services",
+        "dhcpv4-volgorde",
+        "correct"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m15-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.4",
+      "sectionTitle": "IP Addressing Services",
+      "type": "knowledge",
+      "prompt": "Welk DNS-record bevat een IPv6-adres?",
+      "choices": [
+        "AAAA",
+        "A",
+        "MX",
+        "PTR uitsluitend"
+      ],
+      "correctIndex": 0,
+      "answer": "AAAA",
+      "explanation": "AAAA mappt naam naar IPv6.",
+      "tags": [
+        "application",
+        "layer",
+        "addressing",
+        "services",
+        "welk",
+        "dns-record",
+        "bevat",
+        "ipv6-adres"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m15-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.3",
+      "sectionTitle": "Web and Email Protocols",
+      "type": "knowledge",
+      "prompt": "Welk protocol synchroniseert mail op de server?",
+      "choices": [
+        "IMAP",
+        "SMTP alleen",
+        "ARP",
+        "TFTP"
+      ],
+      "correctIndex": 0,
+      "answer": "IMAP",
+      "explanation": "IMAP bewaart/synchroniseert mailboxstatus.",
+      "tags": [
+        "application",
+        "layer",
+        "web",
+        "and",
+        "email",
+        "protocols",
+        "welk",
+        "protocol",
+        "synchroniseert",
+        "mail"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m15-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.4",
+      "sectionTitle": "IP Addressing Services",
+      "type": "diagnosis",
+      "prompt": "Een client kan 198.51.100.20 pingen maar `example.test` niet openen; nslookup time-out. Welke dienst faalt?",
+      "choices": [
+        "DNS-naamresolutie.",
+        "Ethernet switching.",
+        "De default gateway voor alle verkeer.",
+        "TCP-flow-control."
+      ],
+      "correctIndex": 0,
+      "answer": "DNS-naamresolutie.",
+      "explanation": "Werkende IP-connectiviteit met falende naamquery is een DNS-probleem.",
+      "tags": [
+        "application",
+        "layer",
+        "addressing",
+        "services",
+        "client",
+        "198.51.100.20",
+        "pingen",
+        "maar",
+        "example.test",
+        "niet"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m15-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.4",
+      "sectionTitle": "IP Addressing Services",
+      "type": "diagnosis",
+      "prompt": "Een nieuwe client krijgt 169.254.30.8 terwijl lokale statische hosts werken. Welke fase is waarschijnlijk mislukt?",
+      "choices": [
+        "DHCP-leaseverlening.",
+        "ARP voor de loopback.",
+        "TCP three-way handshake naar HTTPS.",
+        "Ethernet-FCS-berekening."
+      ],
+      "correctIndex": 0,
+      "answer": "DHCP-leaseverlening.",
+      "explanation": "Een APIPA/link-local IPv4-adres wijst doorgaans op een mislukte DHCPv4-lease.",
+      "tags": [
+        "application",
+        "layer",
+        "addressing",
+        "services",
+        "nieuwe",
+        "client",
+        "krijgt",
+        "169.254.30.8",
+        "terwijl",
+        "lokale"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m15-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.1",
+      "sectionTitle": "Application, Presentation, and Session",
+      "type": "flashcard",
+      "front": "15.1 · Application, Presentation, and Session",
+      "back": "De TCP/IP-applicatielaag omvat OSI application, presentation en session: netwerkservice, syntax/encoding/compressie/encryptie en dialoogbeheer. Een user application gebruikt een application-layer protocol; browser en HTTP zijn niet hetzelfde. TLS presenteert beveiliging tussen applicatie en transport.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "application",
+        "layer",
+        "presentation",
+        "and",
+        "session"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m15-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.2",
+      "sectionTitle": "Peer-to-Peer",
+      "type": "flashcard",
+      "front": "15.2 · Peer-to-Peer",
+      "back": "In client-server leveren dedicated servers schaalbaar centraal beheer. In peer-to-peer kunnen hosts tegelijk client en server zijn; eenvoudig maar lastiger te beveiligen en beheren. P2P applications kunnen via een index/trackers peers ontdekken en data direct distribueren. Architectuurkeuze is onafhankelijk van fysieke topologie.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "application",
+        "layer",
+        "peer-to-peer"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m15-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.3",
+      "sectionTitle": "Web and Email Protocols",
+      "type": "flashcard",
+      "front": "15.3 · Web and Email Protocols",
+      "back": "HTTP request/response gebruikt methoden en statuscodes; HTTPS is HTTP beveiligd met TLS. Een URL bevat schema, host, optionele poort, pad en query. SMTP verzendt mail tussen client/server en servers; POP3 downloadt eenvoudig, IMAP synchroniseert mappen/status met de server. DNS MX helpt mailrouting.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "application",
+        "layer",
+        "web",
+        "and",
+        "email",
+        "protocols"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m15-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.4",
+      "sectionTitle": "IP Addressing Services",
+      "type": "flashcard",
+      "front": "15.4 · IP Addressing Services",
+      "back": "DNS is hiërarchisch: resolver vraagt records zoals A, AAAA, CNAME, MX en NS en cachet volgens TTL. Een naamprobleem kan bestaan terwijl IP-connectiviteit werkt. DHCPv4 DORA: Discover, Offer, Request, Acknowledge. Het levert adres, masker, gateway, DNS en lease; relay forwardt broadcasts naar een server in een ander subnet.",
+      "commands": "ipconfig /all\nipconfig /release\nipconfig /renew\nnslookup example.com",
+      "verify": [
+        "Leaseparameters correct",
+        "Naam en direct IP apart getest"
+      ],
+      "tags": [
+        "application",
+        "layer",
+        "addressing",
+        "services"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m15-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 15,
+      "moduleTitle": "Application Layer",
+      "sectionId": "15.5",
+      "sectionTitle": "File Sharing Services",
+      "type": "flashcard",
+      "front": "15.5 · File Sharing Services",
+      "back": "FTP gebruikt TCP-control en aparte dataconnectie; active/passive verschilt in initiator van data. TFTP gebruikt UDP en mist authenticatie/encryptie; SFTP draait over SSH. SMB deelt Windowsbestanden/printers; NFS is gangbaar op Unix/Linux. Kies protocol op beveiliging, beheer, interoperabiliteit en netwerkpad.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "application",
+        "layer",
+        "file",
+        "sharing",
+        "services"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

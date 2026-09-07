@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 9,
+    "title": "Address Resolution",
+    "summary": "Koppel Layer-3 next hops aan Layer-2 adressen met ARP en IPv6 Neighbor Discovery en herken beveiligingsimplicaties."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 3,
+    "total": 8
+  },
+  "cards": [
+    {
+      "id": "ccna1-m09-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.1",
+      "sectionTitle": "MAC and IP",
+      "type": "knowledge",
+      "prompt": "Welk MAC-adres gebruikt een host voor een remote IPv4-doel?",
+      "choices": [
+        "Dat van de default gateway",
+        "Dat van de remote host",
+        "Broadcast voor alle frames",
+        "Dat van DNS"
+      ],
+      "correctIndex": 0,
+      "answer": "Dat van de default gateway",
+      "explanation": "De gateway is de lokale next hop.",
+      "tags": [
+        "address",
+        "resolution",
+        "mac",
+        "and",
+        "welk",
+        "mac-adres",
+        "gebruikt",
+        "host",
+        "remote",
+        "ipv4-doel"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m09-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.2",
+      "sectionTitle": "ARP",
+      "type": "knowledge",
+      "prompt": "Hoe wordt een ARP Request verzonden?",
+      "choices": [
+        "Als Layer-2 broadcast",
+        "Als routed unicast",
+        "Als TCP-segment",
+        "Als IPv6 multicast"
+      ],
+      "correctIndex": 0,
+      "answer": "Als Layer-2 broadcast",
+      "explanation": "Iedere host in de VLAN ontvangt de request.",
+      "tags": [
+        "address",
+        "resolution",
+        "arp",
+        "request",
+        "verzonden"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m09-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.3",
+      "sectionTitle": "Neighbor Discovery",
+      "type": "knowledge",
+      "prompt": "Welk NDP-bericht levert prefix en default-routerinformatie?",
+      "choices": [
+        "Router Advertisement",
+        "Neighbor Advertisement alleen",
+        "Echo Reply",
+        "Destination Unreachable"
+      ],
+      "correctIndex": 0,
+      "answer": "Router Advertisement",
+      "explanation": "RA draagt router- en prefixparameters.",
+      "tags": [
+        "address",
+        "resolution",
+        "neighbor",
+        "discovery",
+        "welk",
+        "ndp-bericht",
+        "levert",
+        "prefix",
+        "default-routerinformatie"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m09-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.2",
+      "sectionTitle": "ARP",
+      "type": "diagnosis",
+      "prompt": "Na ARP-spoofing wijst de gateway-entry op het MAC-adres van een onbekende laptop. Welk risico ontstaat?",
+      "choices": [
+        "Verkeer kan via de aanvaller worden omgeleid voor een man-in-the-middle.",
+        "De IPv4-prefix wordt automatisch /32.",
+        "De switch schakelt over naar IPv6.",
+        "TCP-poorten verdwijnen."
+      ],
+      "correctIndex": 0,
+      "answer": "Verkeer kan via de aanvaller worden omgeleid voor een man-in-the-middle.",
+      "explanation": "ARP heeft geen authenticatie en een valse IP–MAC-binding kan verkeer onderscheppen.",
+      "tags": [
+        "address",
+        "resolution",
+        "arp",
+        "arp-spoofing",
+        "wijst",
+        "gateway-entry",
+        "mac-adres",
+        "onbekende",
+        "laptop.",
+        "welk"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m09-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.3",
+      "sectionTitle": "Neighbor Discovery",
+      "type": "diagnosis",
+      "prompt": "Een IPv6-host heeft een GUA maar leert geen default router; Router Advertisements worden gefilterd. Wat ontbreekt?",
+      "choices": [
+        "De RA die router- en prefixinformatie levert.",
+        "Een ARP Reply.",
+        "Een IPv4 DHCPACK.",
+        "Een TCP-handshake."
+      ],
+      "correctIndex": 0,
+      "answer": "De RA die router- en prefixinformatie levert.",
+      "explanation": "IPv6-hosts leren hun default router via ICMPv6 Router Advertisements.",
+      "tags": [
+        "address",
+        "resolution",
+        "neighbor",
+        "discovery",
+        "ipv6-host",
+        "heeft",
+        "gua",
+        "maar",
+        "leert",
+        "geen"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m09-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.1",
+      "sectionTitle": "MAC and IP",
+      "type": "flashcard",
+      "front": "9.1 · MAC and IP",
+      "back": "IP-adressen identificeren end-to-end bron en doel; MAC-adressen identificeren afzender en next hop op één Ethernetlink. Voor remote verkeer is destination MAC dat van de gateway, niet van de remote host. Na routing wordt een nieuwe Layer-2-header gebouwd.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "address",
+        "resolution",
+        "mac",
+        "and"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m09-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.2",
+      "sectionTitle": "ARP",
+      "type": "flashcard",
+      "front": "9.2 · ARP",
+      "back": "ARP resolveert een IPv4-adres naar een MAC-adres binnen het lokale broadcastdomein. Request is broadcast; reply normaal unicast; resultaten worden tijdelijk gecachet. Entries kunnen dynamisch of statisch zijn. Gratuitous ARP kondigt een binding aan of detecteert conflicten. ARP heeft geen ingebouwde authenticatie en is spoofbaar.",
+      "commands": "arp -a\nshow arp\nclear arp-cache",
+      "verify": [
+        "Gatewaybinding klopt",
+        "Onbekend doel triggert request"
+      ],
+      "tags": [
+        "address",
+        "resolution",
+        "arp"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m09-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 9,
+      "moduleTitle": "Address Resolution",
+      "sectionId": "9.3",
+      "sectionTitle": "Neighbor Discovery",
+      "type": "flashcard",
+      "front": "9.3 · Neighbor Discovery",
+      "back": "IPv6 NDP gebruikt ICMPv6: Neighbor Solicitation/Advertisement voor resolutie en DAD, Router Solicitation/Advertisement voor gateway en prefixinformatie. Solicited-node multicast vervangt ARP-broadcast. NDP ondersteunt ook neighbor unreachability en redirect; ICMPv6 mag daarom niet grof worden geblokkeerd.",
+      "commands": "show ipv6 neighbors\nshow ipv6 interface",
+      "verify": [
+        "LLA van router aanwezig",
+        "Neighbor states logisch"
+      ],
+      "tags": [
+        "address",
+        "resolution",
+        "neighbor",
+        "discovery"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

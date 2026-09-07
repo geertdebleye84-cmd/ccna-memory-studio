@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 12,
+    "title": "WLAN Concepts",
+    "summary": "Begrijp 802.11-media, AP-architecturen, associatie, CAPWAP, radiokanalen, dreigingen en moderne WLAN-beveiliging."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 7,
+    "total": 13
+  },
+  "cards": [
+    {
+      "id": "ccna2-m12-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.1",
+      "sectionTitle": "Introduction to Wireless",
+      "type": "knowledge",
+      "prompt": "Waarom gebruikt Wi-Fi CSMA/CA en geen klassieke collision detection?",
+      "choices": [
+        "Een radio kan tijdens zenden niet betrouwbaar naar collisions luisteren.",
+        "Wi-Fi is full duplex.",
+        "AP’s hebben geen MAC-adres.",
+        "CAPWAP voorkomt alle collisions."
+      ],
+      "correctIndex": 0,
+      "answer": "Een radio kan tijdens zenden niet betrouwbaar naar collisions luisteren.",
+      "explanation": "Het gedeelde half-duplex radiomedium vraagt preventie en acknowledgements.",
+      "tags": [
+        "wlan",
+        "concepts",
+        "introduction",
+        "wireless",
+        "gebruikt",
+        "wi-fi",
+        "csma/ca",
+        "geen",
+        "klassieke",
+        "collision"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m12-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.1",
+      "sectionTitle": "Introduction to Wireless",
+      "type": "knowledge",
+      "prompt": "Wat is een BSSID meestal?",
+      "choices": [
+        "Het MAC-adres dat een specifieke BSS/AP-radio identificeert",
+        "De leesbare WLAN-naam",
+        "Het management-IP van de WLC",
+        "De RADIUS-gebruikersnaam"
+      ],
+      "correctIndex": 0,
+      "answer": "Het MAC-adres dat een specifieke BSS/AP-radio identificeert",
+      "explanation": "SSID kan door meerdere AP’s gedeeld worden; BSSID maakt de cel specifiek.",
+      "tags": [
+        "wlan",
+        "concepts",
+        "introduction",
+        "wireless",
+        "bssid",
+        "meestal"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m12-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.7",
+      "sectionTitle": "Secure WLANs",
+      "type": "knowledge",
+      "prompt": "Welke optie is geschikt voor individuele bedrijfsidentiteiten?",
+      "choices": [
+        "WPA2/WPA3 Enterprise met 802.1X",
+        "WEP shared key",
+        "Open met captive portal",
+        "WPA2 Personal met één PSK"
+      ],
+      "correctIndex": 0,
+      "answer": "WPA2/WPA3 Enterprise met 802.1X",
+      "explanation": "802.1X koppelt clients aan afzonderlijke accounts/certificaten via AAA.",
+      "tags": [
+        "wlan",
+        "concepts",
+        "secure",
+        "wlans",
+        "optie",
+        "geschikt",
+        "individuele",
+        "bedrijfsidentiteiten"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m12-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.4",
+      "sectionTitle": "CAPWAP Operation",
+      "type": "knowledge",
+      "prompt": "Welke CAPWAP-tunnel is standaard beveiligd?",
+      "choices": [
+        "De controltunnel",
+        "Altijd alle dataverkeer end-to-end",
+        "De DHCP-broadcast",
+        "De RF-beacon"
+      ],
+      "correctIndex": 0,
+      "answer": "De controltunnel",
+      "explanation": "CAPWAP beveiligt control messaging; datapadgedrag hangt van implementatie/configuratie af.",
+      "tags": [
+        "wlan",
+        "concepts",
+        "capwap",
+        "operation",
+        "capwap-tunnel",
+        "standaard",
+        "beveiligd"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m12-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.5",
+      "sectionTitle": "Channel Management",
+      "type": "diagnosis",
+      "prompt": "Meerdere naburige 2,4-GHz AP’s gebruiken overlappende kanalen en clients ervaren veel retries. Wat is waarschijnlijk?",
+      "choices": [
+        "Adjacent-channel interference.",
+        "Een ontbrekende HSRP VIP.",
+        "Een floating static route.",
+        "Een VTY-timeout."
+      ],
+      "correctIndex": 0,
+      "answer": "Adjacent-channel interference.",
+      "explanation": "Overlappende kanalen verstoren elkaar in plaats van ordelijk airtime te delen.",
+      "tags": [
+        "wlan",
+        "concepts",
+        "channel",
+        "management",
+        "meerdere",
+        "naburige",
+        "4-ghz",
+        "gebruiken",
+        "overlappende",
+        "kanalen"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m12-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.7",
+      "sectionTitle": "Secure WLANs",
+      "type": "diagnosis",
+      "prompt": "Een gast-WLAN gebruikt een captive portal maar geen WPA-beveiliging. Welke aanname is fout?",
+      "choices": [
+        "Een portal versleutelt de 802.11-radioframes niet.",
+        "Een SSID kan leesbaar zijn.",
+        "Een client gebruikt DHCP.",
+        "Een AP heeft een BSSID."
+      ],
+      "correctIndex": 0,
+      "answer": "Een portal versleutelt de 802.11-radioframes niet.",
+      "explanation": "Webauthenticatie is geen vervanging voor linklaagversleuteling.",
+      "tags": [
+        "wlan",
+        "concepts",
+        "secure",
+        "wlans",
+        "gast-wlan",
+        "gebruikt",
+        "captive",
+        "portal",
+        "maar",
+        "geen"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m12-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.1",
+      "sectionTitle": "Introduction to Wireless",
+      "type": "flashcard",
+      "front": "12.1 · Introduction to Wireless",
+      "back": "Wi-Fi gebruikt een gedeeld half-duplex radiomedium. CSMA/CA probeert collisions te vermijden met luisteren, willekeurige backoff en acknowledgements; collisions kunnen niet betrouwbaar tijdens zenden gedetecteerd worden. Een BSS bestaat rond één AP/BSSID. Meerdere AP’s met hetzelfde SSID kunnen een ESS vormen voor roaming. Een IBSS/ad hoc-netwerk heeft geen infrastructuur-AP. RF-kwaliteit hangt af van signaalsterkte, SNR, interferentie, obstakels, frequentie en kanaalbreedte; meer vermogen is niet automatisch beter.",
+      "commands": "show wireless stats client detail",
+      "verify": [
+        "SSID/BSSID onderscheiden",
+        "Client ziet bruikbare SNR",
+        "Kanaalplan vermijdt overmatige overlap"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "introduction",
+        "wireless"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m12-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.2",
+      "sectionTitle": "WLAN Components",
+      "type": "flashcard",
+      "front": "12.2 · WLAN Components",
+      "back": "Autonomous AP’s voeren control- en datafuncties lokaal uit. Lightweight AP’s worden centraal door een WLC beheerd; cloud-managed is een derde operationeel model. Antennes kunnen omnidirectioneel of directioneel zijn. Gain vormt het stralingspatroon; wettelijke EIRP-limieten tellen zendervermogen, kabelverlies en antennewinst samen. PoE voedt AP’s via Ethernet. Switchpoort, PoE-budget, uplinkcapaciteit en VLAN-trunking moeten bij het AP/WLAN-ontwerp passen.",
+      "commands": "show power inline\nshow interfaces status",
+      "verify": [
+        "AP krijgt voldoende PoE",
+        "Management- en client-VLANpad correct",
+        "Antenne/plaatsing past bij dekking"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "components"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m12-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.3",
+      "sectionTitle": "WLAN Operation",
+      "type": "flashcard",
+      "front": "12.3 · WLAN Operation",
+      "back": "Een client ontdekt AP’s passief via beacons of actief via probe requests/responses, kiest een BSS en doorloopt 802.11-authenticatie en association; hogere beveiligingshandshakes volgen daarna. Managementframes regelen discovery, authentication en association; controlframes ondersteunen mediumtoegang; dataframes dragen gebruikersverkeer. Roamingbeslissing ligt meestal bij de client. Consistente SSID/security en voldoende overlap helpen, maar te veel overlap verhoogt co-channel contention.",
+      "commands": "show wireless client summary",
+      "verify": [
+        "Client geassocieerd met bedoelde WLAN",
+        "Authenticatie en DHCP voltooid",
+        "Roaming behoudt bruikbare connectiviteit"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "operation"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m12-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.4",
+      "sectionTitle": "CAPWAP Operation",
+      "type": "flashcard",
+      "front": "12.4 · CAPWAP Operation",
+      "back": "CAPWAP koppelt lightweight AP en WLC. De controltunnel is versleuteld; datatunnel kan centraal clientverkeer transporteren. CAPWAP gebruikt IP, zodat AP en WLC routed van elkaar kunnen staan. Een AP ontdekt controllers via onder meer lokale broadcast, DHCP option 43, DNS of eerder opgeslagen informatie. Daarna volgen join, configuratie en operationele toestand. Split-MAC verdeelt tijdkritische 802.11-functies naar het AP en centrale beleids-/beheerfuncties naar de WLC.",
+      "commands": "show ap summary\nshow capwap client state",
+      "verify": [
+        "AP heeft WLC ontdekt en joined",
+        "Managementreachability en tijd correct",
+        "CAPWAP controlpad up"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "capwap",
+        "operation"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m12-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.5",
+      "sectionTitle": "Channel Management",
+      "type": "flashcard",
+      "front": "12.5 · Channel Management",
+      "back": "2,4 GHz heeft weinig niet-overlappende 20-MHz-kanalen; in veel regio’s worden 1, 6 en 11 gebruikt. 5 en 6 GHz bieden meer kanalen maar andere dekking/regelgeving. Adjacent-channel interference ontstaat bij overlappende kanalen; co-channel interference is eigenlijk gedeelde airtime tussen cellen op hetzelfde kanaal. Brede kanalen verhogen pieksnelheid maar verbruiken meer spectrum en hergebruik wordt moeilijker. Ontwerp op capaciteit, niet alleen dekking.",
+      "commands": "show advanced 802.11a channel\nshow advanced 802.11b channel",
+      "verify": [
+        "Kanaal en vermogen passen bij buren",
+        "Geen onnodig brede kanalen",
+        "DFS/regiovereisten gerespecteerd"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "channel",
+        "management"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m12-f06",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.6",
+      "sectionTitle": "WLAN Threats",
+      "type": "flashcard",
+      "front": "12.6 · WLAN Threats",
+      "back": "Bedreigingen omvatten rogue AP, evil twin, sniffing, spoofing, deauthentication/disassociation en RF-jamming. Een rogue AP is elk niet-goedgekeurd AP; een evil twin imiteert bewust een betrouwbaar SSID. Jamming is een beschikbaarheidsaanval op het medium en kan niet enkel met encryptie worden opgelost. Spectrum-analyse en fysieke/RF-lokalisatie zijn nodig. Open netwerken leveren geen linklaagvertrouwelijkheid; een captive portal is geen vervanging voor WPA-beveiliging.",
+      "commands": "show rogue ap summary",
+      "verify": [
+        "Rogue-classificatie gecontroleerd",
+        "Management frame protection waar mogelijk",
+        "Monitoring detecteert afwijkingen"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "threats"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m12-f07",
+      "courseId": "ccna2-srwe",
+      "moduleId": 12,
+      "moduleTitle": "WLAN Concepts",
+      "sectionId": "12.7",
+      "sectionTitle": "Secure WLANs",
+      "type": "flashcard",
+      "front": "12.7 · Secure WLANs",
+      "back": "WEP en TKIP zijn verouderd. WPA2 gebruikt AES-CCMP; WPA3 versterkt persoonlijke authenticatie met SAE en enterpriseopties. Ondersteuning hangt af van clients en infrastructuur. Personal gebruikt een gedeeld geheim; Enterprise gebruikt 802.1X/EAP met een RADIUS-server en unieke identiteiten. Enterprise is beter beheersbaar en intrekbaar. Bescherm managementframes met 802.11w/PMF waar ondersteund en segmenteer gast-, IoT- en bedrijfsclients met eigen beleid.",
+      "commands": "show wlan summary\nshow radius summary",
+      "verify": [
+        "Geen WEP/TKIP",
+        "AES-CCMP actief",
+        "Enterprise WLAN bereikt RADIUS",
+        "Gastverkeer gescheiden"
+      ],
+      "tags": [
+        "wlan",
+        "concepts",
+        "secure",
+        "wlans"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+appId: be.geertmarierosedebleye.ccnamemorystudio
+productName: SiriusBitz - CCNA Memory Studio
+asar: true
+directories:
+  output: dist-portable
+files:
+  - AGENTS.md
+  - index.html
+  - main.js
+  - preload.js
+  - renderer.js
+  - styles.css
+  - data/**/*
+  - courses/**/*
+  - integrations/**/*
+  - docs/**/*
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - '!test/**/*'
+  - '!references/**/*'
+  - '!runtime/piper/**/*'
+  - '!runtime/tts-output/**/*'
+  - '!user-data/**/*'
+  - '!tmp/**/*'
+win:
+  target:
+    - portable
+  artifactName: CCNA-Memory-Studio-${version}-${arch}.${ext}
+portable:
+  artifactName: CCNA-Memory-Studio-${version}-portable.${ext}

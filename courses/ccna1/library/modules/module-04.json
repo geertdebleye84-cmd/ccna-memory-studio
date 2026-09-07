@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 4,
+    "title": "Physical Layer",
+    "summary": "Koppel bits aan signalering, normen, bandbreedte en geschikte koper-, glasvezel- of draadloze media."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 6,
+    "total": 11
+  },
+  "cards": [
+    {
+      "id": "ccna1-m04-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.2",
+      "sectionTitle": "Physical Layer Characteristics",
+      "type": "knowledge",
+      "prompt": "Welke waarde sluit protocoloverhead uit?",
+      "choices": [
+        "Goodput",
+        "Bandwidth",
+        "Kloksnelheid",
+        "Duplex"
+      ],
+      "correctIndex": 0,
+      "answer": "Goodput",
+      "explanation": "Goodput telt nuttige applicatiedata.",
+      "tags": [
+        "physical",
+        "layer",
+        "characteristics",
+        "waarde",
+        "sluit",
+        "protocoloverhead"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m04-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.5",
+      "sectionTitle": "Fiber-Optic Cabling",
+      "type": "knowledge",
+      "prompt": "Welke fiber is typisch voor de grootste afstanden?",
+      "choices": [
+        "Single-mode",
+        "Multimode met grote kern",
+        "UTP Cat 5e",
+        "Coax"
+      ],
+      "correctIndex": 0,
+      "answer": "Single-mode",
+      "explanation": "Single-mode beperkt modale dispersie.",
+      "tags": [
+        "physical",
+        "layer",
+        "fiber-optic",
+        "cabling",
+        "fiber",
+        "typisch",
+        "grootste",
+        "afstanden"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m04-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.3",
+      "sectionTitle": "Copper Cabling",
+      "type": "knowledge",
+      "prompt": "Wat beperkt crosstalk in UTP?",
+      "choices": [
+        "Getwiste aderparen",
+        "Een groter IP-masker",
+        "DNS",
+        "Full-duplex routing"
+      ],
+      "correctIndex": 0,
+      "answer": "Getwiste aderparen",
+      "explanation": "Twisting laat storingen elkaar grotendeels opheffen.",
+      "tags": [
+        "physical",
+        "layer",
+        "copper",
+        "cabling",
+        "beperkt",
+        "crosstalk",
+        "utp"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m04-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.3",
+      "sectionTitle": "Copper Cabling",
+      "type": "diagnosis",
+      "prompt": "Een koperen link is up maar toont toenemende CRC-fouten wanneer een zware motor draait. Wat is de waarschijnlijkste oorzaak?",
+      "choices": [
+        "EMI op of nabij de koperkabel.",
+        "Een ontbrekende default route.",
+        "Een fout DNS-record.",
+        "Een verlopen DHCP-lease."
+      ],
+      "correctIndex": 0,
+      "answer": "EMI op of nabij de koperkabel.",
+      "explanation": "Elektromagnetische storing kan signalen op koper beschadigen en CRC-fouten veroorzaken.",
+      "tags": [
+        "physical",
+        "layer",
+        "copper",
+        "cabling",
+        "koperen",
+        "link",
+        "maar",
+        "toont",
+        "toenemende",
+        "crc-fouten"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m04-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.4",
+      "sectionTitle": "UTP Cabling",
+      "type": "diagnosis",
+      "prompt": "Een handgemaakte UTP-kabel geeft intermitterende link en de tester meldt gesplitste paren. Wat is fout?",
+      "choices": [
+        "De aders zijn niet volgens één correcte T568A/B-paarindeling getermineerd.",
+        "De kabel gebruikt full duplex.",
+        "Het IP-masker is te lang.",
+        "De switch leert te weinig MAC-adressen."
+      ],
+      "correctIndex": 0,
+      "answer": "De aders zijn niet volgens één correcte T568A/B-paarindeling getermineerd.",
+      "explanation": "Correcte paarvorming en pinout zijn vereist om crosstalk en signaalproblemen te vermijden.",
+      "tags": [
+        "physical",
+        "layer",
+        "utp",
+        "cabling",
+        "handgemaakte",
+        "utp-kabel",
+        "geeft",
+        "intermitterende",
+        "link",
+        "tester"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m04-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.1",
+      "sectionTitle": "Purpose of the Physical Layer",
+      "type": "flashcard",
+      "front": "4.1 · Purpose of the Physical Layer",
+      "back": "De fysieke laag codeert framebits als elektrische, optische of radiosignalen en ontvangt ze weer. Ze definieert connectoren, pinouts, signalering en activering. NIC, medium en connector vormen samen de fysieke verbinding; hogere lagen zijn onafhankelijk van het gekozen medium.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "physical",
+        "layer",
+        "purpose",
+        "the"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m04-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.2",
+      "sectionTitle": "Physical Layer Characteristics",
+      "type": "flashcard",
+      "front": "4.2 · Physical Layer Characteristics",
+      "back": "Standards bepalen mechanische, elektrische/optische, functionele en procedurele eigenschappen. Encoding representeert bits; signaling bepaalt hoe waarden op het medium verschijnen. Bandwidth is theoretische capaciteit; throughput is gemeten levering; goodput sluit overhead en retransmissies uit. Latency en interferentie beïnvloeden prestaties.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "physical",
+        "layer",
+        "characteristics"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m04-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.3",
+      "sectionTitle": "Copper Cabling",
+      "type": "flashcard",
+      "front": "4.3 · Copper Cabling",
+      "back": "Koper is goedkoop maar gevoelig voor EMI/RFI, crosstalk en afstandsverlies. Shielding, twisting, aarding en juiste aanleg beperken storing. UTP, STP en coax verschillen in constructie. Scheid datakabels van storingsbronnen en respecteer buigradius en maximale kanaallengte.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "physical",
+        "layer",
+        "copper",
+        "cabling"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m04-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.4",
+      "sectionTitle": "UTP Cabling",
+      "type": "flashcard",
+      "front": "4.4 · UTP Cabling",
+      "back": "UTP gebruikt vier getwiste aderparen met RJ-45/8P8C. T568A en T568B definiëren pinvolgorde; beide uiteinden gelijk is straight-through, verschillend crossover. Auto-MDIX vermindert de nood aan crossover, maar correcte terminatie, categorie en kabeltest blijven noodzakelijk.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "physical",
+        "layer",
+        "utp",
+        "cabling"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m04-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.5",
+      "sectionTitle": "Fiber-Optic Cabling",
+      "type": "flashcard",
+      "front": "4.5 · Fiber-Optic Cabling",
+      "back": "Glasvezel transporteert licht, is immuun voor EMI en ondersteunt grotere afstand/bandbreedte. Multimode gebruikt doorgaans LED/VCSEL; single-mode laser en een kleinere kern. Connectoren en transceivers moeten bij vezeltype en golflengte passen. Inspecteer/reinig uiteinden; kijk nooit in actieve fiber.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "physical",
+        "layer",
+        "fiber-optic",
+        "cabling"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m04-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 4,
+      "moduleTitle": "Physical Layer",
+      "sectionId": "4.6",
+      "sectionTitle": "Wireless Media",
+      "type": "flashcard",
+      "front": "4.6 · Wireless Media",
+      "back": "Radio deelt het medium en is gevoelig voor interferentie, demping en beveiligingsrisico’s. WLAN gebruikt IEEE 802.11; Bluetooth 802.15 en mobiel andere standaarden. Een AP verbindt draadloze clients met de bedrade LAN. Kanaal, frequentie, antenne, afstand en obstakels bepalen dekking en capaciteit.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "physical",
+        "layer",
+        "wireless",
+        "media"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

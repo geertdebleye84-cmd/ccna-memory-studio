@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna3-ensa",
+  "module": {
+    "id": 10,
+    "title": "Network Management",
+    "summary": "Ontdek buren, synchroniseer tijd, verzamel telemetry en logs en beheer configuraties en IOS-images gecontroleerd."
+  },
+  "counts": {
+    "multipleChoice": 3,
+    "diagnostic": 2,
+    "flashcards": 5
+  },
+  "multipleChoice": [
+    {
+      "id": "ccna3-m10-mc-01",
+      "type": "multiple-choice",
+      "sectionId": "10.1",
+      "sectionTitle": "Device Discovery with CDP and LLDP",
+      "prompt": "Welk protocol is de vendorneutrale buurontdekking?",
+      "choices": [
+        "LLDP",
+        "CDP",
+        "HSRP",
+        "PAT"
+      ],
+      "correctIndex": 0,
+      "answer": "LLDP",
+      "explanation": "LLDP is IEEE-gestandaardiseerd.",
+      "tags": [
+        "network",
+        "management",
+        "device",
+        "discovery",
+        "with",
+        "cdp",
+        "and",
+        "lldp",
+        "welk",
+        "protocol"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m10-mc-02",
+      "type": "multiple-choice",
+      "sectionId": "10.2",
+      "sectionTitle": "NTP",
+      "prompt": "Welke syslogseverity is het meest ernstig?",
+      "choices": [
+        "0",
+        "7",
+        "100",
+        "255"
+      ],
+      "correctIndex": 0,
+      "answer": "0",
+      "explanation": "Emergencies gebruikt severity 0.",
+      "tags": [
+        "network",
+        "management",
+        "ntp",
+        "syslogseverity",
+        "meest",
+        "ernstig"
+      ],
+      "provenance": "original-ccna3-study-question"
+    },
+    {
+      "id": "ccna3-m10-mc-03",
+      "type": "multiple-choice",
+      "sectionId": "10.3",
+      "sectionTitle": "SNMP and Syslog",
+      "prompt": "Waarom verifieer je een IOS-imagehash?",
+      "choices": [
+        "Om integriteit van het bestand te controleren",
+        "Om OSPF-cost te berekenen",
+        "Om DHCP te starten",
+        "Om VLANs te verwijderen"
+      ],
+      "correctIndex": 0,
+      "answer": "Om integriteit van het bestand te controleren",
+      "explanation": "De hash detecteert beschadiging of een verkeerd bestand.",
+      "tags": [
+        "network",
+        "management",
+        "snmp",
+        "and",
+        "syslog",
+        "verifieer",
+        "ios-imagehash"
+      ],
+      "provenance": "original-ccna3-study-question"
+    }
+  ],
+  "diagnostic": [
+    {
+      "id": "ccna3-m10-diag-01",
+      "type": "diagnostic",
+      "sectionId": "10.2",
+      "sectionTitle": "NTP",
+      "prompt": "Logregels van verschillende routers zijn niet betrouwbaar op tijd te ordenen. Welke basisdienst ontbreekt waarschijnlijk?",
+      "choices": [
+        "NTP-synchronisatie",
+        "PAT overload",
+        "EtherChannel",
+        "PortFast"
+      ],
+      "correctIndex": 0,
+      "answer": "NTP-synchronisatie",
+      "explanation": "Gesynchroniseerde klokken zijn nodig voor betrouwbare eventcorrelatie.",
+      "tags": [
+        "network",
+        "management",
+        "ntp",
+        "logregels",
+        "verschillende",
+        "routers",
+        "niet",
+        "betrouwbaar",
+        "tijd",
+        "ordenen."
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    },
+    {
+      "id": "ccna3-m10-diag-02",
+      "type": "diagnostic",
+      "sectionId": "10.5",
+      "sectionTitle": "IOS Image Management and Licensing",
+      "prompt": "Een nieuwe IOS-image staat in flash, maar na reboot start de oude versie. Wat controleer je eerst?",
+      "choices": [
+        "Bootvariable en imagepad",
+        "De DHCP-pool",
+        "De HSRP-priority",
+        "De VLAN-naam"
+      ],
+      "correctIndex": 0,
+      "answer": "Bootvariable en imagepad",
+      "explanation": "De bootconfiguratie bepaalt welk geldig image bij het opstarten wordt gekozen.",
+      "tags": [
+        "network",
+        "management",
+        "ios",
+        "image",
+        "and",
+        "licensing",
+        "nieuwe",
+        "ios-image",
+        "staat",
+        "flash"
+      ],
+      "provenance": "original-ccna3-diagnostic-scenario"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "ccna3-m10-flash-01",
+      "type": "flashcard",
+      "sectionId": "10.1",
+      "sectionTitle": "Device Discovery with CDP and LLDP",
+      "front": "Wat moet je kunnen uitleggen over Device Discovery with CDP and LLDP?",
+      "back": "CDP is Cisco-eigen; LLDP is vendorneutraal. Beide leren direct aangesloten buren, poortnamen en capabilities en zijn nuttig voor topologie en foutlokalisatie. Discovery lekt informatie op onbetrouwbare poorten. Schakel het globaal of per interface uit waar geen infrastructuurburen horen.",
+      "tags": [
+        "network",
+        "management",
+        "device",
+        "discovery",
+        "with",
+        "cdp",
+        "and",
+        "lldp",
+        "cisco-eigen",
+        "vendorneutraal."
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m10-flash-02",
+      "type": "flashcard",
+      "sectionId": "10.2",
+      "sectionTitle": "NTP",
+      "front": "Wat moet je kunnen uitleggen over NTP?",
+      "back": "NTP maakt logcorrelatie, certificaatvalidatie en incidentanalyse betrouwbaar. Stratum beschrijft afstand tot een referentieklok; een lager nummer is dichterbij, niet automatisch veiliger. Gebruik meerdere vertrouwde bronnen en authenticatie waar ondersteund. timezone verandert presentatie; NTP synchroniseert de onderliggende tijd.",
+      "tags": [
+        "network",
+        "management",
+        "ntp",
+        "maakt",
+        "logcorrelatie",
+        "certificaatvalidatie",
+        "incidentanalyse",
+        "betrouwbaar.",
+        "stratum",
+        "beschrijft"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m10-flash-03",
+      "type": "flashcard",
+      "sectionId": "10.3",
+      "sectionTitle": "SNMP and Syslog",
+      "front": "Wat moet je kunnen uitleggen over SNMP and Syslog?",
+      "back": "SNMP manager vraagt objecten uit of ontvangt traps/informs van agents. SNMPv3 biedt authenticatie en privacy; community strings van v1/v2c zijn gedeelde geheimen zonder sterke bescherming. Syslog severity loopt van 0 emergencies tot 7 debugging. Kies buffer, externe server en trapniveau zodat belangrijke events behouden blijven zonder ruisexplosie.",
+      "tags": [
+        "network",
+        "management",
+        "snmp",
+        "and",
+        "syslog",
+        "manager",
+        "vraagt",
+        "objecten",
+        "ontvangt",
+        "traps/informs"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m10-flash-04",
+      "type": "flashcard",
+      "sectionId": "10.4",
+      "sectionTitle": "Router and Switch File Maintenance",
+      "front": "Wat moet je kunnen uitleggen over Router and Switch File Maintenance?",
+      "back": "running-config staat in RAM; startup-config in NVRAM. Kopieer configuraties naar een gecontroleerde repository en verifieer inhoud en herstelprocedure. Bestandssystemen en beschikbare ruimte verschillen per platform. Gebruik dir, show file systems en verify vóór je een image als bootdoel instelt.",
+      "tags": [
+        "network",
+        "management",
+        "router",
+        "and",
+        "switch",
+        "file",
+        "maintenance",
+        "running-config",
+        "staat",
+        "ram"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    },
+    {
+      "id": "ccna3-m10-flash-05",
+      "type": "flashcard",
+      "sectionId": "10.5",
+      "sectionTitle": "IOS Image Management and Licensing",
+      "front": "Wat moet je kunnen uitleggen over IOS Image Management and Licensing?",
+      "back": "Een IOS-upgrade vraagt platformcompatibiliteit, voldoende geheugen, image-integriteit, bootvariable, configuratieback-up en rollbackplan. Verwijder oude recoveryimages niet zonder bewezen alternatief. Licensing verschilt per platform en release. Controleer status en entitlement, maar sla geen tokens of accountgegevens in projectbestanden op.",
+      "tags": [
+        "network",
+        "management",
+        "ios",
+        "image",
+        "and",
+        "licensing",
+        "ios-upgrade",
+        "vraagt",
+        "platformcompatibiliteit",
+        "voldoende"
+      ],
+      "provenance": "original-ccna3-study-flashcard"
+    }
+  ]
+}

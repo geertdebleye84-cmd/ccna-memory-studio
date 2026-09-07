@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 3,
+    "title": "Protocols and Models",
+    "summary": "Verklaar netwerkcommunicatie met protocollen, suites, standaarden, OSI/TCP-IP, encapsulatie en lokale/remote aflevering."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 7,
+    "total": 12
+  },
+  "cards": [
+    {
+      "id": "ccna1-m03-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.6",
+      "sectionTitle": "Data Encapsulation",
+      "type": "knowledge",
+      "prompt": "Welke PDU hoort bij de netwerklaag?",
+      "choices": [
+        "Packet",
+        "Frame",
+        "Bits",
+        "Data-link trailer"
+      ],
+      "correctIndex": 0,
+      "answer": "Packet",
+      "explanation": "IP vormt packets op Layer 3.",
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "data",
+        "encapsulation",
+        "pdu",
+        "hoort",
+        "netwerklaag"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m03-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.7",
+      "sectionTitle": "Data Access",
+      "type": "knowledge",
+      "prompt": "Welk adres verandert normaal bij elke routerhop?",
+      "choices": [
+        "Het Layer-2 adres",
+        "Het doel-IP",
+        "De TCP-bestemmingspoort",
+        "De applicatie-URL"
+      ],
+      "correctIndex": 0,
+      "answer": "Het Layer-2 adres",
+      "explanation": "Elke router maakt een nieuw frame.",
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "data",
+        "access",
+        "welk",
+        "adres",
+        "verandert",
+        "normaal",
+        "elke"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m03-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.4",
+      "sectionTitle": "Standards Organizations",
+      "type": "knowledge",
+      "prompt": "Wie publiceert internet-RFC’s?",
+      "choices": [
+        "IETF",
+        "IEEE 802.3-switch",
+        "Een lokale ISP alleen",
+        "TIA-kabeltester"
+      ],
+      "correctIndex": 0,
+      "answer": "IETF",
+      "explanation": "De IETF ontwikkelt internetstandaarden via RFC’s.",
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "standards",
+        "organizations",
+        "wie",
+        "publiceert",
+        "internet-rfc"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m03-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.7",
+      "sectionTitle": "Data Access",
+      "type": "diagnosis",
+      "prompt": "Een host wil een server in een ander subnet bereiken en gebruikt als destination MAC het MAC-adres van de server. Waarom mislukt de lokale aflevering?",
+      "choices": [
+        "Voor een remote doel moet het frame naar het MAC-adres van de default gateway.",
+        "De destination IP moet broadcast zijn.",
+        "TCP gebruikt geen MAC-adressen.",
+        "De switch moet het remote subnet routeren."
+      ],
+      "correctIndex": 0,
+      "answer": "Voor een remote doel moet het frame naar het MAC-adres van de default gateway.",
+      "explanation": "Layer-2-aflevering is lokaal; de router is de next hop voor remote IP-doelen.",
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "data",
+        "access",
+        "host",
+        "wil",
+        "server",
+        "ander",
+        "subnet"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m03-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.6",
+      "sectionTitle": "Data Encapsulation",
+      "type": "diagnosis",
+      "prompt": "Een capture toont op elke routerhop andere Ethernetadressen, maar dezelfde IP-bron en bestemming. Welke proces verklaart dit?",
+      "choices": [
+        "Elke router decapsuleert en bouwt voor de volgende link een nieuw frame.",
+        "Elke router maakt een nieuw TCP-segment.",
+        "DNS herschrijft de IP-header.",
+        "De FCS bepaalt het doel-IP."
+      ],
+      "correctIndex": 0,
+      "answer": "Elke router decapsuleert en bouwt voor de volgende link een nieuw frame.",
+      "explanation": "De Layer-2-encapsulatie verandert per link terwijl het Layer-3-packet end-to-end blijft.",
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "data",
+        "encapsulation",
+        "capture",
+        "toont",
+        "elke",
+        "routerhop",
+        "andere"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m03-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.1",
+      "sectionTitle": "The Rules",
+      "type": "flashcard",
+      "front": "3.1 · The Rules",
+      "back": "Communicatie vereist overeengekomen afzender/ontvanger, taal/codering, formaat, timing, grootte en bevestiging. Message encoding, encapsulation, size, timing en delivery options gelden voor menselijke én netwerkcommunicatie.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "the",
+        "rules"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m03-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.2",
+      "sectionTitle": "Protocols",
+      "type": "flashcard",
+      "front": "3.2 · Protocols",
+      "back": "Een protocol definieert formaat, betekenis, volgorde en reactie. Meerdere protocollen werken samen per laag. Functies zijn adressering, betrouwbaarheid, flow control, sequencing, foutdetectie en applicatieservice.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m03-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.3",
+      "sectionTitle": "Protocol Suites",
+      "type": "flashcard",
+      "front": "3.3 · Protocol Suites",
+      "back": "Een suite is een interoperabele verzameling protocollen. TCP/IP is de dominante open suite van applicatie tot netwerktoegang. Protocolinteraction kan bijvoorbeeld HTTP→TCP→IP→Ethernet zijn; elke laag levert diensten aan de laag erboven.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "protocol",
+        "suites"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m03-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.4",
+      "sectionTitle": "Standards Organizations",
+      "type": "flashcard",
+      "front": "3.4 · Standards Organizations",
+      "back": "IETF publiceert RFC’s voor internetprotocollen; IEEE standaardiseert onder meer Ethernet en WLAN; ISO ontwikkelde het OSI-model. ICANN/IANA beheert naam- en nummerbronnen; TIA/EIA en ITU dragen bij aan bekabeling en telecommunicatie. Open standaarden bevorderen interoperabiliteit.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "standards",
+        "organizations"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m03-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.5",
+      "sectionTitle": "Reference Models",
+      "type": "flashcard",
+      "front": "3.5 · Reference Models",
+      "back": "OSI: application, presentation, session, transport, network, data link, physical. TCP/IP: application, transport, internet, network access. Modellen scheiden verantwoordelijkheden, helpen ontwerp en troubleshooting en laten leveranciers onafhankelijk implementeren.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "reference"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m03-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.6",
+      "sectionTitle": "Data Encapsulation",
+      "type": "flashcard",
+      "front": "3.6 · Data Encapsulation",
+      "back": "Data wordt segment/datagram, packet, frame en bits; de ontvanger decapsuleert omgekeerd. Elke PDU heeft laagspecifieke controle-informatie. TCP/UDP-poorten identificeren processen, IP-adressen end-to-end hosts/netwerken en MAC-adressen de lokale link.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "data",
+        "encapsulation"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m03-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 3,
+      "moduleTitle": "Protocols and Models",
+      "sectionId": "3.7",
+      "sectionTitle": "Data Access",
+      "type": "flashcard",
+      "front": "3.7 · Data Access",
+      "back": "Voor een lokaal doel gebruikt de bron het doel-MAC; voor een remote doel gebruikt hij het MAC-adres van de default gateway, terwijl het doel-IP remote blijft. MAC-adressen veranderen per routed hop; bron- en doel-IP blijven normaal end-to-end gelijk zonder NAT. ARP/NDP resolveert lokale next hops.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "protocols",
+        "and",
+        "models",
+        "data",
+        "access"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

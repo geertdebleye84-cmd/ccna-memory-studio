@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 17,
+    "title": "Build a Small Network",
+    "summary": "Ontwerp, bouw, verifieer en troubleshoot een klein dual-stacknetwerk met passende apparaten, diensten en documentatie."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 7,
+    "total": 12
+  },
+  "cards": [
+    {
+      "id": "ccna1-m17-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.6",
+      "sectionTitle": "Troubleshooting Methodologies",
+      "type": "knowledge",
+      "prompt": "Wat is de beste eerste stap bij troubleshooting?",
+      "choices": [
+        "Probleem en scope precies definiëren",
+        "Alles herstarten",
+        "Configuratie wissen",
+        "Alle filters uitschakelen"
+      ],
+      "correctIndex": 0,
+      "answer": "Probleem en scope precies definiëren",
+      "explanation": "Een correcte probleemdefinitie voorkomt willekeurige wijzigingen.",
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "troubleshooting",
+        "methodologies",
+        "beste",
+        "eerste",
+        "stap"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m17-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.6",
+      "sectionTitle": "Troubleshooting Methodologies",
+      "type": "knowledge",
+      "prompt": "Welke methode test een middenlaag en halveert daarna het zoekgebied?",
+      "choices": [
+        "Divide-and-conquer",
+        "Bottom-up uitsluitend",
+        "Substitution",
+        "Guessing"
+      ],
+      "correctIndex": 0,
+      "answer": "Divide-and-conquer",
+      "explanation": "Een middentest bepaalt boven- of onderkant.",
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "troubleshooting",
+        "methodologies",
+        "methode",
+        "test",
+        "middenlaag",
+        "halveert",
+        "daarna"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m17-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.3",
+      "sectionTitle": "Scale to Larger Networks",
+      "type": "knowledge",
+      "prompt": "Waarom een baseline bewaren?",
+      "choices": [
+        "Om normaal gedrag met het incident te vergelijken",
+        "Om wachtwoorden openbaar te maken",
+        "Om subnetting te vermijden",
+        "Om geen logs nodig te hebben"
+      ],
+      "correctIndex": 0,
+      "answer": "Om normaal gedrag met het incident te vergelijken",
+      "explanation": "Zonder normaalbeeld is afwijking moeilijk meetbaar.",
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "scale",
+        "larger",
+        "networks",
+        "baseline",
+        "bewaren"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m17-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.7",
+      "sectionTitle": "Troubleshooting Scenarios",
+      "type": "diagnosis",
+      "prompt": "Een router kan de remote server pingen vanaf zijn WAN-interface, maar een LAN-host niet. Welke controle is het belangrijkst?",
+      "choices": [
+        "Test met het LAN-bronadres en controleer het retourpad naar het LAN.",
+        "Wis alle configuraties.",
+        "Maak elke switchpoort trusted.",
+        "Schakel DNS uit."
+      ],
+      "correctIndex": 0,
+      "answer": "Test met het LAN-bronadres en controleer het retourpad naar het LAN.",
+      "explanation": "De routerping kan een ander bronadres en daardoor een ander retourpad gebruiken.",
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "troubleshooting",
+        "scenarios",
+        "router",
+        "remote",
+        "server",
+        "pingen",
+        "vanaf"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m17-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.6",
+      "sectionTitle": "Troubleshooting Methodologies",
+      "type": "diagnosis",
+      "prompt": "Een beheerder verandert tegelijk IP, kabel, VLAN en route; daarna werkt het maar de oorzaak is onbekend. Welke methodologische fout is gemaakt?",
+      "choices": [
+        "Meerdere variabelen tegelijk wijzigen zonder toetsbare hypothese.",
+        "Te veel logging gebruiken.",
+        "Een baseline bewaren.",
+        "Het probleem eerst afbakenen."
+      ],
+      "correctIndex": 0,
+      "answer": "Meerdere variabelen tegelijk wijzigen zonder toetsbare hypothese.",
+      "explanation": "Eén bewezen oorzaak en één gecontroleerde wijziging houden diagnose reproduceerbaar.",
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "troubleshooting",
+        "methodologies",
+        "beheerder",
+        "verandert",
+        "tegelijk",
+        "kabel",
+        "vlan"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m17-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.1",
+      "sectionTitle": "Devices in a Small Network",
+      "type": "flashcard",
+      "front": "17.1 · Devices in a Small Network",
+      "back": "Inventariseer gebruikers, applicaties, verkeer, groei, security en beschikbaarheid. Kies switchpoorten/snelheden, router/WAN, AP-capaciteit, firewall en eventuele servers passend bij eisen. Plan IP-adressen, namen, kabels, locaties, stroom/UPS, beheer en reserve. Een eenvoudig diagram en inventaris versnellen elke wijziging.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "devices"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m17-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.2",
+      "sectionTitle": "Small Network Applications and Protocols",
+      "type": "flashcard",
+      "front": "17.2 · Small Network Applications and Protocols",
+      "back": "Veelgebruikte infrastructuurdiensten zijn DHCP, DNS, NTP, directory/authenticatie, file/print, web en monitoring. Hun protocollen en poorten bepalen policies en troubleshooting. Prioriteer real-time voice/video met QoS waar congestie kan optreden; beveilig services en beperk onnodige exposure.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "applications",
+        "and",
+        "protocols"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m17-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.3",
+      "sectionTitle": "Scale to Larger Networks",
+      "type": "flashcard",
+      "front": "17.3 · Scale to Larger Networks",
+      "back": "Groei vraagt hiërarchie, adresplanning/summarization, VLAN-segmentatie, redundantie, snellere uplinks, centrale services, monitoring en change management. Meet utilization, errors, CPU/memory, latency en beschikbaarheid tegen een baseline. Schalen is meer dan hardware toevoegen.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "scale",
+        "larger",
+        "networks"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m17-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.4",
+      "sectionTitle": "Verify Connectivity",
+      "type": "flashcard",
+      "front": "17.4 · Verify Connectivity",
+      "back": "Gebruik een testplan met laag-voor-laag en dichtbij-naar-ver: fysieke link, interface, lokaal IP, gateway, remote IP, DNS en applicatie. Ping meet bereikbaarheid/RTT; tracert/traceroute lokaliseert het pad. Leg verwachte en feitelijke resultaten vast zodat regressies zichtbaar zijn.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "verify",
+        "connectivity"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m17-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.5",
+      "sectionTitle": "Host and IOS Commands",
+      "type": "flashcard",
+      "front": "17.5 · Host and IOS Commands",
+      "back": "Hosts: `ipconfig`/`ip addr`, `arp -a`/`ip neigh`, `route print`/`ip route`, `netstat`/`ss`, `nslookup`/`dig`, ping en traceroute. IOS: `show ip interface brief`, `show interfaces`, `show mac address-table`, `show arp`, `show ip route`, `show cdp neighbors`, `show running-config` en logging.",
+      "commands": "show ip interface brief\nshow interfaces counters errors\nshow mac address-table\nshow arp\nshow ip route\nshow cdp neighbors detail",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "host",
+        "and",
+        "ios",
+        "commands"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m17-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.6",
+      "sectionTitle": "Troubleshooting Methodologies",
+      "type": "flashcard",
+      "front": "17.6 · Troubleshooting Methodologies",
+      "back": "Proces: probleem definiëren, feiten verzamelen, theorie vormen, theorie testen, actieplan uitvoeren, functionaliteit verifiëren, preventie en documentatie vastleggen. Methoden zijn bottom-up, top-down, divide-and-conquer, follow-the-path, substitution en comparison. Kies op symptoom en beschikbare gegevens.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "troubleshooting",
+        "methodologies"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m17-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 17,
+      "moduleTitle": "Build a Small Network",
+      "sectionId": "17.7",
+      "sectionTitle": "Troubleshooting Scenarios",
+      "type": "flashcard",
+      "front": "17.7 · Troubleshooting Scenarios",
+      "back": "Typische fouten: verkeerde kabel/poort, shutdown, speed/duplex, fout IP/mask/gateway/DNS, ontbrekende route, stale ARP, service down of filtering. Verander één bewezen oorzaak tegelijk. Vergelijk running-config (intentie) met operationele tabellen/counters (werkelijkheid) en test ook het retourpad.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "build",
+        "small",
+        "network",
+        "troubleshooting",
+        "scenarios"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

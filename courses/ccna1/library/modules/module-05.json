@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 5,
+    "title": "Number Systems",
+    "summary": "Converteer decimal, binair en hexadecimaal en herken hun rol in IPv4, subnetten, IPv6 en MAC-adressen."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 2,
+    "total": 7
+  },
+  "cards": [
+    {
+      "id": "ccna1-m05-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.1",
+      "sectionTitle": "Binary Number System",
+      "type": "knowledge",
+      "prompt": "Wat is binair 11000000?",
+      "choices": [
+        "192",
+        "128",
+        "224",
+        "96"
+      ],
+      "correctIndex": 0,
+      "answer": "192",
+      "explanation": "De actieve bitgewichten 128 en 64 tellen samen op tot 192.",
+      "tags": [
+        "number",
+        "systems",
+        "binary",
+        "system",
+        "binair",
+        "11000000"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m05-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.2",
+      "sectionTitle": "Hexadecimal Number System",
+      "type": "knowledge",
+      "prompt": "Welke hex-digit is binair 1010?",
+      "choices": [
+        "A",
+        "B",
+        "9",
+        "F"
+      ],
+      "correctIndex": 0,
+      "answer": "A",
+      "explanation": "1010 is decimal 10, dus A.",
+      "tags": [
+        "number",
+        "systems",
+        "hexadecimal",
+        "system",
+        "hex-digit",
+        "binair",
+        "1010"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m05-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.2",
+      "sectionTitle": "Hexadecimal Number System",
+      "type": "knowledge",
+      "prompt": "Hoeveel bits vertegenwoordigen twee hex-digits?",
+      "choices": [
+        "8",
+        "2",
+        "4",
+        "16"
+      ],
+      "correctIndex": 0,
+      "answer": "8",
+      "explanation": "Eén digit is vier bits; twee vormen een octet.",
+      "tags": [
+        "number",
+        "systems",
+        "hexadecimal",
+        "system",
+        "hoeveel",
+        "bits",
+        "vertegenwoordigen",
+        "twee",
+        "hex-digits"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m05-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.1",
+      "sectionTitle": "Binary Number System",
+      "type": "diagnosis",
+      "prompt": "Een host heeft IPv4-adres 192.0.2.130/26. Een beheerder noemt 192.0.2.128 het eerste hostadres. Wat is de fout?",
+      "choices": [
+        "192.0.2.128 is het netwerkadres van het /26-subnet.",
+        "Een /26 heeft geen netwerkadres.",
+        "192.0.2.130 is altijd een broadcast.",
+        "Het adres moet hexadecimaal zijn."
+      ],
+      "correctIndex": 0,
+      "answer": "192.0.2.128 is het netwerkadres van het /26-subnet.",
+      "explanation": "Bij block size 64 begint dit subnet op .128; het eerste bruikbare hostadres is .129.",
+      "tags": [
+        "number",
+        "systems",
+        "binary",
+        "system",
+        "host",
+        "heeft",
+        "ipv4-adres",
+        "192.0.2.130/26.",
+        "beheerder",
+        "noemt"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m05-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.2",
+      "sectionTitle": "Hexadecimal Number System",
+      "type": "diagnosis",
+      "prompt": "Een IPv6-hextet wordt geschreven als 0000:0000 en beide nulreeksen worden afzonderlijk met :: ingekort. Waarom is het adres ongeldig?",
+      "choices": [
+        "De dubbele-koloncompressie mag maar één keer in een IPv6-adres voorkomen.",
+        "Hex mag geen nul bevatten.",
+        "Een hextet moet decimal zijn.",
+        "IPv6 gebruikt altijd precies vier hextets."
+      ],
+      "correctIndex": 0,
+      "answer": "De dubbele-koloncompressie mag maar één keer in een IPv6-adres voorkomen.",
+      "explanation": "Meer dan één :: maakt het aantal weggelaten nulhextets ambigu.",
+      "tags": [
+        "number",
+        "systems",
+        "hexadecimal",
+        "system",
+        "ipv6-hextet",
+        "geschreven",
+        "0000",
+        "beide",
+        "nulreeksen",
+        "worden"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m05-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.1",
+      "sectionTitle": "Binary Number System",
+      "type": "flashcard",
+      "front": "5.1 · Binary Number System",
+      "back": "Een IPv4-octet bestaat uit acht bits met gewichten 128,64,32,16,8,4,2,1. Sommeer gewichten van 1-bits om decimal te vinden. Voor decimal→binair trek je gewichten van groot naar klein af. AND tussen adres en masker levert het netwerkadres.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "number",
+        "systems",
+        "binary",
+        "system"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m05-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 5,
+      "moduleTitle": "Number Systems",
+      "sectionId": "5.2",
+      "sectionTitle": "Hexadecimal Number System",
+      "type": "flashcard",
+      "front": "5.2 · Hexadecimal Number System",
+      "back": "Hex gebruikt 0–9 en A–F; elke hex-digit vertegenwoordigt exact vier bits. Daardoor worden 48-bit MAC- en 128-bit IPv6-adressen compact weergegeven. Groepeer binair per nibble voor conversie. Hex is notatie: apparatuur verwerkt nog steeds bits.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "number",
+        "systems",
+        "hexadecimal",
+        "system"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

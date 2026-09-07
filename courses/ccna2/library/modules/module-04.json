@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 4,
+    "title": "Inter-VLAN Routing",
+    "summary": "Routeer verkeer tussen VLANs via legacy fysieke interfaces, router-on-a-stick of SVIs op een multilayer switch en los fouten systematisch op."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 4,
+    "total": 10
+  },
+  "cards": [
+    {
+      "id": "ccna2-m04-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.2",
+      "sectionTitle": "Router-on-a-Stick Inter-VLAN Routing",
+      "type": "knowledge",
+      "prompt": "Waar wordt bij router-on-a-stick de VLAN-ID aan een Layer-3-interface gekoppeld?",
+      "choices": [
+        "Met encapsulation dot1q op de router-subinterface",
+        "Met switchport access vlan op het fysieke routerinterface",
+        "Met ip default-gateway op de switch",
+        "Met spanning-tree vlan op de host"
+      ],
+      "correctIndex": 0,
+      "answer": "Met encapsulation dot1q op de router-subinterface",
+      "explanation": "Elke subinterface verwerkt de 802.1Q-frames van de opgegeven VLAN.",
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "router-on-a-stick",
+        "waar",
+        "vlan-id",
+        "layer-3-interface",
+        "gekoppeld"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m04-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.3",
+      "sectionTitle": "Inter-VLAN Routing using Layer 3 Switches",
+      "type": "knowledge",
+      "prompt": "Welke globale opdracht laat een multilayer switch tussen SVIs route­ren?",
+      "choices": [
+        "ip routing",
+        "switchport mode trunk",
+        "ip default-gateway",
+        "router rip"
+      ],
+      "correctIndex": 0,
+      "answer": "ip routing",
+      "explanation": "ip routing activeert IPv4-forwarding op het Layer-3-switchplatform.",
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "using",
+        "layer",
+        "switches",
+        "globale",
+        "opdracht",
+        "laat",
+        "multilayer",
+        "switch"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m04-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.3",
+      "sectionTitle": "Inter-VLAN Routing using Layer 3 Switches",
+      "type": "knowledge",
+      "prompt": "Een SVI is down/down. Welke oorzaak is waarschijnlijk?",
+      "choices": [
+        "De VLAN bestaat niet of heeft geen actieve Layer-2-poort.",
+        "De router heeft te veel routes.",
+        "SSH versie 2 ontbreekt.",
+        "De host gebruikt DHCP."
+      ],
+      "correctIndex": 0,
+      "answer": "De VLAN bestaat niet of heeft geen actieve Layer-2-poort.",
+      "explanation": "De SVI-line protocol-status is gekoppeld aan de operationele VLAN.",
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "using",
+        "layer",
+        "switches",
+        "svi",
+        "down/down.",
+        "oorzaak",
+        "waarschijnlijk"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m04-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.4",
+      "sectionTitle": "Troubleshoot Inter-VLAN Routing",
+      "type": "knowledge",
+      "prompt": "Wat is de eerste gerichte ping bij een inter-VLAN storing?",
+      "choices": [
+        "Van de host naar zijn eigen default gateway",
+        "Direct naar een internetadres",
+        "Naar de DNS-servernaam",
+        "Naar de switchconsole"
+      ],
+      "correctIndex": 0,
+      "answer": "Van de host naar zijn eigen default gateway",
+      "explanation": "Hiermee toets je lokale adressering, VLAN-pad en gatewayinterface vóór verdere routing.",
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "troubleshoot",
+        "eerste",
+        "gerichte",
+        "ping",
+        "storing"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m04-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.2",
+      "sectionTitle": "Router-on-a-Stick Inter-VLAN Routing",
+      "type": "diagnosis",
+      "prompt": "Bij router-on-a-stick zijn alle subinterfaces correct, maar ze blijven down omdat G0/0/0 administratively down is. Wat blokkeert routing?",
+      "choices": [
+        "Het fysieke parent-interface heeft shutdown.",
+        "De router mist een DNS-server.",
+        "De accesspoorten gebruiken PortFast.",
+        "De switch heeft een MAC-tabel."
+      ],
+      "correctIndex": 0,
+      "answer": "Het fysieke parent-interface heeft shutdown.",
+      "explanation": "Alle subinterfaces zijn afhankelijk van een actief fysiek parent-interface.",
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "router-on-a-stick",
+        "alle",
+        "subinterfaces",
+        "correct",
+        "maar",
+        "blijven",
+        "down",
+        "omdat"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m04-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.3",
+      "sectionTitle": "Inter-VLAN Routing using Layer 3 Switches",
+      "type": "diagnosis",
+      "prompt": "Twee SVIs zijn up/up op een multilayer switch en hosts bereiken hun eigen gateway, maar niet de andere VLAN. Welke globale instelling ontbreekt waarschijnlijk?",
+      "choices": [
+        "ip routing",
+        "ip default-gateway",
+        "switchport nonegotiate",
+        "service password-encryption"
+      ],
+      "correctIndex": 0,
+      "answer": "ip routing",
+      "explanation": "Een multilayer switch routeert pas tussen SVIs wanneer IPv4-routing actief is.",
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "using",
+        "layer",
+        "switches",
+        "twee",
+        "svis",
+        "up/up",
+        "multilayer",
+        "switch"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m04-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.1",
+      "sectionTitle": "Inter-VLAN Routing Operation",
+      "type": "flashcard",
+      "front": "4.1 · Inter-VLAN Routing Operation",
+      "back": "Inter-VLAN verkeer verlaat het bronbroadcastdomein via een default gateway. De router verwijdert het inkomende Layer-2-frame, neemt een routebeslissing en bouwt een nieuw frame voor de doel-VLAN. Legacy routing gebruikt één fysieke routerinterface per VLAN en schaalt slecht. Router-on-a-stick gebruikt subinterfaces op één trunk. Een multilayer switch gebruikt SVIs en hardwarematige routing. De hostgateway is het router- of SVI-adres in hetzelfde subnet als de host; niet het managementadres van een Layer-2-switch.",
+      "commands": "show ip route\nshow arp\ntraceroute 192.0.2.20",
+      "verify": [
+        "Bronhost bereikt zijn gateway",
+        "Router heeft connected routes voor beide VLANs",
+        "Doelhost heeft juiste retourgateway"
+      ],
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "operation"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m04-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.2",
+      "sectionTitle": "Router-on-a-Stick Inter-VLAN Routing",
+      "type": "flashcard",
+      "front": "4.2 · Router-on-a-Stick Inter-VLAN Routing",
+      "back": "Maak één router-subinterface per VLAN. encapsulation dot1q koppelt de subinterface aan de VLAN-ID; een optioneel native-argument moet bij de switch-native VLAN passen. Het fysieke routerinterface krijgt geen IP-adres, maar moet no shutdown zijn. De switchlink naar de router is een statische trunk. Alle inter-VLAN traffic deelt dezelfde fysieke link; capaciteit en single point of failure zijn ontwerpbeperkingen.",
+      "commands": "interface g0/0/0\n no ip address\n no shutdown\ninterface g0/0/0.10\n encapsulation dot1q 10\n ip address 192.0.2.1 255.255.255.0\ninterface g0/0/0.20\n encapsulation dot1q 20\n ip address 198.51.100.1 255.255.255.0",
+      "verify": [
+        "show ip interface brief",
+        "show interfaces g0/0/0.10",
+        "show interfaces trunk",
+        "show ip route connected"
+      ],
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "router-on-a-stick"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m04-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.3",
+      "sectionTitle": "Inter-VLAN Routing using Layer 3 Switches",
+      "type": "flashcard",
+      "front": "4.3 · Inter-VLAN Routing using Layer 3 Switches",
+      "back": "Een multilayer switch routeert tussen SVIs wanneer ip routing actief is. Elke VLAN heeft een up/up SVI met een gatewayadres nodig. Een fysieke uplink kan met no switchport een routed port worden. Zo’n poort behoort niet aan een VLAN en krijgt rechtstreeks een IP-adres. Voor externe bestemmingen is een default of dynamische route nodig; Layer-2 accessswitches blijven een default gateway gebruiken voor eigen beheer.",
+      "commands": "ip routing\ninterface vlan 10\n ip address 192.0.2.1 255.255.255.0\n no shutdown\ninterface vlan 20\n ip address 198.51.100.1 255.255.255.0\n no shutdown\ninterface g1/0/24\n no switchport\n ip address 203.0.113.2 255.255.255.252",
+      "verify": [
+        "show ip route",
+        "show interfaces status",
+        "show ip interface brief",
+        "ping tussen VLAN-hosts"
+      ],
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "using",
+        "layer",
+        "switches"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m04-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 4,
+      "moduleTitle": "Inter-VLAN Routing",
+      "sectionId": "4.4",
+      "sectionTitle": "Troubleshoot Inter-VLAN Routing",
+      "type": "flashcard",
+      "front": "4.4 · Troubleshoot Inter-VLAN Routing",
+      "back": "Werk laag voor laag: kabel en interface, VLAN-bestaan en accesslidmaatschap, trunk/native/allowed, subinterface-encapsulation of SVI-status, IP/mask/gateway en tenslotte routes/ACL’s. Een SVI is vaak down omdat de VLAN ontbreekt of geen enkele Layer-2-poort in die VLAN up en forwarding is. Een router-subinterface kan up/up lijken terwijl de VLAN-ID verkeerd is. Test gericht: host→eigen gateway, router→host in elke VLAN, daarna end-to-end. Controleer ARP/MAC-tabellen om de breukzijde te bepalen.",
+      "commands": "show vlan brief\nshow interfaces trunk\nshow interfaces switchport\nshow ip interface brief\nshow ip route\nshow arp\nshow mac address-table",
+      "verify": [
+        "Elke fout is gekoppeld aan één laag en één link",
+        "Na herstel bestaan retourroute en ARP-resolutie",
+        "Geen native/allowed mismatch"
+      ],
+      "tags": [
+        "inter-vlan",
+        "routing",
+        "troubleshoot"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

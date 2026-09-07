@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 10,
+    "title": "LAN Security Concepts",
+    "summary": "Herken endpoint-, toegangs- en Layer-2-aanvallen en koppel elke dreiging aan de juiste verdedigingslaag."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 11
+  },
+  "cards": [
+    {
+      "id": "ccna2-m10-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.5",
+      "sectionTitle": "LAN Attacks",
+      "type": "knowledge",
+      "prompt": "Welke feature beschermt tegen een rogue DHCP-server op een accesspoort?",
+      "choices": [
+        "DHCP snooping",
+        "PortFast",
+        "DTP desirable",
+        "HSRP"
+      ],
+      "correctIndex": 0,
+      "answer": "DHCP snooping",
+      "explanation": "DHCP snooping dropt serverberichten vanaf untrusted interfaces.",
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "attacks",
+        "feature",
+        "beschermt",
+        "tegen",
+        "rogue",
+        "dhcp-server",
+        "accesspoort"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m10-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.5",
+      "sectionTitle": "LAN Attacks",
+      "type": "knowledge",
+      "prompt": "Waartegen beschermt DAI?",
+      "choices": [
+        "Ongeldige ARP IP–MAC-koppelingen",
+        "Een fout DNS-record",
+        "STP root election",
+        "SSH brute force"
+      ],
+      "correctIndex": 0,
+      "answer": "Ongeldige ARP IP–MAC-koppelingen",
+      "explanation": "DAI valideert ARP-inhoud tegen vertrouwde bindings.",
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "attacks",
+        "waartegen",
+        "beschermt",
+        "dai"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m10-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.4",
+      "sectionTitle": "MAC Address Table Attack",
+      "type": "knowledge",
+      "prompt": "Welke port-security mode zet standaard de poort err-disabled bij overtreding?",
+      "choices": [
+        "shutdown",
+        "restrict",
+        "protect",
+        "monitor"
+      ],
+      "correctIndex": 0,
+      "answer": "shutdown",
+      "explanation": "Shutdown is de standaard violation action.",
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "mac",
+        "address",
+        "table",
+        "attack",
+        "port-security",
+        "mode",
+        "zet"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m10-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.5",
+      "sectionTitle": "LAN Attacks",
+      "type": "knowledge",
+      "prompt": "Waarom is dynamic auto op een gebruikerspoort riskant?",
+      "choices": [
+        "Een aanvaller kan trunkonderhandeling proberen.",
+        "Het schakelt DHCP uit.",
+        "Het maakt de poort routed.",
+        "Het verwijdert de MAC-tabel."
+      ],
+      "correctIndex": 0,
+      "answer": "Een aanvaller kan trunkonderhandeling proberen.",
+      "explanation": "Hard accessmode voorkomt een ongewenste DTP-trunk.",
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "attacks",
+        "dynamic",
+        "auto",
+        "gebruikerspoort",
+        "riskant"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m10-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.5",
+      "sectionTitle": "LAN Attacks",
+      "type": "diagnosis",
+      "prompt": "Clients krijgen snel een lease met een onbekende default gateway van een laptop op een accesspoort. Welke aanval is waarschijnlijk?",
+      "choices": [
+        "Een rogue DHCP-server.",
+        "Een STP root election.",
+        "Een LACP mismatch.",
+        "Een DNS zone transfer."
+      ],
+      "correctIndex": 0,
+      "answer": "Een rogue DHCP-server.",
+      "explanation": "Een ongeautoriseerde DHCP-server kan kwaadaardige gateway- en DNS-opties uitdelen.",
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "attacks",
+        "clients",
+        "krijgen",
+        "snel",
+        "lease",
+        "onbekende",
+        "default"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m10-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.4",
+      "sectionTitle": "MAC Address Table Attack",
+      "type": "diagnosis",
+      "prompt": "De MAC-tabel raakt gevuld met duizenden wisselende bronadressen en de switch floodt steeds meer unicastframes. Welke aanval past hierbij?",
+      "choices": [
+        "MAC flooding.",
+        "Double tagging.",
+        "HSRP spoofing.",
+        "SLAAC renumbering."
+      ],
+      "correctIndex": 0,
+      "answer": "MAC flooding.",
+      "explanation": "CAM-table exhaustion maakt legitieme bestemmingen unknown unicast.",
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "mac",
+        "address",
+        "table",
+        "attack",
+        "mac-tabel",
+        "raakt",
+        "gevuld"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m10-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.1",
+      "sectionTitle": "Endpoint Security",
+      "type": "flashcard",
+      "front": "10.1 · Endpoint Security",
+      "back": "Endpoints zijn aanvalsoppervlak én springplank. Basismaatregelen zijn patches, antimalware/EDR, hostfirewall, least privilege, sterke authenticatie, back-ups en gebruikersbewustzijn. Network access control kan identiteit en device posture controleren voordat volledige netwerktoegang wordt verleend. Segmentatie beperkt laterale beweging wanneer een endpoint toch wordt gecompromitteerd. Beschikbaarheid, integriteit en vertrouwelijkheid (CIA) helpen impact classificeren; logging en tijdsynchronisatie ondersteunen detectie en onderzoek.",
+      "commands": "show logging\nshow clock\nshow ntp associations",
+      "verify": [
+        "Beheerprotocollen versleuteld",
+        "Onnodige services uit",
+        "Logs gaan naar bewaakte bestemming"
+      ],
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "endpoint"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m10-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.2",
+      "sectionTitle": "Access Control",
+      "type": "flashcard",
+      "front": "10.2 · Access Control",
+      "back": "AAA scheidt Authentication (wie ben je), Authorization (wat mag je) en Accounting (wat deed je). Lokale accounts zijn een fallback; centrale RADIUS/TACACS+ schaalt en auditeert beter. 802.1X gebruikt supplicant, authenticator (switch/AP) en authentication server. Tot succesvolle authenticatie is normale datatoegang beperkt. Beheer plane, control plane en data plane vragen elk eigen bescherming. Een management-VLAN alleen is geen authenticatie of encryptie.",
+      "commands": "aaa new-model\nusername fallback privilege 15 secret <GEHEIM>\nline vty 0 15\n transport input ssh",
+      "verify": [
+        "Authenticatiepad en fallback getest",
+        "Minimale privileges",
+        "Accounting/logging beschikbaar"
+      ],
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "access",
+        "control"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m10-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.3",
+      "sectionTitle": "Layer 2 Security Threats",
+      "type": "flashcard",
+      "front": "10.3 · Layer 2 Security Threats",
+      "back": "Layer 2 vertrouwt vaak impliciet op lokale deelnemers. Veelvoorkomende bedreigingen zijn MAC-flooding, VLAN hopping, DHCP starvation/rogue DHCP, ARP spoofing, IP/MAC spoofing en STP-manipulatie. Verdediging is gelaagd: port security, vaste access/trunkconfiguratie, DHCP snooping, Dynamic ARP Inspection, IP Source Guard en BPDU Guard/Root Guard. Trust nooit alle accesspoorten. Uplinks naar echte infrastructuur zijn selectief trusted; eindgebruikerpoorten blijven untrusted.",
+      "commands": "show port-security\nshow ip dhcp snooping\nshow ip arp inspection\nshow spanning-tree inconsistentports",
+      "verify": [
+        "Trustgrenzen gedocumenteerd",
+        "Accesspoorten hard ingesteld",
+        "Beschermingsfeatures per VLAN actief"
+      ],
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "layer",
+        "threats"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m10-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.4",
+      "sectionTitle": "MAC Address Table Attack",
+      "type": "flashcard",
+      "front": "10.4 · MAC Address Table Attack",
+      "back": "Bij MAC flooding vult een aanvaller de CAM/MAC-tabel met vele vervalste bronadressen. Wanneer legitieme bestemmingen onbekend worden, floodt de switch frames en ontstaat kans op afluisteren en overbelasting. Port security begrenst het aantal toegestane bron-MAC’s per accesspoort en kan statisch, dynamisch of sticky leren. Violation modes: protect dropt zonder melding/counter zoals restrict; restrict dropt en logt/telt; shutdown zet de poort err-disabled (standaard).",
+      "commands": "switchport port-security\nswitchport port-security maximum 2\nswitchport port-security mac-address sticky\nswitchport port-security violation restrict",
+      "verify": [
+        "show port-security interface f0/1",
+        "show port-security address",
+        "Maximum past bij telefoon + pc"
+      ],
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "mac",
+        "address",
+        "table",
+        "attack"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m10-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 10,
+      "moduleTitle": "LAN Security Concepts",
+      "sectionId": "10.5",
+      "sectionTitle": "LAN Attacks",
+      "type": "flashcard",
+      "front": "10.5 · LAN Attacks",
+      "back": "VLAN hopping ontstaat via ongewenste trunkonderhandeling of double tagging. Hard accessmode, DTP uit, ongebruikte native VLAN en beperkte allowed-lijsten verkleinen het risico. DHCP starvation put leases uit; een rogue server levert kwaadaardige gateway/DNS. DHCP snooping valideert berichten, markeert server-uplinks trusted en bouwt bindings. ARP spoofing vervalst IP–MAC-koppelingen. DAI controleert ARP op untrusted poorten tegen DHCP-snoopingbindings of ARP ACL’s. STP-aanvallen proberen root te worden. BPDU Guard beschermt edgepoorten; Root Guard voorkomt superieure BPDUs op een plaats waar nooit een root hoort.",
+      "commands": "switchport nonegotiate\nip dhcp snooping\nip dhcp snooping vlan 10,20\ninterface g0/1\n ip dhcp snooping trust\nip arp inspection vlan 10,20",
+      "verify": [
+        "show ip dhcp snooping binding",
+        "show ip arp inspection statistics",
+        "show interfaces trunk"
+      ],
+      "tags": [
+        "lan",
+        "security",
+        "concepts",
+        "attacks"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

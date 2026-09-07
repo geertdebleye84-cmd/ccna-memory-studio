@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 7,
+    "title": "Ethernet Switching",
+    "summary": "Lees Ethernetframes en MAC-adressen, voorspel switchforwarding en vergelijk forwarding-, buffering- en duplexkeuzes."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 4,
+    "total": 9
+  },
+  "cards": [
+    {
+      "id": "ccna1-m07-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.3",
+      "sectionTitle": "The MAC Address Table",
+      "type": "knowledge",
+      "prompt": "Wat doet een switch met een unknown unicast?",
+      "choices": [
+        "Flood binnen dezelfde VLAN behalve ingress",
+        "Naar de default gateway sturen",
+        "Altijd droppen",
+        "Over alle routers flooden"
+      ],
+      "correctIndex": 0,
+      "answer": "Flood binnen dezelfde VLAN behalve ingress",
+      "explanation": "Zonder entry weet de switch de doelpoort niet.",
+      "tags": [
+        "ethernet",
+        "switching",
+        "the",
+        "mac",
+        "address",
+        "table",
+        "doet",
+        "switch",
+        "unknown",
+        "unicast"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m07-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.4",
+      "sectionTitle": "Switch Speeds and Forwarding Methods",
+      "type": "knowledge",
+      "prompt": "Welke methode controleert FCS vóór forwarding?",
+      "choices": [
+        "Store-and-forward",
+        "Fast-forward cut-through",
+        "Fragment-free alleen",
+        "CSMA/CD"
+      ],
+      "correctIndex": 0,
+      "answer": "Store-and-forward",
+      "explanation": "Het volledige frame is nodig voor de FCS.",
+      "tags": [
+        "ethernet",
+        "switching",
+        "switch",
+        "speeds",
+        "and",
+        "forwarding",
+        "methods",
+        "methode",
+        "controleert",
+        "fcs"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m07-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.3",
+      "sectionTitle": "The MAC Address Table",
+      "type": "knowledge",
+      "prompt": "Welk veld leert een switch?",
+      "choices": [
+        "Source MAC",
+        "Destination IP",
+        "TCP-poort",
+        "FCS"
+      ],
+      "correctIndex": 0,
+      "answer": "Source MAC",
+      "explanation": "Source learning koppelt MAC aan ingresspoort.",
+      "tags": [
+        "ethernet",
+        "switching",
+        "the",
+        "mac",
+        "address",
+        "table",
+        "welk",
+        "veld",
+        "leert",
+        "switch"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m07-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.3",
+      "sectionTitle": "The MAC Address Table",
+      "type": "diagnosis",
+      "prompt": "Na het wissen van de MAC-tabel wordt het eerste unicastframe naar meerdere poorten in dezelfde VLAN gestuurd. Waarom?",
+      "choices": [
+        "De destination MAC is nog unknown unicast.",
+        "De switch gebruikt een default route.",
+        "De FCS is te groot.",
+        "De host gebruikt IPv6."
+      ],
+      "correctIndex": 0,
+      "answer": "De destination MAC is nog unknown unicast.",
+      "explanation": "Zonder geleerde destination-entry floodt de switch unknown unicast binnen de VLAN.",
+      "tags": [
+        "ethernet",
+        "switching",
+        "the",
+        "mac",
+        "address",
+        "table",
+        "wissen",
+        "mac-tabel",
+        "eerste",
+        "unicastframe"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m07-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.4",
+      "sectionTitle": "Switch Speeds and Forwarding Methods",
+      "type": "diagnosis",
+      "prompt": "Een link is up, maar toont veel late collisions en zeer lage throughput. Eén zijde staat half duplex en de andere full duplex. Wat is de oorzaak?",
+      "choices": [
+        "Een duplex-mismatch.",
+        "Een fout subnetmasker.",
+        "Een ontbrekende DNS-server.",
+        "Een verlopen ARP-entry."
+      ],
+      "correctIndex": 0,
+      "answer": "Een duplex-mismatch.",
+      "explanation": "Late collisions en asymmetrisch slechte prestaties zijn klassieke duplexmismatchsignalen.",
+      "tags": [
+        "ethernet",
+        "switching",
+        "switch",
+        "speeds",
+        "and",
+        "forwarding",
+        "methods",
+        "link",
+        "maar",
+        "toont"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m07-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.1",
+      "sectionTitle": "Ethernet Frame",
+      "type": "flashcard",
+      "front": "7.1 · Ethernet Frame",
+      "back": "IEEE 802.3 Ethernet gebruikt preamble/SFD, 6-byte destination en source MAC, type/length, payload van normaal 46–1500 bytes en 4-byte FCS. Kleinere payload krijgt padding. De MAC-sublayer verzorgt framing en media access; LLC identificeert het hogere Layer-3-protocol. De framegrootte loopt normaal 64–1518 bytes zonder VLAN-tag/preamble.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ethernet",
+        "switching",
+        "frame"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m07-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.2",
+      "sectionTitle": "Ethernet MAC Address",
+      "type": "flashcard",
+      "front": "7.2 · Ethernet MAC Address",
+      "back": "Een MAC-adres is 48 bits in hex. De eerste 24 bits vormen doorgaans de OUI; de rest identificeert de interface. Het I/G-bit onderscheidt individueel of groep en U/L universeel of lokaal. Broadcast is FF:FF:FF:FF:FF:FF; multicast heeft een groepsadres; unicast richt zich op één interface. Een switch forwardt op destination MAC.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ethernet",
+        "switching",
+        "mac",
+        "address"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m07-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.3",
+      "sectionTitle": "The MAC Address Table",
+      "type": "flashcard",
+      "front": "7.3 · The MAC Address Table",
+      "back": "Een switch leert de source MAC op de inkomende poort. Een bekende destination gaat alleen naar de bijbehorende poort; unknown unicast en broadcast worden binnen de VLAN geflood behalve naar de ingresspoort. Entries verouderen. Een bewegend MAC-adres wordt opnieuw geleerd; loops of flapping kunnen instabiliteit veroorzaken.",
+      "commands": "show mac address-table\nshow mac address-table dynamic\nclear mac address-table dynamic",
+      "verify": [
+        "Bron-MAC op juiste poort",
+        "Bekende unicast niet geflood"
+      ],
+      "tags": [
+        "ethernet",
+        "switching",
+        "the",
+        "mac",
+        "address",
+        "table"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m07-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 7,
+      "moduleTitle": "Ethernet Switching",
+      "sectionId": "7.4",
+      "sectionTitle": "Switch Speeds and Forwarding Methods",
+      "type": "flashcard",
+      "front": "7.4 · Switch Speeds and Forwarding Methods",
+      "back": "Store-and-forward ontvangt het volledige frame en controleert FCS; cut-through begint na destination MAC en verlaagt latency maar kan corrupte frames doorsturen. Symmetric switching gebruikt gelijke poortsnelheden; asymmetric combineert snelheden en vraagt buffering. Memory kan port-based of shared zijn. Autonegotiation voorkomt meestal duplexmismatch.",
+      "commands": "show interfaces status\nshow interfaces counters errors",
+      "verify": [
+        "Geen late collisions",
+        "Speed/duplex aan beide kanten passend"
+      ],
+      "tags": [
+        "ethernet",
+        "switching",
+        "switch",
+        "speeds",
+        "and",
+        "forwarding",
+        "methods"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

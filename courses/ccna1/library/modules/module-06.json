@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 6,
+    "title": "Data Link Layer",
+    "summary": "Verklaar framing, lokale media access, Layer-2-adressering, topologie en foutdetectie."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 3,
+    "total": 8
+  },
+  "cards": [
+    {
+      "id": "ccna1-m06-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.3",
+      "sectionTitle": "Data Link Frame",
+      "type": "knowledge",
+      "prompt": "Welke laag voegt een FCS toe?",
+      "choices": [
+        "Data link",
+        "Network",
+        "Transport",
+        "Application"
+      ],
+      "correctIndex": 0,
+      "answer": "Data link",
+      "explanation": "De FCS staat in de frame-trailer.",
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "frame",
+        "laag",
+        "voegt",
+        "fcs",
+        "toe"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m06-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.1",
+      "sectionTitle": "Purpose of the Data Link Layer",
+      "type": "knowledge",
+      "prompt": "Wat doet een router met het inkomende frame?",
+      "choices": [
+        "Decapsuleert en maakt voor de volgende link een nieuw frame",
+        "Wijzigt alleen de FCS",
+        "Floodt het ongewijzigd",
+        "Slaat het permanent op"
+      ],
+      "correctIndex": 0,
+      "answer": "Decapsuleert en maakt voor de volgende link een nieuw frame",
+      "explanation": "Framing is link-specifiek.",
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "purpose",
+        "the",
+        "doet",
+        "router",
+        "inkomende",
+        "frame"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m06-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.2",
+      "sectionTitle": "Topologies",
+      "type": "knowledge",
+      "prompt": "Waar komen collisions niet voor?",
+      "choices": [
+        "Een full-duplex point-to-point Ethernetlink",
+        "Een hubsegment",
+        "Een gedeeld radio-medium",
+        "Half-duplex Ethernet"
+      ],
+      "correctIndex": 0,
+      "answer": "Een full-duplex point-to-point Ethernetlink",
+      "explanation": "Full-duplex heeft aparte zend/ontvangpaden.",
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "topologies",
+        "waar",
+        "komen",
+        "collisions",
+        "niet"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m06-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.3",
+      "sectionTitle": "Data Link Frame",
+      "type": "diagnosis",
+      "prompt": "Een Ethernetframe komt aan met een FCS die niet overeenkomt met de berekende CRC. Wat doet de ontvanger normaal?",
+      "choices": [
+        "Het frame droppen als beschadigd.",
+        "De FCS gebruiken om alle bits te herstellen.",
+        "Het packet routen zonder header.",
+        "Een DHCP-lease aanvragen."
+      ],
+      "correctIndex": 0,
+      "answer": "Het frame droppen als beschadigd.",
+      "explanation": "FCS detecteert fouten maar corrigeert ze niet; een corrupt frame wordt verworpen.",
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "frame",
+        "ethernetframe",
+        "komt",
+        "fcs",
+        "die",
+        "niet",
+        "overeenkomt"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m06-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.2",
+      "sectionTitle": "Topologies",
+      "type": "diagnosis",
+      "prompt": "Een netwerk met hubs toont collisions en lage prestaties. Na vervanging door full-duplex switches verdwijnen de collisions. Waarom?",
+      "choices": [
+        "Elke switchpoort is een afzonderlijk full-duplex collision domain.",
+        "Switches verwijderen IP-adressen.",
+        "Routers sturen BPDUs.",
+        "DNS regelt duplex."
+      ],
+      "correctIndex": 0,
+      "answer": "Elke switchpoort is een afzonderlijk full-duplex collision domain.",
+      "explanation": "Full-duplex point-to-point Ethernet gebruikt geen CSMA/CD-collisions.",
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "topologies",
+        "netwerk",
+        "hubs",
+        "toont",
+        "collisions",
+        "lage",
+        "prestaties."
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m06-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.1",
+      "sectionTitle": "Purpose of the Data Link Layer",
+      "type": "flashcard",
+      "front": "6.1 · Purpose of the Data Link Layer",
+      "back": "De data-linklaag accepteert een Layer-3-packet, vormt een frame, regelt toegang tot het medium en detecteert overdrachtsfouten. LLC koppelt hogere protocollen; MAC behandelt media access en Layer-2-adressering. Routers vervangen het frame bij elke hop.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "purpose",
+        "the"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m06-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.2",
+      "sectionTitle": "Topologies",
+      "type": "flashcard",
+      "front": "6.2 · Topologies",
+      "back": "Fysieke topologie beschrijft kabels/apparaten; logische topologie beschrijft gegevensstroom en mediumtoegang. WAN kan point-to-point, hub-and-spoke of mesh zijn. LANs zijn vaak fysieke extended star. Half-duplex gedeelde media gebruiken contention; full-duplex point-to-point Ethernet heeft geen collisions.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "topologies"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m06-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 6,
+      "moduleTitle": "Data Link Layer",
+      "sectionId": "6.3",
+      "sectionTitle": "Data Link Frame",
+      "type": "flashcard",
+      "front": "6.3 · Data Link Frame",
+      "back": "Een frame bevat delimiters, besturingsvelden, bron/doel-L2-adres, payload en trailer. De precieze velden verschillen per protocol. FCS gebruikt CRC om bitfouten te detecteren; een fout frame wordt gedropt. Herstel/retransmissie gebeurt zo nodig door hogere lagen.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "data",
+        "link",
+        "layer",
+        "frame"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 8,
+    "title": "SLAAC and DHCPv6",
+    "summary": "Ken IPv6-GUA-toewijzing via SLAAC, stateless/stateful DHCPv6 en relay en lees de RA M- en O-flags correct."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 6,
+    "total": 12
+  },
+  "cards": [
+    {
+      "id": "ccna2-m08-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.3",
+      "sectionTitle": "DHCPv6",
+      "type": "knowledge",
+      "prompt": "Waar leert een IPv6-host zijn default gateway?",
+      "choices": [
+        "Uit een Router Advertisement",
+        "Uit de DHCPv6 address prefix",
+        "Uit DNS",
+        "Uit Duplicate Address Detection"
+      ],
+      "correctIndex": 0,
+      "answer": "Uit een Router Advertisement",
+      "explanation": "RA’s kondigen de default router aan, ook bij stateful DHCPv6.",
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "waar",
+        "leert",
+        "ipv6-host",
+        "default",
+        "gateway"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m08-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.3",
+      "sectionTitle": "DHCPv6",
+      "type": "knowledge",
+      "prompt": "Welke RA-flags passen bij stateless DHCPv6?",
+      "choices": [
+        "M=0, O=1",
+        "M=1, O=0",
+        "M=0, O=0 met uitsluitend stateful adressen",
+        "M=1, O=1 is verplicht"
+      ],
+      "correctIndex": 0,
+      "answer": "M=0, O=1",
+      "explanation": "SLAAC verzorgt het adres; O vraagt aanvullende DHCPv6-opties.",
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "ra-flags",
+        "passen",
+        "stateless"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m08-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.3",
+      "sectionTitle": "DHCPv6",
+      "type": "knowledge",
+      "prompt": "Welke UDP-poort gebruikt een DHCPv6-client?",
+      "choices": [
+        "546",
+        "547",
+        "67",
+        "68"
+      ],
+      "correctIndex": 0,
+      "answer": "546",
+      "explanation": "Client 546, server/relay 547.",
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "udp-poort",
+        "gebruikt",
+        "dhcpv6-client"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m08-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.2",
+      "sectionTitle": "SLAAC",
+      "type": "knowledge",
+      "prompt": "Wat houdt een SLAAC-router niet bij?",
+      "choices": [
+        "Een centrale leasebinding voor elk toegekend adres",
+        "De lokale prefix",
+        "NDP-neighbors",
+        "RA-instellingen"
+      ],
+      "correctIndex": 0,
+      "answer": "Een centrale leasebinding voor elk toegekend adres",
+      "explanation": "De host vormt zelf het adres; er is geen DHCP-leaseadministratie.",
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "houdt",
+        "slaac-router",
+        "niet"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m08-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.3",
+      "sectionTitle": "DHCPv6",
+      "type": "diagnosis",
+      "prompt": "Een stateful DHCPv6-client krijgt een GUA en DNS, maar geen default route omdat RA’s onderdrukt zijn. Wat is de oorzaak?",
+      "choices": [
+        "DHCPv6 levert geen default gateway; RA ontbreekt.",
+        "De client gebruikt UDP 546.",
+        "De prefix is /64.",
+        "DAD controleert het adres."
+      ],
+      "correctIndex": 0,
+      "answer": "DHCPv6 levert geen default gateway; RA ontbreekt.",
+      "explanation": "Ook bij stateful DHCPv6 komt de default router uit een Router Advertisement.",
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "stateful",
+        "dhcpv6-client",
+        "krijgt",
+        "gua",
+        "dns",
+        "maar",
+        "geen"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m08-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.4",
+      "sectionTitle": "Configure Stateless DHCPv6 Server",
+      "type": "diagnosis",
+      "prompt": "Een client vormt via SLAAC een adres maar ontvangt geen DNS-optie uit DHCPv6. De RA heeft M=0 en O=0. Welke flag ontbreekt?",
+      "choices": [
+        "De O-flag moet 1 zijn.",
+        "De M-flag moet altijd 1 zijn.",
+        "De A-flag moet 0 zijn.",
+        "De HSRP-flag ontbreekt."
+      ],
+      "correctIndex": 0,
+      "answer": "De O-flag moet 1 zijn.",
+      "explanation": "Stateless DHCPv6 gebruikt O=1 om aanvullende informatie aan te vragen.",
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "configure",
+        "stateless",
+        "server",
+        "client",
+        "vormt",
+        "via",
+        "adres"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m08-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.1",
+      "sectionTitle": "IPv6 GUA Assignment",
+      "type": "flashcard",
+      "front": "8.1 · IPv6 GUA Assignment",
+      "back": "Een host kan een GUA handmatig, via SLAAC, via stateless DHCPv6 of via stateful DHCPv6 krijgen. De router levert via ICMPv6 Router Advertisements minimaal prefix- en gatewayinformatie. De default gateway wordt bij IPv6 uit de RA geleerd, niet uit DHCPv6. Een host vormt naast GUA’s ook een link-local adres en voert Duplicate Address Detection uit. De interface identifier kan via EUI-64 of een privacy/stabiel willekeurig mechanisme gevormd worden; moderne clients hoeven dus geen zichtbaar MAC-afgeleid adres te gebruiken.",
+      "commands": "ipv6 unicast-routing\ninterface g0/0\n ipv6 address 2001:db8:10::1/64\n no shutdown",
+      "verify": [
+        "show ipv6 interface g0/0",
+        "show ipv6 neighbors",
+        "Host heeft GUA, link-local en default router"
+      ],
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "ipv6",
+        "gua",
+        "assignment"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m08-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.2",
+      "sectionTitle": "SLAAC",
+      "type": "flashcard",
+      "front": "8.2 · SLAAC",
+      "back": "Bij SLAAC gebruikt de host de RA-prefix met A-flag om zelf een adres te vormen. De router verstuurt periodieke RA’s en antwoordt op Router Solicitations. M=0 en O=0 betekent alleen SLAAC voor adressering en geen aanvullende DHCPv6-informatie. RDNSS kan DNS in RA aanbieden, maar de CCNA-labben focussen vaak op DHCPv6 voor DNS. SLAAC houdt op de router geen leasebinding bij; NDP toont alleen actuele neighbors.",
+      "commands": "interface g0/0\n no ipv6 nd managed-config-flag\n no ipv6 nd other-config-flag",
+      "verify": [
+        "show ipv6 interface g0/0",
+        "RA flags correct",
+        "Clientadres ligt in aangekondigde /64"
+      ],
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m08-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.3",
+      "sectionTitle": "DHCPv6",
+      "type": "flashcard",
+      "front": "8.3 · DHCPv6",
+      "back": "Stateless DHCPv6: SLAAC levert het adres, DHCPv6 levert extra opties zoals DNS; RA O=1, M=0. Stateful DHCPv6: server leaset het adres; RA M=1. DHCPv6 gebruikt UDP 546 aan clientzijde en UDP 547 aan server/relayzijde. De basisuitwisseling gebruikt Solicit, Advertise, Request en Reply. Ook bij stateful DHCPv6 blijft de default router afkomstig uit RA. Een DHCPv6-lease alleen is dus niet voldoende voor off-link bereikbaarheid.",
+      "commands": "ipv6 dhcp pool V6-INFO\n dns-server 2001:db8:53::53\n domain-name lab.example",
+      "verify": [
+        "show ipv6 dhcp pool",
+        "show ipv6 dhcp binding",
+        "RA-flag past bij stateless/stateful ontwerp"
+      ],
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m08-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.4",
+      "sectionTitle": "Configure Stateless DHCPv6 Server",
+      "type": "flashcard",
+      "front": "8.4 · Configure Stateless DHCPv6 Server",
+      "back": "Maak een pool met DNS/domein, koppel hem aan het LAN-interface en zet de other-config-flag. De host houdt zijn SLAAC-adres. De interface heeft een /64-prefix nodig die via RA wordt aangekondigd; suppress-ra zou dit ontwerp breken.",
+      "commands": "ipv6 dhcp pool STATELESS\n dns-server 2001:db8:53::53\n domain-name lab.example\ninterface g0/0\n ipv6 nd other-config-flag\n ipv6 dhcp server STATELESS",
+      "verify": [
+        "show ipv6 interface g0/0",
+        "Clientadres via SLAAC",
+        "DNS-optie via DHCPv6"
+      ],
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "configure",
+        "stateless",
+        "server"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m08-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.5",
+      "sectionTitle": "Configure Stateful DHCPv6 Server",
+      "type": "flashcard",
+      "front": "8.5 · Configure Stateful DHCPv6 Server",
+      "back": "Definieer een address prefix in de DHCPv6-pool, koppel de pool en zet de managed-config-flag. IOS- en clientondersteuning kan labgedrag beïnvloeden. De host leert zijn default router nog steeds via RA en gebruikt DHCPv6 voor het globale adres en opties.",
+      "commands": "ipv6 dhcp pool STATEFUL\n address prefix 2001:db8:20::/64\n dns-server 2001:db8:53::53\ninterface g0/1\n ipv6 nd managed-config-flag\n ipv6 dhcp server STATEFUL",
+      "verify": [
+        "show ipv6 dhcp binding",
+        "show ipv6 dhcp pool",
+        "Clientdefault-route verwijst naar router link-local"
+      ],
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "configure",
+        "stateful",
+        "server"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m08-f06",
+      "courseId": "ccna2-srwe",
+      "moduleId": 8,
+      "moduleTitle": "SLAAC and DHCPv6",
+      "sectionId": "8.6",
+      "sectionTitle": "Configure DHCPv6 Relay Agent",
+      "type": "flashcard",
+      "front": "8.6 · Configure DHCPv6 Relay Agent",
+      "back": "Een relay stuurt DHCPv6-berichten tussen een clientlink en een server op een ander IPv6-netwerk. Configureer de relay destination op het client-facing interface. Routing en link-local/global reachability tussen relay en server moeten vooraf werken. RA’s voor de clientprefix blijven door de lokale router geleverd.",
+      "commands": "interface g0/0\n ipv6 dhcp relay destination 2001:db8:100::10 g0/1",
+      "verify": [
+        "show ipv6 dhcp interface",
+        "Serverbindings verschijnen",
+        "Client ontvangt opties/adres en RA-gateway"
+      ],
+      "tags": [
+        "slaac",
+        "and",
+        "dhcpv6",
+        "configure",
+        "relay",
+        "agent"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 node_modules/
+dist/
+dist-*/
 references/
 runtime/piper/
 runtime/tts-output/

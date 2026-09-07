@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna2-srwe",
+  "module": {
+    "id": 3,
+    "title": "VLANs",
+    "summary": "Segmenteer een switched netwerk met VLANs, accesspoorten en 802.1Q-trunks en voorkom ongewenste DTP-onderhandeling."
+  },
+  "counts": {
+    "knowledge": 4,
+    "diagnosis": 2,
+    "flashcards": 5,
+    "total": 11
+  },
+  "cards": [
+    {
+      "id": "ccna2-m03-q01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.2",
+      "sectionTitle": "VLANs in a Multi-Switched Environment",
+      "type": "knowledge",
+      "prompt": "Welke VLAN wordt op een standaard 802.1Q-trunk ongetagd verzonden?",
+      "choices": [
+        "De native VLAN",
+        "De management-VLAN",
+        "Altijd VLAN 1 ongeacht configuratie",
+        "De voice VLAN"
+      ],
+      "correctIndex": 0,
+      "answer": "De native VLAN",
+      "explanation": "De geconfigureerde native VLAN gebruikt op de trunk normaal ongetagde frames.",
+      "tags": [
+        "vlans",
+        "multi-switched",
+        "environment",
+        "vlan",
+        "standaard",
+        "802.1q-trunk",
+        "ongetagd",
+        "verzonden"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m03-q02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.5",
+      "sectionTitle": "Dynamic Trunking Protocol",
+      "type": "knowledge",
+      "prompt": "Welke DTP-combinatie vormt normaal geen trunk?",
+      "choices": [
+        "dynamic auto aan beide kanten",
+        "dynamic desirable met dynamic auto",
+        "trunk met trunk",
+        "dynamic desirable aan beide kanten"
+      ],
+      "correctIndex": 0,
+      "answer": "dynamic auto aan beide kanten",
+      "explanation": "Geen van beide auto-poorten initieert de trunkonderhandeling.",
+      "tags": [
+        "vlans",
+        "dynamic",
+        "trunking",
+        "protocol",
+        "dtp-combinatie",
+        "vormt",
+        "normaal",
+        "geen",
+        "trunk"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m03-q03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.3",
+      "sectionTitle": "VLAN Configuration",
+      "type": "knowledge",
+      "prompt": "Een accesspoort verwijst naar een verwijderde VLAN. Wat gebeurt er?",
+      "choices": [
+        "De poort wordt inactief voor die VLAN.",
+        "De poort valt automatisch terug naar VLAN 1.",
+        "De switch maakt de VLAN opnieuw.",
+        "De poort wordt een trunk."
+      ],
+      "correctIndex": 0,
+      "answer": "De poort wordt inactief voor die VLAN.",
+      "explanation": "De poortconfiguratie blijft verwijzen naar de ontbrekende VLAN, maar kan geen verkeer doorgeven.",
+      "tags": [
+        "vlans",
+        "vlan",
+        "configuration",
+        "accesspoort",
+        "verwijst",
+        "verwijderde",
+        "vlan.",
+        "gebeurt"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m03-q04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.2",
+      "sectionTitle": "VLANs in a Multi-Switched Environment",
+      "type": "knowledge",
+      "prompt": "Wat controleer je eerst na een native-VLAN mismatchmelding?",
+      "choices": [
+        "De trunkconfiguratie aan beide linkuiteinden",
+        "De DNS-configuratie van hosts",
+        "De SSH RSA-sleutel",
+        "De routing metric"
+      ],
+      "correctIndex": 0,
+      "answer": "De trunkconfiguratie aan beide linkuiteinden",
+      "explanation": "De native VLAN moet op beide kanten van dezelfde 802.1Q-link overeenkomen.",
+      "tags": [
+        "vlans",
+        "multi-switched",
+        "environment",
+        "controleer",
+        "eerst",
+        "native-vlan",
+        "mismatchmelding"
+      ],
+      "provenance": "original-ccna2-study-question"
+    },
+    {
+      "id": "ccna2-m03-s01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.4",
+      "sectionTitle": "VLAN Trunks",
+      "type": "diagnosis",
+      "prompt": "Hosts in VLAN 20 werken op S1 en S2 lokaal, maar niet over de trunk. show interfaces trunk vermeldt VLAN 20 niet in de allowed-lijst. Wat is de oorzaak?",
+      "choices": [
+        "VLAN 20 is niet toegestaan op de trunk.",
+        "DORA is mislukt.",
+        "HSRP preempt ontbreekt.",
+        "De switch gebruikt store-and-forward."
+      ],
+      "correctIndex": 0,
+      "answer": "VLAN 20 is niet toegestaan op de trunk.",
+      "explanation": "Een VLAN moet op de trunk allowed én lokaal actief zijn.",
+      "tags": [
+        "vlans",
+        "vlan",
+        "trunks",
+        "hosts",
+        "werken",
+        "lokaal",
+        "maar",
+        "niet",
+        "trunk.",
+        "show"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m03-s02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.2",
+      "sectionTitle": "VLANs in a Multi-Switched Environment",
+      "type": "diagnosis",
+      "prompt": "Twee trunkuiteinden gebruiken verschillende native VLANs en de switches geven waarschuwingen. Wat is fout?",
+      "choices": [
+        "De native-VLAN configuratie komt niet overeen.",
+        "Beide poorten staan full duplex.",
+        "De management-SVI gebruikt SSH.",
+        "Er zijn te weinig MAC-entries."
+      ],
+      "correctIndex": 0,
+      "answer": "De native-VLAN configuratie komt niet overeen.",
+      "explanation": "De native VLAN hoort aan beide kanten van dezelfde 802.1Q-link identiek te zijn.",
+      "tags": [
+        "vlans",
+        "multi-switched",
+        "environment",
+        "twee",
+        "trunkuiteinden",
+        "gebruiken",
+        "verschillende",
+        "native",
+        "switches",
+        "geven"
+      ],
+      "provenance": "original-ccna2-diagnosis-scenario"
+    },
+    {
+      "id": "ccna2-m03-f01",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.1",
+      "sectionTitle": "Overview of VLANs",
+      "type": "flashcard",
+      "front": "3.1 · Overview of VLANs",
+      "back": "Een VLAN is een logisch broadcast domain. Segmentatie beperkt broadcasts, scheidt beleid en laat afdelingen onafhankelijk van fysieke switchlocatie groeperen. Typische rollen zijn data-, voice-, management-, native- en ongebruikte/parking-VLAN. VLAN 1 bestaat standaard en draagt meerdere controleprotocollen; gebruik voor beheer en ongebruikte poorten liever expliciete andere VLANs. Hosts in verschillende VLANs hebben Layer-3-routing nodig, ook wanneer ze op dezelfde fysieke switch aangesloten zijn.",
+      "commands": "show vlan brief\nshow interfaces switchport",
+      "verify": [
+        "Elke gebruikerspoort heeft de bedoelde access-VLAN",
+        "Managementverkeer gebruikt een afzonderlijke VLAN",
+        "Ongebruikte poorten staan uit en in een parking-VLAN"
+      ],
+      "tags": [
+        "vlans",
+        "overview"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m03-f02",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.2",
+      "sectionTitle": "VLANs in a Multi-Switched Environment",
+      "type": "flashcard",
+      "front": "3.2 · VLANs in a Multi-Switched Environment",
+      "back": "Een 802.1Q-trunk draagt frames van meerdere VLANs. De tag bevat onder meer een 12-bits VLAN-ID; de native VLAN wordt standaard ongetagd verzonden. Beide trunkuiteinden moeten dezelfde native VLAN en compatibele allowed-VLAN lijst hebben. Een mismatch veroorzaakt lekken, waarschuwingen of onbereikbaarheid. Voice VLAN laat een Cisco IP-phone spraakframes getagd verzenden terwijl een aangesloten pc ongetagd in de access/data-VLAN werkt. QoS-trust hoort bij een gecontroleerd ontwerp.",
+      "commands": "interface g0/1\n switchport mode trunk\n switchport trunk native vlan 999\n switchport trunk allowed vlan 10,20,99,999\n switchport nonegotiate",
+      "verify": [
+        "show interfaces trunk",
+        "show interfaces g0/1 switchport",
+        "show vlan brief"
+      ],
+      "tags": [
+        "vlans",
+        "multi-switched",
+        "environment"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m03-f03",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.3",
+      "sectionTitle": "VLAN Configuration",
+      "type": "flashcard",
+      "front": "3.3 · VLAN Configuration",
+      "back": "Maak de VLAN eerst in de VLAN-database, geef een betekenisvolle naam en wijs accesspoorten expliciet toe. De configuratie van een poort kan naar een niet-bestaande VLAN verwijzen, maar de poort blijft dan inactief. Verplaats poorten gecontroleerd met interface range. Controleer na wijzigingen zowel VLAN-lidmaatschap als spanning-tree-status. Een VLAN verwijderen verwijdert niet automatisch de switchport access vlan-regel; herplaats betrokken poorten vóór verwijdering.",
+      "commands": "vlan 10\n name USERS\nvlan 20\n name VOICE\nvlan 999\n name PARKING\ninterface range f0/1-12\n switchport mode access\n switchport access vlan 10",
+      "verify": [
+        "show vlan brief",
+        "show interfaces status",
+        "show spanning-tree vlan 10"
+      ],
+      "tags": [
+        "vlans",
+        "vlan",
+        "configuration"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m03-f04",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.4",
+      "sectionTitle": "VLAN Trunks",
+      "type": "flashcard",
+      "front": "3.4 · VLAN Trunks",
+      "back": "Configureer trunks statisch op infrastructuurlinks. Beperk allowed VLANs tot wat werkelijk over de link moet en gebruik een ongebruikte native VLAN aan beide kanten. Een accesspoort voegt intern VLAN-context toe; bij een trunk voegt 802.1Q voor niet-native VLANs een tag in. Aan de ontvangende accesspoort wordt de tag vóór aflevering verwijderd. Troubleshoot volgorde: fysieke link, administratieve/operationele mode, native VLAN, allowed/active VLANs, STP forwarding en MAC-learning.",
+      "commands": "show interfaces trunk\nshow interfaces g0/1 switchport\nshow spanning-tree interface g0/1",
+      "verify": [
+        "Status trunking",
+        "Encapsulation dot1q",
+        "Native VLAN gelijk",
+        "Benodigde VLANs allowed én active"
+      ],
+      "tags": [
+        "vlans",
+        "vlan",
+        "trunks"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    },
+    {
+      "id": "ccna2-m03-f05",
+      "courseId": "ccna2-srwe",
+      "moduleId": 3,
+      "moduleTitle": "VLANs",
+      "sectionId": "3.5",
+      "sectionTitle": "Dynamic Trunking Protocol",
+      "type": "flashcard",
+      "front": "3.5 · Dynamic Trunking Protocol",
+      "back": "DTP is Cisco-eigen en onderhandelt access of trunk. Dynamic desirable initieert actief; dynamic auto wacht. Auto–auto vormt geen trunk; desirable–auto doorgaans wel. Voor voorspelbaarheid en veiligheid: accesspoorten switchport mode access; trunks switchport mode trunk en waar ondersteund switchport nonegotiate. DTP is niet hetzelfde als VTP: DTP onderhandelt linkmodus, VTP verspreidt VLAN-database-informatie.",
+      "commands": "interface g0/1\n switchport mode trunk\n switchport nonegotiate\ninterface range f0/1-24\n switchport mode access",
+      "verify": [
+        "show dtp interface g0/1",
+        "show interfaces trunk",
+        "Geen onverwachte dynamische trunk"
+      ],
+      "tags": [
+        "vlans",
+        "dynamic",
+        "trunking",
+        "protocol"
+      ],
+      "provenance": "original-ccna2-flashcard"
+    }
+  ]
+}

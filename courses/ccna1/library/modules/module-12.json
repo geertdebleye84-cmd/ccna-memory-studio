@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "courseId": "ccna1-itn",
+  "module": {
+    "id": 12,
+    "title": "IPv6 Addressing",
+    "summary": "Lees en configureer IPv6 GUA/LLA, SLAAC/DHCPv6, multicast en /64-subnetten."
+  },
+  "counts": {
+    "knowledge": 3,
+    "diagnosis": 2,
+    "flashcards": 8,
+    "total": 13
+  },
+  "cards": [
+    {
+      "id": "ccna1-m12-q01",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.3",
+      "sectionTitle": "IPv6 Address Types",
+      "type": "knowledge",
+      "prompt": "Welke prefix hoort bij link-local?",
+      "choices": [
+        "fe80::/10",
+        "ff00::/8",
+        "2000::/3",
+        "::1/128"
+      ],
+      "correctIndex": 0,
+      "answer": "fe80::/10",
+      "explanation": "LLA valt onder fe80::/10.",
+      "tags": [
+        "ipv6",
+        "addressing",
+        "address",
+        "types",
+        "prefix",
+        "hoort",
+        "link-local"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m12-q02",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.8",
+      "sectionTitle": "Subnet an IPv6 Network",
+      "type": "knowledge",
+      "prompt": "Hoeveel /64s zitten in een /48?",
+      "choices": [
+        "65.536",
+        "256",
+        "16",
+        "4.294.967.296"
+      ],
+      "correctIndex": 0,
+      "answer": "65.536",
+      "explanation": "Er zijn 16 subnetbits: 2^16.",
+      "tags": [
+        "ipv6",
+        "addressing",
+        "subnet",
+        "network",
+        "hoeveel",
+        "64s",
+        "zitten"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m12-q03",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.5",
+      "sectionTitle": "Dynamic Addressing for IPv6 GUAs",
+      "type": "knowledge",
+      "prompt": "Welk bericht kondigt prefix en gateway aan?",
+      "choices": [
+        "Router Advertisement",
+        "DHCPv6 Reply uitsluitend",
+        "Neighbor Solicitation",
+        "Echo Request"
+      ],
+      "correctIndex": 0,
+      "answer": "Router Advertisement",
+      "explanation": "RA is de bron van router/prefixinformatie.",
+      "tags": [
+        "ipv6",
+        "addressing",
+        "dynamic",
+        "for",
+        "guas",
+        "welk",
+        "bericht",
+        "kondigt",
+        "prefix",
+        "gateway"
+      ],
+      "provenance": "original-ccna1-study-question"
+    },
+    {
+      "id": "ccna1-m12-s01",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.2",
+      "sectionTitle": "IPv6 Address Representation",
+      "type": "diagnosis",
+      "prompt": "Het adres 2001:db8::1::5 wordt door IOS geweigerd. Waarom?",
+      "choices": [
+        "Het gebruikt :: twee keer en is daardoor ambigu.",
+        "Het bevat hexletters.",
+        "De prefix is public.",
+        "IPv6 vereist decimalen."
+      ],
+      "correctIndex": 0,
+      "answer": "Het gebruikt :: twee keer en is daardoor ambigu.",
+      "explanation": "Een IPv6-adres mag de nulcompressie :: slechts eenmaal gebruiken.",
+      "tags": [
+        "ipv6",
+        "addressing",
+        "address",
+        "representation",
+        "adres",
+        "2001",
+        "db8",
+        "ios",
+        "geweigerd."
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m12-s02",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.5",
+      "sectionTitle": "Dynamic Addressing for IPv6 GUAs",
+      "type": "diagnosis",
+      "prompt": "Een stateful DHCPv6-client krijgt een GUA en DNS maar geen default route omdat RA’s worden geblokkeerd. Wat is de oorzaak?",
+      "choices": [
+        "DHCPv6 levert de default gateway niet; de Router Advertisement ontbreekt.",
+        "De client gebruikt UDP 546.",
+        "Een /64 is te groot.",
+        "DAD verwijdert alle routes."
+      ],
+      "correctIndex": 0,
+      "answer": "DHCPv6 levert de default gateway niet; de Router Advertisement ontbreekt.",
+      "explanation": "Ook bij stateful DHCPv6 komt de default router uit een RA.",
+      "tags": [
+        "ipv6",
+        "addressing",
+        "dynamic",
+        "for",
+        "guas",
+        "stateful",
+        "dhcpv6-client",
+        "krijgt",
+        "gua",
+        "dns"
+      ],
+      "provenance": "original-ccna1-diagnosis-scenario"
+    },
+    {
+      "id": "ccna1-m12-f01",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.1",
+      "sectionTitle": "IPv4 Issues",
+      "type": "flashcard",
+      "front": "12.1 · IPv4 Issues",
+      "back": "IPv4-uitputting leidde tot NAT en complexe adresconservering. IPv6 biedt 128-bit adressen, eenvoudiger basisheader, autoconfiguratie en geen broadcast. Dual stack, tunneling en translation ondersteunen overgang; dual stack is conceptueel het meest direct.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "ipv4",
+        "issues"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f02",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.2",
+      "sectionTitle": "IPv6 Address Representation",
+      "type": "flashcard",
+      "front": "12.2 · IPv6 Address Representation",
+      "back": "IPv6 bestaat uit acht hextets. Laat leading zeroes weg en vervang één aaneengesloten reeks nulhextets eenmaal door `::`. Expand altijd tot acht hextets om ambiguïteit en prefixgrenzen te controleren. Prefixlengte vervangt een geschreven subnetmasker.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "address",
+        "representation"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f03",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.3",
+      "sectionTitle": "IPv6 Address Types",
+      "type": "flashcard",
+      "front": "12.3 · IPv6 Address Types",
+      "back": "Unicast omvat GUA, LLA en loopback; multicast vervangt broadcast; anycast gebruikt hetzelfde unicastadres op meerdere nodes. GUA is doorgaans 2000::/3; LLA fe80::/10 is verplicht op de lokale link; ::1 is loopback en :: unspecified.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "address",
+        "types"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f04",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.4",
+      "sectionTitle": "GUA and LLA Static Configuration",
+      "type": "flashcard",
+      "front": "12.4 · GUA and LLA Static Configuration",
+      "back": "Configureer GUA met /64 en optioneel handmatig LLA. Een routerinterface gebruikt LLA voor veel neighbor- en routingfuncties. `ipv6 unicast-routing` laat routers RA’s sturen en IPv6 forwarden. Interface-ID moet uniek op de link zijn.",
+      "commands": "ipv6 unicast-routing\ninterface g0/0\n ipv6 address 2001:db8:1::1/64\n ipv6 address fe80::1 link-local\n no shutdown",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "gua",
+        "and",
+        "lla",
+        "static",
+        "configuration"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f05",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.5",
+      "sectionTitle": "Dynamic Addressing for IPv6 GUAs",
+      "type": "flashcard",
+      "front": "12.5 · Dynamic Addressing for IPv6 GUAs",
+      "back": "SLAAC gebruikt RA-prefix plus zelfgekozen interface-ID. Stateless DHCPv6 levert extra opties; stateful DHCPv6 levert adressen en opties. RA M- en O-flags sturen hostgedrag; de default gateway komt via RA, niet via DHCPv6. DAD controleert uniciteit.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "dynamic",
+        "for",
+        "guas"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f06",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.6",
+      "sectionTitle": "Dynamic Addressing for IPv6 LLAs",
+      "type": "flashcard",
+      "front": "12.6 · Dynamic Addressing for IPv6 LLAs",
+      "back": "Een LLA wordt automatisch gemaakt zodra IPv6 actief is, via willekeurige/stabiele interface-ID of EUI-64, platformafhankelijk. EUI-64 splitst de MAC, voegt FFFE toe en wijzigt het U/L-bit; privacy-adressen vermijden voorspelbare hardwarekoppeling.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "dynamic",
+        "for",
+        "llas"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f07",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.7",
+      "sectionTitle": "IPv6 Multicast Addresses",
+      "type": "flashcard",
+      "front": "12.7 · IPv6 Multicast Addresses",
+      "back": "ff02::1 bereikt alle nodes op de link; ff02::2 alle routers. Solicited-node multicast ondersteunt NDP efficiënt. Scopebits beperken multicastbereik; multicast is geen broadcast en wordt alleen door geïnteresseerde/bedoelde nodes verwerkt.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "multicast",
+        "addresses"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    },
+    {
+      "id": "ccna1-m12-f08",
+      "courseId": "ccna1-itn",
+      "moduleId": 12,
+      "moduleTitle": "IPv6 Addressing",
+      "sectionId": "12.8",
+      "sectionTitle": "Subnet an IPv6 Network",
+      "type": "flashcard",
+      "front": "12.8 · Subnet an IPv6 Network",
+      "back": "Een toegewezen /48 laat typisch 16 bits subnet-ID tot /64: 65.536 /64-LANs. Leen niet routinematig interface-ID-bits. Plan subnet-ID’s hiërarchisch per locatie/VLAN en documenteer GUA-prefix én gateways/LLA’s.",
+      "commands": "",
+      "verify": [],
+      "tags": [
+        "ipv6",
+        "addressing",
+        "subnet",
+        "network"
+      ],
+      "provenance": "original-ccna1-flashcard"
+    }
+  ]
+}
