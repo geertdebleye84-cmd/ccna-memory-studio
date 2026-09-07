@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing release tag whose installer asset should be replaced
+        required: true
+        default: v3.0.3
 
 permissions:
   contents: write
@@ -35,5 +41,7 @@ jobs:
       - name: Publish installer to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ inputs.release_tag || github.ref_name }}
           generate_release_notes: true
+          overwrite_files: true
           files: dist-installer/SiriusBitz-CCNA-Memory-Studio-*-Setup.exe
