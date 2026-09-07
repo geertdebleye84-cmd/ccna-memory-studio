@@ -19,6 +19,8 @@
 - Added `dist/` to `.gitignore`; installers belong in GitHub Releases.
 - The Windows installer is intentionally unsigned; no code-signing certificate
   is available for this open source release.
+- `.github/workflows/windows-release.yml` builds and attaches an unsigned NSIS
+  installer automatically whenever a semantic version tag is pushed.
 
 ## Required verification
 
