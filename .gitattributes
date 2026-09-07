@@ -1,0 +1,2 @@
+# Course manifests verify the exact bytes of these files.
+courses/*/library/modules/*.json text eol=lf
